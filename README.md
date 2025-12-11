@@ -1,10 +1,12 @@
-# KarmaRank Book
+# The KarmaRank Manifesto
 
-A minimal book setup using Pandoc for generating HTML and PDF from Markdown sources.
+**Subtitle:** Optimizing the Unspoken Corporate Objective Function
 
-## Structure
+This repository contains the source code for _The KarmaRank Manifesto_, a book about understanding and optimizing corporate performance evaluation systems.
 
-- `content/` - Your Markdown chapter files
+## Repository Structure
+
+- `content/` - Markdown chapter files
 - `images/` - Image assets
 - `templates/` - Pandoc HTML templates
 - `output/` - Generated files (gitignored)
@@ -18,7 +20,7 @@ Install Pandoc and LaTeX:
 
 ```bash
 sudo apt update
-sudo apt install pandoc texlive-latex-base texlive-latex-extra
+sudo apt install pandoc texlive-latex-base texlive-latex-extra librsvg2-bin
 ```
 
 ### Building
@@ -38,7 +40,7 @@ Open `output/book.html` in your browser to preview.
 
 ## LaTeX Math Support
 
-The setup supports LaTeX math notation:
+The book uses LaTeX math notation throughout. The setup supports:
 
 - **Inline math**: `$x = y$` (recommended for PDF compatibility)
 - **Block math**: `$$x = y$$` (recommended for PDF compatibility)
@@ -52,6 +54,8 @@ On push to `main` or `master`, GitHub Actions will:
 1. Build HTML and PDF
 2. Upload artifacts
 3. Deploy HTML to GitHub Pages (if enabled)
+
+After the first workflow run, configure GitHub Pages in your repo settings to deploy from the `gh-pages` branch.
 
 ## Adding Images
 
@@ -72,14 +76,19 @@ For sizing control, use Pandoc's extended syntax:
 - **HTML**: SVG renders natively
 - **PDF**: Requires `librsvg2-bin` (rsvg-convert) or `inkscape` for conversion
 
-Install SVG converter for PDF:
+## Editing Chapters
 
-```bash
-sudo apt install librsvg2-bin
-```
+Chapters are numbered for explicit ordering:
 
-## Adding Chapters
+- `00-introduction.md`
+- `01-origin-story.md`
+- `02-readme.md`
+- etc.
 
-1. Add new `.md` files to `content/`
-2. Files are processed in alphabetical order
-3. Use `01-chapter.md`, `02-chapter.md` naming for explicit ordering
+Files are processed in alphabetical order, so the numbering ensures correct sequence.
+
+## License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+See the [LICENSE](LICENSE) file for the full legal text.
