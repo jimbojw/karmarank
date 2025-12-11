@@ -13,6 +13,6 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 - **NonCommercial** — You may not use the material for commercial purposes.
 - **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
-For the full legal text, see the [LICENSE](../LICENSE) file in this repository.
+For the full legal text, see the LICENSE file in the source repository.
 
 **Commercial Licensing:** For commercial use inquiries, please contact the author.

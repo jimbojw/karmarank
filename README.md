@@ -87,6 +87,14 @@ Chapters are numbered for explicit ordering:
 
 Files are processed in alphabetical order, so the numbering ensures correct sequence.
 
+## Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+
+- Reporting errata and application feedback
+- Submitting pull requests
+- Copyright and attribution policies
+
 ## License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
