@@ -1,0 +1,34 @@
+# Law #3: Impact = Who Cares?
+
+"Impact" is a fluff word.
+
+People say "impact" the way astrologers say "energy": a vague scalar that is always supposed to be "higher" than last year. It sounds serious. It explains nothing.
+
+Under KarmaRank, "impact" has a very specific implementation:
+
+> **Impact = Who cares?**
+
+Literally: who $(S_i)$ cares $(k_i)$.
+
+* "Who" = which people in the field have non-zero Status with respect to your rating.
+* "Cares" = how much emotional and political value they get from telling a story where you are the hero.
+
+Written as math, your **Net Impact** to the firm is just your Net Status-Weighted Karma:
+
+$$
+K = \sum_i S_i \cdot k_i
+$$
+
+If nobody with Status cares, the system has nowhere to store your so-called impact. It lives only on your Private Ledger as a pleasant feeling about yourself.
+
+This gives you a simple test:
+
+* "I improved test coverage" → Who cares?
+* "I made the UI nicer" → Who cares?
+* "I cut cold-start time by 40% for Team X's workflow" → Who, by name, is going to care enough to say that out loud in a calibration room?
+
+If you cannot answer "who cares?" (with names, not archetypes), you are doing **speculative impact**. To you, it may be good. It may be virtuous. It may even be useful in some cosmic hard-to-measure sense. But as far as the Firm Ledger is concerned, it does not exist yet.
+
+Law #3 is the operational version of Law #2.  
+"The rating is the job" tells you what gets serialized.  
+"Impact = Who Cares?" tells you how to decide where to spend your next hour.

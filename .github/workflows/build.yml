@@ -1,0 +1,45 @@
+name: Build Book
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended librsvg2-bin
+
+      - name: Build HTML and PDF
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Upload HTML artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: book-html
+          path: output/book.html
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: book-pdf
+          path: output/book.pdf
+          if-no-files-found: ignore
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
