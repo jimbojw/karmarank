@@ -21,7 +21,7 @@ It is a complex, probabilistic state machine with inputs, outputs, and weighting
 
 Think of it this way: You are like a CPU. You are optimized for serial, logical, heavy-lift computation. To you, "politics" (rendering the social graphics) feels slow and inefficient. But you _can_ do it. You can run the simulation. It might take more effort, but you can execute the code.
 
-The "Political Animals" in your org? They are GPUs. They render the social graphics instantly and effortlessly. But ask them to run the logic? Ask them to build the complex architecture? They crash.
+The "Political Animals" in your org? They are like GPUs. They render the social graphics instantly and effortlessly. But ask them to run the logic? Ask them to build the complex architecture? They struggle.
 
 Once you accept that social dynamics are learnable skills rather than character flaws, you become a **Full-Stack Human**. You become a creature that can build the value _and_ sell the value. There is no ceiling for that archetype.
 

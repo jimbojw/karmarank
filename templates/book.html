@@ -109,6 +109,10 @@
     <h1>$title$</h1>
     $endif$ $if(subtitle)$
     <p class="subtitle">$subtitle$</p>
+    $endif$ $if(author)$
+    <p class="subtitle"><small>Author: $author$</small></p>
+    $endif$ $if(date)$
+    <p class="subtitle"><small>Version: $date$</small></p>
     $endif$ $if(toc)$
     <div class="toc">
       <h2>Table of Contents</h2>
@@ -129,10 +133,15 @@
     </div>
 
     <div class="license">
-      <p><small>
-        This work is licensed under a 
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-      </small></p>
+      <p>
+        <small>
+          This work is licensed under a
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+            International License</a
+          >.
+        </small>
+      </p>
     </div>
   </body>
 </html>

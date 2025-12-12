@@ -22,6 +22,13 @@ fi
 # Get list of chapters in order
 CHAPTERS=($(ls "$CONTENT_DIR"/*.md | sort))
 
+# Versioning logic
+VERSION=$(grep "version:" "$METADATA" | cut -d'"' -f2)
+HASH=$(git rev-parse --short HEAD 2>/dev/null || echo "dev")
+DATE=$(date +%Y-%m-%d)
+FULL_VERSION="$VERSION ($DATE-$HASH)"
+echo "Build Version: $FULL_VERSION"
+
 if [ ${#CHAPTERS[@]} -eq 0 ]; then
     echo "Error: No markdown files found in $CONTENT_DIR/"
     exit 1
@@ -43,6 +50,7 @@ pandoc \
     --toc \
     --toc-depth=2 \
     --mathjax \
+    --metadata date="$FULL_VERSION" \
     --output="$OUTPUT_DIR/book.html"
 
 echo "✓ Combined HTML: $OUTPUT_DIR/book.html"
@@ -75,6 +83,7 @@ if command -v pdflatex &> /dev/null; then
         --toc \
         --toc-depth=2 \
         --variable=geometry:margin=1in \
+        --metadata date="$FULL_VERSION" \
         $([ -n "$SVG_CONVERTER" ] && echo "--variable=graphics") \
         --output="$OUTPUT_DIR/book.pdf"
     echo "✓ PDF: $OUTPUT_DIR/book.pdf"
