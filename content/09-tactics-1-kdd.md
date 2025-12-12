@@ -109,3 +109,5 @@ The naive engineer builds the software, then tries to write a marketing brochure
 The KDD practitioner writes the brochure, pre-sells it to the market, and then manufactures the product to spec.
 
 Code is a liability. The Status-Weighted Story is the asset. Never generate the liability without securing the asset first.
+
+<!-- TODO: Image - KDD Flowchart: Political Echolocation -> Write The Test -> Compiler Check -> Implementation (Green State) -> Refactor Story -->

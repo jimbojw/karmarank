@@ -69,6 +69,8 @@ If you are claiming that your new UI is better, do not just write "1.53 points h
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
 
+<!-- TODO: Image - The Visual Kill Shot Example. Side-by-side histograms: 'The Old Way' (red, wide variance) vs 'The New Way' (green, tight variance, shifted right). -->
+
 ## 4. Constructing the Brief
 
 Your final deliverable to your manager—the document you hand them two weeks before calibration—should look like this:

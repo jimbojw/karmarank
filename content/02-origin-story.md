@@ -99,6 +99,8 @@ $$
 K = \sum_{i} S_i \cdot k_i
 $$
 
+<!-- TODO: Image - The KarmaRank Equation annotated. An arrow pointing to S_i labeled 'Weight (Status)' and k_i labeled 'Signal (Caring)'. -->
+
 Here, $K$ is your **Net Status-Weighted Karma** in a given field: a company, a team, a subculture, a community.
 
 The index $i$ ranges over the people whose opinions about you actually **travel**—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.

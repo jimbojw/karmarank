@@ -22,6 +22,8 @@ This cylindrical portion of the corporate social graph contains the people who h
 
 Twice a year (or however often your company performs reviews), the lid is put on this cylinder, and the heat is turned up. This is the **Calibration Meeting**. And it works a whole lot like a courtroom.
 
+<!-- TODO: Image - The Calibration Cylinder. A 3D wireframe showing You (bottom center), Manager (middle center), Skip (top center), with rings of Peers surrounding the Manager and You. -->
+
 ## 2. The Courtroom Dynamic
 
 You probably know this critical fact about your performance review: **You are not in the room.**
