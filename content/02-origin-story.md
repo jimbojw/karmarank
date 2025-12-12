@@ -91,19 +91,17 @@ The HQ meeting was a success. My manager's affect flipped from flushed frustrati
 
 ## 5. Writing Down the Algorithm: Net Status-Weighted Karma
 
-I was so pleased with myself for decoding the game that I did what I always do when I think I've spotted a pattern: I tried to turn it into math.
-
-In my notebook, I wrote down a simple expression for what I'd just experienced. I called it **Net Status-Weighted Karma** and wrote:
+I was so pleased with myself for decoding the game that I did what I always do when I think I've spotted a pattern: I tried to turn it into math. In my notebook, I wrote down a simple expression for what I'd just experienced:
 
 $$
 K = \sum_{i} S_i \cdot k_i
 $$
 
-<!-- TODO: Image - The KarmaRank Equation annotated. An arrow pointing to S_i labeled 'Weight (Status)' and k_i labeled 'Signal (Caring)'. -->
-
 Here, $K$ is your **Net Status-Weighted Karma** in a given field: a company, a team, a subculture, a community.
 
 The index $i$ ranges over the people whose opinions about you actually **travel**—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
+
+![Net Status-Weighted Karma Equation](images/net-status-weighted-karma.png)
 
 For each such person, $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
 
