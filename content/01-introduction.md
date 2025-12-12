@@ -6,7 +6,7 @@ Some games are "perfect knowledge", meaning no hidden information. Some games le
 
 I'm going to ask you to entertain a wild idea. I want you to think of the modern workplace as a game, in which you are a professional player. How do you keep score? Who are your allies and opponents? What constitutes a foul, and what are the penalties?
 
-When you sit down to a complex board game, you have certain expectations. Some resources will be easier to acquire, some less. A player may stiff you on a trade, or play suboptimally. That's OK. Your own self-worth is in tact. It's just a game.
+When you sit down to a complex board game, you have certain expectations. Some resources will be easier to acquire, some less. A player may stiff you on a trade, or play suboptimally. That's OK. Your own self-worth is intact. It's just a game.
 
 In the pages that follow, I will reveal the hidden rules and unstated social physics of the corporate performance appraisal game. If you treat it with the same detached curiosity you bring to other gaming, you'll be fine. If you tie your self worth to _being right_, well, it's going to be more difficult.
 
@@ -22,7 +22,7 @@ Unfortunately, to explain the rules and physics of the corporate appraisal game,
 
 Oh, and at the risk of undermining my own authority, I have _never been promoted within a company_. I don't believe in it. Strategically, the firm has every incentive to withhold increases in comp and level as long as possible.
 
-So while I've worked in every size org from tiny startups to Big Tech, from academia to non-profit to B2B SaaS, I've found it way easier to boost my pay by hopping to a competitor, than to stay and grind it out for scraps. 
+So while I've worked in every size org from tiny startups to Big Tech, from academia to non-profit to B2B SaaS, I've found it way easier to boost my pay by hopping to a competitor, than to stay and grind it out for scraps.
 
 But if that's you, no worries, the frameworks and techniques we'll develop here work equally well for effort minimization or outcome maximization. Just pick a lane and play accordingly.
 

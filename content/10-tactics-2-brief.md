@@ -16,20 +16,20 @@ Your evaluators (Directors, VPs, Senior Peers) are human beings, but they are a 
 
 They are obsessed with quantification. In the absence of trust, they use numbers as a proxy for truth. A paragraph of prose feels like an "opinion." A bar chart feels like "science."
 
-* **Bad:** "I significantly improved the performance of the login page." (Hearsay).
-* **Good:** "Reduced P99 login latency by **230ms (-14%)**, reclaiming **45 engineering-hours** per month in wait time." (Fact).
+- **Bad:** "I significantly improved the performance of the login page." (Hearsay).
+- **Good:** "Reduced P99 login latency by **230ms (-14%)**, reclaiming **45 engineering-hours** per month in wait time." (Fact).
 
 It does not matter that the "45 hours" is a back-of-the-napkin estimate based on shaky assumptions. It is a **Number**. It has significant digits. It triggers the "Truth" receptor in the evaluator's brain.
 
 ## 2. Moral Targeting (Know Your Judge)
 
-Before you pick your number, you must pick your narrative. This goes back to **Bug #3 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **Moral Matrix** of your evaluators.
+Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **Moral Matrix** of your evaluators.
 
 Different tribes worship different gods:
 
-* **The Sales/Exec Tribe:** Worships **Authority** and **Revenue**. They care about speed, dollars, and "winning."
-* **The Old Guard/Sysadmin Tribe:** Worships **Sanctity** and **Order**. They care about stability, uptime, and "doing it the right way."
-* **The Modern SV/HR Tribe:** Worships **Care/Harm** and **Fairness**. They care about "User Delight," "Inclusivity," and "Democratizing Access."
+- **The Sales/Exec Tribe:** Worships **Authority** and **Revenue**. They care about speed, dollars, and "winning."
+- **The Old Guard/Sysadmin Tribe:** Worships **Sanctity** and **Order**. They care about stability, uptime, and "doing it the right way."
+- **The Modern SV/HR Tribe:** Worships **Care/Harm** and **Fairness**. They care about "User Delight," "Inclusivity," and "Democratizing Access."
 
 You must estimate the moral composition of your org in general and the Calibration Room in particular, then tailor your evidence accordingly.
 
@@ -39,18 +39,18 @@ Let's say you updated a settings page.
 
 **If the Jury is Sales-Driven:**
 
-* **Narrative:** "Removed friction from the conversion funnel."
-* **The Metric:** "Conversion rate increased by 0.5%. Annualized revenue impact: $50k."
+- **Narrative:** "Removed friction from the conversion funnel."
+- **The Metric:** "Conversion rate increased by 0.5%. Annualized revenue impact: $50k."
 
 **If the Jury is Engineering-Driven:**
 
-* **Narrative:** "Paid down technical debt by migrating to the new design system."
-* **The Metric:** "Deleted 4,000 lines of legacy CSS. Reduced build size by 12KB."
+- **Narrative:** "Paid down technical debt by migrating to the new design system."
+- **The Metric:** "Deleted 4,000 lines of legacy CSS. Reduced build size by 12KB."
 
 **If the Jury is Modern SV (Care/Harm):**
 
-* **Narrative:** "Reduced cognitive load for frustrated users."
-* **The Metric:** "Using Likert scales to assess convenience pre- and post-launch, we found the new UI scored **~1.53 points higher** than baseline (n=20)."
+- **Narrative:** "Reduced cognitive load for frustrated users."
+- **The Metric:** "Using Likert scales to assess convenience pre- and post-launch, we found the new UI scored **~1.53 points higher** than baseline (n=20)."
 
 Same work. Different story. Different numbers.
 
@@ -64,10 +64,10 @@ Whenever possible, **do not just state the number. Show the delta.**
 
 If you are claiming that your new UI is better, do not just write "1.53 points higher." Paste a side-by-side histogram.
 
-* **Left:** A red, messy distribution (The Old Way).
-* **Right:** A green, tight distribution shifted to the right (The New Way).
+- **Left:** A red, messy distribution (The Old Way).
+- **Right:** A green, tight distribution shifted to the right (The New Way).
 
-When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They *will* look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
+When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
 
 ## 4. Constructing the Brief
 
@@ -75,13 +75,13 @@ Your final deliverable to your manager—the document you hand them two weeks be
 
 **Headline:** [The Moral Frame] e.g., "Democratizing Data Access for Non-Technical Users"
 
-* **The Context (The Villain):** "Previously, 40% of PM queries required Engineer intervention, causing delay and frustration (Harm)."
-* **The Action (The Hero):** "Built a self-serve dashboard using Metabase."
-* **The Result (The Evidence):**
-    * "Reduced Engineer-assist tickets by **85%**."
-    * "Saved **20 hours/week** of engineering time."
-    * *Insert Screenshot of Ticket Volume dropping off a cliff.*
-* **The Witness:** "As [Director Alice] noted, this 'fundamentally changed how we make decisions'."
+- **The Context (The Villain):** "Previously, 40% of PM queries required Engineer intervention, causing delay and frustration (Harm)."
+- **The Action (The Hero):** "Built a self-serve dashboard using Metabase."
+- **The Result (The Evidence):**
+  - "Reduced Engineer-assist tickets by **85%**."
+  - "Saved **20 hours/week** of engineering time."
+  - _Insert Screenshot of Ticket Volume dropping off a cliff._
+- **The Witness:** "As [Director Alice] noted, this 'fundamentally changed how we make decisions'."
 
 ## 5. Is This Lying?
 
