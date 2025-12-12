@@ -82,7 +82,7 @@ if command -v pdflatex &> /dev/null; then
         --pdf-engine=pdflatex \
         --toc \
         --toc-depth=2 \
-        --variable=geometry:margin=1in \
+        --variable=geometry:margin=1.5in \
         --metadata date="$FULL_VERSION" \
         $([ -n "$SVG_CONVERTER" ] && echo "--variable=graphics") \
         --output="$OUTPUT_DIR/book.pdf"
