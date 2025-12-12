@@ -20,8 +20,8 @@ There is a structural reality in the modern corporation that you must accept: **
 
 It's nothing personal. It's just how the money is pot-bound.
 
-* **New Hires** are paid from the "Hiring Budget," which is pegged to the current, competitive market rate.
-* **Existing Employees** are paid from the "Retention Budget," which is usually pegged to your entry price plus a standard 3-4% annual adjustment.
+- **New Hires** are paid from the "Hiring Budget," which is pegged to the current, competitive market rate.
+- **Existing Employees** are paid from the "Retention Budget," which is usually pegged to your entry price plus a standard 3-4% annual adjustment.
 
 In a high-demand industry, these two numbers drift apart rapidly. If you stay at a company for more than two years, you are likely suffering from a **Loyalty Discount**.
 
@@ -37,8 +37,8 @@ Every six to twelve months, you should perform a **Market Check**.
 
 This doesn't mean you are quitting. It means you are performing **Price Discovery**. You cannot know the value of your employment by looking at your current pay stub. You can only know it by seeing what a stranger is willing to offer.
 
-* If you can't get an offer that beats your current package: **You are priced correctly.** (Or your skills have stagnated).
-* If you get an offer for 30% more: **The firm is arbitraging you.**
+- If you can't get an offer that beats your current package: **You are priced correctly.** (Or your skills have stagnated).
+- If you get an offer for 30% more: **The firm is arbitraging you.**
 
 Knowing the truth is just data. Ignoring the market is negligence.
 
@@ -46,7 +46,7 @@ Knowing the truth is just data. Ignoring the market is negligence.
 
 The strongest argument for leaving isn't always money. It's **Reputation Hygiene**.
 
-Inside your current company, you carry the weight of negative valence status-weighted stories ascribed to you (deserved or not). The awkward interaction with that Product Manager? It's still in the air. Your "file" contains legacy baggage.
+Inside your current company, you carry the weight of negative valence Status-Weighted Stories ascribed to you (deserved or not). The awkward interaction with that Product Manager? It's still in the air. Your "file" contains legacy baggage.
 
 When you interview at a new company, you get a **Clean Slate**.
 
@@ -60,7 +60,7 @@ You might worry that leaving means "wasting" the effort you put into building yo
 
 The opposite is true.
 
-The **Status-Weighted Stories** you manufactured for your internal promo packet?
+The Status-Weighted Stories you manufactured for your internal promo packet?
 
 The **Briefs** you wrote with the "Villain, Hero, Witness" structure?
 
@@ -68,8 +68,8 @@ The **Briefs** you wrote with the "Villain, Hero, Witness" structure?
 
 The exact same artifacts you built to survive the internal calibration are the ones you use to ace the external interview.
 
-* **Internally:** You wrote the Brief to save your manager time.
-* **Externally:** You recite the Brief to show the hiring committee you are a Senior Operator.
+- **Internally:** You wrote the Brief to save your manager time.
+- **Externally:** You recite the Brief to show the hiring committee you are a Senior Operator.
 
 "I reduced cloud spend by 20%" works everywhere. The story is never wasted; it just changes audiences.
 

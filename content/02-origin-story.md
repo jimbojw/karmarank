@@ -34,7 +34,7 @@ Being an engineer, I interpreted these word-sounds at face value. When she asked
 
 She glanced at it, eyes glazed, then back to me.
 
-Not angrily. It just didn't register as *relevant data*. I'd brought her a beautifully formatted map of the territory **I** cared about: architecture, features, technical sequence. She lived in a different terrain entirely: **people, stories, moods, status**.
+Not angrily. It just didn't register as _relevant data_. I'd brought her a beautifully formatted map of the territory **I** cared about: architecture, features, technical sequence. She lived in a different terrain entirely: **people, stories, moods, status**.
 
 From her point of view, that spreadsheet was beside the point until there was at least one human somewhere in the org saying, "This helped us." Until there was a real person, in a real team, with a real story, the internal structure of my backlog was just décor.
 
@@ -60,8 +60,8 @@ There it was: the **actual objective function**, finally stated in plain languag
 
 The key questions were not, "Is the architecture future-proof?" or "Is the codebase beautiful?" The key questions were:
 
-* "**Who has this helped?**" (concrete users)
-* "**How?**" (a story you can tell in a meeting)
+- "**Who has this helped?**" (concrete users)
+- "**How?**" (a story you can tell in a meeting)
 
 All of that was constrained by a simple deadline: "In time for that HQ meeting, two weeks from now."
 
@@ -105,12 +105,12 @@ The index $i$ ranges over the people whose opinions about you actually **travel*
 
 For each such person, $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
 
-* A positive $k_i$ is, "She saved our launch with that tool."
-* A negative $k_i$ is, "He keeps slipping deadlines and making excuses."
+- A positive $k_i$ is, "She saved our launch with that tool."
+- A negative $k_i$ is, "He keeps slipping deadlines and making excuses."
 
 The last term, $S_i$, is their **Status** in this field—capital $S$ on purpose, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_. It's a weight: how much their stories about you count when they reach the people who allocate promotions, opportunities, and resources.
 
-The implications are brutally simple. Helping a lot of low-status people a little versus helping a few high-status people a lot can produce the same Net Karma. From a purely karmic ROI perspective, it is **cheaper** to create one ecstatic director than ten mildly satisfied ICs. One well-placed success story can outweigh a dozen quiet "yeah, it's fine"s lower in the hierarchy.
+The implications are brutally simple. Helping a lot of low-Status people a little versus helping a few high-Status people a lot can produce the same Net Karma. From a purely karmic ROI perspective, it is **cheaper** to create one ecstatic director than ten mildly satisfied ICs. One well-placed success story can outweigh a dozen quiet "yeah, it's fine"s lower in the hierarchy.
 
 That's what I'd just done, accidentally. I hadn't "improved the codebase" in some abstract, global sense. I had improved my **Net Karma** by creating a couple of high-weight $S_i$ nodes who could now tell positive stories ($k_i > 0$) about me in a critical meeting.
 
@@ -128,14 +128,13 @@ Silence.
 
 This was bad. Silence from an amiable person is a sign of deep disagreement or distress.
 
-It wasn't the kind of distress you get when the math is wrong. It was the kind you get when someone has said the quiet part out loud. Her expression read as: *Please don't say this in exactly these words, ever again, to anyone who signs my paycheck.*
+It wasn't the kind of distress you get when the math is wrong. It was the kind you get when someone has said the quiet part out loud. Her expression read as: _Please don't say this in exactly these words, ever again, to anyone who signs my paycheck._
 
 At the time, I was confused. I thought I was reassuring her: "I understand your constraints. I can optimize for what you actually need." What she reasonably heard was closer to: "I have reverse-engineered the social game you are embedded in and I am now explicitly min-maxing your boss's feelings about me."
 
 In retrospect, that was my first clear encounter with a meta-rule of corporate life:
 
-> **You are allowed to play the game.**
-> **You are not supposed to write down the rules.**
+> **You are allowed to play the game.** > **You are not supposed to write down the rules.**
 
 The organization must persist a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
 
@@ -163,7 +162,7 @@ The leap from Net Karma to KarmaRank comes from realizing that everyone is playi
 
 The people with high Status to you are themselves embedded in their own **field**, trying to secure karma from others who have high Status to them. People trade various forms of **capital**—social clout, headcount, literal budget, corporate rank, etc.—in order to improve their positions. Combine the individual perspective with Google's PageRank algorithm (iteratively re-scoring pages in the hyperlink graph) and you arrive at KarmaRank.
 
-Everyone has the same job: to secure **status-weighted stories** in a **dynamic, heterogenous field**, and call this narrative aggregation "impact."
+Everyone has the same job: to secure **Status-Weighted Stories** in a **dynamic, heterogenous field**, and call this narrative aggregation "impact."
 
 Some people intuit this. Good for them. The rest of us have to write it down.
 

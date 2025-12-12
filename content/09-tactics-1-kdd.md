@@ -24,7 +24,7 @@ To do this, you must leave your IDE and perform **Political Echolocation**. You 
 
 Schedule a 15-minute sync with a High-Status Node ($S_i$)—a Staff Engineer, a Principal PM, or your Skip-Level Manager.
 
-Do not ask: *"What should I work on?"* That makes you look like a junior execution-bot.
+Do not ask: _"What should I work on?"_ That makes you look like a junior execution-bot.
 
 Instead, ask for their **mental model**:
 
@@ -35,14 +35,15 @@ This accomplishes three things:
 1.  **The Ben Franklin Effect:** Benjamin Franklin famously observed that he who has done you a kindness will be more ready to do you another. By asking for their "wisdom," you make them feel like a visionary. They invest in you. They now have a subconscious stake in your success because you are a vessel for their ideas.
 
 2.  **Signal Detection:**
-    * If they look bored or give a generic answer: **Low $k_i$ (Caring).** Delete the ticket.
-    * If they lean in, start drawing on the whiteboard, or vent about a specific pain point: **High $k_i$.** Move this to the top of the backlog.
+
+    - If they look bored or give a generic answer: **Low $k_i$ (Caring).** Delete the ticket.
+    - If they lean in, start drawing on the whiteboard, or vent about a specific pain point: **High $k_i$.** Move this to the top of the backlog.
 
 3.  **Cache Warming (The Mere Exposure Effect):**
     In the Calibration Courtroom, when your name comes up, you do not want the Jury to do a cold lookup.
-    * *Cold Lookup:* "Who? Oh, the backend dev? Okay."
-    * *Warm Cache:* "Oh, right. Smart dev. We chatted about the API strategy last month. They Get It™."
-    By grooming the backlog with them, you are pre-loading your identity into their L1 Cache.
+    - _Cold Lookup:_ "Who? Oh, the backend dev? Okay."
+    - _Warm Cache:_ "Oh, right. Smart dev. We chatted about the API strategy last month. They Get It™."
+      By grooming the backlog with them, you are pre-loading your identity into their L1 Cache.
 
 ## Phase 2: Write The Test (The Spec)
 
@@ -64,11 +65,12 @@ Take this specific bullet point (The Test) to your Manager (The Attorney).
 
 This is a compiler check.
 
-* **Compiler Error:** *"The Director doesn't care about cost right now; she cares about user growth."*
-    * **Result:** The test is invalid. **Delete the test.** You just saved yourself three weeks of invisible labor.
+- **Compiler Error:** _"The Director doesn't care about cost right now; she cares about user growth."_
 
-* **Compiler Success:** *"Oh, absolutely. The VP is screaming about burn rate."*
-    * **Result:** The test is valid. You have a contract.
+  - **Result:** The test is invalid. **Delete the test.** You just saved yourself three weeks of invisible labor.
+
+- **Compiler Success:** _"Oh, absolutely. The VP is screaming about burn rate."_
+  - **Result:** The test is valid. You have a contract.
 
 ## Phase 4: Green State (Implementation)
 
@@ -78,8 +80,8 @@ And crucially, **you do only the work required to pass the test.**
 
 Your goal is to turn the test from Red to Green with the minimum possible calorie expenditure.
 
-* If you can hit the 20% reduction by changing a config file: **Do that.**
-* If you can hit it by deleting unused tables: **Do that.**
+- If you can hit the 20% reduction by changing a config file: **Do that.**
+- If you can hit it by deleting unused tables: **Do that.**
 
 The "Puritan" inside you will want to rewrite the entire caching layer to be "elegant."
 
@@ -106,4 +108,4 @@ The naive engineer builds the software, then tries to write a marketing brochure
 
 The KDD practitioner writes the brochure, pre-sells it to the market, and then manufactures the product to spec.
 
-Code is a liability. The status-weighted story is the asset. Never generate the liability without securing the asset first.
+Code is a liability. The Status-Weighted Story is the asset. Never generate the liability without securing the asset first.

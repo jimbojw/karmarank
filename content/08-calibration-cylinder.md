@@ -1,6 +1,6 @@
 # The Calibration Cylinder: Topology of the Trial
 
-According to Law #2, the rating is the job. And by our earlier observations, the unit of account is the **status-weighted story**. That's all well and good, but whose karma are we harvesting here?
+According to Law #2, the rating is the job. And by our earlier observations, the unit of account is the **Status-Weighted Story**. That's all well and good, but whose karma are we harvesting here?
 
 In this chapter you'll learn the local topology of the network graph as it applies to you: a structure I call the calibration cylinder.
 
@@ -56,7 +56,7 @@ They are acting as both **Jury** and **Prosecution**.
 
 Why prosecution? Because the budget is finite. The "Exceeds Expectations" rating is a scarce resource (often capped at 10-20% of the pool).
 
-For Manager A to get a promotion for *their* star engineer, they effectively need to argue that *you* do not deserve one. It is a zero-sum game of horse-trading.
+For Manager A to get a promotion for _their_ star engineer, they effectively need to argue that _you_ do not deserve one. It is a zero-sum game of horse-trading.
 
 ### The Judge: The Skip-Level (Director/VP)
 
@@ -82,7 +82,7 @@ But if a Peer Manager (a Juror) speaks up and says: "Yes, and that refactor save
 
 **People testify.**
 
-When you help a high-status person in the organization, you are not just "being helpful." You are **securing a witness**. You are ensuring that arguments are made, you have friends in the jury box. 
+When you help a high-Status person in the organization, you are not just "being helpful." You are **securing a witness**. You are ensuring that arguments are made, you have friends in the jury box.
 
 This is why "visibility" matters. Visibility is simply the availability of credible witnesses during your trial.
 
@@ -90,7 +90,7 @@ This is why "visibility" matters. Visibility is simply the availability of credi
 
 If you treat your job as "writing code," you are leaving your fate to the rhetorical skills of your tired Manager.
 
-If you treat your job as "generating status-weighted stories," you are effectively engaging in **lawful jury tampering**.
+If you treat your job as "generating Status-Weighted Stories," you are effectively engaging in **lawful jury tampering**.
 
 Your goal is to ensure that by the time the Calibration Meeting starts, the verdict is already technically decided because three of the five high-$S_i$ people in the room have already "bought" your story.
 
@@ -98,7 +98,7 @@ Your goal is to ensure that by the time the Calibration Meeting starts, the verd
 
 Crucially, your manager is playing the same game. They're at the bottom-center of their Calibration Cylinder. Their own rating will be determined by the next layer up. Their own peers' feedback funnels to their manager (your skip) whose peers are your manager's jury.
 
-Why does this matter to you? Your manager is cultivating their own status-weighted stories (exhibits) for their own upcoming defense. How they "manage" you is crucial evidence made in direct view of their attorney and peers.
+Why does this matter to you? Your manager is cultivating their own Status-Weighted Stories (exhibits) for their own upcoming defense. How they "manage" you is crucial evidence made in direct view of their attorney and peers.
 
 And so, your manager's eagerness to defend your case will naturally be influenced by the degree to which that defense contributes to their own portfolio. Thus, it's prudent to proactively consider your manager's Calibration Cylinder in crafting your own stories.
 
@@ -108,11 +108,11 @@ You might think, "This sounds exhausting. I'll just become a Manager/Director/CE
 
 I have bad news. The topology is fractal.
 
-* **You** generate stories for your Manager to survive the Team Calibration.
-* **Your Manager** generates stories for the Director to survive the Org Calibration.
-* **The Director** generates stories for the VP.
-* **The CEO** generates stories for the Board / Market.
+- **You** generate stories for your Manager to survive the Team Calibration.
+- **Your Manager** generates stories for the Director to survive the Org Calibration.
+- **The Director** generates stories for the VP.
+- **The CEO** generates stories for the Board / Market.
 
-When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mistake it for "strategy" in the pure sense. It is a **status-weighted story** presented to the Board of Directors (The Jury) and the Market (The Judge) to prove that the CEO is still a "High Performer."
+When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mistake it for "strategy" in the pure sense. It is a **Status-Weighted Story** presented to the Board of Directors (The Jury) and the Market (The Judge) to prove that the CEO is still a "High Performer."
 
 The cylinder goes up forever. The only thing that changes is the blast radius of the decisions.

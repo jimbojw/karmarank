@@ -1,6 +1,6 @@
 # Tactics II: Manufacturing Evidence (The Brief)
 
-In the previous chapter, you learned Karma Driven Development (KDD), a strategy for choosing **status-weighted stories** _first_ and working backwards to make them true. Now it's time to learn how to optimize that evidence for your manager to bring to calibration court.
+In the previous chapter, you learned Karma Driven Development (KDD), a strategy for choosing Status-Weighted Stories _first_ and working backwards to make them true. Now it's time to learn how to optimize that evidence for your manager to bring to calibration court.
 
 Your manager is tired. They have six other cases to litigate. They do not remember that cool bug fix you did in March.
 

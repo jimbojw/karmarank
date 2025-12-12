@@ -15,7 +15,7 @@ What follows is a list of the **Five Critical Vulnerabilities** in the Default E
 
 **The Reality:** In engineering, we value efficiency, not brute force. Yet in your career, you are manually brute-forcing your way through tasks, hoping someone notices your sweat.
 
-The firm does not value your suffering. It values **status-weighted stories**. If you work 60 hours to do what a politically savvy peer achieves in 6 hours of "visibility work," you aren't a hero. You are inefficient. The system interprets your silence and suffering as low-value labor.
+The firm does not value your suffering. It values **Status-Weighted Stories**. If you work 60 hours to do what a politically savvy peer achieves in 6 hours of "visibility work," you aren't a hero. You are inefficient. The system interprets your silence and suffering as low-value labor.
 
 ### CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
 

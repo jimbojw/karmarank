@@ -4,7 +4,7 @@ You are running two ledgers in one head.
 
 In your **Private Ledger** you keep score in terms of craft and ethics. "Did I build the right thing?" "Is it correct, elegant, fair?" It's your local religion. You don't need anyone's permission to maintain it. Taste is pre-rational.
 
-On the other ledger, the **Firm Ledger**, the firm keeps score in terms of stories that travel. "Who says you helped them?" "How easy is it to repeat that story up the chain?" Its unit of account is the **status-weighted story** about you, passed between people who can move budget, headcount, and promotion packets.
+On the other ledger, the **Firm Ledger**, the firm keeps score in terms of stories that travel. "Who says you helped them?" "How easy is it to repeat that story up the chain?" Its unit of account is the **Status-Weighted Story** about you, passed between people who can move budget, headcount, and promotion packets.
 
 It is a common yet critical mistake to assume these ledgers are the same system with some measurement noise. They're not. They are different databases with different schemas, occasionally synced only by accident. Like a hash collision.
 

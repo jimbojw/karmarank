@@ -10,19 +10,25 @@ The organization's accounting of value. It does not track code quality, effort, 
 
 Your internal accounting of value, based on craft, ethics, and logic. (e.g., "clean code," "robust architecture"). Useful for mental health, but useless for promotion. Do not expect the Firm Ledger to replicate data from this table.
 
+**Status ($S_i$)**
+
+The contextual importance of a _person_ ($i$). Someone who sits in the calibration court has high Status. Someone who testifies has Status transitively according to how the evaluators in that room view them.
+
+**karma ($k_i$)**
+
+A synonym for "affect" or "care". How much good or bad feeling _this person_ ($i$) has about the subject and is willing to testify to.
+
+**Karma ($K$)**
+
+The sum of Status-weighted karma. ($K = \sum S_i \cdot k_i$).
+
 **Status-Weighted Story**
 
-The atomic unit of corporate currency. A narrative about your work that is endorsed by contextually high-status individuals.
+The atomic unit of corporate currency. A narrative unit featuring you, as told by someone with Status. Stories yield karma and are weighted by the Status of the teller.
 
-* *Formula:* `Value = Story * Witness_Status`
+**KarmaRank**
 
-**KarmaRank ($K$)**
-
-The algorithm that determines your "Impact."
-
-* **Formula:** $K = \sum S_i \cdot k_i$
-* **$S_i$ (Status):** The political weight of a person in your network.
-* **$k_i$ (Caring):** The emotional value they derive from telling a story about you.
+The implied iterative algorithm by which Karma ($K$) and Status ($S$) converge. That is, the outcome of calibration confers title and accolades, which are components of Status. Status is the realized effect of Karma validated by calibration.
 
 ## Topology
 
@@ -48,9 +54,9 @@ A High-Status individual ($S_i$) who has agreed to testify on your behalf during
 
 **Karma-Driven Development (KDD)**
 
-A development methodology where the "Test" (the promotion bullet point) is written and validated *before* any code is written.
+A development methodology where the "Test" (the promotion bullet point) is written and validated _before_ any code is written.
 
-* *Protocol:* Groom Backlog → Write Test → Compiler Check → Code (Green State) → Refactor Story.
+- _Protocol:_ Groom Backlog → Write Test → Compiler Check → Code (Green State) → Refactor Story.
 
 **The Compiler Check**
 
