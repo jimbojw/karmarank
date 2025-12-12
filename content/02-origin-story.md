@@ -134,7 +134,8 @@ At the time, I was confused. I thought I was reassuring her: "I understand your 
 
 In retrospect, that was my first clear encounter with a meta-rule of corporate life:
 
-> **You are allowed to play the game.** > **You are not supposed to write down the rules.**
+**You are allowed to play the game.**  
+**You are not supposed to write down the rules.**
 
 The organization must persist a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
 
