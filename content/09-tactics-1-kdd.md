@@ -26,7 +26,7 @@ Schedule a 15-minute sync with a High-Status Node ($S_i$)—a Staff Engineer, a 
 
 Do not ask: _"What should I work on?"_ That makes you look like a junior execution-bot.
 
-Instead, ask for their **mental model**:
+Instead, ask for their **mental model** (a "calibrated question" in [Voss's](#chris-voss) terms):
 
 > "I'm looking at our Q3 technical roadmap, and I know you've been thinking a lot about [Strategic Theme X]. How does [Project Y] fit into your mental model of that problem?"
 

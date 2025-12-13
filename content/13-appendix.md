@@ -1,6 +1,8 @@
-# Appendix: Glossary
+# Appendix
 
-## Core Concepts
+## Glossary
+
+### Core Concepts
 
 **The Firm Ledger**
 
@@ -30,7 +32,7 @@ The atomic unit of corporate currency. A narrative unit featuring you, as told b
 
 The implied iterative algorithm by which Karma ($K$) and Status ($S$) converge. That is, the outcome of calibration confers title and accolades, which are components of Status. Status is the realized effect of Karma validated by calibration.
 
-## Topology
+### Topology
 
 **The Calibration Cylinder**
 
@@ -50,7 +52,7 @@ A graphics rendering technique applied to social attention. The practice of aggr
 
 A High-Status individual ($S_i$) who has agreed to testify on your behalf during the calibration trial. Without a Witness, your work is hearsay.
 
-## Tactics & Workflows
+### Tactics & Workflows
 
 **Karma-Driven Development (KDD)**
 
@@ -70,7 +72,7 @@ The final artifact of your work. A document formatted for the "Numerophiles" in 
 
 The process of pinging High-Status nodes with strategic questions ("What is your mental model of X?") to populate your backlog with high-demand stories and warm the cache for your identity.
 
-## Economics
+### Economics
 
 **Arbitrage**
 
@@ -83,3 +85,37 @@ The economic penalty for remaining at a firm longer than two years. Caused by th
 **Legacy Cache**
 
 The accumulation of negative or neutral stories ("bugs," "awkward interactions") that inevitably build up in your "Permanent Record" over time. A primary driver for the necessity of **Server Migration** (Job Hopping).
+
+## Further Reading
+
+This manifesto is a synthesis of engineering pragmatism and social science. If you want to inspect the source code for these ideas, start here:
+
+### Pierre Bourdieu
+
+_The Logic of Practice_ / _Distinction_
+
+The source of **Field**, **Capital**, and **Habitus**. Bourdieu explains why some people "just get it" (Habitus) and how social games are played for specific types of Capital within a bounded Field.
+
+### Jonathan Haidt
+
+_The Righteous Mind_
+
+The source of **Moral Foundations Theory**. Essential for debugging **Protocol Mismatches**. It explains why your "rational" argument for refactoring code (Sanctity/Order) sounds like nonsense to a manager optimizing for quarterly revenue (Authority/Outcome).
+
+### James C. Scott
+
+_Seeing Like a State_
+
+The definitive text on **Legibility**. It explains why the Firm (like the State) must flatten complex reality into simple metrics (Ratings), even if that simplification destroys local knowledge and value.
+
+### Chris Voss
+
+_Never Split the Difference_
+
+The manual for **Tactical Empathy** and **Conversational Reconnaissance**. Voss frames empathy not as "niceness," but as a way to extract information and influence behavior using Calibrated Questions. This is the engine behind **Political Echolocation**.
+
+### Goodhart's Law
+
+Marilyn Strathern
+
+_"When a measure becomes a target, it ceases to be a good measure."_ The fundamental reason why **Strategic Ambiguity** is a feature, not a bug, of performance review systems.
