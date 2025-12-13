@@ -1,4 +1,4 @@
-# SECURITY ADVISORY: Five Default Engineering Worldview Vulnerabilities
+# SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 
 **Severity:** Critical  
 **Status:** Active Exploitation Detected
