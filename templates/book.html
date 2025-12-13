@@ -35,6 +35,28 @@
         margin: 2em auto;
         max-width: 50%;
       }
+      .header-link {
+        color: inherit;
+        font-weight: normal;
+        margin-right: 10px;
+        opacity: 0;
+        position: absolute;
+        right: 100%;
+        text-decoration: none;
+        top: 0;
+        transition: opacity 0.2s;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        position: relative;
+        &:hover .header-link {
+          opacity: 0.5;
+        }
+      }
       .nav {
         margin: 30px 0;
         padding: 20px 0;
@@ -112,6 +134,21 @@
           ],
         },
       };
+
+      // Auto-add anchor links to headers
+      document.addEventListener("DOMContentLoaded", function () {
+        const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        headers.forEach((header) => {
+          if (header.id) {
+            const link = document.createElement("a");
+            link.href = "#" + header.id;
+            link.textContent = "¶";
+            link.className = "header-link";
+            link.title = "Permalink to this section";
+            header.appendChild(link);
+          }
+        });
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
