@@ -14,15 +14,17 @@ The Org Chart implies a chain of command. The reality as it applies to you is a 
 
 You are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
+![Circle of You and your Peers](images/peer-circle.png)
+
 Your Manager is at the center of their own circle, surrounded by their **Peer Managers**. The Skip-Level (manager's manager) sits above, the center of their own circle of peers, looking down into the cylinder.
 
 So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
 
+![Calibration Cylinder](images/calibration-cylinder.png)
+
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
 
 Twice a year (or however often your company performs reviews), the lid is put on this cylinder, and the heat is turned up. This is the **Calibration Meeting**. And it works a whole lot like a courtroom.
-
-<!-- TODO: Image - The Calibration Cylinder. A 3D wireframe showing You (bottom center), Manager (middle center), Skip (top center), with rings of Peers surrounding the Manager and You. -->
 
 ## 2. The Courtroom Dynamic
 
