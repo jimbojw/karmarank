@@ -35,6 +35,34 @@
         margin: 2em auto;
         max-width: 50%;
       }
+      .header-link {
+        color: inherit;
+        font-weight: normal;
+        margin-right: 10px;
+        opacity: 0;
+        position: absolute;
+        right: 100%;
+        text-decoration: none;
+        top: 0;
+        transition: opacity 0.2s;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        position: relative;
+        &:hover .header-link {
+          opacity: 0.5;
+        }
+      }
+      a[href^="http"]::after {
+        content: " ↗";
+        display: inline-block;
+        margin-left: 2px;
+        text-decoration: none;
+      }
       .nav {
         margin: 30px 0;
         padding: 20px 0;
@@ -112,6 +140,21 @@
           ],
         },
       };
+
+      // Auto-add anchor links to headers
+      document.addEventListener("DOMContentLoaded", function () {
+        const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        headers.forEach((header) => {
+          if (header.id) {
+            const link = document.createElement("a");
+            link.href = "#" + header.id;
+            link.textContent = "¶";
+            link.className = "header-link";
+            link.title = "Permalink to this section";
+            header.appendChild(link);
+          }
+        });
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
@@ -121,7 +164,7 @@
 Function</p>
          <p class="subtitle"><small>Author: jimbojw</small></p>
          <p class="subtitle"><small>Version: 0.1.0
-(2025-12-13-9c83974)</small></p>
+(2025-12-13-01c50c0)</small></p>
          <div class="toc">
       <h2>Table of Contents</h2>
       <ul>
@@ -267,15 +310,11 @@ Function</p>
       <li><a href="#the-cost-of-clarity" id="toc-the-cost-of-clarity">5.
       The Cost of Clarity</a></li>
       </ul></li>
-      <li><a href="#appendix-glossary"
-      id="toc-appendix-glossary">Appendix: Glossary</a>
+      <li><a href="#appendix" id="toc-appendix">Appendix</a>
       <ul>
-      <li><a href="#core-concepts" id="toc-core-concepts">Core
-      Concepts</a></li>
-      <li><a href="#topology" id="toc-topology">Topology</a></li>
-      <li><a href="#tactics-workflows"
-      id="toc-tactics-workflows">Tactics &amp; Workflows</a></li>
-      <li><a href="#economics" id="toc-economics">Economics</a></li>
+      <li><a href="#glossary" id="toc-glossary">Glossary</a></li>
+      <li><a href="#further-reading" id="toc-further-reading">Further
+      Reading</a></li>
       </ul></li>
       </ul>
     </div>
@@ -579,7 +618,8 @@ count as “real impact” versus “nice-to-have tinkering.”</p>
 for that field: the internalized feel for how things are done, what
 counts as real, what counts as “impactful” versus merely interesting.
 The norms of that space lived in her body. Maybe it was natural. Maybe
-honed from years of practice.</p>
+honed from years of practice. (See <a
+href="#pierre-bourdieu">Bourdieu</a>)</p>
 <p>I had the opposite profile. I could build the tool and explain the
 design, but I had almost no feel for that emotional-political terrain.
 She <strong>intuitively</strong> tracked who mattered, what they cared
@@ -692,10 +732,11 @@ incompetence.</p>
 security feature</strong>.</p>
 <p>If the firm gave you a clear, static set of rules (e.g., “Do X, Y,
 and Z to get promoted”), you, and everyone else, would ruthlessly
-optimize for those variables and destroy the company (Goodhart’s Law).
-Leadership <em>must</em> deploy “Strategic Ambiguity” to retain their
-veto power. They will never give you the manual you are looking for. You
-have to reverse-engineer it.</p>
+optimize for those variables and destroy the company (<a
+href="#goodharts-law">Goodhart’s Law</a>). Leadership <em>must</em>
+deploy “Strategic Ambiguity” to retain their veto power. They will never
+give you the manual you are looking for. You have to reverse-engineer
+it.</p>
 <hr />
 <p>If you can accept these five premises—or at least entertain them as a
 working hypothesis—we can proceed. The rest of this text depends on
@@ -1046,7 +1087,8 @@ class="math inline">\(S_i\)</span>)—a Staff Engineer, a Principal PM, or
 your Skip-Level Manager.</p>
 <p>Do not ask: <em>“What should I work on?”</em> That makes you look
 like a junior execution-bot.</p>
-<p>Instead, ask for their <strong>mental model</strong>:</p>
+<p>Instead, ask for their <strong>mental model</strong> (a “calibrated
+question” in <a href="#chris-voss">Voss’s</a> terms):</p>
 <blockquote>
 <p>“I’m looking at our Q3 technical roadmap, and I know you’ve been
 thinking a lot about [Strategic Theme X]. How does [Project Y] fit into
@@ -1205,8 +1247,8 @@ evaluator’s brain.</p>
 Judge)</h2>
 <p>Before you pick your number, you must pick your narrative. This goes
 back to <strong>CVE-DEW-03 (The Protocol Mismatch)</strong>. You must
-frame your achievement in a way that strokes the specific <strong>Moral
-Matrix</strong> of your evaluators.</p>
+frame your achievement in a way that strokes the specific <strong><a
+href="#jonathan-haidt">Moral Matrix</a></strong> of your evaluators.</p>
 <p>Different tribes worship different gods:</p>
 <ul>
 <li><strong>The Sales/Exec Tribe:</strong> Worships
@@ -1485,7 +1527,7 @@ Advocacy is zero-sum at the margin. Evaluators are not neutral graders;
 they are competing representatives.</li>
 <li><strong>Time Scarcity at the Top:</strong> Directors/VPs cannot
 deeply inspect everyone’s work. The system must compress information
-into legible artifacts.</li>
+into legible artifacts (<a href="#james-c.-scott">Scott</a>).</li>
 <li><strong>Legitimacy Requirements:</strong> The process must look
 “fair enough” to remain stable (morale, retention) and defensible
 (complaints, HR risk, lawsuits).</li>
@@ -1570,8 +1612,9 @@ Family.” But the air is cleaner. And the visibility is unlimited.</p>
 <p>You are good at what you do.</p>
 <p>People like us build and maintain the modern world.</p>
 <p><strong>Stop doing it for free.</strong></p>
-<h1 id="appendix-glossary">Appendix: Glossary</h1>
-<h2 id="core-concepts">Core Concepts</h2>
+<h1 id="appendix">Appendix</h1>
+<h2 id="glossary">Glossary</h2>
+<h3 id="core-concepts">Core Concepts</h3>
 <p><strong>The Firm Ledger</strong></p>
 <p>The organization’s accounting of value. It does not track code
 quality, effort, or moral virtue. It tracks <strong>Status-Weighted
@@ -1605,7 +1648,7 @@ class="math inline">\(K\)</span>) and Status (<span
 class="math inline">\(S\)</span>) converge. That is, the outcome of
 calibration confers title and accolades, which are components of Status.
 Status is the realized effect of Karma validated by calibration.</p>
-<h2 id="topology">Topology</h2>
+<h3 id="topology">Topology</h3>
 <p><strong>The Calibration Cylinder</strong></p>
 <p>The local network graph that determines your rating. It consists of
 three layers:</p>
@@ -1625,7 +1668,7 @@ individuals who do not have influence on your Calibration Cylinder.</p>
 <p>A High-Status individual (<span class="math inline">\(S_i\)</span>)
 who has agreed to testify on your behalf during the calibration trial.
 Without a Witness, your work is hearsay.</p>
-<h2 id="tactics-workflows">Tactics &amp; Workflows</h2>
+<h3 id="tactics-workflows">Tactics &amp; Workflows</h3>
 <p><strong>Karma-Driven Development (KDD)</strong></p>
 <p>A development methodology where the “Test” (the promotion bullet
 point) is written and validated <em>before</em> any code is written.</p>
@@ -1648,7 +1691,7 @@ and must not be written.</p>
 <p>The process of pinging High-Status nodes with strategic questions
 (“What is your mental model of X?”) to populate your backlog with
 high-demand stories and warm the cache for your identity.</p>
-<h2 id="economics">Economics</h2>
+<h3 id="economics">Economics</h3>
 <p><strong>Arbitrage</strong></p>
 <p>The act of changing jobs to correct a market pricing error. If your
 Private Ledger valuation (Senior Engineer) is higher than your Firm
@@ -1664,6 +1707,42 @@ of Living adjustments) and the <strong>Acquisition Budget</strong>
 interactions”) that inevitably build up in your “Permanent Record” over
 time. A primary driver for the necessity of <strong>Server
 Migration</strong> (Job Hopping).</p>
+<h2 id="further-reading">Further Reading</h2>
+<p>This manifesto is a synthesis of engineering pragmatism and social
+science. If you want to inspect the source code for these ideas, start
+here:</p>
+<h3 id="pierre-bourdieu">Pierre Bourdieu</h3>
+<p><em>The Logic of Practice</em> / <em>Distinction</em></p>
+<p>The source of <strong>Field</strong>, <strong>Capital</strong>, and
+<strong>Habitus</strong>. Bourdieu explains why some people “just get
+it” (Habitus) and how social games are played for specific types of
+Capital within a bounded Field.</p>
+<h3 id="jonathan-haidt">Jonathan Haidt</h3>
+<p><em>The Righteous Mind</em></p>
+<p>The source of <strong>Moral Foundations Theory</strong>. Essential
+for debugging <strong>Protocol Mismatches</strong>. It explains why your
+“rational” argument for refactoring code (Sanctity/Order) sounds like
+nonsense to a manager optimizing for quarterly revenue
+(Authority/Outcome).</p>
+<h3 id="james-c.-scott">James C. Scott</h3>
+<p><em>Seeing Like a State</em></p>
+<p>The definitive text on <strong>Legibility</strong>. It explains why
+the Firm (like the State) must flatten complex reality into simple
+metrics (Ratings), even if that simplification destroys local knowledge
+and value.</p>
+<h3 id="chris-voss">Chris Voss</h3>
+<p><em>Never Split the Difference</em></p>
+<p>The manual for <strong>Tactical Empathy</strong> and
+<strong>Conversational Reconnaissance</strong>. Voss frames empathy not
+as “niceness,” but as a way to extract information and influence
+behavior using Calibrated Questions. This is the engine behind
+<strong>Political Echolocation</strong>.</p>
+<h3 id="goodharts-law">Goodhart’s Law</h3>
+<p>Marilyn Strathern</p>
+<p><em>“When a measure becomes a target, it ceases to be a good
+measure.”</em> The fundamental reason why <strong>Strategic
+Ambiguity</strong> is a feature, not a bug, of performance review
+systems.</p>
 
     <div class="license">
       <p>

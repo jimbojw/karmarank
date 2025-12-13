@@ -35,6 +35,34 @@
         margin: 2em auto;
         max-width: 50%;
       }
+      .header-link {
+        color: inherit;
+        font-weight: normal;
+        margin-right: 10px;
+        opacity: 0;
+        position: absolute;
+        right: 100%;
+        text-decoration: none;
+        top: 0;
+        transition: opacity 0.2s;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        position: relative;
+        &:hover .header-link {
+          opacity: 0.5;
+        }
+      }
+      a[href^="http"]::after {
+        content: " ↗";
+        display: inline-block;
+        margin-left: 2px;
+        text-decoration: none;
+      }
       .nav {
         margin: 30px 0;
         padding: 20px 0;
@@ -112,6 +140,21 @@
           ],
         },
       };
+
+      // Auto-add anchor links to headers
+      document.addEventListener("DOMContentLoaded", function () {
+        const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        headers.forEach((header) => {
+          if (header.id) {
+            const link = document.createElement("a");
+            link.href = "#" + header.id;
+            link.textContent = "¶";
+            link.className = "header-link";
+            link.title = "Permalink to this section";
+            header.appendChild(link);
+          }
+        });
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
@@ -121,7 +164,7 @@
 Function</p>
          <p class="subtitle"><small>Author: jimbojw</small></p>
          <p class="subtitle"><small>Version: 0.1.0
-(2025-12-13-9c83974)</small></p>
+(2025-12-13-01c50c0)</small></p>
       <p>You are good at games. You understand rules. But the modern
 workplace runs on a hidden operating system that you haven’t
 reverse-engineered yet.</p>
@@ -130,9 +173,11 @@ social physics of performance appraisal, promoting a simple, rigorous
 framework for navigating the corporate “calibration cylinder.”</p>
 <h2 id="read-the-book">Read the Book</h2>
 <ul>
-<li><a href="book.html"><strong>Read Online (HTML)</strong></a></li>
-<li><a href="book.pdf"><strong>Download PDF</strong></a></li>
-<li><a href="book.md"><strong>Download Raw Markdown</strong></a></li>
+<li><a href="karmarank-manifesto-0.1.0-2025-12-13-01c50c0.html"><strong>Read Online
+(HTML)</strong></a></li>
+<li><a href="karmarank-manifesto-0.1.0-2025-12-13-01c50c0.pdf"><strong>Download PDF</strong></a></li>
+<li><a href="karmarank-manifesto-0.1.0-2025-12-13-01c50c0.txt"><strong>Download Plain
+Text</strong></a></li>
 </ul>
 <h2 id="source-code">Source Code</h2>
 <p>This book is open source. You can fork it, diff it, and submit pull

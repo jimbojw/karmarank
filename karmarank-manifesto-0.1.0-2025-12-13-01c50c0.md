@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-13-9c83974)
+> Version: 0.1.0 (2025-12-13-01c50c0)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -204,7 +204,7 @@ In hindsight, my manager was doing something I didn't have language for yet.
 
 She was a **natural affective-labor manager**. She spoke fluent HR doxa. She could feel, without effort, which stories would land in a VP's office and which wouldn't. She had an internal gyroscope that told her what kinds of updates, phrased in what kinds of ways, would count as "real impact" versus "nice-to-have tinkering."
 
-A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice.
+A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. (See [Bourdieu](#pierre-bourdieu))
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
@@ -273,7 +273,7 @@ A criterion may be objective (e.g., "lines of code," "revenue generated"), but t
 
 **The Reality:** The ambiguity is a **primary security feature**.
 
-If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company (Goodhart’s Law). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
+If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart’s Law](#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
 
 ---
 
@@ -528,7 +528,7 @@ Schedule a 15-minute sync with a High-Status Node ($S_i$)—a Staff Engineer, a 
 
 Do not ask: _"What should I work on?"_ That makes you look like a junior execution-bot.
 
-Instead, ask for their **mental model**:
+Instead, ask for their **mental model** (a "calibrated question" in [Voss's](#chris-voss) terms):
 
 > "I'm looking at our Q3 technical roadmap, and I know you've been thinking a lot about [Strategic Theme X]. How does [Project Y] fit into your mental model of that problem?"
 
@@ -639,7 +639,7 @@ It does not matter that the "45 hours" is a back-of-the-napkin estimate based on
 
 ## 2. Moral Targeting (Know Your Judge)
 
-Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **Moral Matrix** of your evaluators.
+Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](#jonathan-haidt)** of your evaluators.
 
 Different tribes worship different gods:
 
@@ -849,7 +849,7 @@ Here is the constraint set that makes “just measure merit” a fantasy:
 2. **Heterogeneous Work:** People do different kinds of work on different timelines; outputs are not fungible units you can grade like test scores.
 3. **High Goodhart Pressure:** Any published metric becomes a target. Static rubrics get optimized into garbage (metric farming) and destroy signal.
 4. **Adversarial Incentives:** The reward pool is capped. Advocacy is zero-sum at the margin. Evaluators are not neutral graders; they are competing representatives.
-5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone’s work. The system must compress information into legible artifacts.
+5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone’s work. The system must compress information into legible artifacts ([Scott](#james-c.-scott)).
 6. **Legitimacy Requirements:** The process must look “fair enough” to remain stable (morale, retention) and defensible (complaints, HR risk, lawsuits).
 7. **Discretion Must Persist:** Leadership must retain veto power to handle edge cases, shifts in strategy, and the inherent ambiguity of “value.”
 8. **Narrative Compatibility:** Decisions must be explainable in the firm’s public religion (“impact,” “leadership,” “values”) even when the real drivers are messier.
@@ -904,9 +904,11 @@ People like us build and maintain the modern world.
 
 **Stop doing it for free.**
 
-# Appendix: Glossary
+# Appendix
 
-## Core Concepts
+## Glossary
+
+### Core Concepts
 
 **The Firm Ledger**
 
@@ -936,7 +938,7 @@ The atomic unit of corporate currency. A narrative unit featuring you, as told b
 
 The implied iterative algorithm by which Karma ($K$) and Status ($S$) converge. That is, the outcome of calibration confers title and accolades, which are components of Status. Status is the realized effect of Karma validated by calibration.
 
-## Topology
+### Topology
 
 **The Calibration Cylinder**
 
@@ -956,7 +958,7 @@ A graphics rendering technique applied to social attention. The practice of aggr
 
 A High-Status individual ($S_i$) who has agreed to testify on your behalf during the calibration trial. Without a Witness, your work is hearsay.
 
-## Tactics & Workflows
+### Tactics & Workflows
 
 **Karma-Driven Development (KDD)**
 
@@ -976,7 +978,7 @@ The final artifact of your work. A document formatted for the "Numerophiles" in 
 
 The process of pinging High-Status nodes with strategic questions ("What is your mental model of X?") to populate your backlog with high-demand stories and warm the cache for your identity.
 
-## Economics
+### Economics
 
 **Arbitrage**
 
@@ -989,3 +991,37 @@ The economic penalty for remaining at a firm longer than two years. Caused by th
 **Legacy Cache**
 
 The accumulation of negative or neutral stories ("bugs," "awkward interactions") that inevitably build up in your "Permanent Record" over time. A primary driver for the necessity of **Server Migration** (Job Hopping).
+
+## Further Reading
+
+This manifesto is a synthesis of engineering pragmatism and social science. If you want to inspect the source code for these ideas, start here:
+
+### Pierre Bourdieu
+
+_The Logic of Practice_ / _Distinction_
+
+The source of **Field**, **Capital**, and **Habitus**. Bourdieu explains why some people "just get it" (Habitus) and how social games are played for specific types of Capital within a bounded Field.
+
+### Jonathan Haidt
+
+_The Righteous Mind_
+
+The source of **Moral Foundations Theory**. Essential for debugging **Protocol Mismatches**. It explains why your "rational" argument for refactoring code (Sanctity/Order) sounds like nonsense to a manager optimizing for quarterly revenue (Authority/Outcome).
+
+### James C. Scott
+
+_Seeing Like a State_
+
+The definitive text on **Legibility**. It explains why the Firm (like the State) must flatten complex reality into simple metrics (Ratings), even if that simplification destroys local knowledge and value.
+
+### Chris Voss
+
+_Never Split the Difference_
+
+The manual for **Tactical Empathy** and **Conversational Reconnaissance**. Voss frames empathy not as "niceness," but as a way to extract information and influence behavior using Calibrated Questions. This is the engine behind **Political Echolocation**.
+
+### Goodhart's Law
+
+Marilyn Strathern
+
+_"When a measure becomes a target, it ceases to be a good measure."_ The fundamental reason why **Strategic Ambiguity** is a feature, not a bug, of performance review systems.
