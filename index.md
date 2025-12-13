@@ -9,9 +9,9 @@ This manifesto is a debugger for your career. It reveals the unstated social phy
 
 ## Read the Book
 
-- [**Read Online (HTML)**](book.html)
-- [**Download PDF**](book.pdf)
-- [**Download Plain Text**](book.txt)
+- [**Read Online (HTML)**](__HTML_FILENAME__)
+- [**Download PDF**](__PDF_FILENAME__)
+- [**Download Plain Text**](__TXT_FILENAME__)
 
 ## Source Code
 

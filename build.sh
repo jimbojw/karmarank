@@ -27,7 +27,9 @@ VERSION=$(grep "version:" "$METADATA" | cut -d'"' -f2)
 HASH=$(git rev-parse --short HEAD 2>/dev/null || echo "dev")
 DATE=$(date +%Y-%m-%d)
 FULL_VERSION="$VERSION ($DATE-$HASH)"
+FILENAME_BASE="karmarank-manifesto-${VERSION}-${DATE}-${HASH}"
 echo "Build Version: $FULL_VERSION"
+echo "Filename Base: $FILENAME_BASE"
 
 if [ ${#CHAPTERS[@]} -eq 0 ]; then
     echo "Error: No markdown files found in $CONTENT_DIR/"
@@ -51,9 +53,9 @@ pandoc \
     --toc-depth=2 \
     --mathjax \
     --metadata date="$FULL_VERSION" \
-    --output="$OUTPUT_DIR/book.html"
+    --output="$OUTPUT_DIR/${FILENAME_BASE}.html"
 
-echo "✓ Combined HTML: $OUTPUT_DIR/book.html"
+echo "✓ Combined HTML: $OUTPUT_DIR/${FILENAME_BASE}.html"
 
 # Build combined Markdown (concatenated)
 echo ""
@@ -75,8 +77,8 @@ echo "Building combined Markdown..."
     echo "> Version: $FULL_VERSION"
     echo ""
     awk 'FNR==1{print ""}1' "${CHAPTERS[@]}"
-} > "$OUTPUT_DIR/book.md"
-echo "✓ Combined Markdown: $OUTPUT_DIR/book.md"
+} > "$OUTPUT_DIR/${FILENAME_BASE}.md"
+echo "✓ Combined Markdown: $OUTPUT_DIR/${FILENAME_BASE}.md"
 
 # Build Plain Text (ASCII style)
 echo ""
@@ -88,8 +90,8 @@ pandoc \
     --standalone \
     --columns=72 \
     --metadata date="$FULL_VERSION" \
-    --output="$OUTPUT_DIR/book.txt"
-echo "✓ Plain Text: $OUTPUT_DIR/book.txt"
+    --output="$OUTPUT_DIR/${FILENAME_BASE}.txt"
+echo "✓ Plain Text: $OUTPUT_DIR/${FILENAME_BASE}.txt"
 
 # Build PDF (requires LaTeX)
 if command -v pdflatex &> /dev/null; then
@@ -121,8 +123,8 @@ if command -v pdflatex &> /dev/null; then
         --variable=geometry:margin=1.5in \
         --metadata date="$FULL_VERSION" \
         $([ -n "$SVG_CONVERTER" ] && echo "--variable=graphics") \
-        --output="$OUTPUT_DIR/book.pdf"
-    echo "✓ PDF: $OUTPUT_DIR/book.pdf"
+        --output="$OUTPUT_DIR/${FILENAME_BASE}.pdf"
+    echo "✓ PDF: $OUTPUT_DIR/${FILENAME_BASE}.pdf"
 else
     echo ""
     echo "⚠ Skipping PDF (pdflatex not found. Install texlive-latex-base for PDF support)"
@@ -155,5 +157,19 @@ pandoc \
     --standalone \
     --metadata date="$FULL_VERSION" \
     --output="$OUTPUT_DIR/index.html"
-echo "✓ Landing Page: $OUTPUT_DIR/index.html"
+
+# Substitute placeholders in index.html with actual filenames
+# Note: Use perl for robust replacement to handle different sed versions on Mac/Linux
+if command -v perl &> /dev/null; then
+    perl -pi -e "s/__HTML_FILENAME__/${FILENAME_BASE}.html/g" "$OUTPUT_DIR/index.html"
+    perl -pi -e "s/__PDF_FILENAME__/${FILENAME_BASE}.pdf/g" "$OUTPUT_DIR/index.html"
+    perl -pi -e "s/__TXT_FILENAME__/${FILENAME_BASE}.txt/g" "$OUTPUT_DIR/index.html"
+else
+    # Fallback to sed
+    sed -i "s/__HTML_FILENAME__/${FILENAME_BASE}.html/g" "$OUTPUT_DIR/index.html"
+    sed -i "s/__PDF_FILENAME__/${FILENAME_BASE}.pdf/g" "$OUTPUT_DIR/index.html"
+    sed -i "s/__TXT_FILENAME__/${FILENAME_BASE}.txt/g" "$OUTPUT_DIR/index.html"
+fi
+
+echo "✓ Landing Page: $OUTPUT_DIR/index.html (Linked to artifacts)"
 
