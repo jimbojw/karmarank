@@ -78,6 +78,19 @@ echo "Building combined Markdown..."
 } > "$OUTPUT_DIR/book.md"
 echo "✓ Combined Markdown: $OUTPUT_DIR/book.md"
 
+# Build Plain Text (ASCII style)
+echo ""
+echo "Building Plain Text..."
+pandoc \
+    "${CHAPTERS[@]}" \
+    --metadata-file="$METADATA" \
+    --to plain \
+    --standalone \
+    --columns=72 \
+    --metadata date="$FULL_VERSION" \
+    --output="$OUTPUT_DIR/book.txt"
+echo "✓ Plain Text: $OUTPUT_DIR/book.txt"
+
 # Build PDF (requires LaTeX)
 if command -v pdflatex &> /dev/null; then
     echo ""
