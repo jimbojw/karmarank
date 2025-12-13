@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-13-d049ccf)
+> Version: 0.1.0 (2025-12-13-9c83974)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -91,8 +91,6 @@ I started working, and in my head, I was optimizing for **my** scoreboard: clean
 
 My manager, it turned out, was optimizing for a different scoreboard entirely, one I hadn't fully seen yet.
 
----
-
 ## 2. HR Doxa vs What She Actually Meant
 
 As the weeks ticked by and the generalized version stubbornly refused to be "done," my manager started leaning on me with what I now recognize as **HR doxa**—language whose literal content is less important than its emotional payload.
@@ -108,8 +106,6 @@ Not angrily. It just didn't register as _relevant data_. I'd brought her a beaut
 From her point of view, that spreadsheet was beside the point until there was at least one human somewhere in the org saying, "This helped us." Until there was a real person, in a real team, with a real story, the internal structure of my backlog was just décor.
 
 We were using the same words—focus, priorities, help—to play two different games. I thought we were collaborating on how to architect a nice piece of software. She was trying to succeed at **being my manager in an org that cares about certain metrics and not others**. That mismatch simmered for a while.
-
----
 
 ## 3. The Objective Function Reveals Itself
 
@@ -138,8 +134,6 @@ In that moment, my entire understanding of "value" in that context snapped into 
 
 > **Do I have success stories I can say out loud to high-status people, on this date?**
 
----
-
 ## 4. Optimizing for the Real Metric
 
 Once I understood the metric, it was optimizable.
@@ -155,8 +149,6 @@ Within those two weeks, I snagged two concrete success stories—things like, "T
 The HQ meeting was a success. My manager's affect flipped from flushed frustration to relieved pride. From the outside, the story became, "this guy finally focused and delivered." From the inside, the story was:
 
 > "I finally found the **real scoreboard** and stopped optimizing for my private one."
-
----
 
 ## 5. Writing Down the Algorithm: Net Status-Weighted Karma
 
@@ -183,8 +175,6 @@ The implications are brutally simple. Helping a lot of low-Status people a littl
 
 That's what I'd just done, accidentally. I hadn't "improved the codebase" in some abstract, global sense. I had improved my **Net Karma** by creating a couple of high-weight $S_i$ nodes who could now tell positive stories ($k_i > 0$) about me in a critical meeting.
 
----
-
 ## 6. Showing My Manager the Formula
 
 Pleased with my little equation, I showed it to my manager.
@@ -208,8 +198,6 @@ In retrospect, that was my first clear encounter with a meta-rule of corporate l
 
 The organization must persist a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
 
----
-
 ## 7. Habitus: Why It Was Easy for Her and Hard for Me
 
 In hindsight, my manager was doing something I didn't have language for yet.
@@ -223,8 +211,6 @@ I had the opposite profile. I could build the tool and explain the design, but I
 Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations.
 
 KarmaRank is basically my adaptation for that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't have to learn it all the hard way.
-
----
 
 ## 8. From Net Karma to KarmaRank
 
