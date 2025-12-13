@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-13-01c50c0)
+> Version: 0.1.0 (2025-12-13-0b8eebd)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -224,7 +224,7 @@ Some people intuit this. Good for them. The rest of us have to write it down.
 
 KarmaRank is for the second group. You don't have to struggle through a decade of half-failed projects and flushed 1:1s to see KarmaRank. I did that part for you.
 
-# SECURITY ADVISORY: Five Default Engineering Worldview Vulnerabilities
+# SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 
 **Severity:** Critical  
 **Status:** Active Exploitation Detected
