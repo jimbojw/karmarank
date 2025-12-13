@@ -132,3 +132,15 @@ fi
 echo ""
 echo "Build complete! Output files in $OUTPUT_DIR/"
 
+# Build Landing Page (index.html)
+echo ""
+echo "Building Landing Page..."
+pandoc \
+    "index.md" \
+    --metadata-file="$METADATA" \
+    --template="$TEMPLATE_DIR/book.html" \
+    --standalone \
+    --metadata date="$FULL_VERSION" \
+    --output="$OUTPUT_DIR/index.html"
+echo "✓ Landing Page: $OUTPUT_DIR/index.html"
+

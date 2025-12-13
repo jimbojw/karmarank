@@ -28,6 +28,13 @@
         margin-top: 2em;
         color: #555;
       }
+      hr {
+        background-color: #333;
+        border: none;
+        height: 2px;
+        margin: 2em auto;
+        max-width: 50%;
+      }
       .nav {
         margin: 30px 0;
         padding: 20px 0;
@@ -123,18 +130,6 @@
       $toc$
     </div>
     $endif$ $body$
-
-    <div class="nav">
-      $if(prev-chapter)$
-      <a href="$prev-chapter$">← Previous Chapter</a>
-      $else$
-      <span></span>
-      $endif$ $if(next-chapter)$
-      <a href="$next-chapter$">Next Chapter →</a>
-      $else$
-      <span></span>
-      $endif$
-    </div>
 
     <div class="license">
       <p>
