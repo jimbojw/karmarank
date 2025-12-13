@@ -55,6 +55,29 @@ pandoc \
 
 echo "✓ Combined HTML: $OUTPUT_DIR/book.html"
 
+# Build combined Markdown (concatenated)
+echo ""
+echo "Building combined Markdown..."
+{
+    cat "$METADATA"
+    echo ""
+    # Extract title, subtitle, author from metadata for H1 headers
+    TITLE=$(grep "^title:" "$METADATA" | cut -d'"' -f2)
+    SUBTITLE=$(grep "^subtitle:" "$METADATA" | cut -d'"' -f2)
+    AUTHOR=$(grep "^author:" "$METADATA" | cut -d'"' -f2)
+    
+    echo "# $TITLE"
+    echo ""
+    echo "**$SUBTITLE**"
+    echo ""
+    echo "By $AUTHOR"
+    echo ""
+    echo "> Version: $FULL_VERSION"
+    echo ""
+    awk 'FNR==1{print ""}1' "${CHAPTERS[@]}"
+} > "$OUTPUT_DIR/book.md"
+echo "✓ Combined Markdown: $OUTPUT_DIR/book.md"
+
 # Build PDF (requires LaTeX)
 if command -v pdflatex &> /dev/null; then
     echo ""
