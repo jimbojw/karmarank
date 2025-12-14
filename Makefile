@@ -54,6 +54,7 @@ $(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html
 		--metadata-file=$(METADATA) \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
+		--self-contained \
 		--toc \
 		--toc-depth=2 \
 		--mathjax \
