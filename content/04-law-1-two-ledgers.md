@@ -10,7 +10,7 @@ It is a common yet critical mistake to assume these ledgers are the same system 
 
 When you stay late refactoring code nobody will ever hear about, that's a Private Ledger credit. When a director tells a VP "she saved our launch," that's a Firm Ledger credit. These events often do not coincide in time, or at all.
 
-![Private Ledger vs. Firm Ledger](images/two-ledgers.png)
+![Private Ledger vs. Firm Ledger](../images/two-ledgers.png)
 
 From the firm's point of view, your Private Ledger is an internal hobby (on company time!). They don't query it. They query the Firm Ledger, then serialize the result into ratings, levels, and comp.
 

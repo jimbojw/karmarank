@@ -93,7 +93,7 @@ Here, $K$ is your **Net Status-Weighted Karma** in a given field: a company, a t
 
 The index $i$ ranges over the people whose opinions about you actually **travel**—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
 
-![Net Status-Weighted Karma Equation](images/net-status-weighted-karma.png)
+![Net Status-Weighted Karma Equation](../images/net-status-weighted-karma.png)
 
 For each such person, $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
 

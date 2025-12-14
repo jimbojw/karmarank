@@ -106,7 +106,7 @@ We will dive into how to structure the brief in the next chapter.
 
 The naive engineer builds the software, then tries to write a marketing brochure for it.
 
-![Karma Driven Development (KDD) Flowchart](images/kdd-flowchart.png)
+![Karma Driven Development (KDD) Flowchart](../images/kdd-flowchart.png)
 
 The KDD practitioner writes the brochure, pre-sells it to the market, and then manufactures the product to spec.
 

@@ -71,7 +71,7 @@ When a tired Director scans your packet at 4:00 PM on a Friday, they will not re
 
 <!-- TODO: Image - The Visual Kill Shot Example. Side-by-side histograms: 'The Old Way' (red, wide variance) vs 'The New Way' (green, tight variance, shifted right). -->
 
-![Example visual "kill shots" for selling numeric improvements](images/visual-kill-shot.png)
+![Example visual "kill shots" for selling numeric improvements](../images/visual-kill-shot.png)
 
 ## 4. Constructing the Brief
 

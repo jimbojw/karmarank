@@ -41,11 +41,25 @@ for chapter in "${CHAPTERS[@]}"; do
     echo "  - $(basename "$chapter")"
 done
 
+# Create temporary directory for processed markdown files (with image paths adjusted for pandoc)
+TEMP_DIR=$(mktemp -d)
+trap "rm -rf $TEMP_DIR" EXIT
+
+echo ""
+echo "Preparing markdown files for pandoc (adjusting image paths)..."
+PROCESSED_CHAPTERS=()
+for chapter in "${CHAPTERS[@]}"; do
+    processed_chapter="$TEMP_DIR/$(basename "$chapter")"
+    # Replace ../images/ with images/ for pandoc (which runs from repo root)
+    sed 's|](../images/|](images/|g' "$chapter" > "$processed_chapter"
+    PROCESSED_CHAPTERS+=("$processed_chapter")
+done
+
 # Build combined book (single HTML file)
 echo ""
 echo "Building combined HTML..."
 pandoc \
-    "${CHAPTERS[@]}" \
+    "${PROCESSED_CHAPTERS[@]}" \
     --metadata-file="$METADATA" \
     --template="$TEMPLATE_DIR/book.html" \
     --standalone \
@@ -76,7 +90,7 @@ echo "Building combined Markdown..."
     echo ""
     echo "> Version: $FULL_VERSION"
     echo ""
-    awk 'FNR==1{print ""}1' "${CHAPTERS[@]}"
+    awk 'FNR==1{print ""}1' "${PROCESSED_CHAPTERS[@]}"
 } > "$OUTPUT_DIR/${FILENAME_BASE}.md"
 echo "✓ Combined Markdown: $OUTPUT_DIR/${FILENAME_BASE}.md"
 
@@ -84,7 +98,7 @@ echo "✓ Combined Markdown: $OUTPUT_DIR/${FILENAME_BASE}.md"
 echo ""
 echo "Building Plain Text..."
 pandoc \
-    "${CHAPTERS[@]}" \
+    "${PROCESSED_CHAPTERS[@]}" \
     --metadata-file="$METADATA" \
     --to plain \
     --standalone \
@@ -114,7 +128,7 @@ if command -v pdflatex &> /dev/null; then
     fi
     
     pandoc \
-        "${CHAPTERS[@]}" \
+        "${PROCESSED_CHAPTERS[@]}" \
         --metadata-file="$METADATA" \
         --from=markdown+tex_math_dollars+tex_math_double_backslash \
         --pdf-engine=pdflatex \
