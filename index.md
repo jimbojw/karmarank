@@ -11,6 +11,7 @@ This manifesto is a debugger for your career. It reveals the unstated social phy
 
 - [**Read Online (HTML)**](__HTML_FILENAME__)
 - [**Download PDF**](__PDF_FILENAME__)
+- [**Download ePub**](__EPUB_FILENAME__)
 - [**Download Plain Text**](__TXT_FILENAME__)
 
 ## Source Code

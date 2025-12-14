@@ -38,6 +38,13 @@ jobs:
           path: output/*.pdf
           if-no-files-found: ignore
 
+      - name: Upload ePub artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: book-epub
+          path: output/*.epub
+          if-no-files-found: ignore
+
       - name: Upload Markdown artifact
         uses: actions/upload-artifact@v4
         with:

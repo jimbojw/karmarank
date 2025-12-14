@@ -23,6 +23,7 @@ CHAPTERS := $(sort $(wildcard $(CONTENT_DIR)/*.md))
 # Output files
 HTML_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).html
 PDF_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).pdf
+EPUB_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).epub
 TXT_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).txt
 MD_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).md
 INDEX_FILE := $(OUTPUT_DIR)/index.html
@@ -30,9 +31,9 @@ INDEX_FILE := $(OUTPUT_DIR)/index.html
 # Tools
 PANDOC := pandoc
 
-.PHONY: all clean html pdf txt md release directories prepare-images
+.PHONY: all clean html pdf epub txt md release directories prepare-images
 
-all: directories prepare-images html pdf txt md index
+all: directories prepare-images html pdf epub txt md index
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -46,7 +47,7 @@ prepare-images: directories
 
 # HTML Build
 html: $(HTML_FILE)
-$(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html
+$(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 	@echo "Building HTML..."
 	$(PANDOC) \
 		$(CHAPTERS) \
@@ -64,7 +65,7 @@ $(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html
 
 # PDF Build
 pdf: $(PDF_FILE)
-$(PDF_FILE): $(CHAPTERS) $(METADATA)
+$(PDF_FILE): $(CHAPTERS) $(METADATA) | directories
 	@echo "Building PDF..."
 	@if command -v pdflatex >/dev/null; then \
 		$(PANDOC) \
@@ -83,9 +84,25 @@ $(PDF_FILE): $(CHAPTERS) $(METADATA)
 		echo "⚠ Skipping PDF (pdflatex not found)"; \
 	fi
 
+# ePub Build
+epub: $(EPUB_FILE)
+$(EPUB_FILE): $(CHAPTERS) $(METADATA) | directories
+	@echo "Building ePub..."
+	$(PANDOC) \
+		$(CHAPTERS) \
+		--resource-path=$(CONTENT_DIR) \
+		--metadata-file=$(METADATA) \
+		--toc \
+		--toc-depth=2 \
+		--mathml \
+		--css=templates/epub.css \
+		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@echo "✓ ePub: $@"
+
 # Plain Text Build
 txt: $(TXT_FILE)
-$(TXT_FILE): $(CHAPTERS) $(METADATA)
+$(TXT_FILE): $(CHAPTERS) $(METADATA) | directories
 	@echo "Building Plain Text..."
 	$(PANDOC) \
 		$(CHAPTERS) \
@@ -100,7 +117,7 @@ $(TXT_FILE): $(CHAPTERS) $(METADATA)
 
 # Combined Markdown Build
 md: $(MD_FILE)
-$(MD_FILE): $(CHAPTERS) $(METADATA)
+$(MD_FILE): $(CHAPTERS) $(METADATA) | directories
 	@echo "Building Combined Markdown..."
 	@{ \
 		cat $(METADATA); \
@@ -119,7 +136,7 @@ $(MD_FILE): $(CHAPTERS) $(METADATA)
 
 # Index Page (Landing Page)
 index: $(INDEX_FILE)
-$(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html
+$(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 	@echo "Building Landing Page..."
 	$(PANDOC) \
 		index.md \
@@ -133,10 +150,12 @@ $(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html
 		perl -pi -e "s/__HTML_FILENAME__/$(FILENAME_BASE).html/g" $@; \
 		perl -pi -e "s/__PDF_FILENAME__/$(FILENAME_BASE).pdf/g" $@; \
 		perl -pi -e "s/__TXT_FILENAME__/$(FILENAME_BASE).txt/g" $@; \
+		perl -pi -e "s/__EPUB_FILENAME__/$(FILENAME_BASE).epub/g" $@; \
 	else \
 		sed -i "s/__HTML_FILENAME__/$(FILENAME_BASE).html/g" $@; \
 		sed -i "s/__PDF_FILENAME__/$(FILENAME_BASE).pdf/g" $@; \
 		sed -i "s/__TXT_FILENAME__/$(FILENAME_BASE).txt/g" $@; \
+		sed -i "s/__EPUB_FILENAME__/$(FILENAME_BASE).epub/g" $@; \
 	fi
 	@echo "✓ Landing Page: $@"
 
