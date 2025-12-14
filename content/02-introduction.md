@@ -1,4 +1,4 @@
-# Introduction (don't skip)
+# Introduction: The Frame of the Game
 
 You are good at games. You understand games. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
 
