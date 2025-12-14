@@ -7,10 +7,11 @@ This repository contains the source code for _The KarmaRank Manifesto_, a book a
 ## Repository Structure
 
 - `content/` - Markdown chapter files
-- `images/` - Image assets
+- `content/images/` - Image assets (diagrams, figures)
 - `templates/` - Pandoc HTML templates
 - `output/` - Generated files (gitignored)
 - `metadata.yaml` - Book metadata
+- `Makefile` - Build configuration
 
 ## Local Development
 
@@ -20,23 +21,43 @@ Install Pandoc and LaTeX:
 
 ```bash
 sudo apt update
-sudo apt install pandoc texlive-latex-base texlive-latex-extra librsvg2-bin
+sudo apt install pandoc texlive-latex-base texlive-latex-extra
 ```
 
 ### Building
 
-Run the build script:
+This project uses `make`. To build all formats (HTML, PDF, TXT, Markdown):
 
 ```bash
-./build.sh
+make all
 ```
 
-This will generate:
+This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.
 
-- `output/book.html` - Combined HTML with MathJax
-- `output/book.pdf` - PDF (if LaTeX is installed)
+To clean the output directory:
 
-Open `output/book.html` in your browser to preview.
+```bash
+make clean
+```
+
+### Release Mode
+
+To simulate a release build (which generates clean filenames like `karmarank-manifesto-0.1.0.pdf`):
+
+```bash
+export RELEASE_MODE=true
+make all
+```
+
+## GitHub Actions & Releases
+
+This project uses **File-Driven Releases**.
+
+1.  **Continuous Integration**: On every push to `main`, the book is built and artifacts are uploaded to the action run.
+2.  **Automated Releases**: To cut a new public release:
+    - Edit `metadata.yaml` and bump the `version` (e.g., `0.1.0` -> `0.1.1`).
+    - Commit and push to `main`.
+    - GitHub Actions will detect the version bump and automatically create a GitHub Release with the tag `v0.1.1` and attach the built artifacts.
 
 ## LaTeX Math Support
 
@@ -45,55 +66,15 @@ The book uses LaTeX math notation throughout. The setup supports:
 - **Inline math**: `$x = y$` (recommended for PDF compatibility)
 - **Block math**: `$$x = y$$` (recommended for PDF compatibility)
 
-**Note**: While Pandoc supports `\(...\)` and `\[...\]` syntax, these may not work reliably for PDF generation. For best compatibility across HTML and PDF formats, use `$...$` for inline math and `$$...$$` for block math.
-
-## GitHub Actions
-
-On push to `main` or `master`, GitHub Actions will:
-
-1. Build HTML and PDF
-2. Upload artifacts
-3. Deploy HTML to GitHub Pages (if enabled)
-
-After the first workflow run, configure GitHub Pages in your repo settings to deploy from the `gh-pages` branch.
-
 ## Adding Images
 
-You can include images (including SVG diagrams) using standard Markdown syntax:
+Images should be placed in `content/images/`. Reference them in Markdown relative to the `content/` directory:
 
 ```markdown
-![Alt text](images/diagram.svg)
+![Alt text](images/diagram.png)
 ```
 
-For sizing control, use Pandoc's extended syntax:
-
-```markdown
-![Alt text](images/diagram.svg){width=400px}
-```
-
-**SVG Support:**
-
-- **HTML**: SVG renders natively
-- **PDF**: Requires `librsvg2-bin` (rsvg-convert) or `inkscape` for conversion
-
-## Editing Chapters
-
-Chapters are numbered for explicit ordering:
-
-- `00-introduction.md`
-- `01-origin-story.md`
-- `02-readme.md`
-- etc.
-
-Files are processed in alphabetical order, so the numbering ensures correct sequence.
-
-## Contributing
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
-
-- Reporting errata and application feedback
-- Submitting pull requests
-- Copyright and attribution policies
+**Note:** We use PNG format for diagrams to ensure consistent rendering across HTML and PDF output.
 
 ## License
 
