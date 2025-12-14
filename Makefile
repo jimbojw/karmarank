@@ -1,0 +1,143 @@
+# Variables
+METADATA := metadata.yaml
+CONTENT_DIR := content
+OUTPUT_DIR := output
+TEMPLATE_DIR := templates
+IMAGES_DIR := $(CONTENT_DIR)/images
+
+# Version info
+VERSION := $(shell grep "version:" $(METADATA) | cut -d'"' -f2)
+HASH := $(shell git rev-parse --short HEAD 2>/dev/null || echo "dev")
+DATE := $(shell date +%Y-%m-%d)
+
+# Base filename logic
+ifdef RELEASE_MODE
+    FILENAME_BASE := karmarank-manifesto-$(VERSION)
+else
+    FILENAME_BASE := karmarank-manifesto-$(VERSION)-$(DATE)-$(HASH)
+endif
+
+# Source files (sorted)
+CHAPTERS := $(sort $(wildcard $(CONTENT_DIR)/*.md))
+
+# Output files
+HTML_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).html
+PDF_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).pdf
+TXT_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).txt
+MD_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).md
+INDEX_FILE := $(OUTPUT_DIR)/index.html
+
+# Tools
+PANDOC := pandoc
+
+.PHONY: all clean html pdf txt md release directories prepare-images
+
+all: directories prepare-images html pdf txt md index
+
+directories:
+	@mkdir -p $(OUTPUT_DIR)
+
+# Copy images to output directory for HTML
+prepare-images: directories
+	@if [ -d "$(IMAGES_DIR)" ]; then \
+		mkdir -p $(OUTPUT_DIR)/images; \
+		cp -r $(IMAGES_DIR)/* $(OUTPUT_DIR)/images/; \
+	fi
+
+# HTML Build
+html: $(HTML_FILE)
+$(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html
+	@echo "Building HTML..."
+	$(PANDOC) \
+		$(CHAPTERS) \
+		--resource-path=$(CONTENT_DIR) \
+		--metadata-file=$(METADATA) \
+		--template=$(TEMPLATE_DIR)/book.html \
+		--standalone \
+		--toc \
+		--toc-depth=2 \
+		--mathjax \
+		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@echo "✓ HTML: $@"
+
+# PDF Build
+pdf: $(PDF_FILE)
+$(PDF_FILE): $(CHAPTERS) $(METADATA)
+	@echo "Building PDF..."
+	@if command -v pdflatex >/dev/null; then \
+		$(PANDOC) \
+			$(CHAPTERS) \
+			--resource-path=$(CONTENT_DIR) \
+			--metadata-file=$(METADATA) \
+			--from=markdown+tex_math_dollars+tex_math_double_backslash \
+			--pdf-engine=pdflatex \
+			--toc \
+			--toc-depth=2 \
+			--variable=geometry:margin=1.5in \
+			--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+			--output=$@; \
+		echo "✓ PDF: $@"; \
+	else \
+		echo "⚠ Skipping PDF (pdflatex not found)"; \
+	fi
+
+# Plain Text Build
+txt: $(TXT_FILE)
+$(TXT_FILE): $(CHAPTERS) $(METADATA)
+	@echo "Building Plain Text..."
+	$(PANDOC) \
+		$(CHAPTERS) \
+		--resource-path=$(CONTENT_DIR) \
+		--metadata-file=$(METADATA) \
+		--to plain \
+		--standalone \
+		--columns=72 \
+		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@echo "✓ Plain Text: $@"
+
+# Combined Markdown Build
+md: $(MD_FILE)
+$(MD_FILE): $(CHAPTERS) $(METADATA)
+	@echo "Building Combined Markdown..."
+	@{ \
+		cat $(METADATA); \
+		echo ""; \
+		grep "^title:" $(METADATA) | cut -d'"' -f2 | sed 's/^/# /'; \
+		echo ""; \
+		grep "^subtitle:" $(METADATA) | cut -d'"' -f2 | sed 's/^/**/;s/$$/**/'; \
+		echo ""; \
+		grep "^author:" $(METADATA) | cut -d'"' -f2 | sed 's/^/By /'; \
+		echo ""; \
+		echo "> Version: $(VERSION) ($(DATE)-$(HASH))"; \
+		echo ""; \
+		awk 'FNR==1{print ""}1' $(CHAPTERS); \
+	} > $@
+	@echo "✓ Markdown: $@"
+
+# Index Page (Landing Page)
+index: $(INDEX_FILE)
+$(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html
+	@echo "Building Landing Page..."
+	$(PANDOC) \
+		index.md \
+		--metadata-file=$(METADATA) \
+		--template=$(TEMPLATE_DIR)/book.html \
+		--standalone \
+		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@# Replace placeholders
+	@if command -v perl >/dev/null; then \
+		perl -pi -e "s/__HTML_FILENAME__/$(FILENAME_BASE).html/g" $@; \
+		perl -pi -e "s/__PDF_FILENAME__/$(FILENAME_BASE).pdf/g" $@; \
+		perl -pi -e "s/__TXT_FILENAME__/$(FILENAME_BASE).txt/g" $@; \
+	else \
+		sed -i "s/__HTML_FILENAME__/$(FILENAME_BASE).html/g" $@; \
+		sed -i "s/__PDF_FILENAME__/$(FILENAME_BASE).pdf/g" $@; \
+		sed -i "s/__TXT_FILENAME__/$(FILENAME_BASE).txt/g" $@; \
+	fi
+	@echo "✓ Landing Page: $@"
+
+clean:
+	rm -rf $(OUTPUT_DIR)

@@ -19,38 +19,37 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended librsvg2-bin
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended
 
       - name: Build HTML and PDF
         run: |
-          chmod +x build.sh
-          ./build.sh
+          make all
 
       - name: Upload HTML artifact
         uses: actions/upload-artifact@v4
         with:
           name: book-html
-          path: output/book.html
+          path: output/*.html
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: book-pdf
-          path: output/book.pdf
+          path: output/*.pdf
           if-no-files-found: ignore
 
       - name: Upload Markdown artifact
         uses: actions/upload-artifact@v4
         with:
           name: book-markdown
-          path: output/book.md
+          path: output/*.md
           if-no-files-found: ignore
 
       - name: Upload Plain Text artifact
         uses: actions/upload-artifact@v4
         with:
           name: book-text
-          path: output/book.txt
+          path: output/*.txt
           if-no-files-found: ignore
 
       - name: Deploy to GitHub Pages

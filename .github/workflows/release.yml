@@ -6,9 +6,9 @@ on:
       - main
       - master
     paths:
-      - 'metadata.yaml' # Only trigger when metadata might have changed
-      - 'content/**'    # Or content (though strictly we only release on version bump)
-      - '.github/workflows/release.yml'
+      - "metadata.yaml" # Only trigger when metadata might have changed
+      - "content/**" # Or content (though strictly we only release on version bump)
+      - ".github/workflows/release.yml"
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Get Version
         id: get_version
         run: |
@@ -42,13 +42,13 @@ jobs:
         if: steps.check_tag.outputs.exists == 'false'
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended librsvg2-bin
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended
 
       - name: Build Artifacts
         if: steps.check_tag.outputs.exists == 'false'
         run: |
-          chmod +x build.sh
-          ./build.sh
+          export RELEASE_MODE=true
+          make all
 
       - name: Create Release
         if: steps.check_tag.outputs.exists == 'false'
@@ -59,8 +59,8 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            output/karmarank-manifesto-*.pdf
-            output/karmarank-manifesto-*.html
-            output/karmarank-manifesto-*.txt
-            output/karmarank-manifesto-*.md
+            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.pdf
+            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.html
+            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.txt
+            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.md
           generate_release_notes: true
