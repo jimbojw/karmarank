@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'metadata.yaml' # Only trigger when metadata might have changed
+      - 'content/**'    # Or content (though strictly we only release on version bump)
+      - '.github/workflows/release.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Get Version
+        id: get_version
+        run: |
+          VERSION=$(grep "version:" metadata.yaml | cut -d'"' -f2)
+          echo "PROJECT_VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Detected version: $VERSION"
+
+      - name: Check if Tag Exists
+        id: check_tag
+        run: |
+          if git ls-remote --exit-code origin refs/tags/v${{ env.PROJECT_VERSION }} >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Tag v${{ env.PROJECT_VERSION }} already exists. Skipping release."
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Tag v${{ env.PROJECT_VERSION }} does not exist. Proceeding with release."
+          fi
+
+      - name: Install dependencies
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended librsvg2-bin
+
+      - name: Build Artifacts
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Create Release
+        if: steps.check_tag.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ env.PROJECT_VERSION }}
+          name: Release v${{ env.PROJECT_VERSION }}
+          draft: false
+          prerelease: false
+          files: |
+            output/karmarank-manifesto-*.pdf
+            output/karmarank-manifesto-*.html
+            output/karmarank-manifesto-*.txt
+            output/karmarank-manifesto-*.md
+          generate_release_notes: true
