@@ -1,14 +1,15 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "metadata.yaml" # Only trigger when metadata might have changed
-      - "content/**" # Or content (though strictly we only release on version bump)
-      - ".github/workflows/release.yml"
+  # push:
+  #   branches:
+  #     - main
+  #     - master
+  #   paths:
+  #     - "metadata.yaml" # Only trigger when metadata might have changed
+  #     - "content/**" # Or content (though strictly we only release on version bump)
+  #     - ".github/workflows/release.yml"
+  workflow_dispatch: # Allows manual triggering
 
 permissions:
   contents: write
