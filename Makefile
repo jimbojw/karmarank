@@ -31,9 +31,11 @@ INDEX_FILE := $(OUTPUT_DIR)/index.html
 # Tools
 PANDOC := pandoc
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images
+README_FILE := README.md
 
-all: directories prepare-images html pdf epub txt md index
+.PHONY: all clean html pdf epub txt md release directories prepare-images readme
+
+all: directories prepare-images html pdf epub txt md index readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -158,6 +160,31 @@ $(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 		sed -i "s/__EPUB_FILENAME__/$(FILENAME_BASE).epub/g" $@; \
 	fi
 	@echo "✓ Landing Page: $@"
+
+# README Build
+readme: $(README_FILE)
+$(README_FILE): $(TEMPLATE_DIR)/README.template.md $(CHAPTERS) content/01-tldr.md
+	@echo "Generating README.md..."
+	@cp $(TEMPLATE_DIR)/README.template.md $@
+	@# Inject TL;DR (skip first 2 lines: header and blank)
+	@{ \
+		TMP=$$(mktemp); \
+		tail -n +3 content/01-tldr.md > $$TMP; \
+		sed -i "/<!-- TLDR_PLACEHOLDER -->/r $$TMP" $@; \
+		rm $$TMP; \
+	}
+	@# Generate TOC (using grep and sed to format links)
+	@{ \
+		TMP=$$(mktemp); \
+		echo "" > $$TMP; \
+		for f in $(CHAPTERS); do \
+			TITLE=$$(grep "^# " $$f | head -n 1 | sed 's/^# //'); \
+			echo "- [$$TITLE]($$f)" >> $$TMP; \
+		done; \
+		sed -i "/<!-- TOC_PLACEHOLDER -->/r $$TMP" $@; \
+		rm $$TMP; \
+	}
+	@echo "✓ README.md updated"
 
 clean:
 	rm -rf $(OUTPUT_DIR)

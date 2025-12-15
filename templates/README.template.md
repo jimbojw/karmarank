@@ -12,29 +12,10 @@ This repository contains the source code for _The KarmaRank Manifesto_, a book a
 ## TL;DR
 
 <!-- TLDR_PLACEHOLDER -->
-Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
-
-This document patches the "Default Engineering Worldview" (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph. It explains how to decouple your self-worth from your rating, optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local **Calibration Cylinder**.
 
 ## Table of Contents
 
 <!-- TOC_PLACEHOLDER -->
-
-- [License: CC-BY-NC-SA-4.0](content/00-license.md)
-- [TL;DR](content/01-tldr.md)
-- [Introduction: The Frame of the Game](content/02-introduction.md)
-- [KarmaRank: Origin Story (with Math)](content/03-origin-story.md)
-- [SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview](content/04-security-advisory.md)
-- [Law #1: Separation of Private & Firm Ledgers](content/05-law-1-two-ledgers.md)
-- [Law #2: The Rating Is The Job](content/06-law-2-rating-is-job.md)
-- [Law #3: Impact = Who Cares?](content/07-law-3-impact.md)
-- [Meta-Law: You Do Not Talk About KarmaRank](content/08-meta-law.md)
-- [The Calibration Cylinder: Topology of the Trial](content/09-calibration-cylinder.md)
-- [Tactics I: Karma-Driven Development (KDD)](content/10-tactics-1-kdd.md)
-- [Tactics II: Manufacturing Evidence (The Brief)](content/11-tactics-2-brief.md)
-- [The Exit: The Market Check](content/12-exit.md)
-- [Conclusion: The Clear Pill](content/13-conclusion-the-clear-pill.md)
-- [Appendix](content/14-appendix.md)
 
 ## Repository Structure
 
