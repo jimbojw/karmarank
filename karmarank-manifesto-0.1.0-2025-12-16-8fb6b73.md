@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-16-db15458)
+> Version: 0.1.0 (2025-12-16-8fb6b73)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -399,13 +399,13 @@ The Org Chart implies a chain of command. The reality as it applies to you is a 
 
 You are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
-![Circle of You and your Peers](images/peer-circle.png)
+![Circle of You and your Peers under your shared Manager](images/peer-circle.png)
 
 Your Manager is at the center of their own circle, surrounded by their **Peer Managers**. The Skip-Level (manager's manager) sits above, the center of their own circle of peers, looking down into the cylinder.
 
 So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
 
-![Calibration Cylinder](images/calibration-cylinder.png)
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (MP, Prosecution/Jury) and your Skip Manager (Judge)](images/calibration-cylinder.png)
 
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
 
@@ -684,16 +684,16 @@ Humans are visual creatures. A wall of text is a barrier; an image is a bypass t
 
 Whenever possible, **do not just state the number. Show the delta.**
 
-If you are claiming that your new UI is better, do not just write "1.53 points higher." Paste a side-by-side histogram.
+If you are claiming that your new UI is better, do not just write "1.53 points higher." Deploy a diverging stacked bar chart.
 
-- **Left:** A red, messy distribution (The Old Way).
-- **Right:** A green, tight distribution shifted to the right (The New Way).
+- **Top:** Distribution of sentiment scores _before_ development.
+- **Bottom:** Distribution of sentiment scores _after_ implementation.
+
+![Example diverging stacked bar charts for showing quantified sentiment change](images/diverging-stacked-bar-chart.png)
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
-
-<!-- TODO: Image - The Visual Kill Shot Example. Side-by-side histograms: 'The Old Way' (red, wide variance) vs 'The New Way' (green, tight variance, shifted right). -->
-
-![Example visual "kill shots" for selling numeric improvements](images/visual-kill-shot.png)
+    
+If you don't know what data visualizations to make, ask your AI of choice something like "what's the canonical/persuasive way to visualize &lt;your kind of data&gt;?".
 
 ## 4. Constructing the Brief
 
@@ -708,6 +708,8 @@ Your final deliverable to your manager—the document you hand them two weeks be
   - "Saved **20 hours/week** of engineering time."
   - _Insert Screenshot of Ticket Volume dropping off a cliff._
 - **The Witness:** "As [Director Alice] noted, this 'fundamentally changed how we make decisions'."
+
+Your company or team probably keeps a specific internal doc or side template. Use it. Your goal is low cognitive load, not art.
 
 ## 5. Is This Lying?
 
