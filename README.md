@@ -6,8 +6,8 @@ This repository contains the source code for _The KarmaRank Manifesto_, a book a
 
 ## Read the Book
 
-- [**Read Online (HTML)**](https://karmarank.github.io/karmarank/)
-- **Download**: [PDF](https://github.com/jimbojw/karmarank/releases/latest) | [ePub](https://github.com/jimbojw/karmarank/releases/latest) | [Plain Text](https://github.com/jimbojw/karmarank/releases/latest)
+- [**Read Online (HTML)**](https://jimbojw.github.io/karmarank/karmarank-manifesto.html)
+- **Download**: [PDF](https://jimbojw.github.io/karmarank/karmarank-manifesto.pdf) | [ePub](https://jimbojw.github.io/karmarank/karmarank-manifesto.epub) | [Plain Text](https://jimbojw.github.io/karmarank/karmarank-manifesto.txt)
 
 ## TL;DR
 

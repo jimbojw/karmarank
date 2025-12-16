@@ -33,9 +33,9 @@ PANDOC := pandoc
 
 README_FILE := README.md
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images readme
+.PHONY: all clean html pdf epub txt md release directories prepare-images readme latest
 
-all: directories prepare-images html pdf epub txt md index readme
+all: directories prepare-images html pdf epub txt md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -160,6 +160,15 @@ $(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 		sed -i "s/__EPUB_FILENAME__/$(FILENAME_BASE).epub/g" $@; \
 	fi
 	@echo "✓ Landing Page: $@"
+
+# Latest Copies (Permalinks)
+latest: $(HTML_FILE) $(PDF_FILE) $(EPUB_FILE) $(TXT_FILE)
+	@echo "Creating 'latest' copies..."
+	@cp $(HTML_FILE) $(OUTPUT_DIR)/karmarank-manifesto.html
+	@cp $(PDF_FILE) $(OUTPUT_DIR)/karmarank-manifesto.pdf
+	@cp $(EPUB_FILE) $(OUTPUT_DIR)/karmarank-manifesto.epub
+	@cp $(TXT_FILE) $(OUTPUT_DIR)/karmarank-manifesto.txt
+	@echo "✓ Latest copies created"
 
 # README Build
 readme: $(README_FILE)
