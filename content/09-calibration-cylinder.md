@@ -14,13 +14,13 @@ The Org Chart implies a chain of command. The reality as it applies to you is a 
 
 You are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
-![Circle of You and your Peers](images/peer-circle.png)
+![Circle of You and your Peers under your shared Manager](images/peer-circle.png)
 
 Your Manager is at the center of their own circle, surrounded by their **Peer Managers**. The Skip-Level (manager's manager) sits above, the center of their own circle of peers, looking down into the cylinder.
 
 So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
 
-![Calibration Cylinder](images/calibration-cylinder.png)
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (MP, Prosecution/Jury) and your Skip Manager (Judge)](images/calibration-cylinder.png)
 
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
 
