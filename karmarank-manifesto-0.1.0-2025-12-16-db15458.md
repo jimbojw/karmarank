@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-14-25bac93)
+> Version: 0.1.0 (2025-12-16-db15458)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -37,7 +37,13 @@ For the full legal text, see the LICENSE file in the source repository.
 
 **Commercial Licensing:** For commercial use inquiries, please contact the author.
 
-# Introduction (don't skip)
+# TL;DR
+
+Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
+
+This document patches the "Default Engineering Worldview" (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph. It explains how to decouple your self-worth from your rating, optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local **Calibration Cylinder**.
+
+# Introduction: The Frame of the Game
 
 You are good at games. You understand games. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
 
