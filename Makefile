@@ -138,27 +138,15 @@ $(MD_FILE): $(CHAPTERS) $(METADATA) | directories
 
 # Index Page (Landing Page)
 index: $(INDEX_FILE)
-$(INDEX_FILE): index.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
+$(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 	@echo "Building Landing Page..."
 	$(PANDOC) \
-		index.md \
+		templates/index.template.md \
 		--metadata-file=$(METADATA) \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
 		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
-	@# Replace placeholders
-	@if command -v perl >/dev/null; then \
-		perl -pi -e "s/__HTML_FILENAME__/$(FILENAME_BASE).html/g" $@; \
-		perl -pi -e "s/__PDF_FILENAME__/$(FILENAME_BASE).pdf/g" $@; \
-		perl -pi -e "s/__TXT_FILENAME__/$(FILENAME_BASE).txt/g" $@; \
-		perl -pi -e "s/__EPUB_FILENAME__/$(FILENAME_BASE).epub/g" $@; \
-	else \
-		sed -i "s/__HTML_FILENAME__/$(FILENAME_BASE).html/g" $@; \
-		sed -i "s/__PDF_FILENAME__/$(FILENAME_BASE).pdf/g" $@; \
-		sed -i "s/__TXT_FILENAME__/$(FILENAME_BASE).txt/g" $@; \
-		sed -i "s/__EPUB_FILENAME__/$(FILENAME_BASE).epub/g" $@; \
-	fi
 	@echo "✓ Landing Page: $@"
 
 # Latest Copies (Permalinks)

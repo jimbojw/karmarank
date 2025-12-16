@@ -7,12 +7,12 @@ You are good at games. You understand rules. But the modern workplace runs on a 
 
 This manifesto is a debugger for your career. It reveals the unstated social physics of performance appraisal, promoting a simple, rigorous framework for navigating the corporate "calibration cylinder."
 
-## Read the Book
+## Start Reading
 
-- [**Read Online (HTML)**](__HTML_FILENAME__)
-- [**Download PDF**](__PDF_FILENAME__)
-- [**Download ePub**](__EPUB_FILENAME__)
-- [**Download Plain Text**](__TXT_FILENAME__)
+- [**Read Online (HTML)**](./karmarank-manifesto.html)
+- [**Download PDF**](./karmarank-manifesto.pdf)
+- [**Download ePub**](./karmarank-manifesto.epub)
+- [**Download Plain Text**](./karmarank-manifesto.txt)
 
 ## Source Code
 
