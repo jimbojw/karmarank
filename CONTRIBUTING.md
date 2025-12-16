@@ -2,35 +2,24 @@
 
 Thank you for your interest in contributing! This document outlines how you can help improve the book and share your experiences.
 
-## Reporting Issues
+## Community & Feedback
 
-We welcome issues for several purposes:
+We welcome your stories, questions, and corrections. Here is where to put them:
 
-### Errata
+### 💬 GitHub Discussions
+Use [Discussions](https://github.com/jimbojw/karmarank/discussions) for:
+- **Questions:** "How do I apply this to...?"
+- **Stories:** Share your own experiences with calibration.
+- **Ideas:** Propose new concepts that aren't fully formed yet.
+- **Debate:** Challenge the manifesto's assertions.
 
-Found a typo, factual error, or unclear passage? Please open an issue with:
+### 🐛 GitHub Issues
+Use [Issues](https://github.com/jimbojw/karmarank/issues) for **actionable tasks** only:
+- **Typos & Grammatical Errors.**
+- **Rendering Bugs** (PDF looks weird).
+- **Specific Content Requests** (with a clear scope).
 
-- The chapter/section name
-- The specific text in question
-- Your suggested correction or clarification
-
-### Application Feedback
-
-Tried the methods described in the text? We'd love to hear about it:
-
-- **Success stories**: "I applied KDD and got promoted" or "The Brief format worked perfectly"
-- **Failures**: "I tried this approach and it backfired at appraisal time" (include context if possible)
-- **Variations**: "This worked, but I had to modify it because..."
-
-### Organizational Differences
-
-Your organization doesn't match the model described? Share your experience:
-
-- "My org isn't like that because..." (with specific examples)
-- How your calibration/performance review process differs
-- What worked or didn't work in your context
-
-All feedback helps make the text more accurate and useful.
+_Please do not open an Issue for general discussion. Use the Discussion feature instead._
 
 ## Contributing via Pull Request
 
