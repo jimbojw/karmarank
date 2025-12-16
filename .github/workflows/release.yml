@@ -65,4 +65,9 @@ jobs:
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.txt
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.epub
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.md
+            output/karmarank-manifesto.pdf
+            output/karmarank-manifesto.html
+            output/karmarank-manifesto.txt
+            output/karmarank-manifesto.epub
+            output/karmarank-manifesto.md
           generate_release_notes: true
