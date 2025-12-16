@@ -62,16 +62,16 @@ Humans are visual creatures. A wall of text is a barrier; an image is a bypass t
 
 Whenever possible, **do not just state the number. Show the delta.**
 
-If you are claiming that your new UI is better, do not just write "1.53 points higher." Paste a side-by-side histogram.
+If you are claiming that your new UI is better, do not just write "1.53 points higher." Deploy a diverging stacked bar chart.
 
-- **Left:** A red, messy distribution (The Old Way).
-- **Right:** A green, tight distribution shifted to the right (The New Way).
+- **Top:** Distribution of sentiment scores _before_ development.
+- **Bottom:** Distribution of sentiment scores _after_ implementation.
+
+![Example diverging stacked bar charts for showing quantified sentiment change](images/diverging-stacked-bar-chart.png)
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
-
-<!-- TODO: Image - The Visual Kill Shot Example. Side-by-side histograms: 'The Old Way' (red, wide variance) vs 'The New Way' (green, tight variance, shifted right). -->
-
-![Example visual "kill shots" for selling numeric improvements](images/visual-kill-shot.png)
+    
+If you don't know what data visualizations to make, ask your AI of choice something like "what's the canonical/persuasive way to visualize <your kind of data>?".
 
 ## 4. Constructing the Brief
 
@@ -86,6 +86,8 @@ Your final deliverable to your manager—the document you hand them two weeks be
   - "Saved **20 hours/week** of engineering time."
   - _Insert Screenshot of Ticket Volume dropping off a cliff._
 - **The Witness:** "As [Director Alice] noted, this 'fundamentally changed how we make decisions'."
+
+Your company or team probably keeps a specific internal doc or side template. Use it. Your goal is low cognitive load, not art.
 
 ## 5. Is This Lying?
 
