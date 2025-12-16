@@ -71,7 +71,7 @@ If you are claiming that your new UI is better, do not just write "1.53 points h
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
     
-If you don't know what data visualizations to make, ask your AI of choice something like "what's the canonical/persuasive way to visualize <your kind of data>?".
+If you don't know what data visualizations to make, ask your AI of choice something like "what's the canonical/persuasive way to visualize &lt;your kind of data&gt;?".
 
 ## 4. Constructing the Brief
 
