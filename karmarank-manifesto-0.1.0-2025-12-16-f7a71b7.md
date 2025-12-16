@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-16-8fb6b73)
+> Version: 0.1.0 (2025-12-16-f7a71b7)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -33,7 +33,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 - **NonCommercial** — You may not use the material for commercial purposes.
 - **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
-For the full legal text, see the LICENSE file in the source repository.
+For the full legal text, see the LICENSE file in the source repository ([jimbojw/karmarank](https://github.com/jimbojw/karmarank)).
 
 **Commercial Licensing:** For commercial use inquiries, please contact the author.
 

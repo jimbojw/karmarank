@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.1.0 (2025-12-16-8fb6b73)
+0.1.0 (2025-12-16-f7a71b7)
 
 License: CC-BY-NC-SA-4.0
 
@@ -22,7 +22,8 @@ Under the following terms:
     you must distribute your contributions under the same license as the
     original.
 
-For the full legal text, see the LICENSE file in the source repository.
+For the full legal text, see the LICENSE file in the source repository
+(jimbojw/karmarank).
 
 Commercial Licensing: For commercial use inquiries, please contact the
 author.
