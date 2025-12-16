@@ -163,13 +163,6 @@ readme: $(README_FILE)
 $(README_FILE): $(TEMPLATE_DIR)/README.template.md $(CHAPTERS) content/01-tldr.md
 	@echo "Generating README.md..."
 	@cp $(TEMPLATE_DIR)/README.template.md $@
-	@# Inject TL;DR (skip first 2 lines: header and blank)
-	@{ \
-		TMP=$$(mktemp); \
-		tail -n +3 content/01-tldr.md > $$TMP; \
-		sed -i "/<!-- TLDR_PLACEHOLDER -->/r $$TMP" $@; \
-		rm $$TMP; \
-	}
 	@# Generate TOC (using grep and sed to format links)
 	@{ \
 		TMP=$$(mktemp); \
