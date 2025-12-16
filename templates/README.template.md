@@ -1,13 +1,16 @@
-# The KarmaRank Manifesto
+# The KarmaRank Manifesto  
+> Optimizing the Unspoken Corporate Objective Function
 
-**Subtitle:** Optimizing the Unspoken Corporate Objective Function
+You are good at games. You understand systems.  
+So why does your performance review feel like gaslighting?
 
-This repository contains the source code for _The KarmaRank Manifesto_, a book about understanding and optimizing corporate performance evaluation systems.
+**KarmaRank** is a framework for understanding how you are _actually_ evaluated in modern corporations. Not the HR story, but the real objective function.
 
-## Read the Book
+## Start Reading
 
 - [**Read Online (HTML)**](https://jimbojw.github.io/karmarank/karmarank-manifesto.html)
-- **Download**: [PDF](https://jimbojw.github.io/karmarank/karmarank-manifesto.pdf) | [ePub](https://jimbojw.github.io/karmarank/karmarank-manifesto.epub) | [Plain Text](https://jimbojw.github.io/karmarank/karmarank-manifesto.txt)
+- **Download Latest**: [PDF](https://jimbojw.github.io/karmarank/karmarank-manifesto.pdf) | [ePub](https://jimbojw.github.io/karmarank/karmarank-manifesto.epub) | [Plain Text](https://jimbojw.github.io/karmarank/karmarank-manifesto.txt)
+- _Looking for stable versions? View [Releases](https://github.com/jimbojw/karmarank/releases)._
 
 ## TL;DR
 
