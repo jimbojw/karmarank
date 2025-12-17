@@ -2,6 +2,7 @@
 METADATA := metadata.yaml
 CONTENT_DIR := content
 OUTPUT_DIR := output
+BUILD_DIR := build
 TEMPLATE_DIR := templates
 IMAGES_DIR := $(CONTENT_DIR)/images
 
@@ -20,6 +21,10 @@ endif
 # Source files (sorted)
 CHAPTERS := $(sort $(wildcard $(CONTENT_DIR)/*.md))
 
+# Transformed chapters directory (for pandoc builds)
+TRANSFORMED_DIR := $(BUILD_DIR)/chapters
+TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPTERS))
+
 # Output files
 HTML_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).html
 PDF_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).pdf
@@ -33,12 +38,13 @@ PANDOC := pandoc
 
 README_FILE := README.md
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images readme latest
+.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest
 
-all: directories prepare-images html pdf epub txt md index latest readme
+all: directories prepare-images prepare-chapters html pdf epub txt md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(BUILD_DIR)
 
 # Copy images to output directory for HTML
 prepare-images: directories
@@ -47,13 +53,28 @@ prepare-images: directories
 		cp -r $(IMAGES_DIR)/* $(OUTPUT_DIR)/images/; \
 	fi
 
+# Transform markdown links for pandoc (strip file paths before # anchors)
+prepare-chapters: directories
+	@echo "Preparing transformed chapters for pandoc..."
+	@mkdir -p $(TRANSFORMED_DIR)
+	@for f in $(CHAPTERS); do \
+		dest=$$(echo $$f | sed 's|$(CONTENT_DIR)|$(TRANSFORMED_DIR)|'); \
+		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" $$f > $$dest; \
+	done
+	@# Copy images to build directory for pandoc resource-path
+	@if [ -d "$(IMAGES_DIR)" ]; then \
+		mkdir -p $(TRANSFORMED_DIR)/images; \
+		cp -r $(IMAGES_DIR)/* $(TRANSFORMED_DIR)/images/; \
+	fi
+	@echo "✓ Chapters transformed"
+
 # HTML Build
 html: $(HTML_FILE)
-$(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories
+$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories prepare-chapters
 	@echo "Building HTML..."
 	$(PANDOC) \
-		$(CHAPTERS) \
-		--resource-path=$(CONTENT_DIR) \
+		$(TRANSFORMED_CHAPTERS) \
+		--resource-path=$(TRANSFORMED_DIR) \
 		--metadata-file=$(METADATA) \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
@@ -67,12 +88,12 @@ $(HTML_FILE): $(CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 
 # PDF Build
 pdf: $(PDF_FILE)
-$(PDF_FILE): $(CHAPTERS) $(METADATA) | directories
+$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 	@echo "Building PDF..."
 	@if command -v pdflatex >/dev/null; then \
 		$(PANDOC) \
-			$(CHAPTERS) \
-			--resource-path=$(CONTENT_DIR) \
+			$(TRANSFORMED_CHAPTERS) \
+			--resource-path=$(TRANSFORMED_DIR) \
 			--metadata-file=$(METADATA) \
 			--from=markdown+tex_math_dollars+tex_math_double_backslash \
 			--pdf-engine=pdflatex \
@@ -88,11 +109,11 @@ $(PDF_FILE): $(CHAPTERS) $(METADATA) | directories
 
 # ePub Build
 epub: $(EPUB_FILE)
-$(EPUB_FILE): $(CHAPTERS) $(METADATA) | directories
+$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 	@echo "Building ePub..."
 	$(PANDOC) \
-		$(CHAPTERS) \
-		--resource-path=$(CONTENT_DIR) \
+		$(TRANSFORMED_CHAPTERS) \
+		--resource-path=$(TRANSFORMED_DIR) \
 		--metadata-file=$(METADATA) \
 		--toc \
 		--toc-depth=2 \
@@ -104,11 +125,11 @@ $(EPUB_FILE): $(CHAPTERS) $(METADATA) | directories
 
 # Plain Text Build
 txt: $(TXT_FILE)
-$(TXT_FILE): $(CHAPTERS) $(METADATA) | directories
+$(TXT_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 	@echo "Building Plain Text..."
 	$(PANDOC) \
-		$(CHAPTERS) \
-		--resource-path=$(CONTENT_DIR) \
+		$(TRANSFORMED_CHAPTERS) \
+		--resource-path=$(TRANSFORMED_DIR) \
 		--metadata-file=$(METADATA) \
 		--to plain \
 		--standalone \
@@ -178,3 +199,4 @@ $(README_FILE): $(TEMPLATE_DIR)/README.template.md $(CHAPTERS) content/01-tldr.m
 
 clean:
 	rm -rf $(OUTPUT_DIR)
+	rm -rf $(BUILD_DIR)

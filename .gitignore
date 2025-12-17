@@ -1,6 +1,9 @@
 # Output directory
 output/
 
+# Build directory (intermediary files)
+build/
+
 # OS files
 .DS_Store
 Thumbs.db
