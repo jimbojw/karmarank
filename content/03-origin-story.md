@@ -151,11 +151,11 @@ The leap from Net Karma to KarmaRank comes from layering in a few more observati
 - **Time Sensitivity:** Memories are short. "What have you done for me lately?"
 - **Constraints:** Advocacy and rewards are both constrained resources.
 
-So a full definition ends up looking like this:
+So a complete definition ends up looking like this:
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
-We'll talk more about the topology of the network and the constraints in later chapters, starting with the [Calibration Cylinder](./09-calibration-cylinder.md). For now, it's sufficient to observe that the shorthand equation, $K = \sum_{i} S_i \cdot k_i$, suffices as a _first approximation_. A shorthand you can apply immediately.
+This full model explains the complex topology of the [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial) (covered later). But for daily operation, the linear approximation $K = \sum_{i} S_i \cdot k_i$ is sufficient.
 
 Everyone has the same job: to secure timely, **Status-Weighted Stories** in a _dynamic_, _heterogenous_, _adversarial_ field, and call this narrative aggregation "impact."
 
