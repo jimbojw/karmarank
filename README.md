@@ -18,9 +18,9 @@ Corporate performance evaluation is not a function of work quality; it is a func
 
 This document patches the "Default Engineering Worldview" (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
 
-![Net Status-Weighted Karma Equation](images/net-status-weighted-karma.png)
+A complete KarmaRank algorithm would model _time-decayed_, _capital-constrained_, _adversarial eigenvector-sponsorship_. But for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
-A complete **KarmaRank** algorithm would be a time-decayed, capital-constrained, adversarial eigenvector-sponsorship. But for the day-to-day practitioner, it suffices to focus on acquiring Net Status-Weighted Karma.
+![Net Status-Weighted Karma Equation, $K = \sum_{i} S_i \cdot k_i$](content/images/net-status-weighted-karma.png)
 
 $$
 K = \sum_{i} S_i \cdot k_i
@@ -28,7 +28,7 @@ $$
 
 Where:
 
-* $K$ is our **Net Status-Weighted Karma** in a given field: a company, a team, a subculture, a community.
+* $K$ is your Net Status-Weighted Karma in a given field: a company, a team, a subculture, a community.
 * $i$ is the index, ranging over the people whose opinions about you actually _travel_—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
 * $S_i$ is the witness's **Status** in this field—intentionally capitalized, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_.
 Here, 
