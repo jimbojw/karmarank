@@ -16,7 +16,7 @@ So why does your performance review feel like gaslighting?
 
 Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
 
-This document patches the "Default Engineering Worldview" (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
+This document patches the [Default Engineering Worldview](content/04-security-advisory.md) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
 
 A complete KarmaRank algorithm would model _time-decayed_, _capital-constrained_, _adversarial eigenvector-sponsorship_. But for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
@@ -34,7 +34,7 @@ Where:
 Here, 
 * $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
 
-The full document explains how to decouple your self-worth from your rating, optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local **Calibration Cylinder**.
+The full document explains how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
 
 ## Table of Contents
 
