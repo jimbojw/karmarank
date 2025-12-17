@@ -140,9 +140,9 @@
     {
       "id": "ks6fbUvyFMBTTfdWKuClQ",
       "type": "arrow",
-      "x": 431.34338791668,
-      "y": 348.6744689941407,
-      "width": 3.1552319380592166,
+      "x": 431.26787452412947,
+      "y": 348.6744689941406,
+      "width": 3.063497930177789,
       "height": 61.96868896484381,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -159,11 +159,11 @@
         "type": 2
       },
       "seed": 321084780,
-      "version": 275,
-      "versionNonce": 1208070252,
+      "version": 297,
+      "versionNonce": 1587465891,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1765575864368,
+      "boundElements": [],
+      "updated": 1765982770892,
       "link": null,
       "locked": false,
       "points": [
@@ -172,7 +172,7 @@
           0
         ],
         [
-          3.1552319380592166,
+          3.063497930177789,
           -61.96868896484381
         ]
       ],
@@ -211,8 +211,8 @@
       "index": "a4",
       "roundness": null,
       "seed": 1548944084,
-      "version": 159,
-      "versionNonce": 1759172308,
+      "version": 181,
+      "versionNonce": 455386883,
       "isDeleted": false,
       "boundElements": [
         {
@@ -220,16 +220,16 @@
           "type": "arrow"
         }
       ],
-      "updated": 1765575864367,
+      "updated": 1765982770889,
       "link": null,
       "locked": false,
-      "text": "Status of\nindividual",
+      "text": "Status of\nobserver",
       "fontSize": 20,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Status of\nindividual",
+      "originalText": "Status of\nobserver",
       "autoResize": true,
       "lineHeight": 1.25
     },

@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-16-f7a71b7)
+> Version: 0.1.0 (2025-12-17-58f0740)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -41,7 +41,28 @@ For the full legal text, see the LICENSE file in the source repository ([jimbojw
 
 Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
 
-This document patches the "Default Engineering Worldview" (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph. It explains how to decouple your self-worth from your rating, optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local **Calibration Cylinder**.
+This document patches the [Default Engineering Worldview](./04-security-advisory.md#security-advisory-five-vulnerabilities-in-the-default-engineering-worldview) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
+
+A complete KarmaRank algorithm would model _time-decayed_, _capital-constrained_, _adversarial eigenvector-sponsorship_. But for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
+
+![Net Status-Weighted Karma Equation](images/net-status-weighted-karma.png)
+
+$$
+K = \sum_{i} S_i \cdot k_i
+$$
+
+Where:
+
+* $K$ is your Net Status-Weighted Karma in a given field: a company, a team, a subculture, a community.
+* $i$ is the index, ranging over the people whose opinions about you actually _travel_—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
+* $S_i$ is the witness's **Status** in this field—intentionally capitalized, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_.
+Here, 
+* $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
+
+The full document explains how to decouple your self-worth from your rating ([Law #1](./05-law-1-two-ledgers.md#law-1-separation-of-private-firm-ledgers)),
+optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial).
+
+
 
 # Introduction: The Frame of the Game
 
@@ -214,17 +235,25 @@ A sociologist would say she had the right **habitus** for that field: the intern
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
-Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations.
+Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations (if ever).
 
 KarmaRank is basically my adaptation for that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't have to learn it all the hard way.
 
-## 8. From Net Karma to KarmaRank
+## 8. From Net Status-Weighted Karma to KarmaRank
 
-The leap from Net Karma to KarmaRank comes from realizing that everyone is playing the same game. That is, the formula is **transitive**.
+The leap from Net Karma to KarmaRank comes from layering in a few more observations:
 
-The people with high Status to you are themselves embedded in their own **field**, trying to secure karma from others who have high Status to them. People trade various forms of **capital**—social clout, headcount, literal budget, corporate rank, etc.—in order to improve their positions. Combine the individual perspective with Google's PageRank algorithm (iteratively re-scoring pages in the hyperlink graph) and you arrive at KarmaRank.
+- **Transitivity:** Everyone is playing the same game.
+- **Time Sensitivity:** Memories are short. "What have you done for me lately?"
+- **Constraints:** Advocacy and rewards are both constrained resources.
 
-Everyone has the same job: to secure **Status-Weighted Stories** in a **dynamic, heterogenous field**, and call this narrative aggregation "impact."
+So a complete definition ends up looking like this:
+
+> **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
+
+This full model explains the complex topology of the [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial) (covered later). But for daily operation, the linear approximation $K = \sum_{i} S_i \cdot k_i$ is sufficient.
+
+Everyone has the same job: to secure timely, **Status-Weighted Stories** in a _dynamic_, _heterogenous_, _adversarial_ field, and call this narrative aggregation "impact."
 
 Some people intuit this. Good for them. The rest of us have to write it down.
 
@@ -841,7 +870,7 @@ It is a complex, probabilistic state machine with inputs, outputs, and weighting
 
 Think of it this way: You are like a CPU. You are optimized for serial, logical, heavy-lift computation. To you, "politics" (rendering the social graphics) feels slow and inefficient. But you _can_ do it. You can run the simulation. It might take more effort, but you can execute the code.
 
-The "Political Animals" in your org? They are like GPUs. They render the social graphics instantly and effortlessly. But ask them to run the logic? Ask them to build the complex architecture? They struggle.
+The natural politicians in your org? They are like GPUs. They render the social graphics instantly and effortlessly. But ask them to run the logic? Ask them to build the complex architecture? They struggle.
 
 Once you accept that social dynamics are learnable skills rather than character flaws, you become a **Full-Stack Human**. You become a creature that can build the value _and_ sell the value. There is no ceiling for that archetype.
 
