@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-17-58f0740)
+> Version: 0.1.0 (2025-12-17-2636e33)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -434,7 +434,7 @@ Your Manager is at the center of their own circle, surrounded by their **Peer Ma
 
 So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
 
-![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (MP, Prosecution/Jury) and your Skip Manager (Judge)](images/calibration-cylinder.png)
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge)](images/calibration-cylinder.png)
 
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
 
@@ -532,6 +532,8 @@ I have bad news. The topology is fractal.
 - **The CEO** generates stories for the Board / Market.
 
 When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mistake it for "strategy" in the pure sense. It is a **Status-Weighted Story** presented to the Board of Directors (The Jury) and the Market (The Judge) to prove that the CEO is still a "High Performer."
+
+![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles](images/turtles-all-the-way-up.png)
 
 The cylinder goes up forever. The only thing that changes is the blast radius of the decisions.
 
