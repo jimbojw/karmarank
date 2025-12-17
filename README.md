@@ -18,9 +18,23 @@ Corporate performance evaluation is not a function of work quality; it is a func
 
 This document patches the "Default Engineering Worldview" (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
 
-![Net Status-Weighted Karma formula](./content/images/net-status-weighted-karma.png)
+![Net Status-Weighted Karma Equation](images/net-status-weighted-karma.png)
 
-It explains how to decouple your self-worth from your rating, optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local **Calibration Cylinder**.
+A complete **KarmaRank** algorithm would be a time-decayed, capital-constrained, adversarial eigenvector-sponsorship. But for the day-to-day practitioner, it suffices to focus on acquiring Net Status-Weighted Karma.
+
+$$
+K = \sum_{i} S_i \cdot k_i
+$$
+
+Where:
+
+* $K$ is our **Net Status-Weighted Karma** in a given field: a company, a team, a subculture, a community.
+* $i$ is the index, ranging over the people whose opinions about you actually _travel_—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
+* $S_i$ is the witness's **Status** in this field—intentionally capitalized, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_.
+Here, 
+* $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
+
+The full document explains how to decouple your self-worth from your rating, optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local **Calibration Cylinder**.
 
 ## Table of Contents
 

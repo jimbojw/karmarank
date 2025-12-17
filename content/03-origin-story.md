@@ -139,17 +139,25 @@ A sociologist would say she had the right **habitus** for that field: the intern
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
-Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations.
+Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations (if ever).
 
 KarmaRank is basically my adaptation for that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't have to learn it all the hard way.
 
-## 8. From Net Karma to KarmaRank
+## 8. From Net Status-Weighted Karma to KarmaRank
 
-The leap from Net Karma to KarmaRank comes from realizing that everyone is playing the same game. That is, the formula is **transitive**.
+The leap from Net Karma to KarmaRank comes from layering in a few more observations:
 
-The people with high Status to you are themselves embedded in their own **field**, trying to secure karma from others who have high Status to them. People trade various forms of **capital**—social clout, headcount, literal budget, corporate rank, etc.—in order to improve their positions. Combine the individual perspective with Google's PageRank algorithm (iteratively re-scoring pages in the hyperlink graph) and you arrive at KarmaRank.
+- **Transitivity:** Everyone is playing the same game.
+- **Time Sensitivity:** Memories are short. "What have you done for me lately?"
+- **Constraints:** Advocacy and rewards are both constrained resources.
 
-Everyone has the same job: to secure **Status-Weighted Stories** in a **dynamic, heterogenous field**, and call this narrative aggregation "impact."
+So a full definition ends up looking like this:
+
+> **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
+
+We'll talk more about the topology of the network and the constraints in later chapters, starting with the [Calibration Cylinder](./09-calibration-cylinder.md). For now, it's sufficient to observe that the shorthand equation, $K = \sum_{i} S_i \cdot k_i$, suffices as a _first approximation_. A shorthand you can apply immediately.
+
+Everyone has the same job: to secure timely, **Status-Weighted Stories** in a _dynamic_, _heterogenous_, _adversarial_ field, and call this narrative aggregation "impact."
 
 Some people intuit this. Good for them. The rest of us have to write it down.
 
