@@ -42,12 +42,13 @@ The full document explains how to decouple your self-worth from your rating ([La
 
 ## Repository Structure
 
+- `CONTRIBUTING.md` - Contribution guidelines
+- `Makefile` - Build configuration
 - `content/` - Markdown chapter files
 - `content/images/` - Image assets (diagrams, figures)
-- `templates/` - Pandoc HTML templates
-- `output/` - Generated files (gitignored)
 - `metadata.yaml` - Book metadata
-- `Makefile` - Build configuration
+- `output/` - Generated files (gitignored)
+- `templates/` - Pandoc HTML templates
 
 ## Local Development
 
@@ -111,6 +112,10 @@ Images should be placed in `content/images/`. Reference them in Markdown relativ
 ```
 
 **Note:** We use PNG format for diagrams to ensure consistent rendering across HTML and PDF output.
+
+## Contributing
+
+We welcome stories, questions, and corrections! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to report issues or submit pull requests.
 
 ## License
 

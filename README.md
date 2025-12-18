@@ -31,6 +31,7 @@ Where:
 * $K$ is your Net Status-Weighted Karma in a given field: a company, a team, a subculture, a community.
 * $i$ is the index, ranging over the people whose opinions about you actually _travel_—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
 * $S_i$ is the witness's **Status** in this field—intentionally capitalized, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_.
+Here, 
 * $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
 
 The full document explains how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
@@ -57,12 +58,13 @@ The full document explains how to decouple your self-worth from your rating ([La
 
 ## Repository Structure
 
+- `CONTRIBUTING.md` - Contribution guidelines
+- `Makefile` - Build configuration
 - `content/` - Markdown chapter files
 - `content/images/` - Image assets (diagrams, figures)
-- `templates/` - Pandoc HTML templates
-- `output/` - Generated files (gitignored)
 - `metadata.yaml` - Book metadata
-- `Makefile` - Build configuration
+- `output/` - Generated files (gitignored)
+- `templates/` - Pandoc HTML templates
 
 ## Local Development
 
@@ -126,6 +128,10 @@ Images should be placed in `content/images/`. Reference them in Markdown relativ
 ```
 
 **Note:** We use PNG format for diagrams to ensure consistent rendering across HTML and PDF output.
+
+## Contributing
+
+We welcome stories, questions, and corrections! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to report issues or submit pull requests.
 
 ## License
 
