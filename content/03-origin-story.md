@@ -2,7 +2,7 @@
 
 ## 1. The Toy Demo and the Wrong Scoreboard
 
-In that cold fishbowl conference room, my manager looked decidedly displeased. Her face was flushed, which was saying something for someone normally so amiable. The face of you're-about-to-get-PIP'd.
+In that cold fishbowl of a conference room, my manager looked decidedly displeased. Her face was flushed, which was saying something for someone normally so amiable. The face of you're-about-to-get-PIP'd.
 
 I rubbed my wrist, sore from days of furious typing. I'd been getting in early and staying late, trying to wrestle my codebase into something that met all the requirements. Somehow, it still wasn't enough.
 
@@ -32,7 +32,7 @@ Being an engineer, I interpreted these word-sounds at face value. When she asked
 
 She glanced at it, eyes glazed, then back to me.
 
-Not angrily. It just didn't register as _relevant data_. I'd brought her a beautifully formatted map of the territory **I** cared about: architecture, features, technical sequence. She lived in a different terrain entirely: **people, stories, moods, status**.
+Not angrily. It just didn't register as _relevant data_. I'd brought her a beautifully formatted map of the territory *I* cared about: architecture, features, technical sequence. She lived in a different terrain entirely: **people, stories, moods, status**.
 
 From her point of view, that spreadsheet was beside the point until there was at least one human somewhere in the org saying, "This helped us." Until there was a real person, in a real team, with a real story, the internal structure of my backlog was just décor.
 
@@ -61,7 +61,7 @@ The key questions were not, "Is the architecture future-proof?" or "Is the codeb
 
 All of that was constrained by a simple deadline: "In time for that HQ meeting, two weeks from now."
 
-In that moment, my entire understanding of "value" in that context snapped into focus. My personal value system—maintainable code, generality, elegance—was a **proxy**. The institution's value system, at least for this project, was:
+In that moment, my entire understanding of "value" in that context snapped into focus. My personal value system—maintainable code, generality, elegance—was a **proxy**, and a bad one at that. The institution's value system, at least for this project, was:
 
 > **Do I have success stories I can say out loud to high-status people, on this date?**
 
@@ -102,7 +102,7 @@ For each such person, $k_i$ is your **karma with person** $i$: the signed "emoti
 
 The last term, $S_i$, is their **Status** in this field—capital $S$ on purpose, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_. It's a weight: how much their stories about you count when they reach the people who allocate promotions, opportunities, and resources.
 
-The implications are brutally simple. Helping a lot of low-Status people a little versus helping a few high-Status people a lot can produce the same Net Karma. From a purely karmic ROI perspective, it is **cheaper** to create one ecstatic director than ten mildly satisfied ICs. One well-placed success story can outweigh a dozen quiet "yeah, it's fine"s lower in the hierarchy.
+The math is simple. Helping a lot of low-Status people a little versus helping a few high-Status people a lot can produce the same Net Karma. From a purely karmic ROI perspective, it is often **substantially cheaper** to create one ecstatic director than ten mildly satisfied ICs. One well-placed success story can outweigh a dozen quiet "yeah, it's fine"s lower in the hierarchy.
 
 That's what I'd just done, accidentally. I hadn't "improved the codebase" in some abstract, global sense. I had improved my **Net Karma** by creating a couple of high-weight $S_i$ nodes who could now tell positive stories ($k_i > 0$) about me in a critical meeting.
 
@@ -124,10 +124,10 @@ At the time, I was confused. I thought I was reassuring her: "I understand your 
 
 In retrospect, that was my first clear encounter with a meta-rule of corporate life:
 
-**You are allowed to play the game.**  
-**You are not supposed to write down the rules.**
+> **You are allowed to play the game.**  
+> **You are not supposed to write down the rules.**
 
-The organization must persist a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
+The organization must broadcast a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
 
 ## 7. Habitus: Why It Was Easy for Her and Hard for Me
 
@@ -135,13 +135,13 @@ In hindsight, my manager was doing something I didn't have language for yet.
 
 She was a **natural affective-labor manager**. She spoke fluent HR doxa. She could feel, without effort, which stories would land in a VP's office and which wouldn't. She had an internal gyroscope that told her what kinds of updates, phrased in what kinds of ways, would count as "real impact" versus "nice-to-have tinkering."
 
-A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. (See [Bourdieu](#pierre-bourdieu))
+A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](#pierre-bourdieu))
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
 Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations (if ever).
 
-KarmaRank is basically my adaptation for that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't have to learn it all the hard way.
+This document exists to help balance that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't all have to learn it the hard way.
 
 ## 8. From Net Status-Weighted Karma to KarmaRank
 
@@ -151,7 +151,7 @@ The leap from Net Karma to KarmaRank comes from layering in a few more observati
 - **Time Sensitivity:** Memories are short. "What have you done for me lately?"
 - **Constraints:** Advocacy and rewards are both constrained resources.
 
-So a complete definition ends up looking like this:
+So a complete KarmaRank definition ends up looking like this:
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
