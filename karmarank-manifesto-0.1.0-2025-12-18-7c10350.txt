@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.1.0 (2025-12-18-e8d9e3b)
+0.1.0 (2025-12-18-7c10350)
 
 License: CC-BY-NC-SA-4.0
 
@@ -461,10 +461,10 @@ low-value labor.
 
 CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
 
-The Vulnerability: You believe your work (the code, the analysis, the
-doc) is the “Real Object”—what philosophers call noumenal, the thing in
-itself—and your manager’s opinion is just a noisy approximation of that
-truth.
+The Vulnerability: You believe that the work artifact (the code, the
+analysis, the doc) is the “Real Object”—what philosophers call noumenal,
+the thing in itself—and your manager’s opinion is just a noisy
+approximation of that truth.
 
 The Reality: You have it backward. In the corporate epistemology,
 perception is reality.
@@ -519,8 +519,8 @@ reverse-engineer it.
 
 ------------------------------------------------------------------------
 
-If you can accept these five premises—or at least entertain them as a
-working hypothesis—we can proceed. The rest of this text depends on
+If you can accept these five premises—or at least entertain them as
+working hypotheses—we can proceed. The rest of this text depends on
 patching these specific vulnerabilities.
 
 We are going to take your career off the “Default” setting and switch it
