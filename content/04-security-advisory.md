@@ -19,7 +19,7 @@ The firm does not value your suffering. It values **Status-Weighted Stories**. I
 
 ### CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
 
-**The Vulnerability:** You believe your work (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
+**The Vulnerability:** You believe that the work artifact (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
 
 **The Reality:** You have it backward. In the corporate epistemology, **perception is reality**.
 
@@ -47,11 +47,11 @@ A criterion may be objective (e.g., "lines of code," "revenue generated"), but t
 
 **The Reality:** The ambiguity is a **primary security feature**.
 
-If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
+If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./14-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
 
 ---
 
-If you can accept these five premises—or at least entertain them as a working hypothesis—we can proceed. The rest of this text depends on patching these specific vulnerabilities.
+If you can accept these five premises—or at least entertain them as working hypotheses—we can proceed. The rest of this text depends on patching these specific vulnerabilities.
 
 We are going to take your career off the "Default" setting and switch it to "Manual." Whether you use these tools to claw your way to the C-suite or just to minimize your effort while maximizing your karmic ROI, the mechanics are the same.
 
