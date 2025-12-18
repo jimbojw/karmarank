@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-18-7c10350)
+> Version: 0.1.0 (2025-12-18-c575bee)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -71,7 +71,7 @@ optimize your output for the **Firm Ledger**, and maximize your karmic ROI withi
 
 # Introduction: The Frame of the Game
 
-You are good at games. Or at least, you understand them. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
+You are good at games. You understand games. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
 
 Some games are "perfect knowledge", meaning no hidden information. Some games let players keep secrets. Some games have random outcomes. Some games even have rules that change as you go.
 
