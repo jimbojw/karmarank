@@ -28,6 +28,18 @@ The sum of Status-weighted karma. ($K = \sum S_i \cdot k_i$).
 
 The atomic unit of corporate currency. A narrative unit featuring you, as told by someone with Status. Stories yield karma and are weighted by the Status of the teller.
 
+**The Uncanny Valley of Alignment**
+
+The non-linear relationship between System Awareness and Organizational Alignment.
+
+* **Idealists** align because they believe the nobel lie.
+* **Burnouts** rebel because they reject the nobel lie.
+* **Optimizers** align because they subvert the nobel lie.
+
+**Full-Stack Human**
+
+The result of an engineer applying their system-design skills to social dynamics. An individual who can both build value (Technical CPU) and sell value (Social GPU emulation), giving them an asymmetric advantage over pure politicians.
+
 **KarmaRank**
 
 The implied iterative algorithm by which Karma ($K$) and Status ($S$) converge. That is, the outcome of calibration confers title and accolades, which are components of Status. Status is the realized effect of Karma validated by calibration.
