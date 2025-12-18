@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-18-92a2e55)
+> Version: 0.1.0 (2025-12-18-e8d9e3b)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -345,7 +345,7 @@ Whether you treat the Firm Ledger as morally authoritative is your business. Thi
 
 The firm does not pay you by the hour. And it certainly does not pay you "for the work."
 
-The firm pays you an annualized total comp package, dripped out in biweekly installments, **for a portfolio of Status-Weighted Stories about you** that your evaluators are willing to endorse.
+The firm pays you an annualized total comp package, partitioned into biweekly installments, **for a portfolio of Status-Weighted Stories about you** that your evaluators are willing to endorse.
 
 From the firm's perspective, any effort that does not improve that portfolio is tantamount to **willful embezzlement**. You are quietly cashing their checks while investing your energy into a private ledger they neither see nor value.
 
