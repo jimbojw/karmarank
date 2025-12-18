@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.0 (2025-12-18-0a4f2af)
+> Version: 0.1.0 (2025-12-18-8396295)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -71,25 +71,25 @@ optimize your output for the **Firm Ledger**, and maximize your karmic ROI withi
 
 # Introduction: The Frame of the Game
 
-You are good at games. You understand games. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
+You are good at games. Or at least, you understand them. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
 
 Some games are "perfect knowledge", meaning no hidden information. Some games let players keep secrets. Some games have random outcomes. Some games even have rules that change as you go.
 
 I'm going to ask you to entertain a wild idea. I want you to think of the modern workplace as a game, in which you are a professional player. How do you keep score? Who are your allies and opponents? What constitutes a foul, and what are the penalties?
 
-When you sit down to a complex board game, you have certain expectations. Some resources will be easier to acquire, some less. A player may stiff you on a trade, or play suboptimally. That's OK. Your own self-worth is intact. It's just a game.
+When you sit down to a complex board game, you have certain expectations. Some resources will be easier to acquire, some less so. A player may stiff you on a trade, or play suboptimally. That's OK. Your own self-worth is intact. It's just a game.
 
 In the pages that follow, I will reveal the hidden rules and unstated social physics of the corporate performance appraisal game. If you treat it with the same detached curiosity you bring to other gaming, you'll be fine. If you tie your self worth to _being right_, well, it's going to be more difficult.
 
-Just like in other professional sports, how you play has an impact on your greater life. Most directly in terms of comp, but also in terms of reputation, future opportunities, social sphere, mental health, etc. And so playing ethically is the rational move. But so may be the occasional strategic light foul.
+Just like in other professional sports, how you play affects your greater life. Most directly in terms of comp, but also in terms of reputation, future opportunities, social sphere, mental health, etc. And so **playing ethically is the rational move**. But so may be the occasional strategic light foul.
 
-The point is that you must separate your **private ledger**, what you think of as right and true and just, from the **firm ledger**, how the company (the firm) values your contributions.
+The point is that you must separate your **Private Ledger**, what you think of as right and true and just, from the **Firm Ledger**, how the company (the firm) values your contributions.
 
-It's not that your ethics don't matter at all. It's that if you choose to commit a game-suboptimal play to satisfy your ethical frame, or vice versa, I want you to do it with eyes wide open. But to do that, you first have to understand the game you're already playing, which we'll explore thoroughly.
+It's not that your ethics don't matter in some abstract sens. It's that if you choose to commit a game-suboptimal play to satisfy your ethical frame, or vice versa, I want you to do it with eyes open. But to do that, you first have to understand the game you're already playing, which we'll explore thoroughly.
 
-One final warning before we proceed: _you will feel manipulative_. We've been brought up to believe that unconscious prosocial behavior is "good" while conscious prosocial behavior is "suspicious / manipulative" etc.
+One final warning before we proceed: _you will feel manipulative_. We've been brought up to believe that unconscious prosocial behavior is "good" while conscious prosocial behavior is "suspicious", "manipulative", etc.
 
-Unfortunately, to explain the rules and physics of the corporate appraisal game, this text must make social behavior and communication strategies **explicit**. Some players are naturals. You can think of our approach as going from vibes to debugger. Assistive technology for the empathetically disinclined.
+Unfortunately, to explain the rules and physics of the corporate appraisal game, this text must make social behavior and communication strategies **explicit**. You can think of our approach as going from vibes to debugger. Assistive technology for the empathetically disinclined.
 
 Oh, and at the risk of undermining my own authority, I have _never been promoted within a company_. I don't believe in it. Strategically, the firm has every incentive to withhold increases in comp and level as long as possible.
 
@@ -103,7 +103,7 @@ With that out of the way, let's get on with our goal of mapping the firm's real 
 
 ## 1. The Toy Demo and the Wrong Scoreboard
 
-In that cold fishbowl conference room, my manager looked decidedly displeased. Her face was flushed, which was saying something for someone normally so amiable. The face of you're-about-to-get-PIP'd.
+In that cold fishbowl of a conference room, my manager looked decidedly displeased. Her face was flushed, which was saying something for someone normally so amiable. The face of you're-about-to-get-PIP'd.
 
 I rubbed my wrist, sore from days of furious typing. I'd been getting in early and staying late, trying to wrestle my codebase into something that met all the requirements. Somehow, it still wasn't enough.
 
@@ -133,7 +133,7 @@ Being an engineer, I interpreted these word-sounds at face value. When she asked
 
 She glanced at it, eyes glazed, then back to me.
 
-Not angrily. It just didn't register as _relevant data_. I'd brought her a beautifully formatted map of the territory **I** cared about: architecture, features, technical sequence. She lived in a different terrain entirely: **people, stories, moods, status**.
+Not angrily. It just didn't register as _relevant data_. I'd brought her a beautifully formatted map of the territory *I* cared about: architecture, features, technical sequence. She lived in a different terrain entirely: **people, stories, moods, status**.
 
 From her point of view, that spreadsheet was beside the point until there was at least one human somewhere in the org saying, "This helped us." Until there was a real person, in a real team, with a real story, the internal structure of my backlog was just décor.
 
@@ -162,7 +162,7 @@ The key questions were not, "Is the architecture future-proof?" or "Is the codeb
 
 All of that was constrained by a simple deadline: "In time for that HQ meeting, two weeks from now."
 
-In that moment, my entire understanding of "value" in that context snapped into focus. My personal value system—maintainable code, generality, elegance—was a **proxy**. The institution's value system, at least for this project, was:
+In that moment, my entire understanding of "value" in that context snapped into focus. My personal value system—maintainable code, generality, elegance—was a **proxy**, and a bad one at that. The institution's value system, at least for this project, was:
 
 > **Do I have success stories I can say out loud to high-status people, on this date?**
 
@@ -203,7 +203,7 @@ For each such person, $k_i$ is your **karma with person** $i$: the signed "emoti
 
 The last term, $S_i$, is their **Status** in this field—capital $S$ on purpose, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_. It's a weight: how much their stories about you count when they reach the people who allocate promotions, opportunities, and resources.
 
-The implications are brutally simple. Helping a lot of low-Status people a little versus helping a few high-Status people a lot can produce the same Net Karma. From a purely karmic ROI perspective, it is **cheaper** to create one ecstatic director than ten mildly satisfied ICs. One well-placed success story can outweigh a dozen quiet "yeah, it's fine"s lower in the hierarchy.
+The math is simple. Helping a lot of low-Status people a little versus helping a few high-Status people a lot can produce the same Net Karma. From a purely karmic ROI perspective, it is often **substantially cheaper** to create one ecstatic director than ten mildly satisfied ICs. One well-placed success story can outweigh a dozen quiet "yeah, it's fine"s lower in the hierarchy.
 
 That's what I'd just done, accidentally. I hadn't "improved the codebase" in some abstract, global sense. I had improved my **Net Karma** by creating a couple of high-weight $S_i$ nodes who could now tell positive stories ($k_i > 0$) about me in a critical meeting.
 
@@ -225,10 +225,10 @@ At the time, I was confused. I thought I was reassuring her: "I understand your 
 
 In retrospect, that was my first clear encounter with a meta-rule of corporate life:
 
-**You are allowed to play the game.**  
-**You are not supposed to write down the rules.**
+> **You are allowed to play the game.**  
+> **You are not supposed to write down the rules.**
 
-The organization must persist a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
+The organization must broadcast a story about "merit" and "impact" that is neutral, objective, and morally acceptable. Writing it as a status-weighted sum of feelings about you is not morally acceptable, even if it's descriptively accurate.
 
 ## 7. Habitus: Why It Was Easy for Her and Hard for Me
 
@@ -236,13 +236,13 @@ In hindsight, my manager was doing something I didn't have language for yet.
 
 She was a **natural affective-labor manager**. She spoke fluent HR doxa. She could feel, without effort, which stories would land in a VP's office and which wouldn't. She had an internal gyroscope that told her what kinds of updates, phrased in what kinds of ways, would count as "real impact" versus "nice-to-have tinkering."
 
-A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. (See [Bourdieu](#pierre-bourdieu))
+A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](#pierre-bourdieu))
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
 Some people are born into—or trained into—the right habitus for a given field. They just "get" what counts, who matters, what to say in which room. The rest of us end up reverse-engineering it after enough humiliations (if ever).
 
-KarmaRank is basically my adaptation for that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't have to learn it all the hard way.
+This document exists to help balance that asymmetry: a way for people like me—who don't come pre-installed with the right habitus—to see the game board clearly enough that we don't all have to learn it the hard way.
 
 ## 8. From Net Status-Weighted Karma to KarmaRank
 
@@ -252,7 +252,7 @@ The leap from Net Karma to KarmaRank comes from layering in a few more observati
 - **Time Sensitivity:** Memories are short. "What have you done for me lately?"
 - **Constraints:** Advocacy and rewards are both constrained resources.
 
-So a complete definition ends up looking like this:
+So a complete KarmaRank definition ends up looking like this:
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
