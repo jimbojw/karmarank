@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.1.0 (2025-12-18-c575bee)
+0.1.0 (2025-12-18-e2862ee)
 
 License: CC-BY-NC-SA-4.0
 
@@ -1064,26 +1064,26 @@ Your job is to hand them a fully formed Legal Brief. This is a document
 that requires zero cognitive load to copy-paste into the HR portal.
 
 But how do you write a brief that survives the adversarial environment
-of the Calibration Cylinder? You have to understand the psychology of
-the jury.
+of the Calibration Cylinder? For that you have to understand the
+psychology of the jury.
 
 1. Feeding the Numerophiles
 
 Your evaluators (Directors, VPs, Senior Peers) are human beings, but
-they are a specific subspecies. They are Numerophiles.
+they are a specific type. They are Numerophiles.
 
-They are obsessed with quantification. In the absence of trust, they use
+They are impressed by quantification. In the absence of trust, they use
 numbers as a proxy for truth. A paragraph of prose feels like an
-“opinion.” A bar chart feels like “science.”
+“opinion.” A scatter plot feels like “science.”
 
 -   Bad: “I significantly improved the performance of the login page.”
     (Hearsay).
 -   Good: “Reduced P99 login latency by 230ms (-14%), reclaiming 45
     engineering-hours per month in wait time.” (Fact).
 
-It does not matter that the “45 hours” is a back-of-the-napkin estimate
-based on shaky assumptions. It is a Number. It has significant digits.
-It triggers the “Truth” receptor in the evaluator’s brain.
+It does not matter that the “45 hours” is a napkin-math estimate. It is
+a Number. It has significant digits. It triggers the “Truth” receptor in
+the evaluator’s brain. Defensible estimates are in bounds.
 
 2. Moral Targeting (Know Your Judge)
 
@@ -1102,7 +1102,7 @@ Different tribes worship different gods:
     about “User Delight,” “Inclusivity,” and “Democratizing Access.”
 
 You must estimate the moral composition of your org in general and the
-Calibration Room in particular, then tailor your evidence accordingly.
+Calibration Court in particular, then tailor your evidence accordingly.
 
 The Case Study: The UI Refresh
 
@@ -1155,12 +1155,12 @@ will not read your bullet points. They will look at the pretty picture.
 The picture says “Up and to the Right.” The picture says “Competence.”
 
 If you don’t know what data visualizations to make, ask your AI of
-choice something like “what’s the canonical/persuasive way to visualize
+choice something like “what’s the idiomatic/persuasive way to visualize
 <your kind of data>?”.
 
 4. Constructing the Brief
 
-Your final deliverable to your manager—the document you hand them two
+Your final deliverable to your manager—the document you hand them a few
 weeks before calibration—should look like this:
 
 Headline: [The Moral Frame] e.g., “Democratizing Data Access for
@@ -1180,22 +1180,24 @@ Non-Technical Users”
 Your company or team probably keeps a specific internal doc or side
 template. Use it. Your goal is low cognitive load, not art.
 
-5. Is This Lying?
+5. Are you saying I should lie?
 
-You might feel a twinge of guilt. “I didn’t actually measure the 20
-hours saved, I just estimated it.” “The Likert scale sample size was
-only 12 people.”
+No. You should not outright lie (make shit up). And you shouldn’t have
+to! This would demonstrate a severe lack of creativity.
 
-Relax. You are not falsifying data. You are formatting reality.
+Even if your in-the-moment evaluators don’t check the tape at evaluation
+time, they may later! Or, circumstances change. Reorgs happen. The new
+boss may have an extreme reality-correspondence preference.
 
-The firm demands a number to justify the budget. If you refuse to
-provide one because you are waiting for “perfect, academically rigorous
-data,” you are not being noble. You are being invisible.
+Your strategy should not be to falsify data. Your requirement is to
+format reality. You already picked the right story during Karma Driven
+Development. Now you’re just packaging for release.
 
-You are estimating. You are deriving. You are translating your labor
-into the native language of the colony: Numerology.
+The firm demands Status-Weighted Stories and prefers them to have
+numbers and pictures. If you refuse to provide Briefs, you are not being
+noble. You are sabotaging your defense.
 
-Give them the number so they can give you the money.
+Give the court the evidence so that they can give you the money.
 
 The Exit: The Market Check
 
