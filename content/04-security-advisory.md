@@ -5,7 +5,7 @@
 
 This manuscript is going to systematically dismantle a number of your unexamined, cherished beliefs. I have too much respect for your time to withhold that knowledge, and so here it is, up front.
 
-The reason you are frustrated—the reason you feel gaslit by HR, confused by promotions, and exhausted by "politics"—is not that you are bad at your job, or that the system is “rigged”. It is because you have been systematically indoctrinated (optimized) into a vulnerable mental model.
+The reason you are frustrated—the reason you feel gaslit by HR, confused by promotions, and exhausted by "politics"—is not that you are bad at your job, or that the system is "rigged". It is because you have been systematically indoctrinated (optimized) into a vulnerable mental model.
 
 What follows is a list of the **Five Critical Vulnerabilities** in the Default Engineering Worldview (DEW).
 
@@ -19,11 +19,11 @@ The firm does not value your suffering. It values **Status-Weighted Stories**. I
 
 ### CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
 
-**The Vulnerability:** You believe your work (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager’s opinion is just a noisy approximation of that truth.
+**The Vulnerability:** You believe your work (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
 
 **The Reality:** You have it backward. In the corporate epistemology, **perception is reality**.
 
-There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis only matter insofar as they shift someone’s perception enough to move your score. Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
+There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis only matter insofar as they shift someone's perception enough to move your score. Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
 
 ### CVE-DEW-03: The Protocol Mismatch (The Moral Matrix)
 
@@ -47,7 +47,7 @@ A criterion may be objective (e.g., "lines of code," "revenue generated"), but t
 
 **The Reality:** The ambiguity is a **primary security feature**.
 
-If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart’s Law](#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
+If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
 
 ---
 
@@ -55,4 +55,4 @@ If you can accept these five premises—or at least entertain them as a working 
 
 We are going to take your career off the "Default" setting and switch it to "Manual." Whether you use these tools to claw your way to the C-suite or just to minimize your effort while maximizing your karmic ROI, the mechanics are the same.
 
-Let’s open the debugger.
+Let's open the debugger.
