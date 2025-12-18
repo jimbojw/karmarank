@@ -38,7 +38,7 @@ The full document explains how to decouple your self-worth from your rating ([La
 
 ## Table of Contents
 
-<!-- TOC_PLACEHOLDER -->
+<!-- TOC_START -->
 
 - [License: CC-BY-NC-SA-4.0](content/00-license.md)
 - [TL;DR](content/01-tldr.md)
@@ -55,6 +55,8 @@ The full document explains how to decouple your self-worth from your rating ([La
 - [The Exit: The Market Check](content/12-exit.md)
 - [Conclusion: The Clear Pill](content/13-conclusion-the-clear-pill.md)
 - [Appendix](content/14-appendix.md)
+
+<!-- TOC_END -->
 
 ## Repository Structure
 

@@ -180,20 +180,26 @@ latest: $(HTML_FILE) $(PDF_FILE) $(EPUB_FILE) $(TXT_FILE)
 	@echo "✓ Latest copies created"
 
 # README Build
-readme: $(README_FILE)
-$(README_FILE): $(TEMPLATE_DIR)/README.template.md $(CHAPTERS) content/01-tldr.md
-	@echo "Generating README.md..."
-	@cp $(TEMPLATE_DIR)/README.template.md $@
-	@# Generate TOC (using grep and sed to format links)
+readme: | directories
+	@echo "Updating README.md TOC..."
 	@{ \
-		TMP=$$(mktemp); \
-		echo "" > $$TMP; \
+		TOC_FILE="$(BUILD_DIR)/readme_toc.tmp"; \
+		NEW_README="$(BUILD_DIR)/README.new"; \
+		\
+		echo "<!-- TOC_START -->" > $$TOC_FILE; \
+		echo "" >> $$TOC_FILE; \
 		for f in $(CHAPTERS); do \
 			TITLE=$$(grep "^# " $$f | head -n 1 | sed 's/^# //'); \
-			echo "- [$$TITLE]($$f)" >> $$TMP; \
+			echo "- [$$TITLE]($$f)" >> $$TOC_FILE; \
 		done; \
-		sed -i "/<!-- TOC_PLACEHOLDER -->/r $$TMP" $@; \
-		rm $$TMP; \
+		echo "" >> $$TOC_FILE; \
+		echo "<!-- TOC_END -->" >> $$TOC_FILE; \
+		\
+		sed '/<!-- TOC_START -->/,$$d' README.md > $$NEW_README; \
+		cat $$TOC_FILE >> $$NEW_README; \
+		sed '1,/<!-- TOC_END -->/d' README.md >> $$NEW_README; \
+		\
+		mv $$NEW_README README.md; \
 	}
 	@echo "✓ README.md updated"
 
