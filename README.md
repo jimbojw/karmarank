@@ -58,7 +58,7 @@ The KarmaRank Manifesto expands on this, explaining how to decouple your self-wo
 - [Tactics I: Karma-Driven Development (KDD)](content/10-tactics-1-kdd.md)
 - [Tactics II: Manufacturing Evidence (The Brief)](content/11-tactics-2-brief.md)
 - [The Exit: The Market Check](content/12-exit.md)
-- [Conclusion: The Clear Pill](content/13-conclusion-the-clear-pill.md)
+- [Conclusion: You Are Not Cynical Enough](content/13-conclusion.md)
 - [Appendix](content/14-appendix.md)
 
 <!-- TOC_END -->
