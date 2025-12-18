@@ -2,7 +2,7 @@
 
 The firm does not pay you by the hour. And it certainly does not pay you "for the work."
 
-The firm pays you an annualized total comp package, dripped out in biweekly installments, **for a portfolio of Status-Weighted Stories about you** that your evaluators are willing to endorse.
+The firm pays you an annualized total comp package, partitioned into biweekly installments, **for a portfolio of Status-Weighted Stories about you** that your evaluators are willing to endorse.
 
 From the firm's perspective, any effort that does not improve that portfolio is tantamount to **willful embezzlement**. You are quietly cashing their checks while investing your energy into a private ledger they neither see nor value.
 
