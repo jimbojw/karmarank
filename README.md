@@ -18,7 +18,9 @@ Corporate performance evaluation is not a function of work quality; it is a func
 
 This document patches the [Default Engineering Worldview](content/04-security-advisory.md) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
 
-A complete KarmaRank algorithm would model _time-decayed_, _capital-constrained_, _adversarial eigenvector-sponsorship_. But for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
+> **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
+
+While this full KarmaRank definition describes the actual appraisal process, for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
 ![Net Status-Weighted Karma Equation, $K = \sum_{i} S_i \cdot k_i$](content/images/net-status-weighted-karma.png)
 
@@ -28,13 +30,16 @@ $$
 
 Where:
 
-* $K$ is your Net Status-Weighted Karma in a given field: a company, a team, a subculture, a community.
-* $i$ is the index, ranging over the people whose opinions about you actually _travel_—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
-* $S_i$ is the witness's **Status** in this field—intentionally capitalized, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_.
-Here, 
-* $k_i$ is your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
+* **$K$ — Net Status-Weighted Karma**  
+  In a given field: a company, a team, a subculture, a community.
+* **$i$ — The Index**  
+  Ranging over the people whose opinions about you actually _travel_—your manager, your manager's peers, the Staff engineer everyone listens to, the PM who won't shut up in calibration meetings.
+* **$S_i$ — Status**  
+  The witness's **Status** in this field—intentionally capitalized, because it's the most important term. It's not just job title, but their actual ability to move decisions and narratives as it pertains _to you_.
+* **$k_i$ — Karma**  
+  Your **karma with person** $i$: the signed "emotional value" they get from telling a story about you and your work.
 
-The full document explains how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
+The KarmaRank Manifesto expands on this, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
 
 ## Table of Contents
 
