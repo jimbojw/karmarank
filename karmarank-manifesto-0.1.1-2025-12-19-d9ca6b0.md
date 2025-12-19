@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.1 (2025-12-19-d3e04f3)
+> Version: 0.1.1 (2025-12-19-d9ca6b0)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -386,7 +386,7 @@ If you cannot answer "who cares?" (with names, not archetypes), you are doing **
 
 Law #3 is the operational version of Law #2.  
 "The rating is the job" tells you what gets serialized.  
-"Impact = Who Cares?" tells you how to decide where to spend your next hour.
+"Who Cares?" tells you how to decide where to spend your next hour.
 
 # Meta-Law: You Do Not Talk About KarmaRank
 
