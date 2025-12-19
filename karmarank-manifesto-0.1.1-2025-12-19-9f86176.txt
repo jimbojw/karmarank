@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.1.1 (2025-12-19-ce4ab08)
+0.1.1 (2025-12-19-9f86176)
 
 License: CC-BY-NC-SA-4.0
 
@@ -546,7 +546,7 @@ Status-Weighted Story about you, passed between people who can move
 budget, headcount, and promotion packets.
 
 It is a common yet critical mistake to assume these ledgers are the same
-system with some measurement noise, like a single, eventually consistey
+system with some measurement noise, like a single, eventually consistent
 database. They are not. They are different databases with different
 schemas, occasionally synced only by accident. Like a hash collision.
 
