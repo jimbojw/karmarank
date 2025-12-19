@@ -19,6 +19,7 @@ You are angry because, deep down, you still believe the system *should* be fair.
 If we map "System Awareness" against "Organizational Alignment," we see a distinct curve. Call this the **Uncanny Valley of Alignment**.
 
 ![Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.](images/uncanny-valley-alignment.png)
+*Figure: Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.*
 
 On the X-Axis, plot System Awareness (Cynicism). On the Y-Axis: Alignment with the Firm. The curve starts high (Naive Idealist), dips low (Burnt-Out Senior), and rises high again (KarmaRank Optimizer). Let's look at each archetype.
 
@@ -58,7 +59,7 @@ Here is the constraint set that makes "just measure merit" a fantasy:
 2. **Heterogeneous Work:** People do different kinds of work on different timelines; outputs are not fungible units you can grade like test scores.
 3. **High Goodhart Pressure:** Any published metric becomes a target. Static rubrics get optimized into garbage (metric farming) and destroy signal.
 4. **Adversarial Incentives:** The reward pool is capped. Advocacy is zero-sum at the margin. Evaluators are not neutral graders; they are competing representatives.
-5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](#james-c.-scott)).
+5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](./15-appendix.md#james-c.-scott)).
 6. **Legitimacy Requirements:** The process must look "fair enough" to remain stable (morale, retention) and defensible (complaints, HR risk, lawsuits).
 7. **Discretion Must Persist:** Leadership must retain veto power to handle edge cases, shifts in strategy, and the inherent ambiguity of "value."
 8. **Narrative Compatibility:** Decisions must be explainable in the firm's public religion ("impact," "leadership," "values") even when the real drivers are messier.

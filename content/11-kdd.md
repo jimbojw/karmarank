@@ -1,4 +1,3 @@
-
 # Tactics I: Karma-Driven Development (KDD)
 
 In software engineering, the most disciplined teams practice **Test-Driven Development (TDD)**. The rule is simple: **Red, Green, Refactor.**
@@ -9,7 +8,7 @@ In software engineering, the most disciplined teams practice **Test-Driven Devel
 
 Despite this, most _careers_ run on **Waterfall**. You do months of work, ship it, and then hope that the calibration court validates your work. This is madness. You are building features without a spec.
 
-To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it. Remember [Law #2](content/06-law-2-rating-is-job.md): the rating is the job.
+To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it. Remember [Law #2](./06-law-2.md): the rating is the job.
 
 ## Phase 1: Echolocation (Witness Selection & The IKEA Hook)
 
@@ -17,7 +16,7 @@ Before you can write a test, you need requirements.
 
 Right now, your mental backlog is likely full of "Technical Debt" and "Cool Ideas." You cannot sort this list by **Technical Merit** (Private Ledger). You must sort it by **Market Demand** (Firm Ledger).
 
-Scan your local area of the corporate social network, including (but not limited to) your [Calibration Cylinder](./09-calibration-cylinder.md.#the-calibration-cylinder-topology-of-the-trial) . Find a high-status Witness ($S_i$) who needs a problem solved. But do not just ask them what to do.
+Scan your local area of the corporate social network, including (but not limited to) your [Calibration Cylinder](./09-calibration-cylinder.md) . Find a high-status Witness ($S_i$) who needs a problem solved. But do not just ask them what to do.
 
 If you ask *"What should I work on?"*, you are an execution-bot. You are a commodity.
 Instead, you goal is to trigger the **IKEA Effect**.

@@ -22,7 +22,7 @@ This document patches the [Default Engineering Worldview](content/04-security-ad
 
 While this full KarmaRank definition describes the actual appraisal process, for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
-![Net Status-Weighted Karma Equation, $K = \sum_{i} S_i \cdot k_i$](content/images/net-status-weighted-karma.png)
+![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.png)
 
 $$
 K = \sum_{i} S_i \cdot k_i
@@ -50,14 +50,14 @@ The KarmaRank Manifesto proceeds from this, explaining how to decouple your self
 - [Introduction: The Frame of the Game](content/02-introduction.md)
 - [KarmaRank: Origin Story (with Math)](content/03-origin-story.md)
 - [SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview](content/04-security-advisory.md)
-- [Law #1: The Two Ledgers](content/05-law-1-two-ledgers.md)
-- [Law #2: The Rating Is The Job](content/06-law-2-rating-is-job.md)
-- [Law #3: Who Cares?](content/07-law-3-impact.md)
+- [Law #1: The Two Ledgers](content/05-law-1.md)
+- [Law #2: The Rating Is The Job](content/06-law-2.md)
+- [Law #3: Who Cares?](content/07-law-3.md)
 - [Meta-Law: You Do Not Talk About KarmaRank](content/08-meta-law.md)
 - [The Calibration Cylinder: Topology of the Trial](content/09-calibration-cylinder.md)
 - [Know Your Counsel: Technician, Politician, Peacemaker](content/10-kyc.md)
-- [Tactics I: Karma-Driven Development (KDD)](content/11-tactics-1-kdd.md)
-- [Tactics II: Manufacturing Evidence (The Brief)](content/12-tactics-2-brief.md)
+- [Tactics I: Karma-Driven Development (KDD)](content/11-kdd.md)
+- [Tactics II: Manufacturing Evidence (The Brief)](content/12-brief.md)
 - [The Exit: The Market Check](content/13-exit.md)
 - [Conclusion: You Are Not Cynical Enough](content/14-conclusion.md)
 - [Appendix](content/15-appendix.md)
@@ -132,7 +132,8 @@ The book uses LaTeX math notation throughout. The setup supports:
 Images should be placed in `content/images/`. Reference them in Markdown relative to the `content/` directory:
 
 ```markdown
-![Alt text](images/diagram.png)
+![Descriptive caption text.](images/diagram.png)
+*Figure: Descriptive caption text.*
 ```
 
 **Note:** We use PNG format for diagrams to ensure consistent rendering across HTML and PDF output.

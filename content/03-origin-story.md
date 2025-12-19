@@ -135,7 +135,7 @@ In hindsight, my manager was doing something I didn't have language for yet.
 
 She was a **natural affective-labor manager**. She spoke fluent HR doxa. She could feel, without effort, which stories would land in a VP's office and which wouldn't. She had an internal gyroscope that told her what kinds of updates, phrased in what kinds of ways, would count as "real impact" versus "nice-to-have tinkering."
 
-A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](#pierre-bourdieu))
+A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](./15-appendix.md#pierre-bourdieu))
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
@@ -155,7 +155,7 @@ So a complete KarmaRank definition ends up looking like this:
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
-This full model explains the complex topology of the [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial) (covered later). But for daily operation, the linear approximation $K = \sum_{i} S_i \cdot k_i$ is sufficient.
+This full model explains the complex topology of the [Calibration Cylinder](./09-calibration-cylinder.md) (covered later). But for daily operation, the linear approximation $K = \sum_{i} S_i \cdot k_i$ is sufficient.
 
 Everyone has the same job: to secure timely, **Status-Weighted Stories** in a _dynamic_, _heterogenous_, _adversarial_ field, and call this narrative aggregation "impact."
 

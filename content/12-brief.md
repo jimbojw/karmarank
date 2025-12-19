@@ -1,4 +1,3 @@
-
 # Tactics II: Manufacturing Evidence (The Brief)
 
 In the previous chapter, you learned Karma Driven Development (KDD), a strategy for choosing Status-Weighted Stories _first_ and working backwards to make them true. Now it's time to learn how to optimize that evidence for your manager to bring to calibration court.
@@ -24,7 +23,7 @@ It does not matter that the "45 hours" is a napkin-math estimate. It is a **Numb
 
 ## 2. Moral Targeting (Know Your Judge)
 
-Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./14-appendix.md#jonathan-haidt)** of your evaluators.
+Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./15-appendix.md#jonathan-haidt)** of your evaluators.
 
 Different tribes worship different gods:
 
@@ -68,7 +67,8 @@ If you are claiming that your new UI is better, do not just write "1.53 points h
 - **Top:** Distribution of sentiment scores _before_ development.
 - **Bottom:** Distribution of sentiment scores _after_ implementation.
 
-![Example diverging stacked bar charts for showing quantified sentiment change](images/diverging-stacked-bar-chart.png)
+![Example diverging stacked bar charts for showing quantified sentiment change.](images/diverging-stacked-bar-chart.png)
+*Figure: Example diverging stacked bar charts for showing quantified sentiment change.*
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
     

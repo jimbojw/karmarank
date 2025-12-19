@@ -6,5 +6,9 @@ lang: en
 license: "CC-BY-NC-SA-4.0"
 version: "0.2.0"
 rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+colorlinks: true
+linkcolor: "blue"
+urlcolor: "blue"
+toccolor: "black"
 ---
 

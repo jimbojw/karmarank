@@ -2,7 +2,7 @@
 
 Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
 
-This document patches the [Default Engineering Worldview](./04-security-advisory.md#security-advisory-five-vulnerabilities-in-the-default-engineering-worldview) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
+This document patches the [Default Engineering Worldview](./04-security-advisory.md) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
@@ -25,7 +25,7 @@ Where:
 * **$k_i$ — Karmic Appraisal**  
   The signed "emotional value" person $i$ gets from telling a story about you and your work.
 
-The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](./05-law-1-two-ledgers.md#law-1-separation-of-private-firm-ledgers)),
-optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial).
+The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](./05-law-1.md)),
+optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md).
 
 

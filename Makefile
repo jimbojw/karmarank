@@ -53,13 +53,21 @@ prepare-images: directories
 		cp -r $(IMAGES_DIR)/* $(OUTPUT_DIR)/images/; \
 	fi
 
-# Transform markdown links for pandoc (strip file paths before # anchors)
+# Transform chapter markdown before pandoc:
+# - Append `{#filename}` custom ids to chapter headings.
+# - Convert inter-document links to custom id links.
+#   E.g. `[text](./xx-filename.md)` becomes `[text](#xx-filename)`.
+# - Strip file paths from anchored inter-document links.
+#   E.g. `[text](./xx-filename.md#section)` becomes `[text](#section)`.
 prepare-chapters: directories
 	@echo "Preparing transformed chapters for pandoc..."
 	@mkdir -p $(TRANSFORMED_DIR)
 	@for f in $(CHAPTERS); do \
 		dest=$$(echo $$f | sed 's|$(CONTENT_DIR)|$(TRANSFORMED_DIR)|'); \
-		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" $$f > $$dest; \
+		cat $$f | \
+		sed "s%^#[^#].\+%\0 {#$$(basename $$f .md)}%g" | \
+		sed "s%\[\(.*\?\)\](\./\([^#)]\+\)\.md)%[\1](#\2)%g" | \
+		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" >> $$dest; \
 	done
 	@# Copy images to build directory for pandoc resource-path
 	@if [ -d "$(IMAGES_DIR)" ]; then \
@@ -76,6 +84,7 @@ $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | di
 		$(TRANSFORMED_CHAPTERS) \
 		--resource-path=$(TRANSFORMED_DIR) \
 		--metadata-file=$(METADATA) \
+		--from=commonmark_x \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
 		--self-contained \
@@ -95,7 +104,7 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 			$(TRANSFORMED_CHAPTERS) \
 			--resource-path=$(TRANSFORMED_DIR) \
 			--metadata-file=$(METADATA) \
-			--from=markdown+tex_math_dollars+tex_math_double_backslash \
+			--from=commonmark_x+implicit_figures+tex_math_dollars \
 			--pdf-engine=pdflatex \
 			--toc \
 			--toc-depth=2 \
@@ -115,6 +124,7 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 		$(TRANSFORMED_CHAPTERS) \
 		--resource-path=$(TRANSFORMED_DIR) \
 		--metadata-file=$(METADATA) \
+		--from=commonmark_x \
 		--toc \
 		--toc-depth=2 \
 		--mathml \
@@ -131,6 +141,7 @@ $(TXT_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 		$(TRANSFORMED_CHAPTERS) \
 		--resource-path=$(TRANSFORMED_DIR) \
 		--metadata-file=$(METADATA) \
+		--from=commonmark_x \
 		--to plain \
 		--standalone \
 		--columns=72 \
@@ -164,6 +175,7 @@ $(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html
 	$(PANDOC) \
 		templates/index.template.md \
 		--metadata-file=$(METADATA) \
+		--from=commonmark_x \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
 		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \

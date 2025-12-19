@@ -14,13 +14,15 @@ The Org Chart implies a chain of command. The reality as it applies to you is a 
 
 You are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
-![Circle of You and your Peers under your shared Manager](images/peer-circle.png)
+![Circle of You and your Peers under your shared Manager.](images/peer-circle.png)
+*Figure: Circle of You and your Peers under your shared Manager.*
 
 Your Manager is at the center of their own circle, surrounded by their **Peer Managers**. The Skip-Level (manager's manager) sits above, the center of their own circle of peers, looking down into the cylinder.
 
 So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
 
-![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge)](images/calibration-cylinder.png)
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.png)
+*Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
 
@@ -119,6 +121,7 @@ I have bad news. The topology is fractal.
 
 When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mistake it for "strategy" in the pure sense. It is a **Status-Weighted Story** presented to the Board of Directors (The Jury) and the Market (The Judge) to prove that the CEO is still a "High Performer."
 
-![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles](images/turtles-all-the-way-up.png)
+![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.](images/turtles-all-the-way-up.png)  
+*Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.*
 
 The cylinder goes up forever. The only thing that changes is the blast radius of the decisions.
