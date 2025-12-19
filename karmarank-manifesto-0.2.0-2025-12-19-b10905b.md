@@ -4,8 +4,12 @@ subtitle: "Optimizing the Unspoken Corporate Objective Function"
 author: "jimbojw"
 lang: en
 license: "CC-BY-NC-SA-4.0"
-version: "0.1.1"
+version: "0.2.0"
 rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+colorlinks: true
+linkcolor: "blue"
+urlcolor: "blue"
+toccolor: "black"
 ---
 
 
@@ -15,7 +19,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.1 (2025-12-19-1740ccf)
+> Version: 0.2.0 (2025-12-19-b10905b)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -41,7 +45,7 @@ For the full legal text, see the LICENSE file in the source repository ([jimbojw
 
 Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
 
-This document patches the [Default Engineering Worldview](./04-security-advisory.md#security-advisory-five-vulnerabilities-in-the-default-engineering-worldview) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
+This document patches the [Default Engineering Worldview](./04-security-advisory.md) (which assumes meritocracy) with **KarmaRank**, a transitive, narrative-aggregating algorithm over the corporate social graph.
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
@@ -64,8 +68,8 @@ Where:
 * **$k_i$ — Karmic Appraisal**  
   The signed "emotional value" person $i$ gets from telling a story about you and your work.
 
-The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](./05-law-1-two-ledgers.md#law-1-separation-of-private-firm-ledgers)),
-optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial).
+The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](./05-law-1.md)),
+optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md).
 
 
 
@@ -236,7 +240,7 @@ In hindsight, my manager was doing something I didn't have language for yet.
 
 She was a **natural affective-labor manager**. She spoke fluent HR doxa. She could feel, without effort, which stories would land in a VP's office and which wouldn't. She had an internal gyroscope that told her what kinds of updates, phrased in what kinds of ways, would count as "real impact" versus "nice-to-have tinkering."
 
-A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](#pierre-bourdieu))
+A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](./15-appendix.md#pierre-bourdieu))
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
@@ -256,7 +260,7 @@ So a complete KarmaRank definition ends up looking like this:
 
 > **KarmaRank:** Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
 
-This full model explains the complex topology of the [Calibration Cylinder](./09-calibration-cylinder.md#the-calibration-cylinder-topology-of-the-trial) (covered later). But for daily operation, the linear approximation $K = \sum_{i} S_i \cdot k_i$ is sufficient.
+This full model explains the complex topology of the [Calibration Cylinder](./09-calibration-cylinder.md) (covered later). But for daily operation, the linear approximation $K = \sum_{i} S_i \cdot k_i$ is sufficient.
 
 Everyone has the same job: to secure timely, **Status-Weighted Stories** in a _dynamic_, _heterogenous_, _adversarial_ field, and call this narrative aggregation "impact."
 
@@ -313,7 +317,7 @@ A criterion may be objective (e.g., "lines of code," "revenue generated"), but t
 
 **The Reality:** The ambiguity is a **primary security feature**.
 
-If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./14-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
+If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./15-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
 
 ---
 
@@ -335,7 +339,8 @@ It is a common yet critical mistake to assume these ledgers are the same system 
 
 When you stay late refactoring code nobody will ever hear about, that's a Private Ledger credit. When a director tells a VP "she saved our launch," that's a Firm Ledger credit. These events often do not coincide in time, or at all.
 
-![Private Ledger vs. Firm Ledger](images/two-ledgers.png)
+![Private Ledger (left) is not equal to the Firm Ledger (right).](images/two-ledgers.png)
+*Figure: Private Ledger (left) is not equal to the Firm Ledger (right).*
 
 From the firm's point of view, your Private Ledger is an personal hobby (on company time!). They don't query it. They query the Firm Ledger, then serialize the result into ratings, levels, and comp.
 
@@ -433,13 +438,15 @@ The Org Chart implies a chain of command. The reality as it applies to you is a 
 
 You are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
-![Circle of You and your Peers under your shared Manager](images/peer-circle.png)
+![Circle of You and your Peers under your shared Manager.](images/peer-circle.png)
+*Figure: Circle of You and your Peers under your shared Manager.*
 
 Your Manager is at the center of their own circle, surrounded by their **Peer Managers**. The Skip-Level (manager's manager) sits above, the center of their own circle of peers, looking down into the cylinder.
 
 So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
 
-![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge)](images/calibration-cylinder.png)
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.png)
+*Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
 
@@ -538,10 +545,10 @@ I have bad news. The topology is fractal.
 
 When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mistake it for "strategy" in the pure sense. It is a **Status-Weighted Story** presented to the Board of Directors (The Jury) and the Market (The Judge) to prove that the CEO is still a "High Performer."
 
-![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles](images/turtles-all-the-way-up.png)
+![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.](images/turtles-all-the-way-up.png)  
+*Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.*
 
 The cylinder goes up forever. The only thing that changes is the blast radius of the decisions.
-
 
 # Know Your Counsel: Technician, Politician, Peacemaker
 
@@ -611,7 +618,7 @@ This manager is driven by **Connection**. They view the team as a family. They c
 
 I should warn you not to be too hasty in putting your manager into one specific bucket. For example, many managers will ask you “how are you feeling?” as an opener. This doesn’t mean they’re Peacemakers necessarily.
 
-As we discussed, the [Default Engineering Worldview](./04-security-advisory.md#security-advisory-five-vulnerabilities-in-the-default-engineering-worldview) has left your peers with copious, free-floating cognitive dissonance. Consequently, managers often have to become untrained therapists.
+As we discussed, the [Default Engineering Worldview](./04-security-advisory.md) has left your peers with copious, free-floating cognitive dissonance. Consequently, managers often have to become untrained therapists.
 
 Likewise, even if your manager is a natural Technician or Peacemaker, to be effective they’ll have learned (or been trained) to emulate Politician-speak. You’ll observe them using words like “impact” and “visibility” even if their heart is elsewhere.
 
@@ -631,7 +638,6 @@ When you follow up with “how was this book transformative _for you_?”, you o
 
 Now that you have identified who you are trying to impress (the court) and who will be delivering that defense (your manager), it’s time to learn what to _do_. This brings us to **Karma-Driven Development.**
 
-
 # Tactics I: Karma-Driven Development (KDD)
 
 In software engineering, the most disciplined teams practice **Test-Driven Development (TDD)**. The rule is simple: **Red, Green, Refactor.**
@@ -642,7 +648,7 @@ In software engineering, the most disciplined teams practice **Test-Driven Devel
 
 Despite this, most _careers_ run on **Waterfall**. You do months of work, ship it, and then hope that the calibration court validates your work. This is madness. You are building features without a spec.
 
-To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it. Remember [Law #2](content/06-law-2-rating-is-job.md): the rating is the job.
+To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it. Remember [Law #2](./06-law-2.md): the rating is the job.
 
 ## Phase 1: Echolocation (Witness Selection & The IKEA Hook)
 
@@ -650,7 +656,7 @@ Before you can write a test, you need requirements.
 
 Right now, your mental backlog is likely full of "Technical Debt" and "Cool Ideas." You cannot sort this list by **Technical Merit** (Private Ledger). You must sort it by **Market Demand** (Firm Ledger).
 
-Scan your local area of the corporate social network, including (but not limited to) your [Calibration Cylinder](./09-calibration-cylinder.md.#the-calibration-cylinder-topology-of-the-trial) . Find a high-status Witness ($S_i$) who needs a problem solved. But do not just ask them what to do.
+Scan your local area of the corporate social network, including (but not limited to) your [Calibration Cylinder](./09-calibration-cylinder.md) . Find a high-status Witness ($S_i$) who needs a problem solved. But do not just ask them what to do.
 
 If you ask *"What should I work on?"*, you are an execution-bot. You are a commodity.
 Instead, you goal is to trigger the **IKEA Effect**.
@@ -744,7 +750,6 @@ Code is a liability. The Status-Weighted Story is the asset. Never generate the 
 
 Next up: packaging the Story for deployment. It’s time to manufacture some evidence (the Brief).
 
-
 # Tactics II: Manufacturing Evidence (The Brief)
 
 In the previous chapter, you learned Karma Driven Development (KDD), a strategy for choosing Status-Weighted Stories _first_ and working backwards to make them true. Now it's time to learn how to optimize that evidence for your manager to bring to calibration court.
@@ -770,7 +775,7 @@ It does not matter that the "45 hours" is a napkin-math estimate. It is a **Numb
 
 ## 2. Moral Targeting (Know Your Judge)
 
-Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./14-appendix.md#jonathan-haidt)** of your evaluators.
+Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./15-appendix.md#jonathan-haidt)** of your evaluators.
 
 Different tribes worship different gods:
 
@@ -814,7 +819,8 @@ If you are claiming that your new UI is better, do not just write "1.53 points h
 - **Top:** Distribution of sentiment scores _before_ development.
 - **Bottom:** Distribution of sentiment scores _after_ implementation.
 
-![Example diverging stacked bar charts for showing quantified sentiment change](images/diverging-stacked-bar-chart.png)
+![Example diverging stacked bar charts for showing quantified sentiment change.](images/diverging-stacked-bar-chart.png)
+*Figure: Example diverging stacked bar charts for showing quantified sentiment change.*
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."
     
@@ -964,6 +970,7 @@ You are angry because, deep down, you still believe the system *should* be fair.
 If we map "System Awareness" against "Organizational Alignment," we see a distinct curve. Call this the **Uncanny Valley of Alignment**.
 
 ![Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.](images/uncanny-valley-alignment.png)
+*Figure: Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.*
 
 On the X-Axis, plot System Awareness (Cynicism). On the Y-Axis: Alignment with the Firm. The curve starts high (Naive Idealist), dips low (Burnt-Out Senior), and rises high again (KarmaRank Optimizer). Let's look at each archetype.
 
@@ -1003,7 +1010,7 @@ Here is the constraint set that makes "just measure merit" a fantasy:
 2. **Heterogeneous Work:** People do different kinds of work on different timelines; outputs are not fungible units you can grade like test scores.
 3. **High Goodhart Pressure:** Any published metric becomes a target. Static rubrics get optimized into garbage (metric farming) and destroy signal.
 4. **Adversarial Incentives:** The reward pool is capped. Advocacy is zero-sum at the margin. Evaluators are not neutral graders; they are competing representatives.
-5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](#james-c.-scott)).
+5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](./15-appendix.md#james-c.-scott)).
 6. **Legitimacy Requirements:** The process must look "fair enough" to remain stable (morale, retention) and defensible (complaints, HR risk, lawsuits).
 7. **Discretion Must Persist:** Leadership must retain veto power to handle edge cases, shifts in strategy, and the inherent ambiguity of "value."
 8. **Narrative Compatibility:** Decisions must be explainable in the firm's public religion ("impact," "leadership," "values") even when the real drivers are messier.

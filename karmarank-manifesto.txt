@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.1.1 (2025-12-19-1740ccf)
+0.2.0 (2025-12-19-b10905b)
 
 License: CC-BY-NC-SA-4.0
 
@@ -318,7 +318,7 @@ The math is simple. Helping a lot of low-Status people a little versus
 helping a few high-Status people a lot can produce the same Net Karma.
 From a purely karmic ROI perspective, it is often substantially cheaper
 to create one ecstatic director than ten mildly satisfied ICs. One
-well-placed success story can outweigh a dozen quiet “yeah, it’s fine”s
+well-placed success story can outweigh a dozen quiet “yeah, it’s fine“s
 lower in the hierarchy.
 
 That’s what I’d just done, accidentally. I hadn’t “improved the
@@ -459,7 +459,7 @@ achieves in 6 hours of “visibility work,” you aren’t a hero. You are
 inefficient. The system interprets your silence and suffering as
 low-value labor.
 
-CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
+CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
 
 The Vulnerability: You believe that the work artifact (the code, the
 analysis, the doc) is the “Real Object”—what philosophers call noumenal,
@@ -555,7 +555,8 @@ a Private Ledger credit. When a director tells a VP “she saved our
 launch,” that’s a Firm Ledger credit. These events often do not coincide
 in time, or at all.
 
-[Private Ledger vs. Firm Ledger]
+[Private Ledger (left) is not equal to the Firm Ledger (right).] Figure:
+Private Ledger (left) is not equal to the Firm Ledger (right).
 
 From the firm’s point of view, your Private Ledger is an personal hobby
 (on company time!). They don’t query it. They query the Firm Ledger,
@@ -712,7 +713,8 @@ you is a pressure vessel.
 You are at the center of a circle. The perimeter of that circle consists
 of your Peers reporting to your shared manager.
 
-[Circle of You and your Peers under your shared Manager]
+[Circle of You and your Peers under your shared Manager.] Figure: Circle
+of You and your Peers under your shared Manager.
 
 Your Manager is at the center of their own circle, surrounded by their
 Peer Managers. The Skip-Level (manager’s manager) sits above, the center
@@ -723,7 +725,10 @@ middle, your skip at the top. You three form the vertical core; your
 respective peers form the rings around each level.
 
 [Calibration Cylinder showing You (Defendant), your Manager (Counsel),
-your Manager’s Peers (Prosecution/Jury) and your Skip Manager (Judge)]
+your Manager’s Peers (Prosecution/Jury) and your Skip Manager (Judge).]
+Figure: Calibration Cylinder showing You (Defendant), your Manager
+(Counsel), your Manager’s Peers (Prosecution/Jury) and your Skip Manager
+(Judge).
 
 This cylindrical portion of the corporate social graph contains the
 people who have direct influence on your rating. People exterior to the
@@ -880,7 +885,9 @@ the Market (The Judge) to prove that the CEO is still a “High
 Performer.”
 
 [CEO’s Calibration Cylinder showing SVP, Executive, Board and Market
-circles]
+circles.]
+Figure: CEO’s Calibration Cylinder showing SVP, Executive, Board and
+Market circles.
 
 The cylinder goes up forever. The only thing that changes is the blast
 radius of the decisions.
@@ -912,19 +919,24 @@ efficiency, mastery, and “doing it right.” They are allergic to fluff,
 marketing speak, and emotional appeals. They are often former Senior
 Engineers who were Peter-Principled into management.
 
-The Litmus Test: * The 1:1 Test: Do they naturally ask “Are you
-blocked?” (Process) or “How are you feeling?” (People)? * The Risk Test:
-How do they react to a hacky hotfix? If they visibly wince and demand a
-refactor ticket immediately, they are a Technician. * The Praise Test:
-They light up when you mention latency reduction or code deletion. They
-gloss over “great cross-team collaboration.”
+The Litmus Test:
 
-The Interaction Protocol: * Currency: Accuracy & Efficiency. *
-Day-to-Day: Speak in integers. Do not tell them you “improved” the
-system; tell them you “reduced build times by 14%.” * The Trap: Do not
-try to dazzle them with “Vision.” They will drill down into the
-implementation details until they find a flaw, and then they will stop
-trusting you.
+-   The 1:1 Test: Do they naturally ask “Are you blocked?” (Process) or
+    “How are you feeling?” (People)?
+-   The Risk Test: How do they react to a hacky hotfix? If they visibly
+    wince and demand a refactor ticket immediately, they are a
+    Technician.
+-   The Praise Test: They light up when you mention latency reduction or
+    code deletion. They gloss over “great cross-team collaboration.”
+
+The Interaction Protocol:
+
+-   Currency: Accuracy & Efficiency.
+-   Day-to-Day: Speak in integers. Do not tell them you “improved” the
+    system; tell them you “reduced build times by 14%.”
+-   The Trap: Do not try to dazzle them with “Vision.” They will drill
+    down into the implementation details until they find a flaw, and
+    then they will stop trusting you.
 
 How they argue in court: “My client’s output is 20% higher than the L5
 baseline. The data demands a promotion. If we don’t promote them, our
@@ -939,19 +951,25 @@ organizational control. They care about “optics,” “alignment,” and
 “visibility.” They want to be seen as a Kingmaker who grooms future
 leaders.
 
-The Litmus Test: * The 1:1 Test: Do they spend 15 minutes talking about
-what the VP said in the All-Hands? * The Risk Test: How do they react to
-a project that has high technical value but zero visibility? They will
-likely kill it or starve it of resources. * The Praise Test: They light
-up when you mention you presented to another team or “unblocked the
-Director’s initiative.”
+The Litmus Test:
 
-The Interaction Protocol: * Currency: Status & Alignment. * Day-to-Day:
-Connect your work to the “Narrative.” Never just fix a bug; always
-“remove a blocker for the Q3 Strategy.” Name-drop the people they want
-to impress. * The Trap: Do not bore them with technical nuance. If you
-explain the complexity of the database migration, their eyes will glaze
-over. Tell them who the migration helps.
+-   The 1:1 Test: Do they spend 15 minutes talking about what the VP
+    said in the All-Hands?
+-   The Risk Test: How do they react to a project that has high
+    technical value but zero visibility? They will likely kill it or
+    starve it of resources.
+-   The Praise Test: They light up when you mention you presented to
+    another team or “unblocked the Director’s initiative.”
+
+The Interaction Protocol:
+
+-   Currency: Status & Alignment.
+-   Day-to-Day: Connect your work to the “Narrative.” Never just fix a
+    bug; always “remove a blocker for the Q3 Strategy.” Name-drop the
+    people they want to impress.
+-   The Trap: Do not bore them with technical nuance. If you explain the
+    complexity of the database migration, their eyes will glaze over.
+    Tell them who the migration helps.
 
 How they argue in court: “My client isn’t just coding; they are driving
 the VP’s Q3 strategy. Promoting them solidifies our department’s
@@ -966,18 +984,24 @@ calibration fight, they are prone to folding early to avoid conflict
 with their peers. They value their relationship with the other managers
 more than they value winning your case.
 
-The Litmus Test: * The 1:1 Test: Do they spend the first 20 minutes
-chatting about your weekend or your hobbies? * The Risk Test: How do
-they react to you having a conflict with another team? They will
-immediately try to “smooth it over” rather than fighting for your
-side. * The Praise Test: They light up when you mention mentorship,
-onboarding new hires, or organizing team socials.
+The Litmus Test:
 
-The Interaction Protocol: * Currency: Harmony & Safety. * Day-to-Day:
-Position yourself as the “Glue.” Highlight how you help others. If you
-are aggressive or competitive, they will view you as a threat to the
-tribe’s stability. * The Trap: Do not rely on them to be aggressive for
-you. You must manufacture the spine they lack.
+-   The 1:1 Test: Do they spend the first 20 minutes chatting about your
+    weekend or your hobbies?
+-   The Risk Test: How do they react to you having a conflict with
+    another team? They will immediately try to “smooth it over” rather
+    than fighting for your side.
+-   The Praise Test: They light up when you mention mentorship,
+    onboarding new hires, or organizing team socials.
+
+The Interaction Protocol:
+
+-   Currency: Harmony & Safety.
+-   Day-to-Day: Position yourself as the “Glue.” Highlight how you help
+    others. If you are aggressive or competitive, they will view you as
+    a threat to the tribe’s stability.
+-   The Trap: Do not rely on them to be aggressive for you. You must
+    manufacture the spine they lack.
 
 How they argue in court: “My client is the glue holding the team
 together. If we don’t recognize them, we risk morale issues and
@@ -1077,24 +1101,30 @@ Schedule a 15-minute sync with a High-Status Node—a Staff Engineer, a
 Principal PM, or your Skip-Level. Use the specific “Hook” that matches
 their Archetype.
 
-Target: The Technician Witness * The Hook (Accusation Audit): “I’m
-looking at the [Project X] design. I know you hated how we handled the
-concurrency in the last version. Before I draft the RFC, can I get your
-mental model on how you would structure the lock-free queue?” * The IKEA
-Payoff: They give you a technical constraint. When you implement it,
-they see their own genius in your code.
+Target: The Technician Witness
 
-Target: The Politician Witness * The Hook (Strategic Alignment): “I’m
-scoping [Project Y]. I know this overlaps with the VP’s ‘Efficiency’
-pillar. How would you frame this so it lands best with the Director
-during the Q3 review?” * The IKEA Payoff: They give you the narrative.
-When you present it, they see their own strategy in your Brief.
+-   The Hook (Accusation Audit): “I’m looking at the [Project X] design.
+    I know you hated how we handled the concurrency in the last version.
+    Before I draft the RFC, can I get your mental model on how you would
+    structure the lock-free queue?”
+-   The IKEA Payoff: They give you a technical constraint. When you
+    implement it, they see their own genius in your code.
 
-Target: The Peacemaker Witness * The Hook (Diplomacy): “I’m worried
-[Project Z] might step on Team Alpha’s toes. Since you have such good
-rapport with them, how would you approach the handoff so we don’t cause
-friction?” * The IKEA Payoff: They give you the diplomacy. They feel
-ownership over the team harmony.
+Target: The Politician Witness
+
+-   The Hook (Strategic Alignment): “I’m scoping [Project Y]. I know
+    this overlaps with the VP’s ‘Efficiency’ pillar. How would you frame
+    this so it lands best with the Director during the Q3 review?”
+-   The IKEA Payoff: They give you the narrative. When you present it,
+    they see their own strategy in your Brief.
+
+Target: The Peacemaker Witness
+
+-   The Hook (Diplomacy): “I’m worried [Project Z] might step on Team
+    Alpha’s toes. Since you have such good rapport with them, how would
+    you approach the handoff so we don’t cause friction?”
+-   The IKEA Payoff: They give you the diplomacy. They feel ownership
+    over the team harmony.
 
 Phase 2: Write The Test (The Spec)
 
@@ -1177,9 +1207,12 @@ effort spent beyond the Green State is Gold Plating—uncompensated labor
 that introduces risk without adding status.
 
 Caveat: If your Manager is a Technician, “Clean Code” is part of the
-spec. * For a Politician, the work is finished when the chart shows “up
-and to the right”. * For a Technician, the work is finished when the
-graph goes up and the diff looks elegant, to them.
+spec.
+
+-   For a Politician, the work is finished when the chart shows “up and
+    to the right”.
+-   For a Technician, the work is finished when the graph goes up and
+    the diff looks elegant, to them.
 
 But here again, only provide the minimum viable aesthetics to satisfy
 your specific audience. Your own Private Ledger taste is irrelevant.
@@ -1189,9 +1222,11 @@ Phase 5: Refactoring The Narrative
 The work is done. The test passes. Now you engage in “Refactoring”—but
 not of the code. You refactor the Story.
 
-You have the raw materials: 1. The Villain: (The problem defined by the
-Witness in Phase 1). 2. The Hero: (The solution co-signed by the Manager
-in Phase 3). 3. The Result: (The Green State from Phase 4).
+You have the raw materials:
+
+1.  The Villain: (The problem defined by the Witness in Phase 1).
+2.  The Hero: (The solution co-signed by the Manager in Phase 3).
+3.  The Result: (The Green State from Phase 4).
 
 The naive engineer builds the software, then tries to write a marketing
 brochure for it. The KDD practitioner writes the brochure, pre-sells it
@@ -1306,7 +1341,8 @@ points higher.” Deploy a diverging stacked bar chart.
 -   Bottom: Distribution of sentiment scores after implementation.
 
 [Example diverging stacked bar charts for showing quantified sentiment
-change]
+change.] Figure: Example diverging stacked bar charts for showing
+quantified sentiment change.
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they
 will not read your bullet points. They will look at the pretty picture.
@@ -1340,7 +1376,7 @@ template. Use it. Your goal is low cognitive load, not art.
 
 5. Are you saying I should lie?
 
-No. You should not outright lie (make shit up). And you shouldn’t have
+No. You should not outright lie (make shit up). And you shouldn’t have
 to! This would demonstrate a severe lack of creativity.
 
 Even if your in-the-moment evaluators don’t check the tape at evaluation
@@ -1529,7 +1565,9 @@ If we map “System Awareness” against “Organizational Alignment,” we see
 a distinct curve. Call this the Uncanny Valley of Alignment.
 
 [Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness
-(Cynicism). Y-Axis: Alignment with Firm.]
+(Cynicism). Y-Axis: Alignment with Firm.] Figure: Chart showing the
+Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism).
+Y-Axis: Alignment with Firm.
 
 On the X-Axis, plot System Awareness (Cynicism). On the Y-Axis:
 Alignment with the Firm. The curve starts high (Naive Idealist), dips
