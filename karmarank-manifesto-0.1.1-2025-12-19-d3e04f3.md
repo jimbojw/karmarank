@@ -15,7 +15,7 @@ rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 By jimbojw
 
-> Version: 0.1.1 (2025-12-18-664909d)
+> Version: 0.1.1 (2025-12-19-d3e04f3)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -353,7 +353,7 @@ Whether you internalize this moral framing as your own is your business. I'm not
 
 I'm saying: **this is how the firm's operating system sees you**, as demonstrably encoded in their performance appraisal rituals. When you understand that, a lot of confusing decisions suddenly make sense.
 
-# Law #3: Impact = Who Cares?
+# Law #3: Who Cares?
 
 "Impact" is a fluff word.
 
@@ -361,20 +361,20 @@ People say "impact" the way astrologers say "energy": a vague scalar that is alw
 
 Under KarmaRank, "impact" has a very specific implementation:
 
-> **Impact = Who cares?**
+> **Impact = Who Cares?**
 
 Literally: who $(S_i)$ cares $(k_i)$.
 
 * "Who" = which people in the field have non-zero Status with respect to your rating.
 * "Cares" = how much emotional and political value they get from telling a story where you are the hero.
 
-Written as math, your **Net Impact** to the firm is just your Net Status-Weighted Karma:
+Written as math, your capital-I **Impact** to the firm is just your Net Status-Weighted Karma:
 
 $$
 K = \sum_i S_i \cdot k_i
 $$
 
-If nobody with Status cares, the system has nowhere to store your so-called impact. It lives only on your Private Ledger as a pleasant feeling about yourself.
+If nobody with Status cares, the system has nowhere to store your so-called "impact". It lives only on your Private Ledger as a pleasant feeling about yourself.
 
 This gives you a simple test:
 
