@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.1.1 (2025-12-19-378c9c4)
+0.1.1 (2025-12-19-1740ccf)
 
 License: CC-BY-NC-SA-4.0
 
@@ -1039,121 +1039,136 @@ Development (TDD). The rule is simple: Red, Green, Refactor.
 2.  Green: Write just enough code to make the test pass.
 3.  Refactor: Clean up the code.
 
-Most careers, however, run on Waterfall. You do months of work, ship it,
-and then hope that HR writes a test that you happen to pass. This is
-madness. You are building features without a spec.
+Despite this, most careers run on Waterfall. You do months of work, ship
+it, and then hope that the calibration court validates your work. This
+is madness. You are building features without a spec.
 
-To fix this, we will adopt Karma-Driven Development (KDD). In this
-framework, you never write a line of code until you have written the
-performance review bullet point that rewards it. Remember Law #2, the
-rating is the job.
+To fix this, adopt Karma-Driven Development (KDD). In this framework,
+you never write a line of code until you have written the performance
+review bullet point that rewards it. Remember Law #2: the rating is the
+job.
 
-Phase 1: Backlog Grooming (Political Echolocation)
+Phase 1: Echolocation (Witness Selection & The IKEA Hook)
 
 Before you can write a test, you need requirements.
 
 Right now, your mental backlog is likely full of “Technical Debt” and
-“Cool Ideas.” You might be tempted to pick the one that looks most
-intellectually stimulating.
+“Cool Ideas.” You cannot sort this list by Technical Merit (Private
+Ledger). You must sort it by Market Demand (Firm Ledger).
 
-Stop. You cannot sort this list by Technical Merit (Private Ledger). You
-must sort it by Market Demand (Firm Ledger).
+Scan your local area of the corporate social network, including (but not
+limited to) your Calibration Cylinder . Find a high-status Witness
+(S_(i)) who needs a problem solved. But do not just ask them what to do.
 
-To do this, you must leave your IDE and perform Political Echolocation.
-You need to ping the network to see what returns a signal.
+If you ask “What should I work on?”, you are an execution-bot. You are a
+commodity. Instead, you goal is to trigger the IKEA Effect.
 
-The “Hard Problem” Heuristic
+  The IKEA Effect: A cognitive bias in which consumers place a
+  disproportionately high value on products they partially created.
 
-Schedule a 15-minute sync with a High-Status Node (S_(i))—a Staff
-Engineer, a Principal PM, or your Skip-Level Manager.
+You want your Witness to feel like they had a hand in steering your
+project. If they design the box, they will love the box. To do this, you
+must use Political Echolocation—pinging the network with a calibrated
+question to see what signal returns.
 
-Do not ask: “What should I work on?” That makes you look like a junior
-execution-bot.
+The Archetypal Pings
 
-Instead, ask for their mental model (a “calibrated question” in Voss’s
-terms):
+Schedule a 15-minute sync with a High-Status Node—a Staff Engineer, a
+Principal PM, or your Skip-Level. Use the specific “Hook” that matches
+their Archetype.
 
-  “I’m looking at our Q3 technical roadmap, and I know you’ve been
-  thinking a lot about [Strategic Theme X]. How does [Project Y] fit
-  into your mental model of that problem?”
+Target: The Technician Witness * The Hook (Accusation Audit): “I’m
+looking at the [Project X] design. I know you hated how we handled the
+concurrency in the last version. Before I draft the RFC, can I get your
+mental model on how you would structure the lock-free queue?” * The IKEA
+Payoff: They give you a technical constraint. When you implement it,
+they see their own genius in your code.
 
-This accomplishes three things:
+Target: The Politician Witness * The Hook (Strategic Alignment): “I’m
+scoping [Project Y]. I know this overlaps with the VP’s ‘Efficiency’
+pillar. How would you frame this so it lands best with the Director
+during the Q3 review?” * The IKEA Payoff: They give you the narrative.
+When you present it, they see their own strategy in your Brief.
 
-1.  The Ben Franklin Effect: Benjamin Franklin famously observed that he
-    who has done you a kindness will be more ready to do you another. By
-    asking for their “wisdom,” you make them feel like a visionary. They
-    invest in you. They now have a subconscious stake in your success
-    because you are a vessel for their ideas.
-
-2.  Signal Detection:
-
-    -   If they look bored or give a generic answer: Low k_(i) (Caring).
-        Delete the ticket.
-    -   If they lean in, start drawing on the whiteboard, or vent about
-        a specific pain point: High k_(i). Move this to the top of the
-        backlog.
-
-3.  Cache Warming (The Mere Exposure Effect): In the Calibration
-    Courtroom, when your name comes up, you do not want the Jury to do a
-    cold lookup.
-
-    -   Cold Lookup: “Who? Oh, the backend dev? Okay.”
-    -   Warm Cache: “Oh, right. Smart dev. We chatted about the API
-        strategy last month. They Get It™.” By grooming the backlog with
-        them, you are pre-loading your identity into their L1 Cache.
+Target: The Peacemaker Witness * The Hook (Diplomacy): “I’m worried
+[Project Z] might step on Team Alpha’s toes. Since you have such good
+rapport with them, how would you approach the handoff so we don’t cause
+friction?” * The IKEA Payoff: They give you the diplomacy. They feel
+ownership over the team harmony.
 
 Phase 2: Write The Test (The Spec)
 
-Now that you have validated the demand, you enter the Red State.
+Now that you have validated the demand and secured a Witness, you enter
+the Red State.
 
 Open a blank document. Write the bullet point exactly as you want it to
 appear in your promotion packet six months from now.
 
   The Test: “Reduced AWS infrastructure spend by 20% ($150k/annually) by
-  optimizing hot-path caching patterns, effectively extending our runway
-  by 2 weeks.”
+  optimizing hot-path caching patterns, validated by Staff Engineer
+  [Witness Name].”
 
 Currently, this test fails. The cost of telling it is high because the
 story is false. But you now have a target.
 
-Phase 3: The Compiler Check
+Phase 3: The IKEA Cross-Compiler (Counselor Co-Authoring)
 
 Do not start coding yet.
 
-Take this specific bullet point (The Test) to your Manager (The
-Attorney).
+You must run this test against your Counsel (Your Manager). In the
+previous worldview, you would ask for approval. In KDD, you ask for
+Co-Authorship.
 
-  You: “I’m thinking of targeting a 20% reduction in cloud spend this
-  quarter. Is that a story that moves the needle for us in the
-  calibration room?”
+You want your manager to edit the bullet point. If they change the
+wording, they become psychologically committed to defending it in court.
+They are no longer defending your work; they are defending their words.
 
-This is a compiler check.
+Bring the draft to your 1:1 and apply the Archetypal Cross-Compiler:
 
--   Compiler Error: “The Director doesn’t care about cost right now; she
-    cares about user growth.”
+Scenario A: Your Manager is a Technician
 
-    -   Result: The test is invalid. Delete the test. You just saved
-        yourself three weeks of invisible labor.
+-   The Pitch: “I drafted this goal for the [Project X] work. I feel
+    like the ‘impact’ part is fuzzy. I put ‘reduced latency,’ but
+    knowing how you care about precision, is there a specific metric you
+    think would look bulletproof to the Staff Engineers?”
+-   The Edit: They will say, “Don’t just say ‘reduced latency.’ Say
+    ‘reduced P99 latency by 50ms during peak load’.”
+-   The Contract: They have defined the success criteria. If you hit
+    50ms, they must endorse you, or they are invalidating their own
+    technical judgment.
 
--   Compiler Success: “Oh, absolutely. The VP is screaming about burn
-    rate.”
+Scenario B: Your Manager is a Politician
 
-    -   Result: The test is valid. You have a contract.
+-   The Pitch: “I wrote down this bullet for [Project Y]. It feels a bit
+    too ‘in the weeds.’ Since you have a better sense of the Director’s
+    Q3 narrative, how would you tweak this so it pops during the
+    calibration reading?”
+-   The Edit: They will grab the keyboard. “Change ‘refactored database’
+    to ‘Enabled Multi-Region Strategy via Data Layer Modernization’.”
+-   The Contract: They have handed you the script. You are now the actor
+    in their play.
+
+Scenario C: Your Manager is a Peacemaker
+
+-   The Pitch: “I’m worried this bullet point sounds too aggressive. I
+    know you value team collaboration. How can we rephrase this so it
+    highlights how I supported the Junior Devs, while still getting
+    credit for the architecture?”
+-   The Edit: They will soften the language but likely add a “force
+    multiplier” clause.
+-   The Contract: You have given them a weapon they are actually willing
+    to use—a “nice” bullet point that still counts.
 
 Phase 4: Green State (Implementation)
 
-Now—and only now—do you do the work.
-
-And crucially, you do only the work required to pass the test.
+Now—and only now—do you do the work. And crucially, you do only the work
+required to pass the test.
 
 Your goal is to turn the test from Red to Green with the minimum
 possible calorie expenditure.
 
--   If you can hit the 20% reduction by changing a config file: Do that.
--   If you can hit it by deleting unused tables: Do that.
-
-The “Puritan” inside you will want to rewrite the entire caching layer
-to be “elegant.”
+The “Puritan” inside you will want to rewrite the entire system to be
+“elegant.”
 
 Suppress the Puritan.
 
@@ -1161,33 +1176,33 @@ The Firm did not buy “Elegance.” They bought “20% Cost Reduction.” Any
 effort spent beyond the Green State is Gold Plating—uncompensated labor
 that introduces risk without adding status.
 
-Phase 5: Refactoring (The Brief)
+Caveat: If your Manager is a Technician, “Clean Code” is part of the
+spec. * For a Politician, the work is finished when the chart shows “up
+and to the right”. * For a Technician, the work is finished when the
+graph goes up and the diff looks elegant, to them.
+
+But here again, only provide the minimum viable aesthetics to satisfy
+your specific audience. Your own Private Ledger taste is irrelevant.
+
+Phase 5: Refactoring The Narrative
 
 The work is done. The test passes. Now you engage in “Refactoring”—but
 not of the code. You refactor the Story.
 
-This is where you format the reality for the courtroom. You take your
-Green Test and you wrap it in the narrative structure we discussed:
-
-1.  The Villain: (We were burning cash).
-2.  The Hero: (I stopped the bleeding).
-3.  The Witness: (The Skip-Level who helped you groom the backlog).
-4.  The Visual: (The chart showing the cliff).
-
-We will dive into how to structure the brief in the next chapter.
-
-Summary: The Inversion
+You have the raw materials: 1. The Villain: (The problem defined by the
+Witness in Phase 1). 2. The Hero: (The solution co-signed by the Manager
+in Phase 3). 3. The Result: (The Green State from Phase 4).
 
 The naive engineer builds the software, then tries to write a marketing
-brochure for it.
-
-[Karma Driven Development (KDD) Flowchart]
-
-The KDD practitioner writes the brochure, pre-sells it to the market,
-and then manufactures the product to spec.
+brochure for it. The KDD practitioner writes the brochure, pre-sells it
+to the market via the IKEA Effect, and then manufactures the product to
+spec.
 
 Code is a liability. The Status-Weighted Story is the asset. Never
 generate the liability without securing the asset first.
+
+Next up: packaging the Story for deployment. It’s time to manufacture
+some evidence (the Brief).
 
 Tactics II: Manufacturing Evidence (The Brief)
 
