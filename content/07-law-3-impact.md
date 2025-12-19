@@ -31,4 +31,4 @@ If you cannot answer "who cares?" (with names, not archetypes), you are doing **
 
 Law #3 is the operational version of Law #2.  
 "The rating is the job" tells you what gets serialized.  
-"Impact = Who Cares?" tells you how to decide where to spend your next hour.
+"Who Cares?" tells you how to decide where to spend your next hour.
