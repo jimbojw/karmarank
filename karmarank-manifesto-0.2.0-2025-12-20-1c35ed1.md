@@ -19,7 +19,7 @@ toccolor: "black"
 
 By jimbojw
 
-> Version: 0.2.0 (2025-12-20-86ec88b)
+> Version: 0.2.0 (2025-12-20-1c35ed1)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -268,6 +268,7 @@ Some people intuit this. Good for them. The rest of us have to write it down.
 
 KarmaRank is for the second group. You don't have to struggle through a decade of half-failed projects and flushed 1:1s to see KarmaRank. I did that part for you.
 
+
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 
 **Severity:** Critical  
@@ -287,7 +288,7 @@ What follows is a list of the **Five Critical Vulnerabilities** in the Default E
 
 The firm does not value your suffering. It values **Status-Weighted Stories**. If you work 60 hours to do what a politically savvy peer achieves in 6 hours of "visibility work," you aren't a hero. You are inefficient. The system interprets your silence and suffering as low-value labor.
 
-### CVE-DEW-02: The Rendering Error (Noumenal vs. Phenomenal)
+### CVE-DEW-02: The Reality Illusion (Noumenal vs. Phenomenal)
 
 **The Vulnerability:** You believe that the work artifact (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
 
