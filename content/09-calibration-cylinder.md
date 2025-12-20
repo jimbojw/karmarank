@@ -1,25 +1,26 @@
 # The Calibration Cylinder: Topology of the Trial
 
-According to Law #2, the rating is the job. And by our earlier observations, the unit of account is the **Status-Weighted Story**. That's all well and good, but whose karma are we harvesting here?
+According to [Law #2](./06-law-2.md), the rating is the job. And by our earlier observations, the unit of account is the **Status-Weighted Story**. That's all well and good, but whose karma are we harvesting here?
 
-In this chapter you'll learn the local topology of the network graph as it applies to you: a structure I call the calibration cylinder.
-
-## 1. The Calibration Cylinder
+In this chapter you'll learn the local topology of the network graph as it applies to performance appraisal: a structure I call the Calibration Cylinder.
 
 If I asked you to draw a map of your workplace, you would likely draw a Tree: the Org Chart. You are a leaf node, connected to a branch (Manager), connected to a trunk (Director/VP), and so on.
 
+![Boring, uninformative, corporate Org Chart.](images/boring-org-chart.png)
+*Figure: Boring, uninformative, corporate Org Chart.*
+
 Delete that mental image. It is a static representation of reporting lines, useful primarily for knowing whose name is on your vacation approval. It tells you little about the physics of how your value is actually calculated.
 
-The Org Chart implies a chain of command. The reality as it applies to you is a pressure vessel.
+The Org Chart implies a chain of command. The reality, as it applies to you, is a pressure vessel.
 
-You are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
+## 1. The Calibration Cylinder
+
+Starting at the bottom, you are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
 ![Circle of You and your Peers under your shared Manager.](images/peer-circle.png)
 *Figure: Circle of You and your Peers under your shared Manager.*
 
-Your Manager is at the center of their own circle, surrounded by their **Peer Managers**. The Skip-Level (manager's manager) sits above, the center of their own circle of peers, looking down into the cylinder.
-
-So to summarize: three levels. You at the bottom, your manager in the middle, your skip at the top. You three form the vertical core; your respective peers form the rings around each level.
+Your circle of Peers forms the base of the cylinder. Above you, in the middle layer, your Manager is at the center of their own circle, surrounded by their **Peer Managers**. Your Skip Manager (manager's manager, e.g. Director) sits in the top layer, the center of their own third circle of peers, looking down into the cylinder.
 
 ![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.png)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
