@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.2.0 (2025-12-20-1c35ed1)
+0.2.0 (2025-12-20-08bcd5f)
 
 License: CC-BY-NC-SA-4.0
 
@@ -530,7 +530,7 @@ mechanics are the same.
 
 Let’s open the debugger.
 
-Law #1: The Two Ledgers
+Law #1: Conative Dissonance
 
 You are running two ledgers in one head.
 
@@ -550,6 +550,9 @@ system with some measurement noise, like a single, eventually consistent
 database. They are not. They are different databases with different
 schemas, occasionally synced only by accident. Like a hash collision.
 
+The friction you experience by the misalignment of these two databases
+is Conative Dissonance.
+
 When you stay late refactoring code nobody will ever hear about, that’s
 a Private Ledger credit. When a director tells a VP “she saved our
 launch,” that’s a Firm Ledger credit. These events often do not coincide
@@ -558,7 +561,7 @@ in time, or at all.
 [Private Ledger (left) is not equal to the Firm Ledger (right).] Figure:
 Private Ledger (left) is not equal to the Firm Ledger (right).
 
-From the firm’s point of view, your Private Ledger is an personal hobby
+From the firm’s point of view, your Private Ledger is a personal hobby
 (on company time!). They don’t query it. They query the Firm Ledger,
 then serialize the result into ratings, levels, and comp.
 
