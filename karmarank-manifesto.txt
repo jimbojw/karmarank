@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.2.0 (2025-12-19-b10905b)
+0.2.0 (2025-12-20-86ec88b)
 
 License: CC-BY-NC-SA-4.0
 
@@ -638,45 +638,44 @@ You are allowed to play the game.
 You are not supposed to describe the game.
 
 When I showed my manager the Net Status-Weighted Karma formula, she
-wasn’t upset because the math was wrong. It was disempowering to see
-years of political savvy and emotional labor collapsed into a cold
-one-liner.
+wasn’t upset because the math was wrong. She was upset to see years of
+political savvy and emotional labor collapsed into a dehumanizing (from
+her perspective) one-liner.
 
 The modern firm is a social network made of people who, like you, have
 their own pre-rational tastes, preferences and sacred cows. But unlike
-you, most people are unwilling to decouple their private ledger from the
-firm’s—to see things clearly.
+you, most people are unwilling to decouple their Private Ledger from the
+Firm’s—to see things dispassionately.
 
-The modern firm needs to maintain a public religion of “merit,”
-“impact,” and “values.” People have to be able to say, with a straight
-face, that performance ratings emerge from neutral evaluation of
-objective contributions. If you insist on talking about Status weights
-and emotional payoff of stories, you are not “insightful.” You are
-indecent.
+The modern firm needs to project a public religion of “merit,” “impact,”
+and “values.” People have to be able to say, with a straight face, that
+performance ratings emerge from a neutral evaluation of objective
+contributions. If you insist on talking about Status weights and the
+emotional payoff of stories, you are not “insightful.” You are rude.
 
 From the inside, the rule looks like this:
 
   You may act on the true objective function.
   You may not name the true objective function.
 
-You are expected to translate your moves back into the house liturgy:
-“driving business outcomes,” “raising the quality bar,” “delighting
-users,” “living the leadership principles.” The closer your internal
-model gets to “I am maximizing high-Status storytellers who enjoy
-endorsing me,” the more aggressively you must wrap it in acceptable
-language.
+You are expected to transubstantiate your moves back into the house
+liturgy: “driving business outcomes,” “raising the quality bar,”
+“delighting users,” “living the leadership principles.” The closer your
+internal model gets to “I am maximizing high-Status storytellers who
+enjoy endorsing me,” the more aggressively you must wrap it in
+acceptable language.
 
-This is not a conspiracy. It is a hygiene mechanism. If the firm
-acknowledged, openly, that your rating is a status-weighted sum of other
+This is not a conspiracy. It is social hygiene. If the firm
+acknowledged, openly, that your rating is a Status-weighted sum of other
 people’s feelings about you, half the building would quit and the rest
 would start playing even more nakedly political games. Strategic
-ambiguity keeps the story barely stable.
+ambiguity keeps the story stable.
 
 So you keep two layers:
 
 -   In your head, you run KarmaRank. You think in terms of fields,
     Status weights, stories in flight.
--   Out loud, you speak HR doxa. You think in terms of impact,
+-   Out loud, you speak HR doxa. You communicate in terms of impact,
     customers, team success.
 
 Violating Law #3 does not change how the system works. It only changes
@@ -684,8 +683,8 @@ how the system categorizes you. Instead of “high-potential,” you become
 “cynical,” “political,” or “not a culture fit.”
 
 This text is written in the forbidden dialect on purpose. Treat it like
-you would any other internal tool: useful in the debugger, suicidal in
-the release build.
+you would any other internal tool: useful in the debugger, potentially
+disastrous in the release build.
 
 The Calibration Cylinder: Topology of the Trial
 
@@ -694,35 +693,37 @@ observations, the unit of account is the Status-Weighted Story. That’s
 all well and good, but whose karma are we harvesting here?
 
 In this chapter you’ll learn the local topology of the network graph as
-it applies to you: a structure I call the calibration cylinder.
-
-1. The Calibration Cylinder
+it applies to performance appraisal: a structure I call the Calibration
+Cylinder.
 
 If I asked you to draw a map of your workplace, you would likely draw a
 Tree: the Org Chart. You are a leaf node, connected to a branch
 (Manager), connected to a trunk (Director/VP), and so on.
+
+[Boring, uninformative, corporate Org Chart.] Figure: Boring,
+uninformative, corporate Org Chart.
 
 Delete that mental image. It is a static representation of reporting
 lines, useful primarily for knowing whose name is on your vacation
 approval. It tells you little about the physics of how your value is
 actually calculated.
 
-The Org Chart implies a chain of command. The reality as it applies to
-you is a pressure vessel.
+The Org Chart implies a chain of command. The reality, as it applies to
+you, is a pressure vessel.
 
-You are at the center of a circle. The perimeter of that circle consists
-of your Peers reporting to your shared manager.
+1. The Calibration Cylinder
+
+Starting at the bottom, you are at the center of a circle. The perimeter
+of that circle consists of your Peers reporting to your shared manager.
 
 [Circle of You and your Peers under your shared Manager.] Figure: Circle
 of You and your Peers under your shared Manager.
 
-Your Manager is at the center of their own circle, surrounded by their
-Peer Managers. The Skip-Level (manager’s manager) sits above, the center
-of their own circle of peers, looking down into the cylinder.
-
-So to summarize: three levels. You at the bottom, your manager in the
-middle, your skip at the top. You three form the vertical core; your
-respective peers form the rings around each level.
+Your circle of Peers forms the base of the cylinder. Above you, in the
+middle layer, your Manager is at the center of their own circle,
+surrounded by their Peer Managers. Your Skip Manager (manager’s manager,
+e.g. Director) sits in the top layer, the center of their own third
+circle of peers, looking down into the cylinder.
 
 [Calibration Cylinder showing You (Defendant), your Manager (Counsel),
 your Manager’s Peers (Prosecution/Jury) and your Skip Manager (Judge).]
