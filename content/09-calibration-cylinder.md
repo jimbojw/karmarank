@@ -125,4 +125,4 @@ When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mi
 ![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.](images/turtles-all-the-way-up.png)  
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.*
 
-The cylinder goes up forever. The only thing that changes is the blast radius of the decisions.
+The cylinder goes up indefinitely. The only thing that changes is the blast radius of the decisions. Everyone has the same job: figure out who matters, then ship them stories they'll endorse.

@@ -6,7 +6,12 @@ The other managers in the room are the Prosecution/Jury. The Skip Level is the J
 
 To secure your best defense, you’ll want to Know Your Counsel (KYC). This will allow you to select projects and frame Status-Weighted Stories in the native schema of your particular cylinder.
 
-In the engineering world, managers generally fall into one of three archetypes: the Technician, the Politician, and the Peacemaker. Every person is different, but these are the abstract base classes.
+In the engineering world, managers generally fall into one of three archetypes: the Technician, the Politician, and the Peacemaker.
+
+![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.png)
+*Figure: The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.*
+
+Every person is different, but these are the abstract base classes.
 
 ## 1. The Technician (The "Achievement" Manager)
 
