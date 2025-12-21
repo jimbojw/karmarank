@@ -19,7 +19,7 @@ toccolor: "black"
 
 By jimbojw
 
-> Version: 0.2.0 (2025-12-21-b35392a)
+> Version: 0.2.0 (2025-12-21-123f994)
 
 
 # License: CC-BY-NC-SA-4.0
