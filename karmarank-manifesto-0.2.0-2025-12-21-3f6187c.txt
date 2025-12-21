@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.2.0 (2025-12-21-23b070e)
+0.2.0 (2025-12-21-3f6187c)
 
 License: CC-BY-NC-SA-4.0
 
@@ -9,18 +9,17 @@ Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 You are free to:
 
--   Share — copy and redistribute the material in any medium or format
--   Adapt — remix, transform, and build upon the material
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
 
 Under the following terms:
 
--   Attribution — You must give appropriate credit, provide a link to
-    the license, and indicate if changes were made.
--   NonCommercial — You may not use the material for commercial
-    purposes.
--   ShareAlike — If you remix, transform, or build upon the material,
-    you must distribute your contributions under the same license as the
-    original.
+- Attribution — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made.
+- NonCommercial — You may not use the material for commercial purposes.
+- ShareAlike — If you remix, transform, or build upon the material, you
+  must distribute your contributions under the same license as the
+  original.
 
 For the full legal text, see the LICENSE file in the source repository
 (jimbojw/karmarank).
@@ -50,20 +49,19 @@ K = ∑_(i)S_(i) ⋅ k_(i)
 
 Where:
 
--   K — Net Status-Weighted Karma
-    In a given field: a company, a team, a subculture, a community.
--   i — The Index
-    Ranging over the people whose opinions about you actually
-    travel—your manager, your manager’s peers, the Staff engineer
-    everyone listens to, the PM who won’t shut up in calibration
-    meetings.
--   S_(i) — Status
-    Intentionally capitalized, because it’s the most important term.
-    It’s not just the witness’s job title, but their actual ability to
-    move decisions and narratives as it pertains to you.
--   k_(i) — Karmic Appraisal
-    The signed “emotional value” person i gets from telling a story
-    about you and your work.
+- K — Net Status-Weighted Karma
+  In a given field: a company, a team, a subculture, a community.
+- i — The Index
+  Ranging over the people whose opinions about you actually travel—your
+  manager, your manager’s peers, the Staff engineer everyone listens to,
+  the PM who won’t shut up in calibration meetings.
+- S_(i) — Status
+  Intentionally capitalized, because it’s the most important term. It’s
+  not just the witness’s job title, but their actual ability to move
+  decisions and narratives as it pertains to you.
+- k_(i) — Karmic Appraisal
+  The signed “emotional value” person i gets from telling a story about
+  you and your work.
 
 The KarmaRank Manifesto proceeds from this, explaining how to decouple
 your self-worth from your rating (Law #1), optimize your output for the
@@ -236,8 +234,8 @@ language.
 The key questions were not, “Is the architecture future-proof?” or “Is
 the codebase beautiful?” The key questions were:
 
--   “Who has this helped?” (concrete users)
--   “How?” (a story you can tell in a meeting)
+- “Who has this helped?” (concrete users)
+- “How?” (a story you can tell in a meeting)
 
 All of that was constrained by a simple deadline: “In time for that HQ
 meeting, two weeks from now.”
@@ -304,9 +302,8 @@ listens to, the PM who won’t shut up in calibration meetings.
 For each such person, k_(i) is your karma with person i: the signed
 “emotional value” they get from telling a story about you and your work.
 
--   A positive k_(i) is, “She saved our launch with that tool.”
--   A negative k_(i) is, “He keeps slipping deadlines and making
-    excuses.”
+- A positive k_(i) is, “She saved our launch with that tool.”
+- A negative k_(i) is, “He keeps slipping deadlines and making excuses.”
 
 The last term, S_(i), is their Status in this field—capital S on
 purpose, because it’s the most important term. It’s not just job title,
@@ -402,10 +399,10 @@ way.
 The leap from Net Karma to KarmaRank comes from layering in a few more
 observations:
 
--   Transitivity: Everyone is playing the same game.
--   Time Sensitivity: Memories are short. “What have you done for me
-    lately?”
--   Constraints: Advocacy and rewards are both constrained resources.
+- Transitivity: Everyone is playing the same game.
+- Time Sensitivity: Memories are short. “What have you done for me
+  lately?”
+- Constraints: Advocacy and rewards are both constrained resources.
 
 So a complete KarmaRank definition ends up looking like this:
 
@@ -606,10 +603,10 @@ Under KarmaRank, “impact” has a very specific implementation:
 
 Literally: who (S_(i)) cares (k_(i)).
 
--   “Who” = which people in the field have non-zero Status with respect
-    to your rating.
--   “Cares” = how much emotional and political value they get from
-    telling a story where you are the hero.
+- “Who” = which people in the field have non-zero Status with respect to
+  your rating.
+- “Cares” = how much emotional and political value they get from telling
+  a story where you are the hero.
 
 Written as math, your capital-I Impact to the firm is just your Net
 Status-Weighted Karma:
@@ -622,10 +619,10 @@ feeling about yourself.
 
 This gives you a simple test:
 
--   “I improved test coverage” → Who cares?
--   “I made the UI nicer” → Who cares?
--   “I cut cold-start time by 40% for Team X’s workflow” → Who, by name,
-    is going to care enough to say that out loud in a calibration room?
+- “I improved test coverage” → Who cares?
+- “I made the UI nicer” → Who cares?
+- “I cut cold-start time by 40% for Team X’s workflow” → Who, by name,
+  is going to care enough to say that out loud in a calibration room?
 
 If you cannot answer “who cares?” (with names, not archetypes), you are
 doing speculative impact. To you, it may be good. It may be virtuous. It
@@ -677,10 +674,10 @@ ambiguity keeps the story stable.
 
 So you keep two layers:
 
--   In your head, you run KarmaRank. You think in terms of fields,
-    Status weights, stories in flight.
--   Out loud, you speak HR doxa. You communicate in terms of impact,
-    customers, team success.
+- In your head, you run KarmaRank. You think in terms of fields, Status
+  weights, stories in flight.
+- Out loud, you speak HR doxa. You communicate in terms of impact,
+  customers, team success.
 
 Violating Law #3 does not change how the system works. It only changes
 how the system categorizes you. Instead of “high-potential,” you become
@@ -876,12 +873,11 @@ Manager/Director/CEO and stop playing games.”
 
 I have bad news. The topology is fractal.
 
--   You generate stories for your Manager to survive the Team
-    Calibration.
--   Your Manager generates stories for the Director to survive the Org
-    Calibration.
--   The Director generates stories for the VP.
--   The CEO generates stories for the Board / Market.
+- You generate stories for your Manager to survive the Team Calibration.
+- Your Manager generates stories for the Director to survive the Org
+  Calibration.
+- The Director generates stories for the VP.
+- The CEO generates stories for the Board / Market.
 
 When the CEO announces a layoff, or a pivot to AI, or a stock buyback,
 do not mistake it for “strategy” in the pure sense. It is a
@@ -932,22 +928,21 @@ Engineers who were Peter-Principled into management.
 
 The Litmus Test:
 
--   The 1:1 Test: Do they naturally ask “Are you blocked?” (Process) or
-    “How are you feeling?” (People)?
--   The Risk Test: How do they react to a hacky hotfix? If they visibly
-    wince and demand a refactor ticket immediately, they are a
-    Technician.
--   The Praise Test: They light up when you mention latency reduction or
-    code deletion. They gloss over “great cross-team collaboration.”
+- The 1:1 Test: Do they naturally ask “Are you blocked?” (Process) or
+  “How are you feeling?” (People)?
+- The Risk Test: How do they react to a hacky hotfix? If they visibly
+  wince and demand a refactor ticket immediately, they are a Technician.
+- The Praise Test: They light up when you mention latency reduction or
+  code deletion. They gloss over “great cross-team collaboration.”
 
 The Interaction Protocol:
 
--   Currency: Accuracy & Efficiency.
--   Day-to-Day: Speak in integers. Do not tell them you “improved” the
-    system; tell them you “reduced build times by 14%.”
--   The Trap: Do not try to dazzle them with “Vision.” They will drill
-    down into the implementation details until they find a flaw, and
-    then they will stop trusting you.
+- Currency: Accuracy & Efficiency.
+- Day-to-Day: Speak in integers. Do not tell them you “improved” the
+  system; tell them you “reduced build times by 14%.”
+- The Trap: Do not try to dazzle them with “Vision.” They will drill
+  down into the implementation details until they find a flaw, and then
+  they will stop trusting you.
 
 How they argue in court: “My client’s output is 20% higher than the L5
 baseline. The data demands a promotion. If we don’t promote them, our
@@ -964,23 +959,23 @@ leaders.
 
 The Litmus Test:
 
--   The 1:1 Test: Do they spend 15 minutes talking about what the VP
-    said in the All-Hands?
--   The Risk Test: How do they react to a project that has high
-    technical value but zero visibility? They will likely kill it or
-    starve it of resources.
--   The Praise Test: They light up when you mention you presented to
-    another team or “unblocked the Director’s initiative.”
+- The 1:1 Test: Do they spend 15 minutes talking about what the VP said
+  in the All-Hands?
+- The Risk Test: How do they react to a project that has high technical
+  value but zero visibility? They will likely kill it or starve it of
+  resources.
+- The Praise Test: They light up when you mention you presented to
+  another team or “unblocked the Director’s initiative.”
 
 The Interaction Protocol:
 
--   Currency: Status & Alignment.
--   Day-to-Day: Connect your work to the “Narrative.” Never just fix a
-    bug; always “remove a blocker for the Q3 Strategy.” Name-drop the
-    people they want to impress.
--   The Trap: Do not bore them with technical nuance. If you explain the
-    complexity of the database migration, their eyes will glaze over.
-    Tell them who the migration helps.
+- Currency: Status & Alignment.
+- Day-to-Day: Connect your work to the “Narrative.” Never just fix a
+  bug; always “remove a blocker for the Q3 Strategy.” Name-drop the
+  people they want to impress.
+- The Trap: Do not bore them with technical nuance. If you explain the
+  complexity of the database migration, their eyes will glaze over. Tell
+  them who the migration helps.
 
 How they argue in court: “My client isn’t just coding; they are driving
 the VP’s Q3 strategy. Promoting them solidifies our department’s
@@ -997,22 +992,22 @@ more than they value winning your case.
 
 The Litmus Test:
 
--   The 1:1 Test: Do they spend the first 20 minutes chatting about your
-    weekend or your hobbies?
--   The Risk Test: How do they react to you having a conflict with
-    another team? They will immediately try to “smooth it over” rather
-    than fighting for your side.
--   The Praise Test: They light up when you mention mentorship,
-    onboarding new hires, or organizing team socials.
+- The 1:1 Test: Do they spend the first 20 minutes chatting about your
+  weekend or your hobbies?
+- The Risk Test: How do they react to you having a conflict with another
+  team? They will immediately try to “smooth it over” rather than
+  fighting for your side.
+- The Praise Test: They light up when you mention mentorship, onboarding
+  new hires, or organizing team socials.
 
 The Interaction Protocol:
 
--   Currency: Harmony & Safety.
--   Day-to-Day: Position yourself as the “Glue.” Highlight how you help
-    others. If you are aggressive or competitive, they will view you as
-    a threat to the tribe’s stability.
--   The Trap: Do not rely on them to be aggressive for you. You must
-    manufacture the spine they lack.
+- Currency: Harmony & Safety.
+- Day-to-Day: Position yourself as the “Glue.” Highlight how you help
+  others. If you are aggressive or competitive, they will view you as a
+  threat to the tribe’s stability.
+- The Trap: Do not rely on them to be aggressive for you. You must
+  manufacture the spine they lack.
 
 How they argue in court: “My client is the glue holding the team
 together. If we don’t recognize them, we risk morale issues and
@@ -1046,12 +1041,12 @@ specifically.
 
 Possible examples:
 
--   Technician: The Mythical Man-Month, Designing Data-Intensive
-    Applications, or a specific language reference. (Focus: Craft).
--   Politician: The First 90 Days, High Output Management, 7 Habits.
-    (Focus: Effectiveness/Strategy).
--   Peacemaker: Radical Candor, The Five Dysfunctions of a Team,
-    Nonviolent Communication. (Focus: Human Dynamics).
+- Technician: The Mythical Man-Month, Designing Data-Intensive
+  Applications, or a specific language reference. (Focus: Craft).
+- Politician: The First 90 Days, High Output Management, 7 Habits.
+  (Focus: Effectiveness/Strategy).
+- Peacemaker: Radical Candor, The Five Dysfunctions of a Team,
+  Nonviolent Communication. (Focus: Human Dynamics).
 
 When you follow up with “how was this book transformative for you?”, you
 open the floor for them to reveal who the were and who they wanted to
@@ -1118,28 +1113,28 @@ their Archetype.
 
 Target: The Technician Witness
 
--   The Hook (Accusation Audit): “I’m looking at the [Project X] design.
-    I know you hated how we handled the concurrency in the last version.
-    Before I draft the RFC, can I get your mental model on how you would
-    structure the lock-free queue?”
--   The IKEA Payoff: They give you a technical constraint. When you
-    implement it, they see their own genius in your code.
+- The Hook (Accusation Audit): “I’m looking at the [Project X] design. I
+  know you hated how we handled the concurrency in the last version.
+  Before I draft the RFC, can I get your mental model on how you would
+  structure the lock-free queue?”
+- The IKEA Payoff: They give you a technical constraint. When you
+  implement it, they see their own genius in your code.
 
 Target: The Politician Witness
 
--   The Hook (Strategic Alignment): “I’m scoping [Project Y]. I know
-    this overlaps with the VP’s ‘Efficiency’ pillar. How would you frame
-    this so it lands best with the Director during the Q3 review?”
--   The IKEA Payoff: They give you the narrative. When you present it,
-    they see their own strategy in your Brief.
+- The Hook (Strategic Alignment): “I’m scoping [Project Y]. I know this
+  overlaps with the VP’s ‘Efficiency’ pillar. How would you frame this
+  so it lands best with the Director during the Q3 review?”
+- The IKEA Payoff: They give you the narrative. When you present it,
+  they see their own strategy in your Brief.
 
 Target: The Peacemaker Witness
 
--   The Hook (Diplomacy): “I’m worried [Project Z] might step on Team
-    Alpha’s toes. Since you have such good rapport with them, how would
-    you approach the handoff so we don’t cause friction?”
--   The IKEA Payoff: They give you the diplomacy. They feel ownership
-    over the team harmony.
+- The Hook (Diplomacy): “I’m worried [Project Z] might step on Team
+  Alpha’s toes. Since you have such good rapport with them, how would
+  you approach the handoff so we don’t cause friction?”
+- The IKEA Payoff: They give you the diplomacy. They feel ownership over
+  the team harmony.
 
 Phase 2: Write The Test (The Spec)
 
@@ -1172,37 +1167,37 @@ Bring the draft to your 1:1 and apply the Archetypal Cross-Compiler:
 
 Scenario A: Your Manager is a Technician
 
--   The Pitch: “I drafted this goal for the [Project X] work. I feel
-    like the ‘impact’ part is fuzzy. I put ‘reduced latency,’ but
-    knowing how you care about precision, is there a specific metric you
-    think would look bulletproof to the Staff Engineers?”
--   The Edit: They will say, “Don’t just say ‘reduced latency.’ Say
-    ‘reduced P99 latency by 50ms during peak load’.”
--   The Contract: They have defined the success criteria. If you hit
-    50ms, they must endorse you, or they are invalidating their own
-    technical judgment.
+- The Pitch: “I drafted this goal for the [Project X] work. I feel like
+  the ‘impact’ part is fuzzy. I put ‘reduced latency,’ but knowing how
+  you care about precision, is there a specific metric you think would
+  look bulletproof to the Staff Engineers?”
+- The Edit: They will say, “Don’t just say ‘reduced latency.’ Say
+  ‘reduced P99 latency by 50ms during peak load’.”
+- The Contract: They have defined the success criteria. If you hit 50ms,
+  they must endorse you, or they are invalidating their own technical
+  judgment.
 
 Scenario B: Your Manager is a Politician
 
--   The Pitch: “I wrote down this bullet for [Project Y]. It feels a bit
-    too ‘in the weeds.’ Since you have a better sense of the Director’s
-    Q3 narrative, how would you tweak this so it pops during the
-    calibration reading?”
--   The Edit: They will grab the keyboard. “Change ‘refactored database’
-    to ‘Enabled Multi-Region Strategy via Data Layer Modernization’.”
--   The Contract: They have handed you the script. You are now the actor
-    in their play.
+- The Pitch: “I wrote down this bullet for [Project Y]. It feels a bit
+  too ‘in the weeds.’ Since you have a better sense of the Director’s Q3
+  narrative, how would you tweak this so it pops during the calibration
+  reading?”
+- The Edit: They will grab the keyboard. “Change ‘refactored database’
+  to ‘Enabled Multi-Region Strategy via Data Layer Modernization’.”
+- The Contract: They have handed you the script. You are now the actor
+  in their play.
 
 Scenario C: Your Manager is a Peacemaker
 
--   The Pitch: “I’m worried this bullet point sounds too aggressive. I
-    know you value team collaboration. How can we rephrase this so it
-    highlights how I supported the Junior Devs, while still getting
-    credit for the architecture?”
--   The Edit: They will soften the language but likely add a “force
-    multiplier” clause.
--   The Contract: You have given them a weapon they are actually willing
-    to use—a “nice” bullet point that still counts.
+- The Pitch: “I’m worried this bullet point sounds too aggressive. I
+  know you value team collaboration. How can we rephrase this so it
+  highlights how I supported the Junior Devs, while still getting credit
+  for the architecture?”
+- The Edit: They will soften the language but likely add a “force
+  multiplier” clause.
+- The Contract: You have given them a weapon they are actually willing
+  to use—a “nice” bullet point that still counts.
 
 Phase 4: Green State (Implementation)
 
@@ -1224,10 +1219,10 @@ that introduces risk without adding status.
 Caveat: If your Manager is a Technician, “Clean Code” is part of the
 spec.
 
--   For a Politician, the work is finished when the chart shows “up and
-    to the right”.
--   For a Technician, the work is finished when the graph goes up and
-    the diff looks elegant, to them.
+- For a Politician, the work is finished when the chart shows “up and to
+  the right”.
+- For a Technician, the work is finished when the graph goes up and the
+  diff looks elegant, to them.
 
 But here again, only provide the minimum viable aesthetics to satisfy
 your specific audience. Your own Private Ledger taste is irrelevant.
@@ -1284,10 +1279,10 @@ They are impressed by quantification. In the absence of trust, they use
 numbers as a proxy for truth. A paragraph of prose feels like an
 “opinion.” A scatter plot feels like “science.”
 
--   Bad: “I significantly improved the performance of the login page.”
-    (Hearsay).
--   Good: “Reduced P99 login latency by 230ms (-14%), reclaiming 45
-    engineering-hours per month in wait time.” (Fact).
+- Bad: “I significantly improved the performance of the login page.”
+  (Hearsay).
+- Good: “Reduced P99 login latency by 230ms (-14%), reclaiming 45
+  engineering-hours per month in wait time.” (Fact).
 
 It does not matter that the “45 hours” is a napkin-math estimate. It is
 a Number. It has significant digits. It triggers the “Truth” receptor in
@@ -1302,12 +1297,12 @@ evaluators.
 
 Different tribes worship different gods:
 
--   The Sales/Exec Tribe: Worships Authority and Revenue. They care
-    about speed, dollars, and “winning.”
--   The Old Guard/Sysadmin Tribe: Worships Sanctity and Order. They care
-    about stability, uptime, and “doing it the right way.”
--   The Modern SV/HR Tribe: Worships Care/Harm and Fairness. They care
-    about “User Delight,” “Inclusivity,” and “Democratizing Access.”
+- The Sales/Exec Tribe: Worships Authority and Revenue. They care about
+  speed, dollars, and “winning.”
+- The Old Guard/Sysadmin Tribe: Worships Sanctity and Order. They care
+  about stability, uptime, and “doing it the right way.”
+- The Modern SV/HR Tribe: Worships Care/Harm and Fairness. They care
+  about “User Delight,” “Inclusivity,” and “Democratizing Access.”
 
 You must estimate the moral composition of your org in general and the
 Calibration Court in particular, then tailor your evidence accordingly.
@@ -1318,23 +1313,23 @@ Let’s say you updated a settings page.
 
 If the Jury is Sales-Driven:
 
--   Narrative: “Removed friction from the conversion funnel.”
--   The Metric: “Conversion rate increased by 0.5%. Annualized revenue
-    impact: $50k.”
+- Narrative: “Removed friction from the conversion funnel.”
+- The Metric: “Conversion rate increased by 0.5%. Annualized revenue
+  impact: $50k.”
 
 If the Jury is Engineering-Driven:
 
--   Narrative: “Paid down technical debt by migrating to the new design
-    system.”
--   The Metric: “Deleted 4,000 lines of legacy CSS. Reduced build size
-    by 12KB.”
+- Narrative: “Paid down technical debt by migrating to the new design
+  system.”
+- The Metric: “Deleted 4,000 lines of legacy CSS. Reduced build size by
+  12KB.”
 
 If the Jury is Modern SV (Care/Harm):
 
--   Narrative: “Reduced cognitive load for frustrated users.”
--   The Metric: “Using Likert scales to assess convenience pre- and
-    post-launch, we found the new UI scored ~1.53 points higher than
-    baseline (n=20).”
+- Narrative: “Reduced cognitive load for frustrated users.”
+- The Metric: “Using Likert scales to assess convenience pre- and
+  post-launch, we found the new UI scored ~1.53 points higher than
+  baseline (n=20).”
 
 Same work. Different story. Different numbers.
 
@@ -1352,8 +1347,8 @@ Whenever possible, do not just state the number. Show the delta.
 If you are claiming that your new UI is better, do not just write “1.53
 points higher.” Deploy a diverging stacked bar chart.
 
--   Top: Distribution of sentiment scores before development.
--   Bottom: Distribution of sentiment scores after implementation.
+- Top: Distribution of sentiment scores before development.
+- Bottom: Distribution of sentiment scores after implementation.
 
 [Example diverging stacked bar charts for showing quantified sentiment
 change.] Figure: Example diverging stacked bar charts for showing
@@ -1375,16 +1370,15 @@ weeks before calibration—should look like this:
 Headline: [The Moral Frame] e.g., “Democratizing Data Access for
 Non-Technical Users”
 
--   The Context (The Villain): “Previously, 40% of PM queries required
-    Engineer intervention, causing delay and frustration (Harm).”
--   The Action (The Hero): “Built a self-serve dashboard using
-    Metabase.”
--   The Result (The Evidence):
-    -   “Reduced Engineer-assist tickets by 85%.”
-    -   “Saved 20 hours/week of engineering time.”
-    -   Insert Screenshot of Ticket Volume dropping off a cliff.
--   The Witness: “As [Director Alice] noted, this ‘fundamentally changed
-    how we make decisions’.”
+- The Context (The Villain): “Previously, 40% of PM queries required
+  Engineer intervention, causing delay and frustration (Harm).”
+- The Action (The Hero): “Built a self-serve dashboard using Metabase.”
+- The Result (The Evidence):
+  - “Reduced Engineer-assist tickets by 85%.”
+  - “Saved 20 hours/week of engineering time.”
+  - Insert Screenshot of Ticket Volume dropping off a cliff.
+- The Witness: “As [Director Alice] noted, this ‘fundamentally changed
+  how we make decisions’.”
 
 Your company or team probably keeps a specific internal doc or side
 template. Use it. Your goal is low cognitive load, not art.
@@ -1441,11 +1435,11 @@ accept: Budgets are optimized for Acquisition, not Retention.
 
 It’s nothing personal. It’s just how the money is pot-bound.
 
--   New Hires are paid from the “Hiring Budget,” which is pegged to the
-    current, competitive market rate.
--   Existing Employees are paid from the “Retention Budget,” which is
-    usually pegged to your entry price plus a standard 3-4% annual
-    adjustment.
+- New Hires are paid from the “Hiring Budget,” which is pegged to the
+  current, competitive market rate.
+- Existing Employees are paid from the “Retention Budget,” which is
+  usually pegged to your entry price plus a standard 3-4% annual
+  adjustment.
 
 In a high-demand industry, these two numbers drift apart rapidly. If you
 stay at a company for more than two years, you are likely suffering from
@@ -1470,9 +1464,9 @@ Discovery. You cannot know the value of your employment by looking at
 your current pay stub. You can only know it by seeing what a stranger is
 willing to offer.
 
--   If you can’t get an offer that beats your current package: You are
-    priced correctly. (Or your skills have stagnated).
--   If you get an offer for 30% more: The firm is arbitraging you.
+- If you can’t get an offer that beats your current package: You are
+  priced correctly. (Or your skills have stagnated).
+- If you get an offer for 30% more: The firm is arbitraging you.
 
 Knowing the truth is just data. Ignoring the market is negligence.
 
@@ -1513,9 +1507,9 @@ That is your interview script.
 The exact same artifacts you built to survive the internal calibration
 are the ones you use to ace the external interview.
 
--   Internally: You wrote the Brief to save your manager time.
--   Externally: You recite the Brief to show the hiring committee you
-    are a Senior Operator.
+- Internally: You wrote the Brief to save your manager time.
+- Externally: You recite the Brief to show the hiring committee you are
+  a Senior Operator.
 
 “I reduced cloud spend by 20%” works everywhere. The story is never
 wasted; it just changes audiences.
@@ -1591,30 +1585,28 @@ Let’s look at each archetype.
 
 The Naive Idealist (Top Left)
 
--   Mindset: “We are a family! Meritocracy is real.”
--   Behavior: High alignment. They work weekends for pizza parties.
--   Fate: They are useful to the Firm but fragile. One bad calibration
-    destroys them.
+- Mindset: “We are a family! Meritocracy is real.”
+- Behavior: High alignment. They work weekends for pizza parties.
+- Fate: They are useful to the Firm but fragile. One bad calibration
+  destroys them.
 
 The Burnt-Out Senior (The Trough)
 
--   Mindset: “This place is a joke. Management is stupid. It’s all
-    politics.”
--   Behavior: Low alignment. They see the lie, so they rebel. They
-    refuse to write the Brief because “the work should speak for
-    itself.”
--   Fate: They become toxins. They get isolated, PIP’d, or quit in
-    anger.
+- Mindset: “This place is a joke. Management is stupid. It’s all
+  politics.”
+- Behavior: Low alignment. They see the lie, so they rebel. They refuse
+  to write the Brief because “the work should speak for itself.”
+- Fate: They become toxins. They get isolated, PIP’d, or quit in anger.
 
 The KarmaRank Optimizer (Top Right)
 
--   Mindset: “The system is a game. I know the rules, so I can choose my
-    outcome.”
--   Behavior: High alignment. They might use the protocols to ruthlessly
-    climb the C-suite ladder, or they might use them to secure a “Meets
-    Expectations” rating with minimum effort.
--   Fate: They possess Agency. They are no longer victims of the
-    algorithm; they are its operators.
+- Mindset: “The system is a game. I know the rules, so I can choose my
+  outcome.”
+- Behavior: High alignment. They might use the protocols to ruthlessly
+  climb the C-suite ladder, or they might use them to secure a “Meets
+  Expectations” rating with minimum effort.
+- Fate: They possess Agency. They are no longer victims of the
+  algorithm; they are its operators.
 
 The tragedy of the Burnt-Out Senior is that they stopped analyzing at
 the point of injustice. They realized the Meritocracy was a lie but
@@ -1899,20 +1891,20 @@ your raw, low-context observations and objectives (Source Code) and
 compile them into the surgically precise, high-context “HR Doxa”
 (Machine Code) that the Firm executes.
 
--   Raw Input (You): “I observe that the PM’s requested feature cannot
-    achieve the stated goals and its implementation will require
-    breaking changes to the DB.”
--   Prompt (You, to AI): “The PM has requested <feature description>. It
-    cannot achieve their stated goals <list> and is high engineering
-    cost due to backend migration. Their archetype is that of a
-    Politician (ref KarmaRank Manifesto). I need a brief yet persuasive
-    response that refuses their request.”
--   Response (AI): “ACT AS: Politician. GOAL: Risk Mitigation. TOOL:
-    No-Oriented Question (Voss). OUTPUT: ‘We’re excited to support this.
-    While planning, we identified a critical stability risk in the data
-    layer that we should resolve to ensure a seamless Q3 launch. Would
-    it be crazy to get sign-off from [VP Name] on the migration risk?’”
--   Output (The Firm): “Accepted.”
+- Raw Input (You): “I observe that the PM’s requested feature cannot
+  achieve the stated goals and its implementation will require breaking
+  changes to the DB.”
+- Prompt (You, to AI): “The PM has requested <feature description>. It
+  cannot achieve their stated goals <list> and is high engineering cost
+  due to backend migration. Their archetype is that of a Politician (ref
+  KarmaRank Manifesto). I need a brief yet persuasive response that
+  refuses their request.”
+- Response (AI): “ACT AS: Politician. GOAL: Risk Mitigation. TOOL:
+  No-Oriented Question (Voss). OUTPUT: ‘We’re excited to support this.
+  While planning, we identified a critical stability risk in the data
+  layer that we should resolve to ensure a seamless Q3 launch. Would it
+  be crazy to get sign-off from [VP Name] on the migration risk?’”
+- Output (The Firm): “Accepted.”
 
 The “soft skill” gap is no longer a personality flaw. It is a tooling
 issue. If you are bad at politics, you are simply running on bare metal
@@ -1945,12 +1937,12 @@ The natural Politician relies on intuition—a black box they cannot
 explain or debug. You now have the advantage. You can unit test your
 communication. You can prompt-engineer your reputation.
 
--   You can simulate a Calibration Cylinder by feeding your promo packet
-    into an LLM persona of your Skip-Manager and asking: “What is the
-    weakest argument in this text?”
--   You can generate five different versions of a status update—one for
-    the Technician, one for the Peacemaker, one for the Politician—and
-    A/B test the headlines.
+- You can simulate a Calibration Cylinder by feeding your promo packet
+  into an LLM persona of your Skip-Manager and asking: “What is the
+  weakest argument in this text?”
+- You can generate five different versions of a status update—one for
+  the Technician, one for the Peacemaker, one for the Politician—and A/B
+  test the headlines.
 
 The “Humanities” are no longer a misty realm of magic. They are a
 constellation of high-resolution terms floating in embedding space. We
@@ -2055,9 +2047,9 @@ The Uncanny Valley of Alignment
 The non-linear relationship between System Awareness and Organizational
 Alignment.
 
--   Idealists align because they believe the nobel lie.
--   Burnouts rebel because they reject the nobel lie.
--   Optimizers align because they subvert the nobel lie.
+- Idealists align because they believe the nobel lie.
+- Burnouts rebel because they reject the nobel lie.
+- Optimizers align because they subvert the nobel lie.
 
 Full-Stack Human
 
@@ -2134,8 +2126,8 @@ Karma-Driven Development (KDD)
 A development methodology where the “Test” (the promotion bullet point)
 is written and validated before any code is written.
 
--   Protocol: Groom Backlog → Write Test → Compiler Check → Code (Green
-    State) → Refactor Story.
+- Protocol: Groom Backlog → Write Test → Compiler Check → Code (Green
+  State) → Refactor Story.
 
 The Brief
 
