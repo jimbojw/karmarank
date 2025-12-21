@@ -48,13 +48,9 @@ ifeq ($(USE_DOCKER),true)
         $(DOCKER_IMAGE)
     # pandoc/latex image has pandoc as entrypoint, so we don't need to specify it
     PANDOC := $(DOCKER_RUN)
-    PDFLATEX_CMD := $(DOCKER_RUN) --entrypoint pdflatex $(DOCKER_IMAGE)
 else
     PANDOC := pandoc
-    PDFLATEX_CMD := pdflatex
 endif
-
-README_FILE := README.md
 
 .PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
@@ -85,7 +81,7 @@ prepare-chapters: directories
 		cat $$f | \
 		sed "s%^#[^#].\+%\0 {#$$(basename $$f .md)}%g" | \
 		sed "s%\[\(.*\?\)\](\./\([^#)]\+\)\.md)%[\1](#\2)%g" | \
-		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" >> $$dest; \
+		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" > $$dest; \
 	done
 	@# Copy images to build directory for pandoc resource-path
 	@if [ -d "$(IMAGES_DIR)" ]; then \
