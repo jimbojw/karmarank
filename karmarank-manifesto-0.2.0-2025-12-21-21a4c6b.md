@@ -19,7 +19,7 @@ toccolor: "black"
 
 By jimbojw
 
-> Version: 0.2.0 (2025-12-20-08bcd5f)
+> Version: 0.2.0 (2025-12-21-21a4c6b)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -268,7 +268,6 @@ Some people intuit this. Good for them. The rest of us have to write it down.
 
 KarmaRank is for the second group. You don't have to struggle through a decade of half-failed projects and flushed 1:1s to see KarmaRank. I did that part for you.
 
-
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 
 **Severity:** Critical  
@@ -292,9 +291,11 @@ The firm does not value your suffering. It values **Status-Weighted Stories**. I
 
 **The Vulnerability:** You believe that the work artifact (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
 
-**The Reality:** You have it backward. In the corporate epistemology, **perception is reality**.
+**The Reality:** You have it backward. In the corporate epistemology, **perception IS the noumenon**.
 
-There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis only matter insofar as they shift someone's perception enough to move your score. Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
+There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis are merely shadows on the cave wall.
+
+Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
 
 ### CVE-DEW-03: The Protocol Mismatch (The Moral Matrix)
 

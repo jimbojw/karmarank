@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.2.0 (2025-12-20-08bcd5f)
+0.2.0 (2025-12-21-21a4c6b)
 
 License: CC-BY-NC-SA-4.0
 
@@ -467,12 +467,13 @@ the thing in itself—and your manager’s opinion is just a noisy
 approximation of that truth.
 
 The Reality: You have it backward. In the corporate epistemology,
-perception is reality.
+perception IS the noumenon.
 
 There is no capital-T Truth behind the rating; the rating is the object.
-Your code, docs, and analysis only matter insofar as they shift
-someone’s perception enough to move your score. Do not confuse the input
-(your labor) with the output (the recognition). The rating is the job.
+Your code, docs, and analysis are merely shadows on the cave wall.
+
+Do not confuse the input (your labor) with the output (the recognition).
+The rating is the job.
 
 CVE-DEW-03: The Protocol Mismatch (The Moral Matrix)
 
