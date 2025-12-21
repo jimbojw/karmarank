@@ -1,4 +1,3 @@
-
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 
 **Severity:** Critical  
@@ -22,9 +21,11 @@ The firm does not value your suffering. It values **Status-Weighted Stories**. I
 
 **The Vulnerability:** You believe that the work artifact (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
 
-**The Reality:** You have it backward. In the corporate epistemology, **perception is reality**.
+**The Reality:** You have it backward. In the corporate epistemology, **perception IS the noumenon**.
 
-There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis only matter insofar as they shift someone's perception enough to move your score. Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
+There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis are merely shadows on the cave wall.
+
+Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
 
 ### CVE-DEW-03: The Protocol Mismatch (The Moral Matrix)
 
