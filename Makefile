@@ -20,6 +20,8 @@ endif
 
 # Source files (sorted)
 CHAPTERS := $(sort $(wildcard $(CONTENT_DIR)/*.md))
+TOP_LEVEL_MD := $(wildcard *.md)
+ALL_MD := $(CHAPTERS) $(TOP_LEVEL_MD)
 
 # Transformed chapters directory (for pandoc builds)
 TRANSFORMED_DIR := $(BUILD_DIR)/chapters
@@ -38,7 +40,7 @@ PANDOC := pandoc
 
 README_FILE := README.md
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check check-links check-images
+.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order
 
 all: directories prepare-images prepare-chapters html pdf epub txt md index latest readme
 
@@ -216,7 +218,7 @@ readme: | directories
 	@echo "✓ README.md updated"
 
 # Check targets: validates inter-document links and image files
-check: check-links check-images
+check: check-links check-images check-images-refs check-unused-images check-chapter-order
 
 check-links: | directories
 	@echo "Checking inter-document links..."
@@ -263,6 +265,103 @@ check-images: | directories
 		exit 0; \
 	else \
 		echo "✗ Found $$FAILED image issue(s)"; \
+		exit 1; \
+	fi
+
+check-images-refs: | directories
+	@echo "Checking image references in markdown..."
+	@FAILED=0; \
+	for md_file in $(ALL_MD); do \
+		if [ -f "$$md_file" ]; then \
+			DIR=$$(dirname $$md_file); \
+			if [ "$$DIR" = "." ]; then \
+				DIR=""; \
+			fi; \
+			IMAGES=$$(grep -oE '!\[.*\]\([^)]+images/[^)]+\)' $$md_file 2>/dev/null | grep -oE '(content/)?images/[^)]+' | sort -u); \
+			for img_ref in $$IMAGES; do \
+				TARGET=""; \
+				if [ -n "$$DIR" ]; then \
+					TARGET=$$DIR/$$img_ref; \
+				else \
+					TARGET=$$img_ref; \
+				fi; \
+				if [ ! -f "$$TARGET" ]; then \
+					TARGET=$(IMAGES_DIR)/$$(basename $$img_ref); \
+				fi; \
+				if [ ! -f "$$TARGET" ]; then \
+					echo "✗ Broken image reference in $$md_file: $$img_ref"; \
+					FAILED=$$((FAILED + 1)); \
+				fi; \
+			done; \
+		fi; \
+	done; \
+	if [ $$FAILED -eq 0 ]; then \
+		echo "✓ All image references are valid"; \
+		exit 0; \
+	else \
+		echo "✗ Found $$FAILED broken image reference(s)"; \
+		exit 1; \
+	fi
+
+check-unused-images: | directories
+	@echo "Checking for unused images..."
+	@FAILED=0; \
+	if [ -d "$(IMAGES_DIR)" ]; then \
+		for img_file in $(IMAGES_DIR)/*.png $(IMAGES_DIR)/*.excalidraw; do \
+			if [ -f "$$img_file" ]; then \
+				BASENAME=$$(basename $$img_file); \
+				BASENAME_NO_EXT=$$(basename $$img_file .png | sed 's/\.excalidraw$$//'); \
+				FOUND=0; \
+				for md_file in $(ALL_MD); do \
+					if [ -f "$$md_file" ]; then \
+						if grep -qE "(images/|content/images/)$$BASENAME" $$md_file 2>/dev/null || \
+						   grep -qE "(images/|content/images/)$$BASENAME_NO_EXT" $$md_file 2>/dev/null; then \
+							FOUND=1; \
+							break; \
+						fi; \
+					fi; \
+				done; \
+				if [ $$FOUND -eq 0 ]; then \
+					echo "✗ Unused image: $$img_file"; \
+					FAILED=$$((FAILED + 1)); \
+				fi; \
+			fi; \
+		done; \
+	fi; \
+	if [ $$FAILED -eq 0 ]; then \
+		echo "✓ All images are referenced"; \
+		exit 0; \
+	else \
+		echo "✗ Found $$FAILED unused image(s)"; \
+		exit 1; \
+	fi
+
+check-chapter-order: | directories
+	@echo "Checking chapter numbering..."
+	@FAILED=0; \
+	LAST_NUM=-1; \
+	for chapter in $(CHAPTERS); do \
+		if [ -f "$$chapter" ]; then \
+			BASENAME=$$(basename $$chapter); \
+			NUM=$$(echo $$BASENAME | sed -n 's/^\([0-9][0-9]\)-.*/\1/p'); \
+			if [ -n "$$NUM" ]; then \
+				NUM_INT=$$(echo $$NUM | sed 's/^0*//'); \
+				if [ -z "$$NUM_INT" ]; then \
+					NUM_INT=0; \
+				fi; \
+				if [ $$NUM_INT -le $$LAST_NUM ]; then \
+					echo "✗ Chapter out of order or duplicate number: $$chapter (number $$NUM)"; \
+					FAILED=$$((FAILED + 1)); \
+				fi; \
+				LAST_NUM=$$NUM_INT; \
+			fi; \
+		fi; \
+	done; \
+	if [ $$FAILED -eq 0 ]; then \
+		echo "✓ Chapter numbering is valid"; \
+		exit 0; \
+	else \
+		echo "✗ Found $$FAILED chapter ordering issue(s)"; \
 		exit 1; \
 	fi
 
