@@ -80,7 +80,7 @@ The KarmaRank Manifesto proceeds from this observation, explaining how to decoup
 
 We welcome stories, questions, and corrections! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to report issues or submit pull requests.
 
-## Build from source
+## Build From Source
 
 See [DEVELOPING.md](DEVELOPING.md).
 
