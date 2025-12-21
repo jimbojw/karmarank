@@ -4,7 +4,7 @@ subtitle: "Optimizing the Unspoken Corporate Objective Function"
 author: "jimbojw"
 lang: en
 license: "CC-BY-NC-SA-4.0"
-version: "0.2.0"
+version: "0.2.1"
 rights: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
 colorlinks: true
 linkcolor: "blue"
@@ -19,7 +19,7 @@ toccolor: "black"
 
 By jimbojw
 
-> Version: 0.2.0 (2025-12-21-898cff8)
+> Version: 0.2.1 (2025-12-21-8e0ebf3)
 
 
 # License: CC-BY-NC-SA-4.0
