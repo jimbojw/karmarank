@@ -39,7 +39,10 @@ Where:
 * **$k_i$ — Karmic Appraisal**  
   The signed "emotional value" person $i$ gets from telling a story about you and your work.
 
-The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
+The KarmaRank Manifesto proceeds from this observation, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
+
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.png)
+*Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 ## Table of Contents
 
@@ -50,7 +53,7 @@ The KarmaRank Manifesto proceeds from this, explaining how to decouple your self
 - [Introduction: The Frame of the Game](content/02-introduction.md)
 - [KarmaRank: Origin Story (with Math)](content/03-origin-story.md)
 - [SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview](content/04-security-advisory.md)
-- [Law #1: The Two Ledgers](content/05-law-1.md)
+- [Law #1: Conative Dissonance](content/05-law-1.md)
 - [Law #2: The Rating Is The Job](content/06-law-2.md)
 - [Law #3: Who Cares?](content/07-law-3.md)
 - [Meta-Law: You Do Not Talk About KarmaRank](content/08-meta-law.md)
@@ -64,83 +67,13 @@ The KarmaRank Manifesto proceeds from this, explaining how to decouple your self
 
 <!-- TOC_END -->
 
-## Repository Structure
-
-- `CONTRIBUTING.md` - Contribution guidelines
-- `Makefile` - Build configuration
-- `content/` - Markdown chapter files
-- `content/images/` - Image assets (diagrams, figures)
-- `metadata.yaml` - Book metadata
-- `output/` - Generated files (gitignored)
-- `templates/` - Pandoc HTML templates
-
-## Local Development
-
-### Prerequisites
-
-Install Pandoc and LaTeX:
-
-```bash
-sudo apt update
-sudo apt install pandoc texlive-latex-base texlive-latex-extra
-```
-
-### Building
-
-This project uses `make`. To build all formats (HTML, PDF, TXT, Markdown):
-
-```bash
-make all
-```
-
-This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.
-
-To clean the output directory:
-
-```bash
-make clean
-```
-
-### Release Mode
-
-To simulate a release build (which generates clean filenames like `karmarank-manifesto-0.1.0.pdf`):
-
-```bash
-export RELEASE_MODE=true
-make all
-```
-
-## GitHub Actions & Releases
-
-This project uses **File-Driven Releases**.
-
-1.  **Continuous Integration**: On every push to `main`, the book is built and artifacts are uploaded to the action run.
-2.  **Automated Releases**: To cut a new public release:
-    - Edit `metadata.yaml` and bump the `version` (e.g., `0.1.0` -> `0.1.1`).
-    - Commit and push to `main`.
-    - GitHub Actions will detect the version bump and automatically create a GitHub Release with the tag `v0.1.1` and attach the built artifacts.
-
-## LaTeX Math Support
-
-The book uses LaTeX math notation throughout. The setup supports:
-
-- **Inline math**: `$x = y$` (recommended for PDF compatibility)
-- **Block math**: `$$x = y$$` (recommended for PDF compatibility)
-
-## Adding Images
-
-Images should be placed in `content/images/`. Reference them in Markdown relative to the `content/` directory:
-
-```markdown
-![Descriptive caption text.](images/diagram.png)
-*Figure: Descriptive caption text.*
-```
-
-**Note:** We use PNG format for diagrams to ensure consistent rendering across HTML and PDF output.
-
 ## Contributing
 
 We welcome stories, questions, and corrections! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to report issues or submit pull requests.
+
+## Build from source
+
+See [DEVELOPING.md](DEVELOPING.md).
 
 ## License
 
