@@ -8,9 +8,17 @@ So why does your performance review feel like gaslighting?
 
 ## Start Reading
 
-- [**Read Online (HTML)**](https://jimbojw.github.io/karmarank/karmarank-manifesto.html)
-- **Download Latest**: [PDF](https://jimbojw.github.io/karmarank/karmarank-manifesto.pdf) | [ePub](https://jimbojw.github.io/karmarank/karmarank-manifesto.epub) | [Plain Text](https://jimbojw.github.io/karmarank/karmarank-manifesto.txt)
-- _Looking for stable versions? View [Releases](https://github.com/jimbojw/karmarank/releases)._
+**Latest builds:**
+
+[![Read The KarmaRank Manifesto Online (HTML)](https://img.shields.io/badge/Read_Online-HTML-2ea44f?style=for-the-badge&logo=html5&logoColor=white)](https://jimbojw.github.io/karmarank/karmarank-manifesto.html) [![Download The KarmaRank Manifesto (PDF)](https://img.shields.io/badge/Download-PDF-b31b1b?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://jimbojw.github.io/karmarank/karmarank-manifesto.pdf) [![Download The KarmaRank Manifesto (ePub)](https://img.shields.io/badge/Download-ePub-orange?style=for-the-badge&logo=epub&logoColor=white)](https://jimbojw.github.io/karmarank/karmarank-manifesto.epub)
+
+**Read in terminal:**
+
+```
+curl -sL https://jimbojw.github.io/karmarank/karmarank-manifesto.txt | less
+```
+
+_Looking for stable release versions? View [Releases](https://github.com/jimbojw/karmarank/releases)._
 
 ## TL;DR
 
@@ -39,9 +47,9 @@ Where:
 * **$k_i$ — Karmic Appraisal**  
   The signed "emotional value" person $i$ gets from telling a story about you and your work.
 
-The KarmaRank Manifesto proceeds from this observation, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1-two-ledgers.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
+The KarmaRank Manifesto proceeds from this observation, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
 
-![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.png)
+[![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.png)](content/09-calibration-cylinder.md)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 ## Table of Contents
