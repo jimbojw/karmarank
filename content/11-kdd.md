@@ -8,7 +8,13 @@ In software engineering, the most disciplined teams practice **Test-Driven Devel
 
 Despite this, most _careers_ run on **Waterfall**. You do months of work, ship it, and then hope that the calibration court validates your work. This is madness. You are building features without a spec.
 
-To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it. Remember [Law #2](./06-law-2.md): the rating is the job.
+To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it.
+
+
+![Karma Driven Development (KDD) Flowchart.](images/kdd-flowchart.png)
+*Figure: Karma Driven Development (KDD) Flowchart.*
+
+Remember [Law #2](./06-law-2.md): the rating is the job.
 
 ## Phase 1: Echolocation (Witness Selection & The IKEA Hook)
 
