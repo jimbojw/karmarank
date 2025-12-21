@@ -38,7 +38,7 @@ PANDOC := pandoc
 
 README_FILE := README.md
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest
+.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check
 
 all: directories prepare-images prepare-chapters html pdf epub txt md index latest readme
 
@@ -214,6 +214,29 @@ readme: | directories
 		mv $$NEW_README README.md; \
 	}
 	@echo "✓ README.md updated"
+
+# Check target: validates inter-document links
+check: | directories
+	@echo "Checking inter-document links..."
+	@FAILED=0; \
+	for chapter in $(CHAPTERS); do \
+		DIR=$$(dirname $$chapter); \
+		LINKS=$$(grep -oE '\]\(\./[^)]+\.md[^)]*\)' $$chapter 2>/dev/null | sed 's/.*(\.\///;s/\.md.*/.md/' | sort -u); \
+		for link in $$LINKS; do \
+			TARGET=$$DIR/$$link; \
+			if [ ! -f "$$TARGET" ]; then \
+				echo "✗ Broken link in $$chapter: $$link"; \
+				FAILED=$$((FAILED + 1)); \
+			fi; \
+		done; \
+	done; \
+	if [ $$FAILED -eq 0 ]; then \
+		echo "✓ All inter-document links are valid"; \
+		exit 0; \
+	else \
+		echo "✗ Found $$FAILED broken link(s)"; \
+		exit 1; \
+	fi
 
 clean:
 	rm -rf $(OUTPUT_DIR)

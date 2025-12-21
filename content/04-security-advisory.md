@@ -49,7 +49,7 @@ A criterion may be objective (e.g., "lines of code," "revenue generated"), but t
 
 **The Reality:** The ambiguity is a **primary security feature**.
 
-If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./15-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
+If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./16-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
 
 ---
 

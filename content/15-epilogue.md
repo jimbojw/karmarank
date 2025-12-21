@@ -2,7 +2,7 @@
 
 You prefer clear rules and actionable guidance. I’ve endeavored to give them to you.
 
-You learned tactics like Political Echolocation in service of [Karma-Driven Development (KDD)](./11-KDD.md). We discussed [Knowing Your Counsel (KYC)](./10-kyc.md) to secure the best defense in calibration court. I showed you how to [construct a Brief](./12-brief.md) with a Visual Kill Shot to arm your haggard public defender (your Manager). 
+You learned tactics like Political Echolocation in service of [Karma-Driven Development (KDD)](./11-kdd.md). We discussed [Knowing Your Counsel (KYC)](./10-kyc.md) to secure the best defense in calibration court. I showed you how to [construct a Brief](./12-brief.md) with a Visual Kill Shot to arm your haggard public defender (your Manager). 
 
 It’s undoubtedly tempting to take your new clarity and agency and ride off into the code cowboy sunset. And if you want to, I don’t blame you. Cheers and godspeed.
 
@@ -22,7 +22,7 @@ Here is the constraint set that makes "just measure merit" a fantasy:
 2. **Heterogeneous Work:** People do different kinds of work on different timelines; outputs are not fungible units you can grade like test scores.
 3. **High Goodhart Pressure:** Any published metric becomes a target. Static rubrics get optimized into garbage via metric farming, destroying the signal they were meant to capture.
 4. **Adversarial Incentives:** The reward pool is capped. Advocacy is zero-sum at the margin. Evaluators are not neutral graders; they are competing representatives.
-5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](./15-appendix.md#james-c.-scott)).
+5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](./16-appendix.md#james-c.-scott)).
 6. **Legitimacy Requirements:** The process must look procedurally just to remain stable (morale, retention) and defensible (complaints, HR risk, lawsuits).
 7. **Discretion Must Persist:** Leadership must retain veto power to handle edge cases, shifts in strategy, and the inherent ambiguity of "value."
 8. **Narrative Compatibility:** Decisions must be explainable in the firm's public religion ("impact," "leadership," "values") even when the real drivers are messier.
