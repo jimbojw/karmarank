@@ -37,6 +37,10 @@ jobs:
             echo "Tag v${{ env.PROJECT_VERSION }} does not exist. Proceeding with release."
           fi
 
+      - name: Pull Docker image
+        if: steps.check_tag.outputs.exists == 'false'
+        run: docker pull pandoc/latex:latest
+
       - name: Build Artifacts
         if: steps.check_tag.outputs.exists == 'false'
         run: |

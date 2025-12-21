@@ -14,6 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Pull Docker image
+        run: docker pull pandoc/latex:latest
+
       - name: Build HTML and PDF
         run: |
           make all
