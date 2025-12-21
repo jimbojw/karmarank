@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.2.0 (2025-12-21-c51386a)
+0.2.0 (2025-12-21-898cff8)
 
 License: CC-BY-NC-SA-4.0
 
@@ -1021,7 +1021,7 @@ feeling?” as an opener. This doesn’t mean they’re Peacemakers
 necessarily.
 
 As we discussed, the Default Engineering Worldview has left your peers
-with copious, free-floating cognitive dissonance. Consequently, managers
+with copious, free-floating Conative Dissonance. Consequently, managers
 often have to become untrained therapists.
 
 Likewise, even if your manager is a natural Technician or Peacemaker, to
