@@ -14,11 +14,23 @@
 
 ### Prerequisites
 
-Install Pandoc and LaTeX:
+**Recommended: Docker** (default, cross-platform)
+
+This project uses Docker for hermetic, reproducible builds. Install Docker by following the [official Docker installation guide](https://docs.docker.com/get-docker/) for your platform.
+
+**Alternative: Native Installation**
+
+If you prefer not to use Docker, install Pandoc and LaTeX natively:
 
 ```bash
+# Ubuntu/Debian
 sudo apt update
-sudo apt install pandoc texlive-latex-base texlive-latex-extra
+sudo apt install pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+# macOS (Homebrew)
+brew install pandoc basictex
+
+# Other platforms: See https://pandoc.org/installing.html
 ```
 
 ### Building
@@ -26,7 +38,11 @@ sudo apt install pandoc texlive-latex-base texlive-latex-extra
 This project uses `make`. To build all formats (HTML, PDF, TXT, Markdown):
 
 ```bash
+# Docker build (default, recommended)
 make all
+
+# Native build (if you have pandoc/LaTeX installed locally)
+USE_DOCKER=false make all
 ```
 
 This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.

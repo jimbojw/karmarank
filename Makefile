@@ -36,11 +36,27 @@ MD_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).md
 INDEX_FILE := $(OUTPUT_DIR)/index.html
 
 # Tools
-PANDOC := pandoc
+# Docker is the default build method for hermetic, cross-platform builds
+# To use native pandoc/LaTeX instead: USE_DOCKER=false make all
+USE_DOCKER ?= true
+DOCKER_IMAGE := pandoc/latex:latest
+ifeq ($(USE_DOCKER),true)
+    DOCKER_RUN := docker run --rm \
+        --volume "$(CURDIR):/data" \
+        --workdir /data \
+        --user $(shell id -u):$(shell id -g) \
+        $(DOCKER_IMAGE)
+    # pandoc/latex image has pandoc as entrypoint, so we don't need to specify it
+    PANDOC := $(DOCKER_RUN)
+    PDFLATEX_CMD := $(DOCKER_RUN) --entrypoint pdflatex $(DOCKER_IMAGE)
+else
+    PANDOC := pandoc
+    PDFLATEX_CMD := pdflatex
+endif
 
 README_FILE := README.md
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order
+.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
 all: directories prepare-images prepare-chapters html pdf epub txt md index latest readme
 
@@ -79,7 +95,7 @@ prepare-chapters: directories
 	@echo "✓ Chapters transformed"
 
 # HTML Build
-html: $(HTML_FILE)
+html: check-pandoc-deps $(HTML_FILE)
 $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories prepare-chapters
 	@echo "Building HTML..."
 	$(PANDOC) \
@@ -97,29 +113,39 @@ $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | di
 		--output=$@
 	@echo "✓ HTML: $@"
 
-# PDF Build
-pdf: $(PDF_FILE)
-$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
-	@echo "Building PDF..."
-	@if command -v pdflatex >/dev/null; then \
-		$(PANDOC) \
-			$(TRANSFORMED_CHAPTERS) \
-			--resource-path=$(TRANSFORMED_DIR) \
-			--metadata-file=$(METADATA) \
-			--from=commonmark_x+implicit_figures+tex_math_dollars \
-			--pdf-engine=pdflatex \
-			--toc \
-			--toc-depth=2 \
-			--variable=geometry:margin=1.5in \
-			--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
-			--output=$@; \
-		echo "✓ PDF: $@"; \
+# Pandoc Dependencies Check (shared by all pandoc-based targets)
+check-pandoc-deps:
+	@if [ "$(USE_DOCKER)" = "true" ]; then \
+		docker info >/dev/null 2>&1 || (echo "✗ Error: Docker not available. Install Docker or use: USE_DOCKER=false make <target>" && exit 1); \
 	else \
-		echo "⚠ Skipping PDF (pdflatex not found)"; \
+		command -v pandoc >/dev/null || (echo "✗ Error: pandoc not found. Install pandoc or use: USE_DOCKER=true make <target>" && exit 1); \
 	fi
 
+# PDF Build Dependencies Check (depends on pandoc, also checks pdflatex)
+check-pdf-deps: check-pandoc-deps
+	@if [ "$(USE_DOCKER)" != "true" ]; then \
+		command -v pdflatex >/dev/null || (echo "✗ Error: pdflatex not found. Install LaTeX or use: USE_DOCKER=true make pdf" && exit 1); \
+	fi
+
+# PDF Build
+pdf: check-pdf-deps $(PDF_FILE)
+$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
+	@echo "Building PDF..."
+	$(PANDOC) \
+		$(TRANSFORMED_CHAPTERS) \
+		--resource-path=$(TRANSFORMED_DIR) \
+		--metadata-file=$(METADATA) \
+		--from=commonmark_x+implicit_figures+tex_math_dollars \
+		--pdf-engine=pdflatex \
+		--toc \
+		--toc-depth=2 \
+		--variable=geometry:margin=1.5in \
+		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@echo "✓ PDF: $@"
+
 # ePub Build
-epub: $(EPUB_FILE)
+epub: check-pandoc-deps $(EPUB_FILE)
 $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 	@echo "Building ePub..."
 	$(PANDOC) \
@@ -136,7 +162,7 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 	@echo "✓ ePub: $@"
 
 # Plain Text Build
-txt: $(TXT_FILE)
+txt: check-pandoc-deps $(TXT_FILE)
 $(TXT_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 	@echo "Building Plain Text..."
 	$(PANDOC) \
@@ -171,7 +197,7 @@ $(MD_FILE): $(CHAPTERS) $(METADATA) | directories
 	@echo "✓ Markdown: $@"
 
 # Index Page (Landing Page)
-index: $(INDEX_FILE)
+index: check-pandoc-deps $(INDEX_FILE)
 $(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 	@echo "Building Landing Page..."
 	$(PANDOC) \

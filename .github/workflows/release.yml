@@ -37,12 +37,6 @@ jobs:
             echo "Tag v${{ env.PROJECT_VERSION }} does not exist. Proceeding with release."
           fi
 
-      - name: Install dependencies
-        if: steps.check_tag.outputs.exists == 'false'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-extra texlive-fonts-recommended
-
       - name: Build Artifacts
         if: steps.check_tag.outputs.exists == 'false'
         run: |
