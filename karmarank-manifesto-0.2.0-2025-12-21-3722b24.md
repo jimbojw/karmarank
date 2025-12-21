@@ -19,7 +19,7 @@ toccolor: "black"
 
 By jimbojw
 
-> Version: 0.2.0 (2025-12-21-9f03368)
+> Version: 0.2.0 (2025-12-21-3722b24)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -1181,19 +1181,53 @@ The **Full-Stack Human** is no longer born. They are prompted.
 
 ## Glossary
 
+### The Laws
+
+**Law #1: Conative Dissonance**
+
+You are running two ledgers in one head (Private vs. Firm). The psychological friction experienced when these two databases drift apart is Conative Dissonance.
+
+**Law #2: The Rating Is The Job**
+
+The firm does not pay you for the work; it pays you for the **Status-Weighted Stories** about the work. Any effort not serialized into a rating is pro bono labor.
+
+**Law #3: Who Cares?**
+
+"Impact" is defined strictly as: *Who* ($S_i$) *Cares* ($k_i$). If you cannot name the specific high-status individuals who derive emotional value from your work, the impact is speculative.
+
+**The Meta-Law**
+
+You are allowed to play the game, but you must not describe the game. You must transubstantiate **KarmaRank** moves into HR Doxa ("business impact," "values") when speaking in public.
+
 ### Core Concepts
+
+**Default Engineering Worldview (DEW)**
+
+The vulnerable mental model that assumes meritocracy, logical consistency, and hard work are the primary drivers of corporate success. A legacy operating system that KarmaRank is designed to patch.
 
 **The Firm Ledger**
 
-The organization's accounting of value. It does not track code quality, effort, or moral virtue. It tracks **Status-Weighted Stories**. If an action is not recorded here, it is chemically indistinguishable from doing nothing.
+The organization's accounting of value. It does not track effort or moral virtue. It tracks **Status-Weighted Stories**. If an action is not recorded here, it is chemically indistinguishable from doing nothing.
+
+**Numerophiles**
+
+People persuaded by numbers in the **Calibration Cylinder** (Directors/VPs). They are less persuaded by prose; they trust numbers and significant digits as proxies for truth.
 
 **The Private Ledger**
 
 Your internal accounting of value, based on craft, ethics, and logic. (e.g., "clean code," "robust architecture"). Useful for mental health, but useless for promotion. Do not expect the Firm Ledger to replicate data from this table.
 
+**Red Queen's Race**
+
+The evolutionary condition where one must constantly adapt just to maintain current standing. As KarmaRank tactics become popularized, the Firm will patch its exploits (deprecating "Impact"), requiring you to continuously reverse-engineer the new board.
+
 **Status ($S_i$)**
 
 The contextual importance of a _person_ ($i$). Someone who sits in the calibration court has high Status. Someone who testifies has Status transitively according to how the evaluators in that room view them.
+
+**Strategic Ambiguity**
+
+A security feature of the Firm. The intentional lack of clear, static promotion criteria to prevent Goodhart's Law (metric gaming) and strictly retain Leadership's veto power.
 
 **karma ($k_i$)**
 
@@ -1221,7 +1255,27 @@ The result of an engineer applying their system-design skills to social dynamics
 
 **KarmaRank**
 
+Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
+
 The implied iterative algorithm by which Karma ($K$) and Status ($S$) converge. That is, the outcome of calibration confers title and accolades, which are components of Status. Status is the realized effect of Karma validated by calibration.
+
+### Archetypes
+
+**The Technician**
+
+The "Achievement" Manager. Driven by competence and efficiency. Currency: Accuracy. Trap: Do not bore them with "vision"; give them p99 latency stats.
+
+**The Politician**
+
+The "Power" Manager. Driven by influence and optics. Currency: Alignment. Trap: Do not bore them with technical nuance; connect your work to the VP's narrative.
+
+**The Peacemaker**
+
+The "Affiliation" Manager. Driven by harmony and connection. Currency: Safety. Trap: Most dangerous Counsel; will fold in court to avoid conflict. You must manufacture their spine.
+
+**The Centaur Operator**
+
+The post-AI engineer who uses LLMs ("The Humanities Compiler") to generate the empathy and social rhetoric they lack naturally. They do not rely on charisma; they spec charisma.
 
 ### Topology
 
@@ -1233,7 +1287,7 @@ The local network graph that determines your rating. It consists of three layers
 2.  **The Counsel/Jury:** Your Manager and their Peers.
 3.  **The Judge:** Your Skip-Level (Director/VP).
 
-Anyone outside this cylinder is irrelevant to your immediate survival.
+Anyone outside this cylinder is relevant only transitively (viewed from your cylinder’s constituent’s perspectives).
 
 **Frustum Culling**
 
@@ -1251,23 +1305,27 @@ A development methodology where the "Test" (the promotion bullet point) is writt
 
 - _Protocol:_ Groom Backlog → Write Test → Compiler Check → Code (Green State) → Refactor Story.
 
-**The Compiler Check**
-
-The step in KDD where you validate a proposed "Status-Weighted Story" with your Manager. If the Manager rejects the premise ($k_i \approx 0$), the code fails to compile and must not be written.
-
 **The Brief**
 
-The final artifact of your work. A document formatted for the "Numerophiles" in the calibration room. It must follow the structure: **Villain** (Context) → **Hero** (Action) → **Witness** (Validation) → **Visual** (Chart).
+The final artifact of your work. A document formatted for the **Numerophiles** in the calibration room. It must follow the structure: **Villain** (Context) → **Hero** (Action) → **Witness** (Validation) → **Visual** (Chart).
+
+**The IKEA Effect**
+
+A cognitive bias where people overvalue things they helped create. A tactical exploit used to secure Witnesses: ask them to design the box so they are psychologically compelled to defend it.
 
 **Political Echolocation**
 
 The process of pinging High-Status nodes with strategic questions ("What is your mental model of X?") to populate your backlog with high-demand stories and warm the cache for your identity.
 
+**The Visual Kill Shot**
+
+A data visualization deployed to bypass the Jury's logical circuits and trigger a "competence" signal via the visual cortex. Used to prove "Up and To The Right."
+
 ### Economics
 
 **Arbitrage**
 
-The act of changing jobs to correct a market pricing error. If your Private Ledger valuation (Senior Engineer) is higher than your Firm Ledger valuation (Level 3), you execute a trade (change companies) to capture the spread.
+The act of changing jobs to correct a market pricing error.
 
 **The Loyalty Discount**
 
@@ -1275,7 +1333,7 @@ The economic penalty for remaining at a firm longer than two years. Caused by th
 
 **Legacy Cache**
 
-The accumulation of negative or neutral stories ("bugs," "awkward interactions") that inevitably build up in your "Permanent Record" over time. A primary driver for the necessity of **Server Migration** (Job Hopping).
+The accumulation of negative or neutral stories ("bugs," "awkward interactions") that inevitably build up in your record over time. A primary driver for the necessity of **Server Migration** (Job Hopping).
 
 ## Further Reading
 

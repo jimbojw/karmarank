@@ -164,7 +164,7 @@ text-decoration: underline;
 Function</p>
          <p class="subtitle"><small>Author: jimbojw</small></p>
          <p class="subtitle"><small>Version: 0.2.0
-(2025-12-21-9f03368)</small></p>
+(2025-12-21-3722b24)</small></p>
          <div class="toc">
       <h2>Table of Contents</h2>
       <ul>
@@ -2016,21 +2016,55 @@ them.</p>
 prompted.</p>
 <h1 id="16-appendix">Appendix</h1>
 <h2 id="glossary">Glossary</h2>
+<h3 id="the-laws">The Laws</h3>
+<p><strong>Law #1: Conative Dissonance</strong></p>
+<p>You are running two ledgers in one head (Private vs. Firm). The
+psychological friction experienced when these two databases drift apart
+is Conative Dissonance.</p>
+<p><strong>Law #2: The Rating Is The Job</strong></p>
+<p>The firm does not pay you for the work; it pays you for the
+<strong>Status-Weighted Stories</strong> about the work. Any effort not
+serialized into a rating is pro bono labor.</p>
+<p><strong>Law #3: Who Cares?</strong></p>
+<p>“Impact” is defined strictly as: <em>Who</em> (<span class="math inline">\(S_i\)</span>) <em>Cares</em> (<span class="math inline">\(k_i\)</span>). If you cannot name the specific
+high-status individuals who derive emotional value from your work, the
+impact is speculative.</p>
+<p><strong>The Meta-Law</strong></p>
+<p>You are allowed to play the game, but you must not describe the game.
+You must transubstantiate <strong>KarmaRank</strong> moves into HR Doxa
+(“business impact,” “values”) when speaking in public.</p>
 <h3 id="core-concepts">Core Concepts</h3>
+<p><strong>Default Engineering Worldview (DEW)</strong></p>
+<p>The vulnerable mental model that assumes meritocracy, logical
+consistency, and hard work are the primary drivers of corporate success.
+A legacy operating system that KarmaRank is designed to patch.</p>
 <p><strong>The Firm Ledger</strong></p>
-<p>The organization’s accounting of value. It does not track code
-quality, effort, or moral virtue. It tracks <strong>Status-Weighted
-Stories</strong>. If an action is not recorded here, it is chemically
-indistinguishable from doing nothing.</p>
+<p>The organization’s accounting of value. It does not track effort or
+moral virtue. It tracks <strong>Status-Weighted Stories</strong>. If an
+action is not recorded here, it is chemically indistinguishable from
+doing nothing.</p>
+<p><strong>Numerophiles</strong></p>
+<p>People persuaded by numbers in the <strong>Calibration
+Cylinder</strong> (Directors/VPs). They are less persuaded by prose;
+they trust numbers and significant digits as proxies for truth.</p>
 <p><strong>The Private Ledger</strong></p>
 <p>Your internal accounting of value, based on craft, ethics, and logic.
 (e.g., “clean code,” “robust architecture”). Useful for mental health,
 but useless for promotion. Do not expect the Firm Ledger to replicate
 data from this table.</p>
+<p><strong>Red Queen’s Race</strong></p>
+<p>The evolutionary condition where one must constantly adapt just to
+maintain current standing. As KarmaRank tactics become popularized, the
+Firm will patch its exploits (deprecating “Impact”), requiring you to
+continuously reverse-engineer the new board.</p>
 <p><strong>Status (<span class="math inline">\(S_i\)</span>)</strong></p>
 <p>The contextual importance of a <em>person</em> (<span class="math inline">\(i\)</span>). Someone who sits in the calibration
 court has high Status. Someone who testifies has Status transitively
 according to how the evaluators in that room view them.</p>
+<p><strong>Strategic Ambiguity</strong></p>
+<p>A security feature of the Firm. The intentional lack of clear, static
+promotion criteria to prevent Goodhart’s Law (metric gaming) and
+strictly retain Leadership’s veto power.</p>
 <p><strong>karma (<span class="math inline">\(k_i\)</span>)</strong></p>
 <p>A synonym for “affect” or “care”. How much good or bad feeling
 <em>this person</em> (<span class="math inline">\(i\)</span>) has about
@@ -2059,9 +2093,28 @@ social dynamics. An individual who can both build value (Technical CPU)
 and sell value (Social GPU emulation), giving them an asymmetric
 advantage over pure politicians.</p>
 <p><strong>KarmaRank</strong></p>
+<p>Time-Decayed, Capital-Constrained, Adversarial
+Eigenvector-Sponsorship.</p>
 <p>The implied iterative algorithm by which Karma (<span class="math inline">\(K\)</span>) and Status (<span class="math inline">\(S\)</span>) converge. That is, the outcome of
 calibration confers title and accolades, which are components of Status.
 Status is the realized effect of Karma validated by calibration.</p>
+<h3 id="archetypes">Archetypes</h3>
+<p><strong>The Technician</strong></p>
+<p>The “Achievement” Manager. Driven by competence and efficiency.
+Currency: Accuracy. Trap: Do not bore them with “vision”; give them p99
+latency stats.</p>
+<p><strong>The Politician</strong></p>
+<p>The “Power” Manager. Driven by influence and optics. Currency:
+Alignment. Trap: Do not bore them with technical nuance; connect your
+work to the VP’s narrative.</p>
+<p><strong>The Peacemaker</strong></p>
+<p>The “Affiliation” Manager. Driven by harmony and connection.
+Currency: Safety. Trap: Most dangerous Counsel; will fold in court to
+avoid conflict. You must manufacture their spine.</p>
+<p><strong>The Centaur Operator</strong></p>
+<p>The post-AI engineer who uses LLMs (“The Humanities Compiler”) to
+generate the empathy and social rhetoric they lack naturally. They do
+not rely on charisma; they spec charisma.</p>
 <h3 id="topology">Topology</h3>
 <p><strong>The Calibration Cylinder</strong></p>
 <p>The local network graph that determines your rating. It consists of
@@ -2072,8 +2125,8 @@ three layers:</p>
 Peers.</li>
 <li><strong>The Judge:</strong> Your Skip-Level (Director/VP).</li>
 </ol>
-<p>Anyone outside this cylinder is irrelevant to your immediate
-survival.</p>
+<p>Anyone outside this cylinder is relevant only transitively (viewed
+from your cylinder’s constituent’s perspectives).</p>
 <p><strong>Frustum Culling</strong></p>
 <p>A graphics rendering technique applied to social attention. The
 practice of aggressively ignoring input, requests, or feedback from
@@ -2090,26 +2143,27 @@ point) is written and validated <em>before</em> any code is written.</p>
 <li><em>Protocol:</em> Groom Backlog → Write Test → Compiler Check →
 Code (Green State) → Refactor Story.</li>
 </ul>
-<p><strong>The Compiler Check</strong></p>
-<p>The step in KDD where you validate a proposed “Status-Weighted Story”
-with your Manager. If the Manager rejects the premise (<span class="math inline">\(k_i \approx 0\)</span>), the code fails to compile
-and must not be written.</p>
 <p><strong>The Brief</strong></p>
 <p>The final artifact of your work. A document formatted for the
-“Numerophiles” in the calibration room. It must follow the structure:
-<strong>Villain</strong> (Context) → <strong>Hero</strong> (Action) →
-<strong>Witness</strong> (Validation) → <strong>Visual</strong>
-(Chart).</p>
+<strong>Numerophiles</strong> in the calibration room. It must follow
+the structure: <strong>Villain</strong> (Context) →
+<strong>Hero</strong> (Action) → <strong>Witness</strong> (Validation) →
+<strong>Visual</strong> (Chart).</p>
+<p><strong>The IKEA Effect</strong></p>
+<p>A cognitive bias where people overvalue things they helped create. A
+tactical exploit used to secure Witnesses: ask them to design the box so
+they are psychologically compelled to defend it.</p>
 <p><strong>Political Echolocation</strong></p>
 <p>The process of pinging High-Status nodes with strategic questions
 (“What is your mental model of X?”) to populate your backlog with
 high-demand stories and warm the cache for your identity.</p>
+<p><strong>The Visual Kill Shot</strong></p>
+<p>A data visualization deployed to bypass the Jury’s logical circuits
+and trigger a “competence” signal via the visual cortex. Used to prove
+“Up and To The Right.”</p>
 <h3 id="economics">Economics</h3>
 <p><strong>Arbitrage</strong></p>
-<p>The act of changing jobs to correct a market pricing error. If your
-Private Ledger valuation (Senior Engineer) is higher than your Firm
-Ledger valuation (Level 3), you execute a trade (change companies) to
-capture the spread.</p>
+<p>The act of changing jobs to correct a market pricing error.</p>
 <p><strong>The Loyalty Discount</strong></p>
 <p>The economic penalty for remaining at a firm longer than two years.
 Caused by the spread between the <strong>Retention Budget</strong> (Cost
@@ -2117,9 +2171,9 @@ of Living adjustments) and the <strong>Acquisition Budget</strong>
 (Market Rate).</p>
 <p><strong>Legacy Cache</strong></p>
 <p>The accumulation of negative or neutral stories (“bugs,” “awkward
-interactions”) that inevitably build up in your “Permanent Record” over
-time. A primary driver for the necessity of <strong>Server
-Migration</strong> (Job Hopping).</p>
+interactions”) that inevitably build up in your record over time. A
+primary driver for the necessity of <strong>Server Migration</strong>
+(Job Hopping).</p>
 <h2 id="further-reading">Further Reading</h2>
 <p>This manifesto is a synthesis of engineering pragmatism and social
 science. If you want to inspect the source code for these ideas, start
