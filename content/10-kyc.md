@@ -71,7 +71,7 @@ This manager is driven by **Connection**. They view the team as a family. They c
 
 I should warn you not to be too hasty in putting your manager into one specific bucket. For example, many managers will ask you “how are you feeling?” as an opener. This doesn’t mean they’re Peacemakers necessarily.
 
-As we discussed, the [Default Engineering Worldview](./04-security-advisory.md) has left your peers with copious, free-floating cognitive dissonance. Consequently, managers often have to become untrained therapists.
+As we discussed, the [Default Engineering Worldview](./04-security-advisory.md) has left your peers with copious, free-floating Conative Dissonance. Consequently, managers often have to become untrained therapists.
 
 Likewise, even if your manager is a natural Technician or Peacemaker, to be effective they’ll have learned (or been trained) to emulate Politician-speak. You’ll observe them using words like “impact” and “visibility” even if their heart is elsewhere.
 
