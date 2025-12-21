@@ -164,7 +164,7 @@ text-decoration: underline;
 Function</p>
          <p class="subtitle"><small>Author: jimbojw</small></p>
          <p class="subtitle"><small>Version: 0.2.0
-(2025-12-21-8d6c900)</small></p>
+(2025-12-21-9f03368)</small></p>
          <div class="toc">
       <h2>Table of Contents</h2>
       <ul>
@@ -289,6 +289,8 @@ Function</p>
       Court Mechanism</a></li>
       <li><a href="#2-the-red-queens-race-condition-a-pre-deprecation-warning" id="toc-2-the-red-queens-race-condition-a-pre-deprecation-warning">2.
       The Red Queen’s Race Condition: A Pre-Deprecation Warning</a></li>
+      <li><a href="#3-software-eats-the-humanities" id="toc-3-software-eats-the-humanities">3. Software Eats the
+      Humanities</a></li>
       </ul></li>
       <li><a href="#16-appendix" id="toc-16-appendix">Appendix</a>
       <ul>
@@ -1843,7 +1845,7 @@ they are competing representatives.</li>
 deeply inspect everyone’s work. The system must compress information
 into legible artifacts (<a href="#james-c.-scott">Scott</a>).</li>
 <li><strong>Legitimacy Requirements:</strong> The process must look
-“fair enough” to remain stable (morale, retention) and defensible
+procedurally just to remain stable (morale, retention) and defensible
 (complaints, HR risk, lawsuits).</li>
 <li><strong>Discretion Must Persist:</strong> Leadership must retain
 veto power to handle edge cases, shifts in strategy, and the inherent
@@ -1866,12 +1868,11 @@ budgets and keeps the ritual moving. The process is messy, but it’s also
 robust: it resists straightforward gaming better than naive metrics, and
 it produces a story of legitimacy that the organization can live
 with.</p>
-<p>Calibration courts are a plausibly, locally Pareto optimal
-mechanism—or at least an evolutionarily stable one—given leadership’s
-constraints and objectives. This is not a claim that the system is fair,
-kind, unbiased, or truth-tracking. It’s a claim about mechanism design:
-you can’t eliminate valuation; you can only decide where it lives and
-how it fails.</p>
+<p>Calibration courts are not arbitrary. They’re an evolutionarily
+stable system, given leadership’s constraints and objectives. This is
+not a claim that the system is fair, kind, unbiased, or truth-tracking.
+It’s a claim about mechanism design: you can’t eliminate valuation; you
+can only decide where it lives and how it fails.</p>
 <p>Because this pattern is convergent, proposals to replace it inherit
 the burden. If you want an alternative, show a Pareto improvement under
 the same constraints, or explicitly name the trade you’re buying. Most
@@ -1926,6 +1927,93 @@ the weak signals. Commit the new data. Merge the changes.</p>
 <p>The game will change the moment you start winning. The Red Queen
 demands that you never stop reverse-engineering the board you are
 standing on.</p>
+<h2 id="3-software-eats-the-humanities">3. Software Eats the
+Humanities</h2>
+<p>The Red Queen race is changing from a marathon to a sprint.</p>
+<p>For the last decade, we have been told that as machines get better at
+logic, the value of the human will retreat into the “Soft
+Skills”—empathy, persuasion, leadership. I.e. “vibes.” We were told that
+the <strong>Technician</strong> would be automated, but the
+<strong>Politician</strong> and the <strong>Peacemaker</strong> were
+safe.</p>
+<p>That was a lie.</p>
+<p>The arrival of Large Language Models (LLMs) does not just automate
+code; it accelerates <em>engineering the social wrapper</em> around the
+code. It turns the “Humanities” into just another high-level language
+that can be compiled from a spec.</p>
+<h3 id="the-humanities-compiler">The Humanities Compiler</h3>
+<p>You have spent your life feeling at a disadvantage because you lack
+the “habitus” to speak the high-context language of the Firm. You have
+the raw logic (CPU), but you lack the social rendering engine (GPU) to
+display it pleasingly to the Jury.</p>
+<p>Previously, you had to learn social graces the hard way: by awkward
+trial and error. Now, you can just install the driver.</p>
+<p>An LLM is not just a “chatbot.” It is a <strong>Humanities
+Compiler</strong>. It can take your raw, low-context observations and
+objectives (Source Code) and compile them into the surgically precise,
+high-context “HR Doxa” (Machine Code) that the Firm executes.</p>
+<ul>
+<li><strong>Raw Input (You):</strong> “I observe that the PM’s requested
+feature cannot achieve the stated goals and its implementation will
+require breaking changes to the DB.”</li>
+<li><strong>Prompt (You, to AI):</strong> “The PM has requested
+&lt;feature description&gt;. It cannot achieve their stated goals
+&lt;list&gt; and is high engineering cost due to backend migration.
+Their archetype is that of a Politician (ref KarmaRank Manifesto). I
+need a brief yet persuasive response that refuses their request.”</li>
+<li><strong>Response (AI):</strong> “ACT AS: Politician. GOAL: Risk
+Mitigation. TOOL: No-Oriented Question (Voss). OUTPUT: ‘We’re excited to
+support this. While planning, we identified a critical stability risk in
+the data layer that we should resolve to ensure a seamless Q3 launch.
+Would it be crazy to get sign-off from [VP Name] on the migration
+risk?’”</li>
+<li><strong>Output (The Firm):</strong> “Accepted.”</li>
+</ul>
+<p>The “soft skill” gap is no longer a personality flaw. It is a tooling
+issue. If you are bad at politics, you are simply running on bare metal
+when you should be using a hypervisor.</p>
+<h3 id="the-rise-of-the-centaur-operator">The Rise of the Centaur
+Operator</h3>
+<p>This creates a new divergence in the <a href="#14-conclusion">Uncanny
+Valley of Alignment</a>.</p>
+<ol type="1">
+<li><strong>The Purist:</strong> This engineer refuses to use AI for
+“social” tasks. They view it as inauthentic. They insist on writing
+their own jagged emails and awkward self-reviews. They will be
+outcompeted by mediocrity wrapped in perfect rhetoric.</li>
+<li><strong>The Script Kiddie:</strong> This engineer naively asks the
+AI to “write a self-review.” The output is hallucinated, generic fluff.
+The <strong>Discriminator</strong> (your Manager’s own AI) will flag it
+as spam immediately.</li>
+<li><strong>The Centaur Operator:</strong> This is you. You do not ask
+the AI to “think.” You give it the Brief template. You feed it the git
+logs. You force it to strictly adhere to the <strong>Villain -&gt; Hero
+-&gt; Witness</strong> structure.</li>
+</ol>
+<p>The Centaur Operator does not need to <em>be</em> charismatic. They
+only need to be able to <em>spec</em> charisma.</p>
+<h3 id="the-api-of-empathy">The API of Empathy</h3>
+<p>We are entering an era where <strong>Social Engineering is just
+Engineering</strong>.</p>
+<p>The natural Politician relies on intuition—a black box they cannot
+explain or debug. You now have the advantage. You can <strong>unit
+test</strong> your communication. You can prompt-engineer your
+reputation.</p>
+<ul>
+<li>You can simulate a <strong>Calibration Cylinder</strong> by feeding
+your promo packet into an LLM persona of your Skip-Manager and asking:
+<em>“What is the weakest argument in this text?”</em></li>
+<li>You can generate five different versions of a status update—one for
+the <strong>Technician</strong>, one for the
+<strong>Peacemaker</strong>, one for the <strong>Politician</strong>—and
+A/B test the headlines.</li>
+</ul>
+<p>The “Humanities” are no longer a misty realm of magic. They are a
+constellation of high-resolution terms floating in embedding space. We
+have quantified them. We have tokenized them. And now we can optimize
+them.</p>
+<p>The <strong>Full-Stack Human</strong> is no longer born. They are
+prompted.</p>
 <h1 id="16-appendix">Appendix</h1>
 <h2 id="glossary">Glossary</h2>
 <h3 id="core-concepts">Core Concepts</h3>
