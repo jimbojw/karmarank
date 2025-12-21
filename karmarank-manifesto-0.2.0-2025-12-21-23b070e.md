@@ -19,7 +19,7 @@ toccolor: "black"
 
 By jimbojw
 
-> Version: 0.2.0 (2025-12-21-dd7edcf)
+> Version: 0.2.0 (2025-12-21-23b070e)
 
 
 # License: CC-BY-NC-SA-4.0
@@ -240,7 +240,7 @@ In hindsight, my manager was doing something I didn't have language for yet.
 
 She was a **natural affective-labor manager**. She spoke fluent HR doxa. She could feel, without effort, which stories would land in a VP's office and which wouldn't. She had an internal gyroscope that told her what kinds of updates, phrased in what kinds of ways, would count as "real impact" versus "nice-to-have tinkering."
 
-A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](./15-appendix.md#pierre-bourdieu))
+A sociologist would say she had the right **habitus** for that field: the internalized feel for how things are done, what counts as real, what counts as "impactful" versus merely interesting. The norms of that space lived in her body. Maybe it was natural. Maybe honed from years of practice. But either way, she had it. (See [Bourdieu](./16-appendix.md#pierre-bourdieu))
 
 I had the opposite profile. I could build the tool and explain the design, but I had almost no feel for that emotional-political terrain. She **intuitively** tracked who mattered, what they cared about, and which narratives they were hungry for. I had to **derive** all of that on paper, after getting smacked by reality.
 
@@ -319,7 +319,7 @@ A criterion may be objective (e.g., "lines of code," "revenue generated"), but t
 
 **The Reality:** The ambiguity is a **primary security feature**.
 
-If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./15-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
+If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z to get promoted"), you, and everyone else, would ruthlessly optimize for those variables and destroy the company ([Goodhart's Law](./16-appendix.md#goodharts-law)). Leadership _must_ deploy "Strategic Ambiguity" to retain their veto power. They will never give you the manual you are looking for. You have to reverse-engineer it.
 
 ---
 
@@ -553,7 +553,7 @@ When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mi
 ![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.](images/turtles-all-the-way-up.png)  
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.*
 
-The cylinder goes up forever. The only thing that changes is the blast radius of the decisions.
+The cylinder goes up indefinitely. The only thing that changes is the blast radius of the decisions. Everyone has the same job: figure out who matters, then ship them stories they'll endorse.
 
 # Know Your Counsel: Technician, Politician, Peacemaker
 
@@ -563,7 +563,12 @@ The other managers in the room are the Prosecution/Jury. The Skip Level is the J
 
 To secure your best defense, you’ll want to Know Your Counsel (KYC). This will allow you to select projects and frame Status-Weighted Stories in the native schema of your particular cylinder.
 
-In the engineering world, managers generally fall into one of three archetypes: the Technician, the Politician, and the Peacemaker. Every person is different, but these are the abstract base classes.
+In the engineering world, managers generally fall into one of three archetypes: the Technician, the Politician, and the Peacemaker.
+
+![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.png)
+*Figure: The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.*
+
+Every person is different, but these are the abstract base classes.
 
 ## 1. The Technician (The "Achievement" Manager)
 
@@ -653,7 +658,12 @@ In software engineering, the most disciplined teams practice **Test-Driven Devel
 
 Despite this, most _careers_ run on **Waterfall**. You do months of work, ship it, and then hope that the calibration court validates your work. This is madness. You are building features without a spec.
 
-To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it. Remember [Law #2](./06-law-2.md): the rating is the job.
+To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it.
+
+![Karma Driven Development (KDD) Flowchart.](images/kdd-flowchart.png)
+*Figure: Karma Driven Development (KDD) Flowchart.*
+
+Remember [Law #2](./06-law-2.md): the rating is the job.
 
 ## Phase 1: Echolocation (Witness Selection & The IKEA Hook)
 
@@ -780,7 +790,7 @@ It does not matter that the "45 hours" is a napkin-math estimate. It is a **Numb
 
 ## 2. Moral Targeting (Know Your Judge)
 
-Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./15-appendix.md#jonathan-haidt)** of your evaluators.
+Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./16-appendix.md#jonathan-haidt)** of your evaluators.
 
 Different tribes worship different gods:
 
@@ -1063,7 +1073,7 @@ People like us build and maintain the modern world.
 
 You prefer clear rules and actionable guidance. I’ve endeavored to give them to you.
 
-You learned tactics like Political Echolocation in service of [Karma-Driven Development (KDD)](./11-KDD.md). We discussed [Knowing Your Counsel (KYC)](./10-kyc.md) to secure the best defense in calibration court. I showed you how to [construct a Brief](./12-brief.md) with a Visual Kill Shot to arm your haggard public defender (your Manager). 
+You learned tactics like Political Echolocation in service of [Karma-Driven Development (KDD)](./11-kdd.md). We discussed [Knowing Your Counsel (KYC)](./10-kyc.md) to secure the best defense in calibration court. I showed you how to [construct a Brief](./12-brief.md) with a Visual Kill Shot to arm your haggard public defender (your Manager). 
 
 It’s undoubtedly tempting to take your new clarity and agency and ride off into the code cowboy sunset. And if you want to, I don’t blame you. Cheers and godspeed.
 
@@ -1083,7 +1093,7 @@ Here is the constraint set that makes "just measure merit" a fantasy:
 2. **Heterogeneous Work:** People do different kinds of work on different timelines; outputs are not fungible units you can grade like test scores.
 3. **High Goodhart Pressure:** Any published metric becomes a target. Static rubrics get optimized into garbage via metric farming, destroying the signal they were meant to capture.
 4. **Adversarial Incentives:** The reward pool is capped. Advocacy is zero-sum at the margin. Evaluators are not neutral graders; they are competing representatives.
-5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](./15-appendix.md#james-c.-scott)).
+5. **Time Scarcity at the Top:** Directors/VPs cannot deeply inspect everyone's work. The system must compress information into legible artifacts ([Scott](./16-appendix.md#james-c.-scott)).
 6. **Legitimacy Requirements:** The process must look procedurally just to remain stable (morale, retention) and defensible (complaints, HR risk, lawsuits).
 7. **Discretion Must Persist:** Leadership must retain veto power to handle edge cases, shifts in strategy, and the inherent ambiguity of "value."
 8. **Narrative Compatibility:** Decisions must be explainable in the firm's public religion ("impact," "leadership," "values") even when the real drivers are messier.

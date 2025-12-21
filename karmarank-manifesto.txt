@@ -1,6 +1,6 @@
 The KarmaRank Manifesto
 jimbojw
-0.2.0 (2025-12-21-dd7edcf)
+0.2.0 (2025-12-21-23b070e)
 
 License: CC-BY-NC-SA-4.0
 
@@ -894,8 +894,9 @@ circles.]
 Figure: CEO’s Calibration Cylinder showing SVP, Executive, Board and
 Market circles.
 
-The cylinder goes up forever. The only thing that changes is the blast
-radius of the decisions.
+The cylinder goes up indefinitely. The only thing that changes is the
+blast radius of the decisions. Everyone has the same job: figure out who
+matters, then ship them stories they’ll endorse.
 
 Know Your Counsel: Technician, Politician, Peacemaker
 
@@ -913,8 +914,13 @@ This will allow you to select projects and frame Status-Weighted Stories
 in the native schema of your particular cylinder.
 
 In the engineering world, managers generally fall into one of three
-archetypes: the Technician, the Politician, and the Peacemaker. Every
-person is different, but these are the abstract base classes.
+archetypes: the Technician, the Politician, and the Peacemaker.
+
+[The Three Managerial Archetypes: the Technician, the Politician, and
+the Peacemaker.] Figure: The Three Managerial Archetypes: the
+Technician, the Politician, and the Peacemaker.
+
+Every person is different, but these are the abstract base classes.
 
 1. The Technician (The “Achievement” Manager)
 
@@ -1074,8 +1080,12 @@ is madness. You are building features without a spec.
 
 To fix this, adopt Karma-Driven Development (KDD). In this framework,
 you never write a line of code until you have written the performance
-review bullet point that rewards it. Remember Law #2: the rating is the
-job.
+review bullet point that rewards it.
+
+[Karma Driven Development (KDD) Flowchart.] Figure: Karma Driven
+Development (KDD) Flowchart.
+
+Remember Law #2: the rating is the job.
 
 Phase 1: Echolocation (Witness Selection & The IKEA Hook)
 
