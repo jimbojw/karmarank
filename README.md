@@ -71,7 +71,8 @@ The KarmaRank Manifesto proceeds from this observation, explaining how to decoup
 - [Tactics II: Manufacturing Evidence (The Brief)](content/12-brief.md)
 - [The Exit: The Market Check](content/13-exit.md)
 - [Conclusion: You Are Not Cynical Enough](content/14-conclusion.md)
-- [Appendix](content/15-appendix.md)
+- [Epilogue: The Meta-Game](content/15-epilogue.md)
+- [Appendix](content/16-appendix.md)
 
 <!-- TOC_END -->
 
