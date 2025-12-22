@@ -30,7 +30,7 @@ This document patches the [Default Engineering Worldview](content/04-security-ad
 
 While this full KarmaRank definition describes the actual appraisal process, for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
-![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.png)
+[![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.png)](content/03-origin-story.md)
 
 $$
 K = \sum_{i} S_i \cdot k_i
