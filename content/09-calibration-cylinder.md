@@ -1,9 +1,9 @@
 <!-- NAV_HEADER_START -->
-[← Meta-Law: You Do Not Talk About KarmaRank](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel: Technician, Politician, Peacemaker →](./10-kyc.md)
+[← Meta-Law](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel →](./10-kyc.md)
 ---
 <!-- NAV_HEADER_END -->
 # The Calibration Cylinder: Topology of the Trial
-<!-- NAV_TITLE: @inherit -->
+<!-- NAV_TITLE: Calibration Cylinder -->
 
 According to [Law #2](./06-law-2.md), the rating is the job. And by our earlier observations, the unit of account is the **Status-Weighted Story**. That's all well and good, but whose karma are we harvesting here?
 
@@ -134,5 +134,5 @@ The cylinder goes up indefinitely. The only thing that changes is the blast radi
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Meta-Law: You Do Not Talk About KarmaRank](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel: Technician, Politician, Peacemaker →](./10-kyc.md)
+[← Meta-Law](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel →](./10-kyc.md)
 <!-- NAV_FOOTER_END -->

@@ -1,9 +1,9 @@
 <!-- NAV_HEADER_START -->
-[← KarmaRank: Origin Story (with Math)](./03-origin-story.md) | [Index](../README.md#table-of-contents) | [Law #1: Conative Dissonance →](./05-law-1.md)
+[← Origin Story](./03-origin-story.md) | [Index](../README.md#table-of-contents) | [Law #1: Conative Dissonance →](./05-law-1.md)
 ---
 <!-- NAV_HEADER_END -->
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
-<!-- NAV_TITLE: @inherit -->
+<!-- NAV_TITLE: Security Advisory -->
 
 **Severity:** Critical  
 **Status:** Active Exploitation Detected
@@ -66,5 +66,5 @@ Let's open the debugger.
 
 <!-- NAV_FOOTER_START -->
 ---
-[← KarmaRank: Origin Story (with Math)](./03-origin-story.md) | [Index](../README.md#table-of-contents) | [Law #1: Conative Dissonance →](./05-law-1.md)
+[← Origin Story](./03-origin-story.md) | [Index](../README.md#table-of-contents) | [Law #1: Conative Dissonance →](./05-law-1.md)
 <!-- NAV_FOOTER_END -->

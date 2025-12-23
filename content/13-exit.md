@@ -1,5 +1,5 @@
 <!-- NAV_HEADER_START -->
-[← Tactics II: Manufacturing Evidence (The Brief)](./12-brief.md) | [Index](../README.md#table-of-contents) | [Conclusion: You Are Not Cynical Enough →](./14-conclusion.md)
+[← The Brief](./12-brief.md) | [Index](../README.md#table-of-contents) | [Conclusion: You Are Not Cynical Enough →](./14-conclusion.md)
 ---
 <!-- NAV_HEADER_END -->
 # The Exit: The Market Check
@@ -100,5 +100,5 @@ Just pack up your stories, take your clean slate, and go play somewhere else.
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Tactics II: Manufacturing Evidence (The Brief)](./12-brief.md) | [Index](../README.md#table-of-contents) | [Conclusion: You Are Not Cynical Enough →](./14-conclusion.md)
+[← The Brief](./12-brief.md) | [Index](../README.md#table-of-contents) | [Conclusion: You Are Not Cynical Enough →](./14-conclusion.md)
 <!-- NAV_FOOTER_END -->

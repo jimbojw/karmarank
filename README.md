@@ -59,7 +59,7 @@ The KarmaRank Manifesto proceeds from this observation, explaining how to decoup
 - [License: CC-BY-NC-SA-4.0](content/00-license.md)
 - [TL;DR](content/01-tldr.md)
 - [Introduction: The Frame of the Game](content/02-introduction.md)
-- [KarmaRank: Origin Story (with Math)](content/03-origin-story.md)
+- [KarmaRank Origin Story (with Math)](content/03-origin-story.md)
 - [SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview](content/04-security-advisory.md)
 - [Law #1: Conative Dissonance](content/05-law-1.md)
 - [Law #2: The Rating Is The Job](content/06-law-2.md)

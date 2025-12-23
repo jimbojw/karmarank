@@ -1,9 +1,9 @@
 <!-- NAV_HEADER_START -->
-[← Know Your Counsel: Technician, Politician, Peacemaker](./10-kyc.md) | [Index](../README.md#table-of-contents) | [Tactics II: Manufacturing Evidence (The Brief) →](./12-brief.md)
+[← Know Your Counsel](./10-kyc.md) | [Index](../README.md#table-of-contents) | [The Brief →](./12-brief.md)
 ---
 <!-- NAV_HEADER_END -->
 # Tactics I: Karma-Driven Development (KDD)
-<!-- NAV_TITLE: @inherit -->
+<!-- NAV_TITLE: Karma-Driven Development -->
 
 In software engineering, the most disciplined teams practice **Test-Driven Development (TDD)**. The rule is simple: **Red, Green, Refactor.**
 
@@ -122,5 +122,5 @@ Next up: packaging the Story for deployment. It’s time to manufacture some evi
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Know Your Counsel: Technician, Politician, Peacemaker](./10-kyc.md) | [Index](../README.md#table-of-contents) | [Tactics II: Manufacturing Evidence (The Brief) →](./12-brief.md)
+[← Know Your Counsel](./10-kyc.md) | [Index](../README.md#table-of-contents) | [The Brief →](./12-brief.md)
 <!-- NAV_FOOTER_END -->

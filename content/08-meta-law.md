@@ -1,9 +1,9 @@
 <!-- NAV_HEADER_START -->
-[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [The Calibration Cylinder: Topology of the Trial →](./09-calibration-cylinder.md)
+[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [Calibration Cylinder →](./09-calibration-cylinder.md)
 ---
 <!-- NAV_HEADER_END -->
 # Meta-Law: You Do Not Talk About KarmaRank
-<!-- NAV_TITLE: @inherit -->
+<!-- NAV_TITLE: Meta-Law -->
 
 You are allowed to play the game.  
 You are not supposed to describe the game.
@@ -34,5 +34,5 @@ This text is written in the forbidden dialect on purpose. Treat it like you woul
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [The Calibration Cylinder: Topology of the Trial →](./09-calibration-cylinder.md)
+[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [Calibration Cylinder →](./09-calibration-cylinder.md)
 <!-- NAV_FOOTER_END -->
