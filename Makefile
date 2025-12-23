@@ -30,10 +30,6 @@ ALL_MD := $(CHAPTERS) $(TOP_LEVEL_MD)
 TRANSFORMED_DIR := $(BUILD_DIR)/chapters
 TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPTERS))
 
-# Chapter ID extraction directory
-CHAPTER_IDS_DIR := $(BUILD_DIR)/chapter-ids
-CHAPTER_ID_FILES := $(patsubst $(CONTENT_DIR)/%.md,$(CHAPTER_IDS_DIR)/%.md,$(CHAPTERS))
-
 # Build artifacts for markdown output
 TITLE_PAGE := $(BUILD_DIR)/title-page.md
 FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
@@ -68,48 +64,50 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page prepare-chapter-ids build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
-all: prepare-chapter-ids build-transform-filter html pdf epub md index latest readme
+all: build-transform-filter html pdf epub md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
 	@mkdir -p $(BUILD_DIR)
 
-# Extract H1 IDs from chapters (Step 1: discover pandoc's auto-generated IDs)
-prepare-chapter-ids: $(CHAPTER_ID_FILES)
-$(CHAPTER_IDS_DIR)/%.md: $(CONTENT_DIR)/%.md filters/extract-h1-id.lua | directories
-	@mkdir -p $(CHAPTER_IDS_DIR)
-	@$(PANDOC) $< \
-		--from=commonmark_x \
-		--to=commonmark_x \
-		--lua-filter=filters/extract-h1-id.lua \
-		--output=$@.tmp 2>/dev/null || true
-	@if ! grep -qE '{#[^}]+}' $@.tmp 2>/dev/null; then \
-		echo "Error: Failed to find ID in output from $<. Expected {#id} format." >&2; \
-		echo "Output was:" >&2; \
-		cat $@.tmp >&2; \
-		rm -f $@.tmp; \
-		exit 1; \
-	fi; \
-	mv $@.tmp $@
-
 # Build combined transform filter (map + transform logic)
+# Inlines chapter ID extraction directly (no intermediate files)
+#
+# ID extraction implementation notes:
+# - We follow Pandoc's OBSERVED behavior, not its documentation (which is incorrect)
+# - Periods (.) are REMOVED (despite docs claiming they're preserved)
+# - Underscores (_) are PRESERVED
+# - Formatting (bold, links) is stripped; link text is extracted, not URL
+# - Leading/trailing hyphens are removed, multiple hyphens collapsed
+# - Case is lowercased, spaces become hyphens
+#
+# Known edge cases where our implementation differs from Pandoc:
+# - Headers with ONLY links: Pandoc extracts link text, we include URL
+#   (e.g., "# [Link](url)" -> Pandoc: "link", ours: "linkurl")
+# - Headers with ONLY punctuation: Pandoc outputs "# ", we output empty string
+#   (e.g., "# !@#$" -> Pandoc: "# ", ours: "")
+# These edge cases don't occur in our actual chapter headers.
 build-transform-filter: $(BUILD_DIR)/transform-chapters.lua
-$(BUILD_DIR)/transform-chapters.lua: $(CHAPTER_ID_FILES) filters/transform-chapters.lua | directories prepare-chapter-ids
+$(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua | directories
 	@echo "-- Auto-generated chapter ID map" > $@
 	@echo "chapter_id_map = {" >> $@
 	@for f in $(CHAPTERS); do \
 		basename=$$(basename $$f); \
-		id_file=$(CHAPTER_IDS_DIR)/$$basename; \
-		if [ -f $$id_file ]; then \
-			id=$$(sed 's%.*{#\([^}]\+\).*%\1%' $$id_file); \
-			if [ -z "$$id" ]; then \
-				echo "Error: Failed to extract ID from $$id_file" >&2; \
-				exit 1; \
-			fi; \
-			echo "  [\"$$basename\"] = \"$$id\"," >> $@; \
+		h1_line=$$(grep '^#[^#]' $$f | head -1); \
+		if [ -z "$$h1_line" ]; then \
+			echo "Error: No H1 found in $$f" >&2; \
+			exit 1; \
 		fi; \
+		h1_text=$$(echo "$$h1_line" | sed 's/^# *//'); \
+		id=$$(echo "$$h1_text" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g; s/[^a-z0-9_-]//g; s/--*/-/g; s/^-//; s/-$$//'); \
+		if [ -z "$$id" ]; then \
+			echo "Error: Failed to generate ID from H1 in $$f" >&2; \
+			echo "H1 was: $$h1_line" >&2; \
+			exit 1; \
+		fi; \
+		echo "  [\"$$basename\"] = \"$$id\"," >> $@; \
 	done
 	@echo "}" >> $@
 	@echo "" >> $@
@@ -118,7 +116,7 @@ $(BUILD_DIR)/transform-chapters.lua: $(CHAPTER_ID_FILES) filters/transform-chapt
 	@echo "✓ Transform filter created"
 
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories prepare-chapter-ids build-transform-filter check-pandoc-deps
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories build-transform-filter check-pandoc-deps
 	@mkdir -p $(TRANSFORMED_DIR)
 	$(PANDOC) \
 		$< \
