@@ -20,7 +20,7 @@ Just like in other professional sports, how you play affects your greater life. 
 
 The point is that you must separate your **Private Ledger**, what you think of as right and true and just, from the **Firm Ledger**, how the company (the firm) values your contributions.
 
-It's not that your ethics don't matter in some abstract sens. It's that if you choose to commit a game-suboptimal play to satisfy your ethical frame, or vice versa, I want you to do it with eyes open. But to do that, you first have to understand the game you're already playing, which we'll explore thoroughly.
+It's not that your ethics don't matter in some abstract sense. It's that if you choose to commit a game-suboptimal play to satisfy your ethical frame, or vice versa, I want you to do it with eyes open. But to do that, you first have to understand the game you're already playing, which we'll explore thoroughly.
 
 One final warning before we proceed: _you will feel manipulative_. We've been brought up to believe that unconscious prosocial behavior is "good" while conscious prosocial behavior is "suspicious", "manipulative", etc.
 
