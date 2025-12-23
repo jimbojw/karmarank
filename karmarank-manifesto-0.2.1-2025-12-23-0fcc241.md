@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-23-2bdd9f6)
+build: 0.2.1 (2025-12-23-0fcc241)
 date: 2025-12-23
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-23-2bdd9f6)
+Build: 0.2.1 (2025-12-23-0fcc241)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -162,7 +162,7 @@ firm's real moral and status drivers. This will reduce confusion, reduce
 unfair self-blame, and increase the karmic ROI of genuinely prosocial
 behavior.
 
-# KarmaRank: Origin Story (with Math)
+# KarmaRank Origin Story (with Math)
 
 ## 1. The Toy Demo and the Wrong Scoreboard
 
