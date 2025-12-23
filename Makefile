@@ -104,12 +104,13 @@ $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua 
 	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
 
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories build-transform-filter check-pandoc-deps
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav-footer.lua | directories build-transform-filter check-pandoc-deps
 	@mkdir -p $(TRANSFORMED_DIR)
 	$(PANDOC) \
 		$< \
 		--from=commonmark_x \
 		--to=commonmark_x \
+		--lua-filter=filters/remove-nav-footer.lua \
 		--lua-filter=$(BUILD_DIR)/transform-chapters.lua \
 		--output=$@
 
