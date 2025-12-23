@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← TL;DR](./01-tldr.md) | [Index](../README.md#table-of-contents) | [Origin Story →](./03-origin-story.md)
+[← TL;DR](./01-tldr.md) | [TOC](../README.md#table-of-contents) | [Origin Story →](./03-origin-story.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Introduction: The Frame of the Game
@@ -35,5 +36,6 @@ With that out of the way, let's get on with our goal of mapping the firm's real 
 
 <!-- NAV_FOOTER_START -->
 ---
-[← TL;DR](./01-tldr.md) | [Index](../README.md#table-of-contents) | [Origin Story →](./03-origin-story.md)
+
+[← TL;DR](./01-tldr.md) | [TOC](../README.md#table-of-contents) | [Origin Story →](./03-origin-story.md)
 <!-- NAV_FOOTER_END -->

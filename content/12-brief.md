@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Karma-Driven Development](./11-kdd.md) | [Index](../README.md#table-of-contents) | [The Exit: The Market Check →](./13-exit.md)
+[← Karma-Driven Development](./11-kdd.md) | [TOC](../README.md#table-of-contents) | [The Exit: The Market Check →](./13-exit.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Tactics II: Manufacturing Evidence (The Brief)
@@ -109,5 +110,6 @@ Give the court the evidence so that they can give you the money.
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Karma-Driven Development](./11-kdd.md) | [Index](../README.md#table-of-contents) | [The Exit: The Market Check →](./13-exit.md)
+
+[← Karma-Driven Development](./11-kdd.md) | [TOC](../README.md#table-of-contents) | [The Exit: The Market Check →](./13-exit.md)
 <!-- NAV_FOOTER_END -->

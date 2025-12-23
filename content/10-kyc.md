@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Calibration Cylinder](./09-calibration-cylinder.md) | [Index](../README.md#table-of-contents) | [Karma-Driven Development →](./11-kdd.md)
+[← Calibration Cylinder](./09-calibration-cylinder.md) | [TOC](../README.md#table-of-contents) | [Karma-Driven Development →](./11-kdd.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Know Your Counsel: Technician, Politician, Peacemaker
@@ -98,5 +99,6 @@ Now that you have identified who you are trying to impress (the court) and who w
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Calibration Cylinder](./09-calibration-cylinder.md) | [Index](../README.md#table-of-contents) | [Karma-Driven Development →](./11-kdd.md)
+
+[← Calibration Cylinder](./09-calibration-cylinder.md) | [TOC](../README.md#table-of-contents) | [Karma-Driven Development →](./11-kdd.md)
 <!-- NAV_FOOTER_END -->

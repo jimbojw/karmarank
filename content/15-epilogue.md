@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Conclusion: You Are Not Cynical Enough](./14-conclusion.md) | [Index](../README.md#table-of-contents) | [Appendix →](./16-appendix.md)
+[← Conclusion: You Are Not Cynical Enough](./14-conclusion.md) | [TOC](../README.md#table-of-contents) | [Appendix →](./16-appendix.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Epilogue: The Meta-Game
@@ -123,5 +124,6 @@ The **Full-Stack Human** is no longer born. They are prompted.
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Conclusion: You Are Not Cynical Enough](./14-conclusion.md) | [Index](../README.md#table-of-contents) | [Appendix →](./16-appendix.md)
+
+[← Conclusion: You Are Not Cynical Enough](./14-conclusion.md) | [TOC](../README.md#table-of-contents) | [Appendix →](./16-appendix.md)
 <!-- NAV_FOOTER_END -->

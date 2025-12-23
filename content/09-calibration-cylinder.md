@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Meta-Law](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel →](./10-kyc.md)
+[← Meta-Law](./08-meta-law.md) | [TOC](../README.md#table-of-contents) | [Know Your Counsel →](./10-kyc.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # The Calibration Cylinder: Topology of the Trial
@@ -134,5 +135,6 @@ The cylinder goes up indefinitely. The only thing that changes is the blast radi
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Meta-Law](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel →](./10-kyc.md)
+
+[← Meta-Law](./08-meta-law.md) | [TOC](../README.md#table-of-contents) | [Know Your Counsel →](./10-kyc.md)
 <!-- NAV_FOOTER_END -->

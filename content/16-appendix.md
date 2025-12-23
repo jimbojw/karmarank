@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Epilogue: The Meta-Game](./15-epilogue.md) | [Index](../README.md#table-of-contents)
+[← Epilogue: The Meta-Game](./15-epilogue.md) | [TOC](../README.md#table-of-contents)
+
 ---
 <!-- NAV_HEADER_END -->
 # Appendix
@@ -197,5 +198,6 @@ _"When a measure becomes a target, it ceases to be a good measure."_ The fundame
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Epilogue: The Meta-Game](./15-epilogue.md) | [Index](../README.md#table-of-contents)
+
+[← Epilogue: The Meta-Game](./15-epilogue.md) | [TOC](../README.md#table-of-contents)
 <!-- NAV_FOOTER_END -->

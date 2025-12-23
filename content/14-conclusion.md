@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← The Exit: The Market Check](./13-exit.md) | [Index](../README.md#table-of-contents) | [Epilogue: The Meta-Game →](./15-epilogue.md)
+[← The Exit: The Market Check](./13-exit.md) | [TOC](../README.md#table-of-contents) | [Epilogue: The Meta-Game →](./15-epilogue.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Conclusion: You Are Not Cynical Enough
@@ -110,5 +111,6 @@ People like us build and maintain the modern world.
 
 <!-- NAV_FOOTER_START -->
 ---
-[← The Exit: The Market Check](./13-exit.md) | [Index](../README.md#table-of-contents) | [Epilogue: The Meta-Game →](./15-epilogue.md)
+
+[← The Exit: The Market Check](./13-exit.md) | [TOC](../README.md#table-of-contents) | [Epilogue: The Meta-Game →](./15-epilogue.md)
 <!-- NAV_FOOTER_END -->

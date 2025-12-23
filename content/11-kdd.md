@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Know Your Counsel](./10-kyc.md) | [Index](../README.md#table-of-contents) | [The Brief →](./12-brief.md)
+[← Know Your Counsel](./10-kyc.md) | [TOC](../README.md#table-of-contents) | [The Brief →](./12-brief.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Tactics I: Karma-Driven Development (KDD)
@@ -122,5 +123,6 @@ Next up: packaging the Story for deployment. It’s time to manufacture some evi
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Know Your Counsel](./10-kyc.md) | [Index](../README.md#table-of-contents) | [The Brief →](./12-brief.md)
+
+[← Know Your Counsel](./10-kyc.md) | [TOC](../README.md#table-of-contents) | [The Brief →](./12-brief.md)
 <!-- NAV_FOOTER_END -->

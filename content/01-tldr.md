@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← License: CC-BY-NC-SA-4.0](./00-license.md) | [Index](../README.md#table-of-contents) | [Introduction: The Frame of the Game →](./02-introduction.md)
+[← License](./00-license.md) | [TOC](../README.md#table-of-contents) | [Introduction: The Frame of the Game →](./02-introduction.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # TL;DR
@@ -35,5 +36,6 @@ optimize your output for the **Firm Ledger**, and maximize your karmic ROI withi
 
 <!-- NAV_FOOTER_START -->
 ---
-[← License: CC-BY-NC-SA-4.0](./00-license.md) | [Index](../README.md#table-of-contents) | [Introduction: The Frame of the Game →](./02-introduction.md)
+
+[← License](./00-license.md) | [TOC](../README.md#table-of-contents) | [Introduction: The Frame of the Game →](./02-introduction.md)
 <!-- NAV_FOOTER_END -->

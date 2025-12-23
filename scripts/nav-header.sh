@@ -58,6 +58,7 @@ for chapter in "${CHAPTERS[@]}"; do
 		{
 			echo "<!-- NAV_HEADER_START -->"
 			echo "$NAV_LINE"
+			echo ""
 			echo "---"
 			echo "<!-- NAV_HEADER_END -->"
 			cat "$TEMP_FILE"
@@ -69,6 +70,7 @@ for chapter in "${CHAPTERS[@]}"; do
 		{
 			echo "<!-- NAV_HEADER_START -->"
 			echo "$NAV_LINE"
+			echo ""
 			echo "---"
 			echo "<!-- NAV_HEADER_END -->"
 			cat "$chapter"

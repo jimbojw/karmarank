@@ -1,5 +1,6 @@
 <!-- NAV_HEADER_START -->
-[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [Calibration Cylinder →](./09-calibration-cylinder.md)
+[← Law #3: Who Cares?](./07-law-3.md) | [TOC](../README.md#table-of-contents) | [Calibration Cylinder →](./09-calibration-cylinder.md)
+
 ---
 <!-- NAV_HEADER_END -->
 # Meta-Law: You Do Not Talk About KarmaRank
@@ -34,5 +35,6 @@ This text is written in the forbidden dialect on purpose. Treat it like you woul
 
 <!-- NAV_FOOTER_START -->
 ---
-[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [Calibration Cylinder →](./09-calibration-cylinder.md)
+
+[← Law #3: Who Cares?](./07-law-3.md) | [TOC](../README.md#table-of-contents) | [Calibration Cylinder →](./09-calibration-cylinder.md)
 <!-- NAV_FOOTER_END -->

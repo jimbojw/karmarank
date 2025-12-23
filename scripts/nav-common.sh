@@ -49,13 +49,13 @@ build_nav_line() {
 	fi
 	
 	if [ -n "$prev_text" ] && [ -n "$next_text" ]; then
-		echo "$prev_text | [Index](../README.md#table-of-contents) | $next_text"
+		echo "$prev_text | [TOC](../README.md#table-of-contents) | $next_text"
 	elif [ -n "$prev_text" ]; then
-		echo "$prev_text | [Index](../README.md#table-of-contents)"
+		echo "$prev_text | [TOC](../README.md#table-of-contents)"
 	elif [ -n "$next_text" ]; then
-		echo "[Index](../README.md#table-of-contents) | $next_text"
+		echo "[TOC](../README.md#table-of-contents) | $next_text"
 	else
-		echo "[Index](../README.md#table-of-contents)"
+		echo "[TOC](../README.md#table-of-contents)"
 	fi
 }
 
