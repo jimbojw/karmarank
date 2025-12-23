@@ -1,4 +1,5 @@
 # The Calibration Cylinder: Topology of the Trial
+<!-- NAV_TITLE: @inherit -->
 
 According to [Law #2](./06-law-2.md), the rating is the job. And by our earlier observations, the unit of account is the **Status-Weighted Story**. That's all well and good, but whose karma are we harvesting here?
 
@@ -126,3 +127,8 @@ When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mi
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.*
 
 The cylinder goes up indefinitely. The only thing that changes is the blast radius of the decisions. Everyone has the same job: figure out who matters, then ship them stories they'll endorse.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Meta-Law: You Do Not Talk About KarmaRank](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel: Technician, Politician, Peacemaker →](./10-kyc.md)
+<!-- NAV_FOOTER_END -->

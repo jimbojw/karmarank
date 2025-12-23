@@ -1,4 +1,5 @@
 # Epilogue: The Meta-Game
+<!-- NAV_TITLE: @inherit -->
 
 You prefer clear rules and actionable guidance. I’ve endeavored to give them to you.
 
@@ -115,3 +116,8 @@ The natural Politician relies on intuition—a black box they cannot explain or 
 The "Humanities" are no longer a misty realm of magic. They are a constellation of high-resolution terms floating in embedding space. We have quantified them. We have tokenized them. And now we can optimize them.
 
 The **Full-Stack Human** is no longer born. They are prompted.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Conclusion: You Are Not Cynical Enough](./14-conclusion.md) | [Index](../README.md#table-of-contents) | [Appendix →](./16-appendix.md)
+<!-- NAV_FOOTER_END -->

@@ -68,9 +68,15 @@ else
     HTML_EMBED_FLAG := --self-contained
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav nav-title
 
-all: build-transform-filter html pdf epub md index latest readme
+# Build deployable artifacts (index page + all formats via "latest" target).
+# Note: "latest" transitively builds html, pdf, epub and md.
+artifacts: index latest
+
+inter-document-links: readme nav
+
+all: artifacts inter-document-links
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -305,6 +311,16 @@ README.md: $(CHAPTERS) | directories
 		mv $$NEW_README README.md; \
 	}
 	@echo "✓ README.md updated"
+
+# Ensure NAV_TITLE comment exists in all chapters
+nav-title: | directories
+	@echo "Ensuring NAV_TITLE comments..."
+	@scripts/nav-title.sh $(BUILD_DIR) $(sort $(CHAPTERS))
+
+# Navigation Footer Target (depends on nav-title)
+nav: nav-title | directories
+	@echo "Updating navigation footers..."
+	@scripts/nav-footer.sh $(BUILD_DIR) $(sort $(CHAPTERS))
 
 # Check targets: validates inter-document links and image files
 check: check-links check-images check-images-refs check-unused-images check-chapter-order

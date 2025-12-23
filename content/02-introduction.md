@@ -1,4 +1,5 @@
 # Introduction: The Frame of the Game
+<!-- NAV_TITLE: @inherit -->
 
 You are good at games. You understand games. Games have rules. Predictable, deterministic, if-this-then-that rules. If the rules are clear, you can play it.
 
@@ -27,3 +28,8 @@ So while I've worked in every size org from tiny startups to Big Tech, from acad
 But if that's you, no worries, the frameworks and techniques we'll develop here work equally well for effort minimization or outcome maximization. Just pick a lane and play accordingly.
 
 With that out of the way, let's get on with our goal of mapping the firm's real moral and status drivers. This will reduce confusion, reduce unfair self-blame, and increase the karmic ROI of genuinely prosocial behavior.
+
+<!-- NAV_FOOTER_START -->
+---
+[← TL;DR](./01-tldr.md) | [Index](../README.md#table-of-contents) | [KarmaRank: Origin Story (with Math) →](./03-origin-story.md)
+<!-- NAV_FOOTER_END -->

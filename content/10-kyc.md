@@ -1,4 +1,5 @@
 # Know Your Counsel: Technician, Politician, Peacemaker
+<!-- NAV_TITLE: @inherit -->
 
 In the preceding chapter, you saw the Calibration Cylinder—the relevant local topology of your corporate social graph. We discussed how calibration operates like a courtroom, a trial in absentia, with your manager performing the role of your public defender (Counsel).
 
@@ -90,3 +91,8 @@ When you follow up with “how was this book transformative _for you_?”, you o
 ---
 
 Now that you have identified who you are trying to impress (the court) and who will be delivering that defense (your manager), it’s time to learn what to _do_. This brings us to **Karma-Driven Development.**
+
+<!-- NAV_FOOTER_START -->
+---
+[← The Calibration Cylinder: Topology of the Trial](./09-calibration-cylinder.md) | [Index](../README.md#table-of-contents) | [Tactics I: Karma-Driven Development (KDD) →](./11-kdd.md)
+<!-- NAV_FOOTER_END -->

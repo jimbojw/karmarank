@@ -1,4 +1,5 @@
 # Appendix
+<!-- NAV_TITLE: @inherit -->
 
 ## Glossary
 
@@ -189,3 +190,8 @@ The manual for **Tactical Empathy** and **Conversational Reconnaissance**. Voss 
 Marilyn Strathern
 
 _"When a measure becomes a target, it ceases to be a good measure."_ The fundamental reason why **Strategic Ambiguity** is a feature, not a bug, of performance review systems.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Epilogue: The Meta-Game](./15-epilogue.md) | [Index](../README.md#table-of-contents)
+<!-- NAV_FOOTER_END -->

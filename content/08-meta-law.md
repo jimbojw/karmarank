@@ -1,4 +1,5 @@
 # Meta-Law: You Do Not Talk About KarmaRank
+<!-- NAV_TITLE: @inherit -->
 
 You are allowed to play the game.  
 You are not supposed to describe the game.
@@ -26,3 +27,8 @@ So you keep two layers:
 Violating Law #3 does not change how the system works. It only changes how the system categorizes you. Instead of "high-potential," you become "cynical," "political," or "not a culture fit."
 
 This text is written in the forbidden dialect on purpose. Treat it like you would any other internal tool: useful in the debugger, potentially disastrous in the release build.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [The Calibration Cylinder: Topology of the Trial →](./09-calibration-cylinder.md)
+<!-- NAV_FOOTER_END -->

@@ -1,4 +1,5 @@
 # Tactics I: Karma-Driven Development (KDD)
+<!-- NAV_TITLE: @inherit -->
 
 In software engineering, the most disciplined teams practice **Test-Driven Development (TDD)**. The rule is simple: **Red, Green, Refactor.**
 
@@ -114,3 +115,8 @@ The naive engineer builds the software, then tries to write a marketing brochure
 Code is a liability. The Status-Weighted Story is the asset. Never generate the liability without securing the asset first.
 
 Next up: packaging the Story for deployment. It’s time to manufacture some evidence (the Brief).
+
+<!-- NAV_FOOTER_START -->
+---
+[← Know Your Counsel: Technician, Politician, Peacemaker](./10-kyc.md) | [Index](../README.md#table-of-contents) | [Tactics II: Manufacturing Evidence (The Brief) →](./12-brief.md)
+<!-- NAV_FOOTER_END -->

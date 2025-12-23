@@ -1,4 +1,5 @@
 # The Exit: The Market Check
+<!-- NAV_TITLE: @inherit -->
 
 We have spent this entire text discussing how to optimize your position inside the firm. We covered how to debug the culture, how to identify what matters, and how to manufacture the evidence required to get rewarded.
 
@@ -92,3 +93,8 @@ But the board is not the world.
 You have agency. You are the CEO of your own career. If the game becomes unwinnable, or if the rewards stop matching the effort, do not become toxic. Do not become cynical.
 
 Just pack up your stories, take your clean slate, and go play somewhere else.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Tactics II: Manufacturing Evidence (The Brief)](./12-brief.md) | [Index](../README.md#table-of-contents) | [Conclusion: You Are Not Cynical Enough →](./14-conclusion.md)
+<!-- NAV_FOOTER_END -->

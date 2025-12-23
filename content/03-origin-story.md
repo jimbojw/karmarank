@@ -1,4 +1,5 @@
 # KarmaRank: Origin Story (with Math)
+<!-- NAV_TITLE: @inherit -->
 
 ## 1. The Toy Demo and the Wrong Scoreboard
 
@@ -162,3 +163,8 @@ Everyone has the same job: to secure timely, **Status-Weighted Stories** in a _d
 Some people intuit this. Good for them. The rest of us have to write it down.
 
 KarmaRank is for the second group. You don't have to struggle through a decade of half-failed projects and flushed 1:1s to see KarmaRank. I did that part for you.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Introduction: The Frame of the Game](./02-introduction.md) | [Index](../README.md#table-of-contents) | [SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview →](./04-security-advisory.md)
+<!-- NAV_FOOTER_END -->

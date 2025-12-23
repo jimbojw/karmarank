@@ -1,4 +1,5 @@
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
+<!-- NAV_TITLE: @inherit -->
 
 **Severity:** Critical  
 **Status:** Active Exploitation Detected
@@ -58,3 +59,8 @@ If you can accept these five premises—or at least entertain them as working hy
 We are going to take your career off the "Default" setting and switch it to "Manual." Whether you use these tools to claw your way to the C-suite or just to minimize your effort while maximizing your karmic ROI, the mechanics are the same.
 
 Let's open the debugger.
+
+<!-- NAV_FOOTER_START -->
+---
+[← KarmaRank: Origin Story (with Math)](./03-origin-story.md) | [Index](../README.md#table-of-contents) | [Law #1: Conative Dissonance →](./05-law-1.md)
+<!-- NAV_FOOTER_END -->

@@ -1,4 +1,5 @@
 # TL;DR
+<!-- NAV_TITLE: @inherit -->
 
 Corporate performance evaluation is not a function of work quality; it is a function of **Status-Weighted Stories**.
 
@@ -28,4 +29,7 @@ Where:
 The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](./05-law-1.md)),
 optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md).
 
-
+<!-- NAV_FOOTER_START -->
+---
+[← License: CC-BY-NC-SA-4.0](./00-license.md) | [Index](../README.md#table-of-contents) | [Introduction: The Frame of the Game →](./02-introduction.md)
+<!-- NAV_FOOTER_END -->

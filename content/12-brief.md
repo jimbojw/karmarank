@@ -1,4 +1,5 @@
 # Tactics II: Manufacturing Evidence (The Brief)
+<!-- NAV_TITLE: @inherit -->
 
 In the previous chapter, you learned Karma Driven Development (KDD), a strategy for choosing Status-Weighted Stories _first_ and working backwards to make them true. Now it's time to learn how to optimize that evidence for your manager to bring to calibration court.
 
@@ -101,3 +102,8 @@ Your strategy should not be to falsify data. Your requirement is to **format rea
 The firm demands Status-Weighted Stories and prefers them to have numbers and pictures. If you refuse to provide Briefs, you are not being noble. You are sabotaging your defense.
 
 Give the court the evidence so that they can give you the money.
+
+<!-- NAV_FOOTER_START -->
+---
+[← Tactics I: Karma-Driven Development (KDD)](./11-kdd.md) | [Index](../README.md#table-of-contents) | [The Exit: The Market Check →](./13-exit.md)
+<!-- NAV_FOOTER_END -->
