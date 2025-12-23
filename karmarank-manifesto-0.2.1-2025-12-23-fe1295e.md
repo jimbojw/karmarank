@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-23-6010aae)
+build: 0.2.1 (2025-12-23-fe1295e)
 date: 2025-12-23
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-23-6010aae)
+Build: 0.2.1 (2025-12-23-fe1295e)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -127,7 +127,7 @@ The point is that you must separate your **Private Ledger**, what you
 think of as right and true and just, from the **Firm Ledger**, how the
 company (the firm) values your contributions.
 
-It's not that your ethics don't matter in some abstract sens. It's that
+It's not that your ethics don't matter in some abstract sense. It's that
 if you choose to commit a game-suboptimal play to satisfy your ethical
 frame, or vice versa, I want you to do it with eyes open. But to do
 that, you first have to understand the game you're already playing,
