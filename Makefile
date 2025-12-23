@@ -101,29 +101,7 @@ directories:
 # These edge cases don't occur in our actual chapter headers.
 build-transform-filter: $(BUILD_DIR)/transform-chapters.lua
 $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua | directories
-	@echo "-- Auto-generated chapter ID map" > $@
-	@echo "chapter_id_map = {" >> $@
-	@for f in $(CHAPTERS); do \
-		basename=$$(basename $$f); \
-		h1_line=$$(grep '^#[^#]' $$f | head -1); \
-		if [ -z "$$h1_line" ]; then \
-			echo "Error: No H1 found in $$f" >&2; \
-			exit 1; \
-		fi; \
-		h1_text=$$(echo "$$h1_line" | sed 's/^# *//'); \
-		id=$$(echo "$$h1_text" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g; s/[^a-z0-9_-]//g; s/--*/-/g; s/^-//; s/-$$//'); \
-		if [ -z "$$id" ]; then \
-			echo "Error: Failed to generate ID from H1 in $$f" >&2; \
-			echo "H1 was: $$h1_line" >&2; \
-			exit 1; \
-		fi; \
-		echo "  [\"$$basename\"] = \"$$id\"," >> $@; \
-	done
-	@echo "}" >> $@
-	@echo "" >> $@
-	@echo "-- Transform logic" >> $@
-	@cat filters/transform-chapters.lua >> $@
-	@echo "✓ Transform filter created"
+	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
 
 # Pattern rule to build transformed chapters
 $(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories build-transform-filter check-pandoc-deps
@@ -291,26 +269,7 @@ $(MD_FILE_LONG): $(MD_FILE)
 readme: README.md
 README.md: $(CHAPTERS) | directories
 	@echo "Updating README.md TOC..."
-	@{ \
-		TOC_FILE="$(BUILD_DIR)/readme_toc.tmp"; \
-		NEW_README="$(BUILD_DIR)/README.new"; \
-		\
-		echo "<!-- TOC_START -->" > $$TOC_FILE; \
-		echo "" >> $$TOC_FILE; \
-		for f in $(CHAPTERS); do \
-			TITLE=$$(grep "^# " $$f | head -n 1 | sed 's/^# //'); \
-			echo "- [$$TITLE]($$f)" >> $$TOC_FILE; \
-		done; \
-		echo "" >> $$TOC_FILE; \
-		echo "<!-- TOC_END -->" >> $$TOC_FILE; \
-		\
-		sed '/<!-- TOC_START -->/,$$d' README.md > $$NEW_README; \
-		cat $$TOC_FILE >> $$NEW_README; \
-		sed '1,/<!-- TOC_END -->/d' README.md >> $$NEW_README; \
-		\
-		mv $$NEW_README README.md; \
-	}
-	@echo "✓ README.md updated"
+	@scripts/update-readme-toc.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
 
 # Ensure NAV_TITLE comment exists in all chapters
 nav-title: | directories
