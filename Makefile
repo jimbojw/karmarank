@@ -64,20 +64,22 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-images prepare-metadata-filtered prepare-title-page readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
-all: directories prepare-images prepare-chapters html pdf epub md index latest readme
+all: prepare-images prepare-chapters html pdf epub md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
 	@mkdir -p $(BUILD_DIR)
 
 # Copy images to output directory for HTML
-prepare-images: directories
+prepare-images: $(OUTPUT_DIR)/.images-copied
+$(OUTPUT_DIR)/.images-copied: | directories
 	@if [ -d "$(IMAGES_DIR)" ]; then \
 		mkdir -p $(OUTPUT_DIR)/images; \
 		cp -r $(IMAGES_DIR)/* $(OUTPUT_DIR)/images/; \
 	fi
+	@touch $@
 
 # Transform chapter markdown before pandoc:
 # - Append `{#filename}` custom ids to chapter headings.
@@ -239,16 +241,23 @@ $(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html
 
 # Latest Copies (Permalinks)
 # Copy from short names to long names
-latest: $(HTML_FILE) $(PDF_FILE) $(EPUB_FILE) $(MD_FILE)
-	@echo "Creating versioned copies..."
-	@cp $(HTML_FILE) $(HTML_FILE_LONG)
-	@cp $(PDF_FILE) $(PDF_FILE_LONG)
-	@cp $(EPUB_FILE) $(EPUB_FILE_LONG)
-	@cp $(MD_FILE) $(MD_FILE_LONG)
-	@echo "✓ Versioned copies created"
+latest: $(HTML_FILE_LONG) $(PDF_FILE_LONG) $(EPUB_FILE_LONG) $(MD_FILE_LONG)
+
+$(HTML_FILE_LONG): $(HTML_FILE)
+	@cp $< $@
+
+$(PDF_FILE_LONG): $(PDF_FILE)
+	@cp $< $@
+
+$(EPUB_FILE_LONG): $(EPUB_FILE)
+	@cp $< $@
+
+$(MD_FILE_LONG): $(MD_FILE)
+	@cp $< $@
 
 # README Build
-readme: | directories
+readme: README.md
+README.md: $(CHAPTERS) | directories
 	@echo "Updating README.md TOC..."
 	@{ \
 		TOC_FILE="$(BUILD_DIR)/readme_toc.tmp"; \
