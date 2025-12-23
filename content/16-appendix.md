@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Epilogue: The Meta-Game](./15-epilogue.md) | [Index](../README.md#table-of-contents)
+---
+<!-- NAV_HEADER_END -->
 # Appendix
 <!-- NAV_TITLE: @inherit -->
 

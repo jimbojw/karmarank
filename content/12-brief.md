@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Tactics I: Karma-Driven Development (KDD)](./11-kdd.md) | [Index](../README.md#table-of-contents) | [The Exit: The Market Check →](./13-exit.md)
+---
+<!-- NAV_HEADER_END -->
 # Tactics II: Manufacturing Evidence (The Brief)
 <!-- NAV_TITLE: @inherit -->
 

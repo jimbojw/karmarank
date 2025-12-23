@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← The Calibration Cylinder: Topology of the Trial](./09-calibration-cylinder.md) | [Index](../README.md#table-of-contents) | [Tactics I: Karma-Driven Development (KDD) →](./11-kdd.md)
+---
+<!-- NAV_HEADER_END -->
 # Know Your Counsel: Technician, Politician, Peacemaker
 <!-- NAV_TITLE: @inherit -->
 

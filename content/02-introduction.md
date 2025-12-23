@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← TL;DR](./01-tldr.md) | [Index](../README.md#table-of-contents) | [KarmaRank: Origin Story (with Math) →](./03-origin-story.md)
+---
+<!-- NAV_HEADER_END -->
 # Introduction: The Frame of the Game
 <!-- NAV_TITLE: @inherit -->
 

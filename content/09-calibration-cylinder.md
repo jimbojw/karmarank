@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Meta-Law: You Do Not Talk About KarmaRank](./08-meta-law.md) | [Index](../README.md#table-of-contents) | [Know Your Counsel: Technician, Politician, Peacemaker →](./10-kyc.md)
+---
+<!-- NAV_HEADER_END -->
 # The Calibration Cylinder: Topology of the Trial
 <!-- NAV_TITLE: @inherit -->
 

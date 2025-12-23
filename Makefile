@@ -68,7 +68,7 @@ else
     HTML_EMBED_FLAG := --self-contained
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav nav-title
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav nav-title nav-header nav-footer check-nav check-nav-title check-nav-header check-nav-footer
 
 # Build deployable artifacts (index page + all formats via "latest" target).
 # Note: "latest" transitively builds html, pdf, epub and md.
@@ -104,13 +104,13 @@ $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua 
 	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
 
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav-footer.lua | directories build-transform-filter check-pandoc-deps
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav.lua | directories build-transform-filter check-pandoc-deps
 	@mkdir -p $(TRANSFORMED_DIR)
 	$(PANDOC) \
 		$< \
 		--from=commonmark_x \
 		--to=commonmark_x \
-		--lua-filter=filters/remove-nav-footer.lua \
+		--lua-filter=filters/remove-nav.lua \
 		--lua-filter=$(BUILD_DIR)/transform-chapters.lua \
 		--output=$@
 
@@ -253,13 +253,36 @@ nav-title: | directories
 	@echo "Ensuring NAV_TITLE comments..."
 	@scripts/nav-title.sh $(BUILD_DIR) $(sort $(CHAPTERS))
 
+# Navigation Header Target (depends on nav-title)
+nav-header: nav-title | directories
+	@echo "Updating navigation headers..."
+	@scripts/nav-header.sh $(BUILD_DIR) $(sort $(CHAPTERS))
+
 # Navigation Footer Target (depends on nav-title)
-nav: nav-title | directories
+nav-footer: nav-title | directories
 	@echo "Updating navigation footers..."
 	@scripts/nav-footer.sh $(BUILD_DIR) $(sort $(CHAPTERS))
 
+# Navigation Target (updates both header and footer)
+nav: nav-header nav-footer
+
 # Check targets: validates inter-document links and image files
-check: check-links check-images check-images-refs check-unused-images check-chapter-order
+check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav
+
+# Navigation check targets
+check-nav: check-nav-title check-nav-header check-nav-footer
+
+check-nav-title: | directories
+	@echo "Checking NAV_TITLE comments..."
+	@scripts/check-nav-title.sh $(sort $(CHAPTERS))
+
+check-nav-header: | directories
+	@echo "Checking NAV_HEADER format..."
+	@scripts/check-nav-header.sh $(sort $(CHAPTERS))
+
+check-nav-footer: | directories
+	@echo "Checking NAV_FOOTER format..."
+	@scripts/check-nav-footer.sh $(sort $(CHAPTERS))
 
 check-links: | directories
 	@echo "Checking inter-document links..."

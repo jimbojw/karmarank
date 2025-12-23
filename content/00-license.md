@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[Index](../README.md#table-of-contents) | [TL;DR →](./01-tldr.md)
+---
+<!-- NAV_HEADER_END -->
 # License: CC-BY-NC-SA-4.0
 <!-- NAV_TITLE: @inherit -->
 

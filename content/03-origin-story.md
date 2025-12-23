@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Introduction: The Frame of the Game](./02-introduction.md) | [Index](../README.md#table-of-contents) | [SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview →](./04-security-advisory.md)
+---
+<!-- NAV_HEADER_END -->
 # KarmaRank: Origin Story (with Math)
 <!-- NAV_TITLE: @inherit -->
 

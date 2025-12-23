@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Know Your Counsel: Technician, Politician, Peacemaker](./10-kyc.md) | [Index](../README.md#table-of-contents) | [Tactics II: Manufacturing Evidence (The Brief) →](./12-brief.md)
+---
+<!-- NAV_HEADER_END -->
 # Tactics I: Karma-Driven Development (KDD)
 <!-- NAV_TITLE: @inherit -->
 

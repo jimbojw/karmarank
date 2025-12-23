@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← The Exit: The Market Check](./13-exit.md) | [Index](../README.md#table-of-contents) | [Epilogue: The Meta-Game →](./15-epilogue.md)
+---
+<!-- NAV_HEADER_END -->
 # Conclusion: You Are Not Cynical Enough
 <!-- NAV_TITLE: @inherit -->
 

@@ -1,6 +1,6 @@
 #!/bin/bash
-# Update navigation footers in all chapters
-# Usage: nav-footer.sh BUILD_DIR CHAPTERS...
+# Update navigation headers in all chapters
+# Usage: nav-header.sh BUILD_DIR CHAPTERS...
 
 set -e
 
@@ -48,28 +48,31 @@ for chapter in "${CHAPTERS[@]}"; do
 	# Build navigation line using shared function
 	NAV_LINE=$(build_nav_line "$PREV_NAV_TITLE" "$PREV_BASENAME" "$NEXT_NAV_TITLE" "$NEXT_BASENAME")
 	
-	# Check if footer already exists
-	if grep -q "<!-- NAV_FOOTER_START -->" "$chapter" 2>/dev/null; then
-		# Replace existing footer
-		TEMP_FILE="$BUILD_DIR/nav_temp_$BASENAME"
-		# Remove footer section and trailing blank lines, then add exactly one newline
-		sed '/<!-- NAV_FOOTER_START -->/,/<!-- NAV_FOOTER_END -->/d' "$chapter" | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > "$TEMP_FILE"
-		printf '\n' >> "$TEMP_FILE"
-		echo "<!-- NAV_FOOTER_START -->" >> "$TEMP_FILE"
-		echo "---" >> "$TEMP_FILE"
-		echo "$NAV_LINE" >> "$TEMP_FILE"
-		echo "<!-- NAV_FOOTER_END -->" >> "$TEMP_FILE"
-		mv "$TEMP_FILE" "$chapter"
+	# Check if header already exists
+	if grep -q "<!-- NAV_HEADER_START -->" "$chapter" 2>/dev/null; then
+		# Replace existing header
+		TEMP_FILE="$BUILD_DIR/nav_header_temp_$BASENAME"
+		# Remove header section
+		sed '/<!-- NAV_HEADER_START -->/,/<!-- NAV_HEADER_END -->/d' "$chapter" > "$TEMP_FILE"
+		# Insert new header at the very beginning
+		{
+			echo "<!-- NAV_HEADER_START -->"
+			echo "$NAV_LINE"
+			echo "---"
+			echo "<!-- NAV_HEADER_END -->"
+			cat "$TEMP_FILE"
+		} > "$chapter"
+		rm "$TEMP_FILE"
 	else
-		# Append new footer
-		TEMP_FILE="$BUILD_DIR/nav_append_temp_$BASENAME"
-		# Remove trailing blank lines, then add exactly one newline
-		sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$chapter" > "$TEMP_FILE"
-		printf '\n' >> "$TEMP_FILE"
-		echo "<!-- NAV_FOOTER_START -->" >> "$TEMP_FILE"
-		echo "---" >> "$TEMP_FILE"
-		echo "$NAV_LINE" >> "$TEMP_FILE"
-		echo "<!-- NAV_FOOTER_END -->" >> "$TEMP_FILE"
+		# Insert new header at the very beginning
+		TEMP_FILE="$BUILD_DIR/nav_header_prepend_temp_$BASENAME"
+		{
+			echo "<!-- NAV_HEADER_START -->"
+			echo "$NAV_LINE"
+			echo "---"
+			echo "<!-- NAV_HEADER_END -->"
+			cat "$chapter"
+		} > "$TEMP_FILE"
 		mv "$TEMP_FILE" "$chapter"
 	fi
 	
@@ -82,4 +85,5 @@ if [ $FAILED -gt 0 ]; then
 	exit 1
 fi
 
-echo "✓ Navigation footers updated"
+echo "✓ Navigation headers updated"
+

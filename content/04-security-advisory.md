@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← KarmaRank: Origin Story (with Math)](./03-origin-story.md) | [Index](../README.md#table-of-contents) | [Law #1: Conative Dissonance →](./05-law-1.md)
+---
+<!-- NAV_HEADER_END -->
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 <!-- NAV_TITLE: @inherit -->
 

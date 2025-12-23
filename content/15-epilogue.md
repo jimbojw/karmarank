@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Conclusion: You Are Not Cynical Enough](./14-conclusion.md) | [Index](../README.md#table-of-contents) | [Appendix →](./16-appendix.md)
+---
+<!-- NAV_HEADER_END -->
 # Epilogue: The Meta-Game
 <!-- NAV_TITLE: @inherit -->
 

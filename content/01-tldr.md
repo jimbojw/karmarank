@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← License: CC-BY-NC-SA-4.0](./00-license.md) | [Index](../README.md#table-of-contents) | [Introduction: The Frame of the Game →](./02-introduction.md)
+---
+<!-- NAV_HEADER_END -->
 # TL;DR
 <!-- NAV_TITLE: @inherit -->
 

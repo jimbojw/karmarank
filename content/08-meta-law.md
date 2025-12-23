@@ -1,3 +1,7 @@
+<!-- NAV_HEADER_START -->
+[← Law #3: Who Cares?](./07-law-3.md) | [Index](../README.md#table-of-contents) | [The Calibration Cylinder: Topology of the Trial →](./09-calibration-cylinder.md)
+---
+<!-- NAV_HEADER_END -->
 # Meta-Law: You Do Not Talk About KarmaRank
 <!-- NAV_TITLE: @inherit -->
 
