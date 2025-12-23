@@ -12,10 +12,13 @@ HASH := $(shell git rev-parse --short HEAD 2>/dev/null || echo "dev")
 DATE := $(shell date +%Y-%m-%d)
 
 # Base filename logic
+# Short names (built first)
+SHORT_BASE := karmarank-manifesto
+# Long names (copied from short names)
 ifdef RELEASE_MODE
-    FILENAME_BASE := karmarank-manifesto-$(VERSION)
+    LONG_BASE := karmarank-manifesto-$(VERSION)
 else
-    FILENAME_BASE := karmarank-manifesto-$(VERSION)-$(DATE)-$(HASH)
+    LONG_BASE := karmarank-manifesto-$(VERSION)-$(DATE)-$(HASH)
 endif
 
 # Source files (sorted)
@@ -31,12 +34,18 @@ TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPT
 TITLE_PAGE := $(BUILD_DIR)/title-page.md
 FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
 
-# Output files
-HTML_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).html
-PDF_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).pdf
-EPUB_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).epub
-MD_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).md
+# Output files (short names - built first)
+HTML_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).html
+PDF_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).pdf
+EPUB_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).epub
+MD_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).md
 INDEX_FILE := $(OUTPUT_DIR)/index.html
+
+# Long name files (copied from short names)
+HTML_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).html
+PDF_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).pdf
+EPUB_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).epub
+MD_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).md
 
 # Tools
 # Docker is the default build method for hermetic, cross-platform builds
@@ -55,7 +64,7 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-images prepare-chapters prepare-metadata-filtered prepare-title-page readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
+.PHONY: all clean html pdf epub md release directories prepare-images prepare-metadata-filtered prepare-title-page readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
 all: directories prepare-images prepare-chapters html pdf epub md index latest readme
 
@@ -76,22 +85,21 @@ prepare-images: directories
 #   E.g. `[text](./xx-filename.md)` becomes `[text](#xx-filename)`.
 # - Strip file paths from anchored inter-document links.
 #   E.g. `[text](./xx-filename.md#section)` becomes `[text](#section)`.
-prepare-chapters: directories
-	@echo "Preparing transformed chapters for pandoc..."
-	@mkdir -p $(TRANSFORMED_DIR)
-	@for f in $(CHAPTERS); do \
-		dest=$$(echo $$f | sed 's|$(CONTENT_DIR)|$(TRANSFORMED_DIR)|'); \
-		cat $$f | \
-		sed "s%^#[^#].\+%\0 {#$$(basename $$f .md)}%g" | \
-		sed "s%\[\(.*\?\)\](\./\([^#)]\+\)\.md)%[\1](#\2)%g" | \
-		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" > $$dest; \
-	done
+prepare-chapters: $(TRANSFORMED_CHAPTERS)
 	@# Copy images to build directory for pandoc resource-path
 	@if [ -d "$(IMAGES_DIR)" ]; then \
 		mkdir -p $(TRANSFORMED_DIR)/images; \
 		cp -r $(IMAGES_DIR)/* $(TRANSFORMED_DIR)/images/; \
 	fi
 	@echo "✓ Chapters transformed"
+
+# Pattern rule to build transformed chapters
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md | directories
+	@mkdir -p $(TRANSFORMED_DIR)
+	@cat $< | \
+		sed "s%^#[^#].\+%\0 {#$$(basename $< .md)}%g" | \
+		sed "s%\[\(.*\?\)\](\./\([^#)]\+\)\.md)%[\1](#\2)%g" | \
+		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" > $@
 
 # Prepare filtered metadata (excludes styling fields)
 prepare-metadata-filtered: $(FILTERED_METADATA)
@@ -131,7 +139,7 @@ $(TITLE_PAGE): $(METADATA) | directories
 
 # HTML Build
 html: check-pandoc-deps $(HTML_FILE)
-$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories prepare-chapters
+$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 	@echo "Building HTML..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
@@ -165,7 +173,7 @@ check-pdf-deps: check-pandoc-deps
 
 # PDF Build
 pdf: check-pdf-deps $(PDF_FILE)
-$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
+$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "Building PDF..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
@@ -183,7 +191,7 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 
 # ePub Build
 epub: check-pandoc-deps $(EPUB_FILE)
-$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
+$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "Building ePub..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
@@ -201,7 +209,7 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 
 # Combined Markdown Build
 md: check-pandoc-deps $(MD_FILE)
-$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories prepare-chapters prepare-metadata-filtered prepare-title-page
+$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories
 	@echo "Building Markdown..."
 	$(PANDOC) \
 		$(TITLE_PAGE) \
@@ -230,13 +238,14 @@ $(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html
 	@echo "✓ Landing Page: $@"
 
 # Latest Copies (Permalinks)
+# Copy from short names to long names
 latest: $(HTML_FILE) $(PDF_FILE) $(EPUB_FILE) $(MD_FILE)
-	@echo "Creating 'latest' copies..."
-	@cp $(HTML_FILE) $(OUTPUT_DIR)/karmarank-manifesto.html
-	@cp $(PDF_FILE) $(OUTPUT_DIR)/karmarank-manifesto.pdf
-	@cp $(EPUB_FILE) $(OUTPUT_DIR)/karmarank-manifesto.epub
-	@cp $(MD_FILE) $(OUTPUT_DIR)/karmarank-manifesto.md
-	@echo "✓ Latest copies created"
+	@echo "Creating versioned copies..."
+	@cp $(HTML_FILE) $(HTML_FILE_LONG)
+	@cp $(PDF_FILE) $(PDF_FILE_LONG)
+	@cp $(EPUB_FILE) $(EPUB_FILE_LONG)
+	@cp $(MD_FILE) $(MD_FILE_LONG)
+	@echo "✓ Versioned copies created"
 
 # README Build
 readme: | directories
