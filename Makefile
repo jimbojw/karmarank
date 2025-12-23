@@ -30,6 +30,10 @@ ALL_MD := $(CHAPTERS) $(TOP_LEVEL_MD)
 TRANSFORMED_DIR := $(BUILD_DIR)/chapters
 TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPTERS))
 
+# Chapter ID extraction directory
+CHAPTER_IDS_DIR := $(BUILD_DIR)/chapter-ids
+CHAPTER_ID_FILES := $(patsubst $(CONTENT_DIR)/%.md,$(CHAPTER_IDS_DIR)/%.md,$(CHAPTERS))
+
 # Build artifacts for markdown output
 TITLE_PAGE := $(BUILD_DIR)/title-page.md
 FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
@@ -64,9 +68,9 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page prepare-chapter-ids build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
-all: prepare-images prepare-chapters html pdf epub md index latest readme
+all: prepare-images prepare-chapter-ids build-transform-filter prepare-chapters html pdf epub md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -81,13 +85,53 @@ $(OUTPUT_DIR)/.images-copied: | directories
 	fi
 	@touch $@
 
+# Extract H1 IDs from chapters (Step 1: discover pandoc's auto-generated IDs)
+prepare-chapter-ids: $(CHAPTER_ID_FILES)
+$(CHAPTER_IDS_DIR)/%.md: $(CONTENT_DIR)/%.md filters/extract-h1-id.lua | directories
+	@mkdir -p $(CHAPTER_IDS_DIR)
+	@$(PANDOC) $< \
+		--from=commonmark_x \
+		--to=commonmark_x \
+		--lua-filter=filters/extract-h1-id.lua \
+		--output=$@.tmp 2>/dev/null || true
+	@if ! grep -qE '{#[^}]+}' $@.tmp 2>/dev/null; then \
+		echo "Error: Failed to find ID in output from $<. Expected {#id} format." >&2; \
+		echo "Output was:" >&2; \
+		cat $@.tmp >&2; \
+		rm -f $@.tmp; \
+		exit 1; \
+	fi; \
+	mv $@.tmp $@
+
+# Build combined transform filter (map + transform logic)
+build-transform-filter: $(BUILD_DIR)/transform-chapters.lua
+$(BUILD_DIR)/transform-chapters.lua: $(CHAPTER_ID_FILES) filters/transform-chapters.lua | directories prepare-chapter-ids
+	@echo "-- Auto-generated chapter ID map" > $@
+	@echo "chapter_id_map = {" >> $@
+	@for f in $(CHAPTERS); do \
+		basename=$$(basename $$f); \
+		id_file=$(CHAPTER_IDS_DIR)/$$basename; \
+		if [ -f $$id_file ]; then \
+			id=$$(sed 's%.*{#\([^}]\+\).*%\1%' $$id_file); \
+			if [ -z "$$id" ]; then \
+				echo "Error: Failed to extract ID from $$id_file" >&2; \
+				exit 1; \
+			fi; \
+			echo "  [\"$$basename\"] = \"$$id\"," >> $@; \
+		fi; \
+	done
+	@echo "}" >> $@
+	@echo "" >> $@
+	@echo "-- Transform logic" >> $@
+	@cat filters/transform-chapters.lua >> $@
+	@echo "✓ Transform filter created"
+
 # Transform chapter markdown before pandoc:
-# - Append `{#filename}` custom ids to chapter headings.
-# - Convert inter-document links to custom id links.
-#   E.g. `[text](./xx-filename.md)` becomes `[text](#xx-filename)`.
+# - Convert inter-document links to use pandoc's auto-generated IDs.
+#   E.g. `[text](./xx-filename.md)` becomes `[text](#pandoc-generated-id)`.
 # - Strip file paths from anchored inter-document links.
 #   E.g. `[text](./xx-filename.md#section)` becomes `[text](#section)`.
-prepare-chapters: $(TRANSFORMED_CHAPTERS)
+prepare-chapters: $(TRANSFORMED_CHAPTERS) $(BUILD_DIR)/transform-chapters.lua
 	@# Copy images to build directory for pandoc resource-path
 	@if [ -d "$(IMAGES_DIR)" ]; then \
 		mkdir -p $(TRANSFORMED_DIR)/images; \
@@ -96,12 +140,14 @@ prepare-chapters: $(TRANSFORMED_CHAPTERS)
 	@echo "✓ Chapters transformed"
 
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md | directories
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories prepare-chapter-ids build-transform-filter
 	@mkdir -p $(TRANSFORMED_DIR)
-	@cat $< | \
-		sed "s%^#[^#].\+%\0 {#$$(basename $< .md)}%g" | \
-		sed "s%\[\(.*\?\)\](\./\([^#)]\+\)\.md)%[\1](#\2)%g" | \
-		sed "s%\[\(.*\?\)\]([^#)]\+\.md#\(.\+\?\))%[\1](#\2)%g" > $@
+	$(PANDOC) \
+		$< \
+		--from=commonmark_x \
+		--to=commonmark_x \
+		--lua-filter=$(BUILD_DIR)/transform-chapters.lua \
+		--output=$@
 
 # Prepare filtered metadata (excludes styling fields)
 prepare-metadata-filtered: $(FILTERED_METADATA)

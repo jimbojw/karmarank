@@ -12,7 +12,7 @@ This manifesto is a debugger for your career. It reveals the unstated social phy
 - [**Read Online (HTML)**](./karmarank-manifesto.html)
 - [**Download PDF**](./karmarank-manifesto.pdf)
 - [**Download ePub**](./karmarank-manifesto.epub)
-- [**Download Plain Text**](./karmarank-manifesto.txt)
+- [**Download Markdown**](./karmarank-manifesto.md)
 
 ## Source Code
 
