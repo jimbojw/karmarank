@@ -70,20 +70,11 @@ endif
 
 .PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page prepare-chapter-ids build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
-all: prepare-images prepare-chapter-ids build-transform-filter html pdf epub md index latest readme
+all: prepare-chapter-ids build-transform-filter html pdf epub md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
 	@mkdir -p $(BUILD_DIR)
-
-# Copy images to output directory for HTML
-prepare-images: $(OUTPUT_DIR)/.images-copied
-$(OUTPUT_DIR)/.images-copied: | directories
-	@if [ -d "$(IMAGES_DIR)" ]; then \
-		mkdir -p $(OUTPUT_DIR)/images; \
-		cp -r $(IMAGES_DIR)/* $(OUTPUT_DIR)/images/; \
-	fi
-	@touch $@
 
 # Extract H1 IDs from chapters (Step 1: discover pandoc's auto-generated IDs)
 prepare-chapter-ids: $(CHAPTER_ID_FILES)
