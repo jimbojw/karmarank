@@ -82,7 +82,13 @@ We welcome stories, questions, and corrections! Please see [CONTRIBUTING.md](CON
 
 ## Build From Source
 
-See [DEVELOPING.md](DEVELOPING.md).
+Requires Docker or Pandoc:
+
+```
+make -j$(nproc) latest
+```
+
+Artifacts will be written to `build/`. See [DEVELOPING.md](DEVELOPING.md) for details.
 
 ## License
 
