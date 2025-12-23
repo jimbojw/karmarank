@@ -186,7 +186,7 @@ $(TITLE_PAGE): $(METADATA) | directories
 	@echo "✓ Title page prepared"
 
 # HTML Build
-html: check-pandoc-deps $(HTML_FILE)
+html: check-pandoc-deps prepare-chapters $(HTML_FILE)
 $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories
 	@echo "Building HTML..."
 	$(PANDOC) \
@@ -220,7 +220,7 @@ check-pdf-deps: check-pandoc-deps
 	fi
 
 # PDF Build
-pdf: check-pdf-deps $(PDF_FILE)
+pdf: check-pdf-deps prepare-chapters $(PDF_FILE)
 $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "Building PDF..."
 	$(PANDOC) \
@@ -238,7 +238,7 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "✓ PDF: $@"
 
 # ePub Build
-epub: check-pandoc-deps $(EPUB_FILE)
+epub: check-pandoc-deps prepare-chapters $(EPUB_FILE)
 $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "Building ePub..."
 	$(PANDOC) \
@@ -256,7 +256,7 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "✓ ePub: $@"
 
 # Combined Markdown Build
-md: check-pandoc-deps $(MD_FILE)
+md: check-pandoc-deps prepare-chapters $(MD_FILE)
 $(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories
 	@echo "Building Markdown..."
 	$(PANDOC) \
