@@ -70,7 +70,7 @@ endif
 
 .PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page prepare-chapter-ids build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
-all: prepare-images prepare-chapter-ids build-transform-filter prepare-chapters html pdf epub md index latest readme
+all: prepare-images prepare-chapter-ids build-transform-filter html pdf epub md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -126,21 +126,8 @@ $(BUILD_DIR)/transform-chapters.lua: $(CHAPTER_ID_FILES) filters/transform-chapt
 	@cat filters/transform-chapters.lua >> $@
 	@echo "✓ Transform filter created"
 
-# Transform chapter markdown before pandoc:
-# - Convert inter-document links to use pandoc's auto-generated IDs.
-#   E.g. `[text](./xx-filename.md)` becomes `[text](#pandoc-generated-id)`.
-# - Strip file paths from anchored inter-document links.
-#   E.g. `[text](./xx-filename.md#section)` becomes `[text](#section)`.
-prepare-chapters: $(TRANSFORMED_CHAPTERS) $(BUILD_DIR)/transform-chapters.lua
-	@# Copy images to build directory for pandoc resource-path
-	@if [ -d "$(IMAGES_DIR)" ]; then \
-		mkdir -p $(TRANSFORMED_DIR)/images; \
-		cp -r $(IMAGES_DIR)/* $(TRANSFORMED_DIR)/images/; \
-	fi
-	@echo "✓ Chapters transformed"
-
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories prepare-chapter-ids build-transform-filter
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua | directories prepare-chapter-ids build-transform-filter check-pandoc-deps
 	@mkdir -p $(TRANSFORMED_DIR)
 	$(PANDOC) \
 		$< \
@@ -186,12 +173,12 @@ $(TITLE_PAGE): $(METADATA) | directories
 	@echo "✓ Title page prepared"
 
 # HTML Build
-html: check-pandoc-deps prepare-chapters $(HTML_FILE)
-$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories
+html: $(HTML_FILE)
+$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories check-pandoc-deps
 	@echo "Building HTML..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
-		--resource-path=$(TRANSFORMED_DIR) \
+		--resource-path=$(CONTENT_DIR) \
 		--metadata-file=$(METADATA) \
 		--from=commonmark_x \
 		--template=$(TEMPLATE_DIR)/book.html \
@@ -220,12 +207,12 @@ check-pdf-deps: check-pandoc-deps
 	fi
 
 # PDF Build
-pdf: check-pdf-deps prepare-chapters $(PDF_FILE)
-$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
+pdf: $(PDF_FILE)
+$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pdf-deps
 	@echo "Building PDF..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
-		--resource-path=$(TRANSFORMED_DIR) \
+		--resource-path=$(CONTENT_DIR) \
 		--metadata-file=$(METADATA) \
 		--from=commonmark_x+implicit_figures+tex_math_dollars \
 		--pdf-engine=pdflatex \
@@ -238,12 +225,12 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "✓ PDF: $@"
 
 # ePub Build
-epub: check-pandoc-deps prepare-chapters $(EPUB_FILE)
-$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
+epub: $(EPUB_FILE)
+$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pandoc-deps
 	@echo "Building ePub..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
-		--resource-path=$(TRANSFORMED_DIR) \
+		--resource-path=$(CONTENT_DIR) \
 		--metadata-file=$(METADATA) \
 		--from=commonmark_x \
 		--toc \
@@ -256,13 +243,13 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories
 	@echo "✓ ePub: $@"
 
 # Combined Markdown Build
-md: check-pandoc-deps prepare-chapters $(MD_FILE)
-$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories
+md: $(MD_FILE)
+$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories check-pandoc-deps
 	@echo "Building Markdown..."
 	$(PANDOC) \
 		$(TITLE_PAGE) \
 		$(TRANSFORMED_CHAPTERS) \
-		--resource-path=$(TRANSFORMED_DIR) \
+		--resource-path=$(CONTENT_DIR) \
 		--metadata-file=$(FILTERED_METADATA) \
 		--from=commonmark_x \
 		--to=commonmark_x \
@@ -271,8 +258,8 @@ $(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directo
 	@echo "✓ Markdown: $@"
 
 # Index Page (Landing Page)
-index: check-pandoc-deps $(INDEX_FILE)
-$(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories
+index: $(INDEX_FILE)
+$(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories check-pandoc-deps
 	@echo "Building Landing Page..."
 	$(PANDOC) \
 		templates/index.template.md \
