@@ -60,8 +60,12 @@ ifeq ($(USE_DOCKER),true)
         $(DOCKER_IMAGE)
     # pandoc/latex image has pandoc as entrypoint, so we don't need to specify it
     PANDOC := $(DOCKER_RUN)
+    # Docker uses newer Pandoc with --embed-resources
+    HTML_EMBED_FLAG := --embed-resources
 else
     PANDOC := pandoc
+    # Local Pandoc may be older, use deprecated --self-contained
+    HTML_EMBED_FLAG := --self-contained
 endif
 
 .PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
@@ -172,7 +176,7 @@ $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | di
 		--from=commonmark_x \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
-		--self-contained \
+		$(HTML_EMBED_FLAG) \
 		--toc \
 		--toc-depth=2 \
 		--mathjax \
