@@ -15,7 +15,7 @@ So why does your performance review feel like gaslighting?
 **Read in terminal:**
 
 ```
-curl -sL https://jimbojw.github.io/karmarank/karmarank-manifesto.txt | less
+curl -sL https://jimbojw.github.io/karmarank/karmarank-manifesto.md | less
 ```
 
 _Looking for stable release versions? View [Releases](https://github.com/jimbojw/karmarank/releases)._

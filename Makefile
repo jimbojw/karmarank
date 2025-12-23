@@ -27,11 +27,14 @@ ALL_MD := $(CHAPTERS) $(TOP_LEVEL_MD)
 TRANSFORMED_DIR := $(BUILD_DIR)/chapters
 TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPTERS))
 
+# Build artifacts for markdown output
+TITLE_PAGE := $(BUILD_DIR)/title-page.md
+FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
+
 # Output files
 HTML_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).html
 PDF_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).pdf
 EPUB_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).epub
-TXT_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).txt
 MD_FILE := $(OUTPUT_DIR)/$(FILENAME_BASE).md
 INDEX_FILE := $(OUTPUT_DIR)/index.html
 
@@ -52,9 +55,9 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub txt md release directories prepare-images prepare-chapters readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
+.PHONY: all clean html pdf epub md release directories prepare-images prepare-chapters prepare-metadata-filtered prepare-title-page readme latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps
 
-all: directories prepare-images prepare-chapters html pdf epub txt md index latest readme
+all: directories prepare-images prepare-chapters html pdf epub md index latest readme
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -90,6 +93,42 @@ prepare-chapters: directories
 	fi
 	@echo "✓ Chapters transformed"
 
+# Prepare filtered metadata (excludes styling fields)
+prepare-metadata-filtered: $(FILTERED_METADATA)
+$(FILTERED_METADATA): $(METADATA) | directories
+	@echo "Preparing filtered metadata..."
+	@echo "---" > $@
+	@grep -E "^(title|subtitle|author|lang|license|rights|version):" $(METADATA) >> $@
+	@echo "date: $(DATE)" >> $@
+	@if [ -z "$(RELEASE_MODE)" ]; then \
+		echo "build: $(VERSION) ($(DATE)-$(HASH))" >> $@; \
+	fi
+	@echo "---" >> $@
+	@echo "✓ Metadata filtered"
+
+# Prepare title page markdown
+prepare-title-page: $(TITLE_PAGE)
+$(TITLE_PAGE): $(METADATA) | directories
+	@echo "Preparing title page..."
+	@{ \
+		TITLE=$$(grep "^title:" $(METADATA) | cut -d'"' -f2); \
+		SUBTITLE=$$(grep "^subtitle:" $(METADATA) | cut -d'"' -f2); \
+		AUTHOR=$$(grep "^author:" $(METADATA) | cut -d'"' -f2); \
+		echo "# $$TITLE" > $@; \
+		echo "" >> $@; \
+		echo "*$$SUBTITLE*" >> $@; \
+		echo "" >> $@; \
+		echo "By $$AUTHOR" >> $@; \
+		echo "" >> $@; \
+		if [ -z "$(RELEASE_MODE)" ]; then \
+			echo "Build: $(VERSION) ($(DATE)-$(HASH))" >> $@; \
+		else \
+			echo "Version: $(VERSION)" >> $@; \
+		fi; \
+		echo "" >> $@; \
+	}
+	@echo "✓ Title page prepared"
+
 # HTML Build
 html: check-pandoc-deps $(HTML_FILE)
 $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories prepare-chapters
@@ -105,7 +144,8 @@ $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | di
 		--toc \
 		--toc-depth=2 \
 		--mathjax \
-		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--metadata date="$(DATE)" \
+		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ HTML: $@"
 
@@ -136,7 +176,8 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 		--toc \
 		--toc-depth=2 \
 		--variable=geometry:margin=1.5in \
-		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--metadata date="$(DATE)" \
+		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ PDF: $@"
 
@@ -153,43 +194,24 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
 		--toc-depth=2 \
 		--mathml \
 		--css=templates/epub.css \
-		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--metadata date="$(DATE)" \
+		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ ePub: $@"
 
-# Plain Text Build
-txt: check-pandoc-deps $(TXT_FILE)
-$(TXT_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories prepare-chapters
-	@echo "Building Plain Text..."
+# Combined Markdown Build
+md: check-pandoc-deps $(MD_FILE)
+$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories prepare-chapters prepare-metadata-filtered prepare-title-page
+	@echo "Building Markdown..."
 	$(PANDOC) \
+		$(TITLE_PAGE) \
 		$(TRANSFORMED_CHAPTERS) \
 		--resource-path=$(TRANSFORMED_DIR) \
-		--metadata-file=$(METADATA) \
+		--metadata-file=$(FILTERED_METADATA) \
 		--from=commonmark_x \
-		--to plain \
+		--to=commonmark_x \
 		--standalone \
-		--columns=72 \
-		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
-	@echo "✓ Plain Text: $@"
-
-# Combined Markdown Build
-md: $(MD_FILE)
-$(MD_FILE): $(CHAPTERS) $(METADATA) | directories
-	@echo "Building Combined Markdown..."
-	@{ \
-		cat $(METADATA); \
-		echo ""; \
-		grep "^title:" $(METADATA) | cut -d'"' -f2 | sed 's/^/# /'; \
-		echo ""; \
-		grep "^subtitle:" $(METADATA) | cut -d'"' -f2 | sed 's/^/**/;s/$$/**/'; \
-		echo ""; \
-		grep "^author:" $(METADATA) | cut -d'"' -f2 | sed 's/^/By /'; \
-		echo ""; \
-		echo "> Version: $(VERSION) ($(DATE)-$(HASH))"; \
-		echo ""; \
-		awk 'FNR==1{print ""}1' $(CHAPTERS); \
-	} > $@
 	@echo "✓ Markdown: $@"
 
 # Index Page (Landing Page)
@@ -202,17 +224,18 @@ $(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html
 		--from=commonmark_x \
 		--template=$(TEMPLATE_DIR)/book.html \
 		--standalone \
-		--metadata date="$(VERSION) ($(DATE)-$(HASH))" \
+		--metadata date="$(DATE)" \
+		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ Landing Page: $@"
 
 # Latest Copies (Permalinks)
-latest: $(HTML_FILE) $(PDF_FILE) $(EPUB_FILE) $(TXT_FILE)
+latest: $(HTML_FILE) $(PDF_FILE) $(EPUB_FILE) $(MD_FILE)
 	@echo "Creating 'latest' copies..."
 	@cp $(HTML_FILE) $(OUTPUT_DIR)/karmarank-manifesto.html
 	@cp $(PDF_FILE) $(OUTPUT_DIR)/karmarank-manifesto.pdf
 	@cp $(EPUB_FILE) $(OUTPUT_DIR)/karmarank-manifesto.epub
-	@cp $(TXT_FILE) $(OUTPUT_DIR)/karmarank-manifesto.txt
+	@cp $(MD_FILE) $(OUTPUT_DIR)/karmarank-manifesto.md
 	@echo "✓ Latest copies created"
 
 # README Build
