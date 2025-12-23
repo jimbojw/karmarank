@@ -117,37 +117,13 @@ $(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua
 prepare-metadata-filtered: $(FILTERED_METADATA)
 $(FILTERED_METADATA): $(METADATA) | directories
 	@echo "Preparing filtered metadata..."
-	@echo "---" > $@
-	@grep -E "^(title|subtitle|author|lang|license|rights|version):" $(METADATA) >> $@
-	@echo "date: $(DATE)" >> $@
-	@if [ -z "$(RELEASE_MODE)" ]; then \
-		echo "build: $(VERSION) ($(DATE)-$(HASH))" >> $@; \
-	fi
-	@echo "---" >> $@
-	@echo "✓ Metadata filtered"
+	@scripts/prepare-metadata-filtered.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(RELEASE_MODE)
 
 # Prepare title page markdown
 prepare-title-page: $(TITLE_PAGE)
 $(TITLE_PAGE): $(METADATA) | directories
 	@echo "Preparing title page..."
-	@{ \
-		TITLE=$$(grep "^title:" $(METADATA) | cut -d'"' -f2); \
-		SUBTITLE=$$(grep "^subtitle:" $(METADATA) | cut -d'"' -f2); \
-		AUTHOR=$$(grep "^author:" $(METADATA) | cut -d'"' -f2); \
-		echo "# $$TITLE" > $@; \
-		echo "" >> $@; \
-		echo "*$$SUBTITLE*" >> $@; \
-		echo "" >> $@; \
-		echo "By $$AUTHOR" >> $@; \
-		echo "" >> $@; \
-		if [ -z "$(RELEASE_MODE)" ]; then \
-			echo "Build: $(VERSION) ($(DATE)-$(HASH))" >> $@; \
-		else \
-			echo "Version: $(VERSION)" >> $@; \
-		fi; \
-		echo "" >> $@; \
-	}
-	@echo "✓ Title page prepared"
+	@scripts/prepare-title-page.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(RELEASE_MODE)
 
 # HTML Build
 html: $(HTML_FILE)
