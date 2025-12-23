@@ -45,7 +45,7 @@ jobs:
         if: steps.check_tag.outputs.exists == 'false'
         run: |
           export RELEASE_MODE=true
-          make all
+          make -j$(nproc) all
 
       - name: Create Release
         if: steps.check_tag.outputs.exists == 'false'

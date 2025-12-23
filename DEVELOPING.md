@@ -35,7 +35,7 @@ brew install pandoc basictex
 
 ### Building
 
-This project uses `make`. To build all formats (HTML, PDF, TXT, Markdown):
+This project uses `make`. To build all formats (HTML, PDF, ePub, Markdown):
 
 ```bash
 # Docker build (default, recommended)
@@ -43,7 +43,12 @@ make all
 
 # Native build (if you have pandoc/LaTeX installed locally)
 USE_DOCKER=false make all
+
+# Parallel build (faster, uses all CPU cores)
+make -j$(nproc) all
 ```
+
+**Note:** The Makefile supports parallel builds. Use `make -j$(nproc)` to build multiple chapters simultaneously, which significantly speeds up builds on multi-core systems.
 
 This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.
 
