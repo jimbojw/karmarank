@@ -1,6 +1,6 @@
 #!/bin/bash
 # Common functions for README table of contents generation
-# This file should be sourced by readme.sh and check-readme.sh
+# This file should be sourced by fix-readme.sh and check-readme.sh
 
 # Build table of contents from chapters
 # Usage: build_toc CHAPTERS...

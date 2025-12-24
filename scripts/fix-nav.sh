@@ -1,6 +1,6 @@
 #!/bin/bash
 # Update navigation elements in chapters
-# Usage: nav.sh [title|header|footer|all] BUILD_DIR CHAPTERS...
+# Usage: fix-nav.sh [title|header|footer|all] BUILD_DIR CHAPTERS...
 
 set -e
 
@@ -13,7 +13,7 @@ shift 2
 CHAPTERS=("$@")
 
 if [ -z "$BUILD_DIR" ] || [ ${#CHAPTERS[@]} -eq 0 ]; then
-	echo "Usage: nav.sh [title|header|footer|all] BUILD_DIR CHAPTERS..." >&2
+	echo "Usage: fix-nav.sh [title|header|footer|all] BUILD_DIR CHAPTERS..." >&2
 	exit 1
 fi
 

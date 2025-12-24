@@ -1,6 +1,6 @@
 #!/bin/bash
 # Update README.md table of contents
-# Usage: readme.sh BUILD_DIR README_FILE CHAPTERS...
+# Usage: fix-readme.sh BUILD_DIR README_FILE CHAPTERS...
 
 set -e
 
@@ -13,7 +13,7 @@ shift 2
 CHAPTERS=("$@")
 
 if [ -z "$BUILD_DIR" ] || [ -z "$README_FILE" ] || [ ${#CHAPTERS[@]} -eq 0 ]; then
-	echo "Usage: readme.sh BUILD_DIR README_FILE CHAPTERS..." >&2
+	echo "Usage: fix-readme.sh BUILD_DIR README_FILE CHAPTERS..." >&2
 	exit 1
 fi
 

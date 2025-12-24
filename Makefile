@@ -66,7 +66,7 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps nav check-nav fix
+.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps fix-nav fix-readme check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
@@ -268,12 +268,12 @@ clean:
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(BUILD_DIR)
 
-fix: readme nav
+fix: fix-readme fix-nav
 
-readme: README.md
+fix-readme: README.md
 README.md: $(CHAPTERS) | directories
 	@echo "Updating README.md TOC..."
-	@scripts/readme.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
+	@scripts/fix-readme.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
 
-nav: | directories
-	@scripts/nav.sh all $(BUILD_DIR) $(sort $(CHAPTERS))
+fix-nav: | directories
+	@scripts/fix-nav.sh all $(BUILD_DIR) $(sort $(CHAPTERS))
