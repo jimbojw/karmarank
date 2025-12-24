@@ -55,6 +55,14 @@ jobs:
             karmarank-manifesto.md \
             images/
 
+      - name: Package HTML Archive
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          cd output
+          zip -r karmarank-manifesto-${{ env.PROJECT_VERSION }}.html.zip \
+            karmarank-manifesto.html \
+            images/
+
       - name: Create Release
         if: steps.check_tag.outputs.exists == 'false'
         uses: softprops/action-gh-release@v1
@@ -65,7 +73,7 @@ jobs:
           prerelease: false
           files: |
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.pdf
-            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.html
+            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.html.zip
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.epub
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.md.zip
           generate_release_notes: true
