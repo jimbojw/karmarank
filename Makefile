@@ -65,18 +65,17 @@ ifeq ($(USE_DOCKER),true)
 else
     PANDOC := pandoc
     # Local Pandoc may be older, use deprecated --self-contained
-    HTML_EMBED_FLAG := --self-contained
+	HTML_EMBED_FLAG := --self-contained
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer fix
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order verify-pandoc-deps verify-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer fix
 
+# Main targets
 # Build deployable artifacts (index page + all formats).
 # Each format builds both short-named and long-named versions.
 all: index html pdf epub md
 
-# Source-altering targets.
-fix: readme nav
-
+# Build infrastructure
 directories:
 	@mkdir -p $(OUTPUT_DIR)
 	@mkdir -p $(BUILD_DIR)
@@ -103,7 +102,7 @@ $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua 
 	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
 
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav.lua | directories build-transform-filter check-pandoc-deps
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav.lua | directories build-transform-filter verify-pandoc-deps
 	@mkdir -p $(TRANSFORMED_DIR)
 	$(PANDOC) \
 		$< \
@@ -125,9 +124,38 @@ $(TITLE_PAGE): $(METADATA) | directories
 	@echo "Preparing title page..."
 	@scripts/prepare-title-page.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(RELEASE_MODE)
 
+# Dependency checks
+verify-pandoc-deps:
+	@if [ "$(USE_DOCKER)" = "true" ]; then \
+		docker info >/dev/null 2>&1 || (echo "✗ Error: Docker not available. Install Docker or use: USE_DOCKER=false make <target>" && exit 1); \
+	else \
+		command -v pandoc >/dev/null || (echo "✗ Error: pandoc not found. Install pandoc or use: USE_DOCKER=true make <target>" && exit 1); \
+	fi
+
+verify-pdf-deps: verify-pandoc-deps
+	@if [ "$(USE_DOCKER)" != "true" ]; then \
+		command -v pdflatex >/dev/null || (echo "✗ Error: pdflatex not found. Install LaTeX or use: USE_DOCKER=true make pdf" && exit 1); \
+	fi
+
+# Output format targets
+# Index Page (Landing Page)
+index: $(INDEX_FILE)
+$(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories verify-pandoc-deps
+	@echo "Building Landing Page..."
+	$(PANDOC) \
+		templates/index.template.md \
+		--metadata-file=$(METADATA) \
+		--from=commonmark_x \
+		--template=$(TEMPLATE_DIR)/book.html \
+		--standalone \
+		--metadata date="$(DATE)" \
+		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@echo "✓ Landing Page: $@"
+
 # HTML Build (builds both short and long versions)
 html: $(HTML_FILE_LONG)
-$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories check-pandoc-deps
+$(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories verify-pandoc-deps
 	@echo "Building HTML..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
@@ -144,24 +172,12 @@ $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | di
 		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ HTML: $@"
-
-# Pandoc Dependencies Check (shared by all pandoc-based targets)
-check-pandoc-deps:
-	@if [ "$(USE_DOCKER)" = "true" ]; then \
-		docker info >/dev/null 2>&1 || (echo "✗ Error: Docker not available. Install Docker or use: USE_DOCKER=false make <target>" && exit 1); \
-	else \
-		command -v pandoc >/dev/null || (echo "✗ Error: pandoc not found. Install pandoc or use: USE_DOCKER=true make <target>" && exit 1); \
-	fi
-
-# PDF Build Dependencies Check (depends on pandoc, also checks pdflatex)
-check-pdf-deps: check-pandoc-deps
-	@if [ "$(USE_DOCKER)" != "true" ]; then \
-		command -v pdflatex >/dev/null || (echo "✗ Error: pdflatex not found. Install LaTeX or use: USE_DOCKER=true make pdf" && exit 1); \
-	fi
+$(HTML_FILE_LONG): $(HTML_FILE)
+	@cp $< $@
 
 # PDF Build (builds both short and long versions)
 pdf: $(PDF_FILE_LONG)
-$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pdf-deps
+$(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories verify-pdf-deps
 	@echo "Building PDF..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
@@ -176,10 +192,12 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pdf-deps
 		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ PDF: $@"
+$(PDF_FILE_LONG): $(PDF_FILE)
+	@cp $< $@
 
 # ePub Build (builds both short and long versions)
 epub: $(EPUB_FILE_LONG)
-$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pandoc-deps
+$(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories verify-pandoc-deps
 	@echo "Building ePub..."
 	$(PANDOC) \
 		$(TRANSFORMED_CHAPTERS) \
@@ -194,10 +212,12 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pandoc-dep
 		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ ePub: $@"
+$(EPUB_FILE_LONG): $(EPUB_FILE)
+	@cp $< $@
 
 # Combined Markdown Build (builds both short and long versions)
 md: $(MD_FILE_LONG)
-$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories check-pandoc-deps
+$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories verify-pandoc-deps
 	@echo "Building Markdown..."
 	$(PANDOC) \
 		$(TITLE_PAGE) \
@@ -209,52 +229,10 @@ $(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directo
 		--standalone \
 		--output=$@
 	@echo "✓ Markdown: $@"
-
-# Index Page (Landing Page)
-index: $(INDEX_FILE)
-$(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html | directories check-pandoc-deps
-	@echo "Building Landing Page..."
-	$(PANDOC) \
-		templates/index.template.md \
-		--metadata-file=$(METADATA) \
-		--from=commonmark_x \
-		--template=$(TEMPLATE_DIR)/book.html \
-		--standalone \
-		--metadata date="$(DATE)" \
-		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
-		--output=$@
-	@echo "✓ Landing Page: $@"
-
-# Long name files (copied from short names)
-# These are built automatically when building the format targets above
-$(HTML_FILE_LONG): $(HTML_FILE)
-	@cp $< $@
-
-$(PDF_FILE_LONG): $(PDF_FILE)
-	@cp $< $@
-
-$(EPUB_FILE_LONG): $(EPUB_FILE)
-	@cp $< $@
-
 $(MD_FILE_LONG): $(MD_FILE)
 	@cp $< $@
 
-# README Build
-readme: README.md
-README.md: $(CHAPTERS) | directories
-	@echo "Updating README.md TOC..."
-	@scripts/update-readme-toc.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
-
-# Navigation Target (updates titles, headers, and footers sequentially)
-nav: | directories
-	@echo "Ensuring NAV_TITLE comments..."
-	@scripts/nav-title.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-	@echo "Updating navigation headers..."
-	@scripts/nav-header.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-	@echo "Updating navigation footers..."
-	@scripts/nav-footer.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-
-# Check targets: validates inter-document links and image files
+# Check targets
 check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav
 
 # Navigation check targets
@@ -292,6 +270,22 @@ check-chapter-order: | directories
 	@echo "Checking chapter numbering..."
 	@scripts/check-chapter-order.sh $(sort $(CHAPTERS))
 
+# Utility targets
 clean:
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(BUILD_DIR)
+
+fix: readme nav
+
+readme: README.md
+README.md: $(CHAPTERS) | directories
+	@echo "Updating README.md TOC..."
+	@scripts/update-readme-toc.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
+
+nav: | directories
+	@echo "Ensuring NAV_TITLE comments..."
+	@scripts/nav-title.sh $(BUILD_DIR) $(sort $(CHAPTERS))
+	@echo "Updating navigation headers..."
+	@scripts/nav-header.sh $(BUILD_DIR) $(sort $(CHAPTERS))
+	@echo "Updating navigation footers..."
+	@scripts/nav-footer.sh $(BUILD_DIR) $(sort $(CHAPTERS))
