@@ -50,13 +50,13 @@ This ensures the work remains cohesive while still allowing community contributi
 
 ### Attribution
 
-Contributors will be credited in:
+Contributors may be credited in:
 
 - The repository README (Contributors section)
 - Book metadata (if substantial contributions)
 - Individual commit history (via GitHub)
 
-However, the overall copyright and editorial control remain with the original author.
+However, the overall copyright and editorial control **remain with the original author**.
 
 ## Questions?
 
