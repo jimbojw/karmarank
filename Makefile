@@ -234,7 +234,7 @@ $(EPUB_FILE_LONG): $(EPUB_FILE)
 
 # Combined Markdown Build (builds both short and long versions)
 md: $(MD_FILE_LONG)
-$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories verify-pandoc-deps
+$(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) filters/convert-images-to-gh-pages.lua | directories verify-pandoc-deps
 	@echo "Building Markdown..."
 	$(PANDOC) \
 		$(TITLE_PAGE) \
@@ -244,6 +244,7 @@ $(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directo
 		--from=commonmark_x \
 		--to=commonmark_x \
 		--standalone \
+		$(if $(RELEASE_MODE),,--lua-filter=filters/convert-images-to-gh-pages.lua) \
 		--output=$@
 	@echo "✓ Markdown: $@"
 $(MD_FILE_LONG): $(MD_FILE)
