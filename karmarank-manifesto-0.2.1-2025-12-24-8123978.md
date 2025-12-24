@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-24-f72d505)
+build: 0.2.1 (2025-12-24-8123978)
 date: 2025-12-24
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-24-f72d505)
+Build: 0.2.1 (2025-12-24-8123978)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -65,7 +65,7 @@ process, for the day-to-day practitioner, it suffices to optimize for
 **Net Status-Weighted Karma**:
 
 ![Net Status-Weighted Karma
-Equation](images/net-status-weighted-karma.png)
+Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.png)
 
 $$K = \sum_{i} S_i \cdot k_i$$
 
@@ -323,7 +323,7 @@ The index $i$ ranges over the people whose opinions about you actually
 everyone listens to, the PM who won't shut up in calibration meetings.
 
 ![Net Status-Weighted Karma
-Equation](images/net-status-weighted-karma.png)
+Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.png)
 
 For each such person, $k_i$ is your **karma with person** $i$: the
 signed "emotional value" they get from telling a story about you and
@@ -588,8 +588,8 @@ launch," that's a Firm Ledger credit. These events often do not coincide
 in time, or at all.
 
 ![Private Ledger (left) is not equal to the Firm Ledger
-(right).](images/two-ledgers.png) *Figure: Private Ledger (left) is not
-equal to the Firm Ledger (right).*
+(right).](https://jimbojw.github.io/karmarank/images/two-ledgers.png)
+*Figure: Private Ledger (left) is not equal to the Firm Ledger (right).*
 
 From the firm's point of view, your Private Ledger is a personal hobby
 (on company time!). They don't query it. They query the Firm Ledger,
@@ -735,8 +735,8 @@ Tree: the Org Chart. You are a leaf node, connected to a branch
 (Manager), connected to a trunk (Director/VP), and so on.
 
 ![Boring, uninformative, corporate Org
-Chart.](images/boring-org-chart.png) *Figure: Boring, uninformative,
-corporate Org Chart.*
+Chart.](https://jimbojw.github.io/karmarank/images/boring-org-chart.png)
+*Figure: Boring, uninformative, corporate Org Chart.*
 
 Delete that mental image. It is a static representation of reporting
 lines, useful primarily for knowing whose name is on your vacation
@@ -753,8 +753,8 @@ of that circle consists of your **Peers** reporting to your shared
 manager.
 
 ![Circle of You and your Peers under your shared
-Manager.](images/peer-circle.png) *Figure: Circle of You and your Peers
-under your shared Manager.*
+Manager.](https://jimbojw.github.io/karmarank/images/peer-circle.png)
+*Figure: Circle of You and your Peers under your shared Manager.*
 
 Your circle of Peers forms the base of the cylinder. Above you, in the
 middle layer, your Manager is at the center of their own circle,
@@ -764,9 +764,10 @@ third circle of peers, looking down into the cylinder.
 
 ![Calibration Cylinder showing You (Defendant), your Manager (Counsel),
 your Manager's Peers (Prosecution/Jury) and your Skip Manager
-(Judge).](images/calibration-cylinder.png) *Figure: Calibration Cylinder
-showing You (Defendant), your Manager (Counsel), your Manager's Peers
-(Prosecution/Jury) and your Skip Manager (Judge).*
+(Judge).](https://jimbojw.github.io/karmarank/images/calibration-cylinder.png)
+*Figure: Calibration Cylinder showing You (Defendant), your Manager
+(Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager
+(Judge).*
 
 This cylindrical portion of the corporate social graph contains the
 people who have direct influence on your rating. People exterior to the
@@ -924,7 +925,7 @@ and the Market (The Judge) to prove that the CEO is still a "High
 Performer."
 
 ![CEO's Calibration Cylinder showing SVP, Executive, Board and Market
-circles.](images/turtles-all-the-way-up.png)  
+circles.](https://jimbojw.github.io/karmarank/images/turtles-all-the-way-up.png)  
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and
 Market circles.*
 
@@ -951,9 +952,10 @@ In the engineering world, managers generally fall into one of three
 archetypes: the Technician, the Politician, and the Peacemaker.
 
 ![The Three Managerial Archetypes: the Technician, the Politician, and
-the Peacemaker.](images/know-your-counsel.png) *Figure: The Three
-Managerial Archetypes: the Technician, the Politician, and the
-Peacemaker.*
+the
+Peacemaker.](https://jimbojw.github.io/karmarank/images/know-your-counsel.png)
+*Figure: The Three Managerial Archetypes: the Technician, the
+Politician, and the Peacemaker.*
 
 Every person is different, but these are the abstract base classes.
 
@@ -1119,7 +1121,8 @@ To fix this, adopt **Karma-Driven Development (KDD)**. In this
 framework, you never write a line of code until you have written the
 performance review bullet point that rewards it.
 
-![Karma Driven Development (KDD) Flowchart.](images/kdd-flowchart.png)
+![Karma Driven Development (KDD)
+Flowchart.](https://jimbojw.github.io/karmarank/images/kdd-flowchart.png)
 *Figure: Karma Driven Development (KDD) Flowchart.*
 
 Remember [Law \#2](#law-2-the-rating-is-the-job): the rating is the job.
@@ -1399,8 +1402,9 @@ points higher." Deploy a diverging stacked bar chart.
 - **Bottom:** Distribution of sentiment scores *after* implementation.
 
 ![Example diverging stacked bar charts for showing quantified sentiment
-change.](images/diverging-stacked-bar-chart.png) *Figure: Example
-diverging stacked bar charts for showing quantified sentiment change.*
+change.](https://jimbojw.github.io/karmarank/images/diverging-stacked-bar-chart.png)
+*Figure: Example diverging stacked bar charts for showing quantified
+sentiment change.*
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they
 will not read your bullet points. They *will* look at the pretty
@@ -1628,9 +1632,9 @@ a distinct curve. Call this the **Uncanny Valley of Alignment**.
 
 ![Chart showing the Uncanny Valley of Alignment. X-Axis: System
 Awareness (Cynicism). Y-Axis: Alignment with
-Firm.](images/uncanny-valley-alignment.png) *Figure: Chart showing the
-Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism).
-Y-Axis: Alignment with Firm.*
+Firm.](https://jimbojw.github.io/karmarank/images/uncanny-valley-alignment.png)
+*Figure: Chart showing the Uncanny Valley of Alignment. X-Axis: System
+Awareness (Cynicism). Y-Axis: Alignment with Firm.*
 
 On the X-Axis, plot System Awareness (Cynicism). On the Y-Axis:
 Alignment with the Firm. The curve starts high (Naive Idealist), dips
