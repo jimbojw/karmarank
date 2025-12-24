@@ -64,4 +64,5 @@ jobs:
             output/karmarank-manifesto.html
             output/karmarank-manifesto.epub
             output/karmarank-manifesto.md
+            output/images/**
           generate_release_notes: true
