@@ -47,6 +47,14 @@ jobs:
           export RELEASE_MODE=true
           make -j$(nproc) all
 
+      - name: Package Markdown Archive
+        if: steps.check_tag.outputs.exists == 'false'
+        run: |
+          cd output
+          zip -r karmarank-manifesto-${{ env.PROJECT_VERSION }}.md.zip \
+            karmarank-manifesto.md \
+            images/
+
       - name: Create Release
         if: steps.check_tag.outputs.exists == 'false'
         uses: softprops/action-gh-release@v1
@@ -59,10 +67,5 @@ jobs:
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.pdf
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.html
             output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.epub
-            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.md
-            output/karmarank-manifesto.pdf
-            output/karmarank-manifesto.html
-            output/karmarank-manifesto.epub
-            output/karmarank-manifesto.md
-            output/images/**
+            output/karmarank-manifesto-${{ env.PROJECT_VERSION }}.md.zip
           generate_release_notes: true
