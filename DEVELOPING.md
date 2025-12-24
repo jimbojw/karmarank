@@ -50,12 +50,33 @@ make -j$(nproc) all
 
 **Note:** The Makefile supports parallel builds. Use `make -j$(nproc)` to build multiple chapters simultaneously, which significantly speeds up builds on multi-core systems.
 
+**For local development**, you may want to update source files (README TOC, navigation) before building:
+
+```bash
+make clean && make fix && make -j$(nproc) all
+```
+
+The `fix` target updates:
+- README.md table of contents
+- Navigation headers and footers in chapters
+
 This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.
 
 To clean the output directory:
 
 ```bash
 make clean
+```
+
+### Validating Source Files
+
+Run validation checks to ensure source files are correct:
+
+```bash
+# Run all validation checks
+make check
+
+# This checks: links, images, navigation, chapter order, etc.
 ```
 
 ### Release Mode
