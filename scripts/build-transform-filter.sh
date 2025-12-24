@@ -1,6 +1,21 @@
 #!/bin/bash
 # Build combined transform filter (map + transform logic)
 # Usage: build-transform-filter.sh BUILD_DIR OUTPUT_FILE FILTER_TEMPLATE CHAPTERS...
+# 
+# ID extraction implementation notes:
+# - We follow Pandoc's OBSERVED behavior, not its documentation (which is incorrect)
+# - Periods (.) are REMOVED (despite docs claiming they're preserved)
+# - Underscores (_) are PRESERVED
+# - Formatting (bold, links) is stripped; link text is extracted, not URL
+# - Leading/trailing hyphens are removed, multiple hyphens collapsed
+# - Case is lowercased, spaces become hyphens
+#
+# Known edge cases where our implementation differs from Pandoc:
+# - Headers with ONLY links: Pandoc extracts link text, we include URL
+#   (e.g., "# [Link](url)" -> Pandoc: "link", ours: "linkurl")
+# - Headers with ONLY punctuation: Pandoc outputs "# ", we output empty string
+#   (e.g., "# !@#$" -> Pandoc: "# ", ours: "")
+# These edge cases don't occur in our actual chapter headers.
 
 set -e
 

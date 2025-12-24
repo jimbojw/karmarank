@@ -82,22 +82,7 @@ directories:
 	@mkdir -p $(BUILD_DIR)
 
 # Build combined transform filter (map + transform logic)
-# Inlines chapter ID extraction directly (no intermediate files)
-#
-# ID extraction implementation notes:
-# - We follow Pandoc's OBSERVED behavior, not its documentation (which is incorrect)
-# - Periods (.) are REMOVED (despite docs claiming they're preserved)
-# - Underscores (_) are PRESERVED
-# - Formatting (bold, links) is stripped; link text is extracted, not URL
-# - Leading/trailing hyphens are removed, multiple hyphens collapsed
-# - Case is lowercased, spaces become hyphens
-#
-# Known edge cases where our implementation differs from Pandoc:
-# - Headers with ONLY links: Pandoc extracts link text, we include URL
-#   (e.g., "# [Link](url)" -> Pandoc: "link", ours: "linkurl")
-# - Headers with ONLY punctuation: Pandoc outputs "# ", we output empty string
-#   (e.g., "# !@#$" -> Pandoc: "# ", ours: "")
-# These edge cases don't occur in our actual chapter headers.
+# See scripts/build-transform-filter.sh for ID extraction implementation details
 build-transform-filter: $(BUILD_DIR)/transform-chapters.lua
 $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua | directories
 	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
