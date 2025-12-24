@@ -1,7 +1,7 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-23-fe1295e)
-date: 2025-12-23
+build: 0.2.1 (2025-12-24-edcc2b1)
+date: 2025-12-24
 lang: en
 license: CC-BY-NC-SA-4.0
 rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-23-fe1295e)
+Build: 0.2.1 (2025-12-24-edcc2b1)
 
 # License: CC-BY-NC-SA-4.0
 
