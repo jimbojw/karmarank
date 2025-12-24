@@ -68,7 +68,7 @@ else
     HTML_EMBED_FLAG := --self-contained
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav nav-title nav-header nav-footer check-nav check-nav-title check-nav-header check-nav-footer
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer
 
 # Build deployable artifacts (index page + all formats via "latest" target).
 # Note: "latest" transitively builds html, pdf, epub and md.
@@ -248,23 +248,14 @@ README.md: $(CHAPTERS) | directories
 	@echo "Updating README.md TOC..."
 	@scripts/update-readme-toc.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
 
-# Ensure NAV_TITLE comment exists in all chapters
-nav-title: | directories
+# Navigation Target (updates titles, headers, and footers sequentially)
+nav: | directories
 	@echo "Ensuring NAV_TITLE comments..."
 	@scripts/nav-title.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-
-# Navigation Header Target (depends on nav-title)
-nav-header: nav-title | directories
 	@echo "Updating navigation headers..."
 	@scripts/nav-header.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-
-# Navigation Footer Target (depends on nav-title)
-nav-footer: nav-title | directories
 	@echo "Updating navigation footers..."
 	@scripts/nav-footer.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-
-# Navigation Target (updates both header and footer)
-nav: nav-header nav-footer
 
 # Check targets: validates inter-document links and image files
 check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav
