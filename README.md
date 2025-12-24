@@ -80,7 +80,12 @@ The KarmaRank Manifesto proceeds from this observation, explaining how to decoup
 
 ## Contributing
 
-We welcome stories, questions, and corrections! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to report issues or submit pull requests.
+Contributions welcomed:
+
+* 💬 GitHub [Discussions](https://github.com/jimbojw/karmarank/discussions) for: Questions, Stories, Ideas, Debate.
+* 🐛 GitHub [Issues](https://github.com/jimbojw/karmarank/issues) for **actionable tasks** only: Typos & Grammatical Errors, Rendering Bugs, Specific Content Requests.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for PR process details.
 
 ## Build From Source
 
