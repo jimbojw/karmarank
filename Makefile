@@ -68,15 +68,14 @@ else
     HTML_EMBED_FLAG := --self-contained
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter latest check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer
+.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-pandoc-deps check-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer fix
 
-# Build deployable artifacts (index page + all formats via "latest" target).
-# Note: "latest" transitively builds html, pdf, epub and md.
-artifacts: index latest
+# Build deployable artifacts (index page + all formats).
+# Each format builds both short-named and long-named versions.
+all: index html pdf epub md
 
-inter-document-links: readme nav
-
-all: artifacts inter-document-links
+# Source-altering targets.
+fix: readme nav
 
 directories:
 	@mkdir -p $(OUTPUT_DIR)
@@ -126,8 +125,8 @@ $(TITLE_PAGE): $(METADATA) | directories
 	@echo "Preparing title page..."
 	@scripts/prepare-title-page.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(RELEASE_MODE)
 
-# HTML Build
-html: $(HTML_FILE)
+# HTML Build (builds both short and long versions)
+html: $(HTML_FILE_LONG)
 $(HTML_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) $(TEMPLATE_DIR)/book.html | directories check-pandoc-deps
 	@echo "Building HTML..."
 	$(PANDOC) \
@@ -160,8 +159,8 @@ check-pdf-deps: check-pandoc-deps
 		command -v pdflatex >/dev/null || (echo "✗ Error: pdflatex not found. Install LaTeX or use: USE_DOCKER=true make pdf" && exit 1); \
 	fi
 
-# PDF Build
-pdf: $(PDF_FILE)
+# PDF Build (builds both short and long versions)
+pdf: $(PDF_FILE_LONG)
 $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pdf-deps
 	@echo "Building PDF..."
 	$(PANDOC) \
@@ -178,8 +177,8 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pdf-deps
 		--output=$@
 	@echo "✓ PDF: $@"
 
-# ePub Build
-epub: $(EPUB_FILE)
+# ePub Build (builds both short and long versions)
+epub: $(EPUB_FILE_LONG)
 $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pandoc-deps
 	@echo "Building ePub..."
 	$(PANDOC) \
@@ -196,8 +195,8 @@ $(EPUB_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories check-pandoc-dep
 		--output=$@
 	@echo "✓ ePub: $@"
 
-# Combined Markdown Build
-md: $(MD_FILE)
+# Combined Markdown Build (builds both short and long versions)
+md: $(MD_FILE_LONG)
 $(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) | directories check-pandoc-deps
 	@echo "Building Markdown..."
 	$(PANDOC) \
@@ -226,10 +225,8 @@ $(INDEX_FILE): templates/index.template.md $(METADATA) $(TEMPLATE_DIR)/book.html
 		--output=$@
 	@echo "✓ Landing Page: $@"
 
-# Latest Copies (Permalinks)
-# Copy from short names to long names
-latest: $(HTML_FILE_LONG) $(PDF_FILE_LONG) $(EPUB_FILE_LONG) $(MD_FILE_LONG)
-
+# Long name files (copied from short names)
+# These are built automatically when building the format targets above
 $(HTML_FILE_LONG): $(HTML_FILE)
 	@cp $< $@
 
