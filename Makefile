@@ -10,6 +10,7 @@ IMAGES_DIR := $(CONTENT_DIR)/images
 VERSION := $(shell grep "version:" $(METADATA) | cut -d'"' -f2)
 HASH := $(shell git rev-parse --short HEAD 2>/dev/null || echo "dev")
 DATE := $(shell date +%Y-%m-%d)
+PDF_DATE := $(if $(RELEASE_MODE),v$(VERSION) ($(DATE)),v$(VERSION)-$(HASH) ($(DATE)))
 
 # Base filename logic
 # Short names (built first)
@@ -185,7 +186,7 @@ $(PDF_FILE): $(TRANSFORMED_CHAPTERS) $(METADATA) | directories verify-pdf-deps
 		--toc \
 		--toc-depth=2 \
 		--variable=geometry:margin=1.5in \
-		--metadata date="$(DATE)" \
+		--metadata date="$(PDF_DATE)" \
 		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
 		--output=$@
 	@echo "✓ PDF: $@"
