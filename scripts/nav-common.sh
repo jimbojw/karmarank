@@ -59,3 +59,27 @@ build_nav_line() {
 	fi
 }
 
+# Build complete NAV_HEADER block
+# Usage: build_nav_header prev_title prev_file next_title next_file
+# Returns: complete header block with markers and separator
+build_nav_header() {
+	local nav_line=$(build_nav_line "$@")
+	echo "<!-- NAV_HEADER_START -->"
+	echo "$nav_line"
+	echo ""
+	echo "---"
+	echo "<!-- NAV_HEADER_END -->"
+}
+
+# Build complete NAV_FOOTER block
+# Usage: build_nav_footer prev_title prev_file next_title next_file
+# Returns: complete footer block with markers and separator
+build_nav_footer() {
+	local nav_line=$(build_nav_line "$@")
+	echo "<!-- NAV_FOOTER_START -->"
+	echo "---"
+	echo ""
+	echo "$nav_line"
+	echo "<!-- NAV_FOOTER_END -->"
+}
+

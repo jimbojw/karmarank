@@ -66,7 +66,7 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order verify-pandoc-deps verify-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer fix
+.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order verify-pandoc-deps verify-pdf-deps nav check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
@@ -235,19 +235,9 @@ $(MD_FILE_LONG): $(MD_FILE)
 check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav
 
 # Navigation check targets
-check-nav: check-nav-title check-nav-header check-nav-footer
-
-check-nav-title: | directories
-	@echo "Checking NAV_TITLE comments..."
-	@scripts/check-nav-title.sh $(sort $(CHAPTERS))
-
-check-nav-header: | directories
-	@echo "Checking NAV_HEADER format..."
-	@scripts/check-nav-header.sh $(sort $(CHAPTERS))
-
-check-nav-footer: | directories
-	@echo "Checking NAV_FOOTER format..."
-	@scripts/check-nav-footer.sh $(sort $(CHAPTERS))
+check-nav: | directories
+	@echo "Checking navigation elements..."
+	@scripts/check-nav.sh all $(sort $(CHAPTERS))
 
 check-links: | directories
 	@echo "Checking inter-document links..."
@@ -282,9 +272,4 @@ README.md: $(CHAPTERS) | directories
 	@scripts/update-readme-toc.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
 
 nav: | directories
-	@echo "Ensuring NAV_TITLE comments..."
-	@scripts/nav-title.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-	@echo "Updating navigation headers..."
-	@scripts/nav-header.sh $(BUILD_DIR) $(sort $(CHAPTERS))
-	@echo "Updating navigation footers..."
-	@scripts/nav-footer.sh $(BUILD_DIR) $(sort $(CHAPTERS))
+	@scripts/nav.sh all $(BUILD_DIR) $(sort $(CHAPTERS))
