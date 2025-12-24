@@ -66,7 +66,7 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order verify-pandoc-deps verify-pdf-deps nav check-nav fix
+.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps nav check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
@@ -232,7 +232,7 @@ $(MD_FILE_LONG): $(MD_FILE)
 	@cp $< $@
 
 # Check targets
-check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav
+check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav check-readme
 
 # Navigation check targets
 check-nav: | directories
@@ -259,6 +259,10 @@ check-chapter-order: | directories
 	@echo "Checking chapter numbering..."
 	@scripts/check-chapter-order.sh $(sort $(CHAPTERS))
 
+check-readme: README.md | directories
+	@echo "Checking README.md TOC..."
+	@scripts/check-readme.sh README.md $(sort $(CHAPTERS))
+
 # Utility targets
 clean:
 	rm -rf $(OUTPUT_DIR)
@@ -269,7 +273,7 @@ fix: readme nav
 readme: README.md
 README.md: $(CHAPTERS) | directories
 	@echo "Updating README.md TOC..."
-	@scripts/update-readme-toc.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
+	@scripts/readme.sh $(BUILD_DIR) README.md $(sort $(CHAPTERS))
 
 nav: | directories
 	@scripts/nav.sh all $(BUILD_DIR) $(sort $(CHAPTERS))
