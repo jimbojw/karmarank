@@ -33,6 +33,7 @@ TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPT
 # Build artifacts for markdown output
 TITLE_PAGE := $(BUILD_DIR)/title-page.md
 FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
+IMAGE_LIST := $(BUILD_DIR)/image-list.txt
 
 # Output files (short names - built first)
 HTML_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).html
@@ -68,12 +69,12 @@ else
 	HTML_EMBED_FLAG := --self-contained
 endif
 
-.PHONY: all clean html pdf epub md release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order verify-pandoc-deps verify-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer fix
+.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order verify-pandoc-deps verify-pdf-deps nav check-nav check-nav-title check-nav-header check-nav-footer fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
 # Each format builds both short-named and long-named versions.
-all: index html pdf epub md
+all: images index html pdf epub md
 
 # Build infrastructure
 directories:
@@ -123,6 +124,22 @@ prepare-title-page: $(TITLE_PAGE)
 $(TITLE_PAGE): $(METADATA) | directories
 	@echo "Preparing title page..."
 	@scripts/prepare-title-page.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(RELEASE_MODE)
+
+# Extract image list from transformed chapters
+$(IMAGE_LIST): $(TRANSFORMED_CHAPTERS) filters/extract-images.lua | directories verify-pandoc-deps
+	@echo "Extracting image references..."
+	@mkdir -p $(BUILD_DIR)
+	$(PANDOC) \
+		$(TRANSFORMED_CHAPTERS) \
+		--from=commonmark_x \
+		--lua-filter=filters/extract-images.lua \
+		--to=commonmark_x \
+		--output=$@ || (rm -f $@ && exit 1)
+
+# Copy referenced images to output
+images: $(IMAGE_LIST) | directories
+	@echo "Copying images to output..."
+	@scripts/copy-images.sh $(IMAGE_LIST) $(IMAGES_DIR) $(OUTPUT_DIR)/images
 
 # Dependency checks
 verify-pandoc-deps:
