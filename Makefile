@@ -27,6 +27,11 @@ CHAPTERS := $(sort $(wildcard $(CONTENT_DIR)/*.md))
 TOP_LEVEL_MD := $(wildcard *.md)
 ALL_MD := $(CHAPTERS) $(TOP_LEVEL_MD)
 
+# Excalidraw source files and corresponding PNG targets (light and dark)
+EXCALIDRAW_FILES := $(wildcard $(IMAGES_DIR)/src/*.excalidraw)
+PNG_FILES := $(patsubst $(IMAGES_DIR)/src/%.excalidraw,$(IMAGES_DIR)/%.png,$(EXCALIDRAW_FILES))
+PNG_DARK_FILES := $(patsubst $(IMAGES_DIR)/src/%.excalidraw,$(IMAGES_DIR)/%.dark.png,$(EXCALIDRAW_FILES))
+
 # Transformed chapters directory (for pandoc builds)
 TRANSFORMED_DIR := $(BUILD_DIR)/chapters
 TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPTERS))
@@ -66,7 +71,10 @@ else
     PANDOC := pandoc
 endif
 
-.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps fix-nav fix-readme check-nav fix
+# Excalidraw export tool (uses local npm install via npx)
+EXCALIDRAW_EXPORT := npx --no-install excalidraw-brute-export-cli
+
+.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
@@ -94,6 +102,16 @@ $(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua
 		--lua-filter=filters/remove-nav.lua \
 		--lua-filter=$(BUILD_DIR)/transform-chapters.lua \
 		--output=$@
+
+# Pattern rule to generate light mode PNG from excalidraw files
+$(IMAGES_DIR)/%.png: $(IMAGES_DIR)/src/%.excalidraw | verify-excalidraw-deps
+	@echo "Generating $@ from $<..."
+	@$(EXCALIDRAW_EXPORT) -i "$<" -o "$@" --format png --scale 3 --dark-mode false --background true
+
+# Pattern rule to generate dark mode PNG from excalidraw files
+$(IMAGES_DIR)/%.dark.png: $(IMAGES_DIR)/src/%.excalidraw | verify-excalidraw-deps
+	@echo "Generating $@ from $<..."
+	@$(EXCALIDRAW_EXPORT) -i "$<" -o "$@" --format png --scale 3 --dark-mode true --background true
 
 # Prepare filtered metadata (excludes styling fields)
 prepare-metadata-filtered: $(FILTERED_METADATA)
@@ -134,6 +152,14 @@ verify-pandoc-deps:
 verify-pdf-deps: verify-pandoc-deps
 	@if [ "$(USE_DOCKER)" != "true" ]; then \
 		command -v pdflatex >/dev/null || (echo "✗ Error: pdflatex not found. Install LaTeX or use: USE_DOCKER=true make pdf" && exit 1); \
+	fi
+
+verify-excalidraw-deps:
+	@if ! $(EXCALIDRAW_EXPORT) --version >/dev/null 2>&1; then \
+		echo "✗ Error: excalidraw-brute-export-cli not found or not working. Install with: npm install" && exit 1; \
+	fi
+	@if ! npx playwright --version >/dev/null 2>&1; then \
+		echo "✗ Warning: Playwright browsers may not be installed. Run: npm install" && exit 1; \
 	fi
 
 # Output format targets
@@ -268,7 +294,7 @@ clean:
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(BUILD_DIR)
 
-fix: fix-readme fix-nav
+fix: fix-readme fix-nav fix-images
 
 fix-readme: README.md
 README.md: $(CHAPTERS) | directories
@@ -277,3 +303,6 @@ README.md: $(CHAPTERS) | directories
 
 fix-nav: | directories
 	@scripts/fix-nav.sh all $(BUILD_DIR) $(sort $(CHAPTERS))
+
+fix-images: $(PNG_FILES) $(PNG_DARK_FILES)
+	@echo "✓ All PNG files are up to date"

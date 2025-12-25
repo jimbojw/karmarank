@@ -33,6 +33,16 @@ brew install pandoc basictex
 # Other platforms: See https://pandoc.org/installing.html
 ```
 
+**Node.js** (for image generation)
+
+Install Node.js from [nodejs.org](https://nodejs.org/), then install project dependencies:
+
+```bash
+npm install
+```
+
+This installs `excalidraw-brute-export-cli` locally and automatically downloads Playwright browser binaries (~470MB) needed for generating PNG files from Excalidraw diagrams. The `postinstall` script handles Playwright installation automatically.
+
 ### Building
 
 This project uses `make`. To build all formats (HTML, PDF, ePub, Markdown):
@@ -48,19 +58,25 @@ USE_DOCKER=false make all
 make -j$(nproc) all
 ```
 
-**Note:** The Makefile supports parallel builds. Use `make -j$(nproc)` to build multiple chapters simultaneously, which significantly speeds up builds on multi-core systems.
+This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.
+
 
 **For local development**, you may want to update source files (README TOC, navigation) before building:
 
 ```bash
-make clean && make fix && make -j$(nproc) all
+make clean && make fix -j$(nproc) && make -j$(nproc) all
 ```
 
 The `fix` target updates:
 - README.md table of contents
 - Navigation headers and footers in chapters
+- PNG files from Excalidraw source files (in `content/images/src/`)
 
-This will generate files in `output/` with detailed filenames (e.g., `karmarank-manifesto-0.1.0-2025-12-14-abc1234.pdf`) useful for debugging.
+**Note:** The `fix-images` target generates both light and dark mode PNGs. For faster generation, use parallel builds:
+
+```bash
+make -j$(nproc) fix-images
+```
 
 To clean the output directory:
 
