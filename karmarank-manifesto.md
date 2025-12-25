@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-25-e7896ed)
+build: 0.2.1 (2025-12-25-9b17be7)
 date: 2025-12-25
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-25-e7896ed)
+Build: 0.2.1 (2025-12-25-9b17be7)
 
 # License: CC-BY-NC-SA-4.0
 
