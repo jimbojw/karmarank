@@ -245,7 +245,7 @@ check-links: | directories
 
 check-images: | directories
 	@echo "Checking image files..."
-	@scripts/check-images.sh $(IMAGES_DIR)
+	@scripts/check-images.sh $(IMAGES_DIR)/src
 
 check-images-refs: | directories
 	@echo "Checking image references in markdown..."

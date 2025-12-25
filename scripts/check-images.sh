@@ -9,10 +9,14 @@ IMAGES_DIR="$1"
 FAILED=0
 
 if [ -d "$IMAGES_DIR" ]; then
+	# Determine where to look for PNG files
+	# If excalidraw files are in a subdirectory (e.g., src/), PNGs are in the parent
+	PNG_DIR=$(dirname "$IMAGES_DIR")
+	
 	for excalidraw in "$IMAGES_DIR"/*.excalidraw; do
 		if [ -f "$excalidraw" ]; then
 			BASENAME=$(basename "$excalidraw" .excalidraw)
-			PNG_FILE="$IMAGES_DIR/$BASENAME.png"
+			PNG_FILE="$PNG_DIR/$BASENAME.png"
 			if [ ! -f "$PNG_FILE" ]; then
 				echo "✗ Missing PNG for $excalidraw"
 				FAILED=$((FAILED + 1))
