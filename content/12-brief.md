@@ -73,7 +73,7 @@ If you are claiming that your new UI is better, do not just write "1.53 points h
 - **Top:** Distribution of sentiment scores _before_ development.
 - **Bottom:** Distribution of sentiment scores _after_ implementation.
 
-![Example diverging stacked bar charts for showing quantified sentiment change.](images/diverging-stacked-bar-chart.light.png)
+![Example diverging stacked bar charts for showing quantified sentiment change.](images/diverging-stacked-bar-chart.light.png#gh-light-mode-only)![Example diverging stacked bar charts for showing quantified sentiment change.](images/diverging-stacked-bar-chart.dark.png#gh-dark-mode-only)
 *Figure: Example diverging stacked bar charts for showing quantified sentiment change.*
 
 When a tired Director scans your packet at 4:00 PM on a Friday, they will not read your bullet points. They _will_ look at the pretty picture. The picture says "Up and to the Right." The picture says "Competence."

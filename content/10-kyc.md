@@ -14,7 +14,7 @@ To secure your best defense, you’ll want to Know Your Counsel (KYC). This will
 
 In the engineering world, managers generally fall into one of three archetypes: the Technician, the Politician, and the Peacemaker.
 
-![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.light.png)
+![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.light.png#gh-light-mode-only)![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.dark.png#gh-dark-mode-only)
 *Figure: The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.*
 
 Every person is different, but these are the abstract base classes.

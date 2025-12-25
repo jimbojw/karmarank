@@ -24,7 +24,7 @@ You are angry because, deep down, you still believe the system *should* be fair.
 
 If we map "System Awareness" against "Organizational Alignment," we see a distinct curve. Call this the **Uncanny Valley of Alignment**.
 
-![Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.](images/uncanny-valley-alignment.light.png)
+![Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.](images/uncanny-valley-alignment.light.png#gh-light-mode-only)![Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.](images/uncanny-valley-alignment.dark.png#gh-dark-mode-only)
 *Figure: Chart showing the Uncanny Valley of Alignment. X-Axis: System Awareness (Cynicism). Y-Axis: Alignment with Firm.*
 
 On the X-Axis, plot System Awareness (Cynicism). On the Y-Axis: Alignment with the Firm. The curve starts high (Naive Idealist), dips low (Burnt-Out Senior), and rises high again (KarmaRank Optimizer). Let's look at each archetype.

@@ -18,14 +18,17 @@ for md_file in "${ALL_MD[@]}"; do
 		fi
 		IMAGES=$(grep -oE '!\[.*\]\([^)]+images/[^)]+\)' "$md_file" 2>/dev/null | grep -oE '(content/)?images/[^)]+' | sort -u)
 		for img_ref in $IMAGES; do
+			# Strip hash tag from path (e.g., remove #gh-light-mode-only)
+			img_path="${img_ref%%#*}"
+			
 			TARGET=""
 			if [ -n "$DIR" ]; then
-				TARGET="$DIR/$img_ref"
+				TARGET="$DIR/$img_path"
 			else
-				TARGET="$img_ref"
+				TARGET="$img_path"
 			fi
 			if [ ! -f "$TARGET" ]; then
-				TARGET="$IMAGES_DIR/$(basename "$img_ref")"
+				TARGET="$IMAGES_DIR/$(basename "$img_path")"
 			fi
 			if [ ! -f "$TARGET" ]; then
 				echo "✗ Broken image reference in $md_file: $img_ref"

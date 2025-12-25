@@ -74,7 +74,7 @@ endif
 # Excalidraw export tool (uses local npm install via npx)
 EXCALIDRAW_EXPORT := npx --no-install excalidraw-brute-export-cli
 
-.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images check-nav fix
+.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-images-mode check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images fix-images-mode check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
@@ -93,13 +93,14 @@ $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua 
 	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
 
 # Pattern rule to build transformed chapters
-$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav.lua | directories build-transform-filter verify-pandoc-deps
+$(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav.lua filters/filter-image-modes.lua | directories build-transform-filter verify-pandoc-deps
 	@mkdir -p $(TRANSFORMED_DIR)
 	$(PANDOC) \
 		$< \
 		--from=commonmark_x \
 		--to=commonmark_x \
 		--lua-filter=filters/remove-nav.lua \
+		--lua-filter=filters/filter-image-modes.lua \
 		--lua-filter=$(BUILD_DIR)/transform-chapters.lua \
 		--output=$@
 
@@ -258,7 +259,7 @@ $(MD_FILE_LONG): $(MD_FILE)
 	@cp $< $@
 
 # Check targets
-check: check-links check-images check-images-refs check-unused-images check-chapter-order check-nav check-readme
+check: check-links check-images check-images-refs check-images-mode check-unused-images check-chapter-order check-nav check-readme
 
 # Navigation check targets
 check-nav: | directories
@@ -277,6 +278,10 @@ check-images-refs: | directories
 	@echo "Checking image references in markdown..."
 	@scripts/check-images-refs.sh $(IMAGES_DIR) $(ALL_MD)
 
+check-images-mode: | directories
+	@echo "Checking light/dark image mode formatting..."
+	@scripts/check-images-mode.sh $(ALL_MD)
+
 check-unused-images: | directories
 	@echo "Checking for unused images..."
 	@scripts/check-unused-images.sh $(IMAGES_DIR) $(ALL_MD)
@@ -294,7 +299,7 @@ clean:
 	rm -rf $(OUTPUT_DIR)
 	rm -rf $(BUILD_DIR)
 
-fix: fix-readme fix-nav fix-images
+fix: fix-readme fix-nav fix-images fix-images-mode
 
 fix-readme: README.md
 README.md: $(CHAPTERS) | directories
@@ -306,3 +311,7 @@ fix-nav: | directories
 
 fix-images: $(PNG_FILES) $(PNG_DARK_FILES)
 	@echo "✓ All PNG files are up to date"
+
+fix-images-mode: | directories
+	@echo "Fixing light/dark image mode formatting..."
+	@scripts/fix-images-mode.sh $(BUILD_DIR) $(ALL_MD)
