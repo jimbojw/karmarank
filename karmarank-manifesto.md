@@ -1,7 +1,7 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-24-31feb61)
-date: 2025-12-24
+build: 0.2.1 (2025-12-25-64686f7)
+date: 2025-12-25
 lang: en
 license: CC-BY-NC-SA-4.0
 rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-24-31feb61)
+Build: 0.2.1 (2025-12-25-64686f7)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -65,7 +65,7 @@ process, for the day-to-day practitioner, it suffices to optimize for
 **Net Status-Weighted Karma**:
 
 ![Net Status-Weighted Karma
-Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.png)
+Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.light.png)
 
 $$K = \sum_{i} S_i \cdot k_i$$
 
@@ -323,7 +323,7 @@ The index $i$ ranges over the people whose opinions about you actually
 everyone listens to, the PM who won't shut up in calibration meetings.
 
 ![Net Status-Weighted Karma
-Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.png)
+Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.light.png)
 
 For each such person, $k_i$ is your **karma with person** $i$: the
 signed "emotional value" they get from telling a story about you and
@@ -588,7 +588,7 @@ launch," that's a Firm Ledger credit. These events often do not coincide
 in time, or at all.
 
 ![Private Ledger (left) is not equal to the Firm Ledger
-(right).](https://jimbojw.github.io/karmarank/images/two-ledgers.png)
+(right).](https://jimbojw.github.io/karmarank/images/two-ledgers.light.png)
 *Figure: Private Ledger (left) is not equal to the Firm Ledger (right).*
 
 From the firm's point of view, your Private Ledger is a personal hobby
@@ -735,7 +735,7 @@ Tree: the Org Chart. You are a leaf node, connected to a branch
 (Manager), connected to a trunk (Director/VP), and so on.
 
 ![Boring, uninformative, corporate Org
-Chart.](https://jimbojw.github.io/karmarank/images/boring-org-chart.png)
+Chart.](https://jimbojw.github.io/karmarank/images/boring-org-chart.light.png)
 *Figure: Boring, uninformative, corporate Org Chart.*
 
 Delete that mental image. It is a static representation of reporting
@@ -753,7 +753,7 @@ of that circle consists of your **Peers** reporting to your shared
 manager.
 
 ![Circle of You and your Peers under your shared
-Manager.](https://jimbojw.github.io/karmarank/images/peer-circle.png)
+Manager.](https://jimbojw.github.io/karmarank/images/peer-circle.light.png)
 *Figure: Circle of You and your Peers under your shared Manager.*
 
 Your circle of Peers forms the base of the cylinder. Above you, in the
@@ -764,7 +764,7 @@ third circle of peers, looking down into the cylinder.
 
 ![Calibration Cylinder showing You (Defendant), your Manager (Counsel),
 your Manager's Peers (Prosecution/Jury) and your Skip Manager
-(Judge).](https://jimbojw.github.io/karmarank/images/calibration-cylinder.png)
+(Judge).](https://jimbojw.github.io/karmarank/images/calibration-cylinder.light.png)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager
 (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager
 (Judge).*
@@ -925,7 +925,7 @@ and the Market (The Judge) to prove that the CEO is still a "High
 Performer."
 
 ![CEO's Calibration Cylinder showing SVP, Executive, Board and Market
-circles.](https://jimbojw.github.io/karmarank/images/turtles-all-the-way-up.png)  
+circles.](https://jimbojw.github.io/karmarank/images/turtles-all-the-way-up.light.png)  
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and
 Market circles.*
 
@@ -953,7 +953,7 @@ archetypes: the Technician, the Politician, and the Peacemaker.
 
 ![The Three Managerial Archetypes: the Technician, the Politician, and
 the
-Peacemaker.](https://jimbojw.github.io/karmarank/images/know-your-counsel.png)
+Peacemaker.](https://jimbojw.github.io/karmarank/images/know-your-counsel.light.png)
 *Figure: The Three Managerial Archetypes: the Technician, the
 Politician, and the Peacemaker.*
 
@@ -1122,7 +1122,7 @@ framework, you never write a line of code until you have written the
 performance review bullet point that rewards it.
 
 ![Karma Driven Development (KDD)
-Flowchart.](https://jimbojw.github.io/karmarank/images/kdd-flowchart.png)
+Flowchart.](https://jimbojw.github.io/karmarank/images/kdd-flowchart.light.png)
 *Figure: Karma Driven Development (KDD) Flowchart.*
 
 Remember [Law \#2](#law-2-the-rating-is-the-job): the rating is the job.
@@ -1402,7 +1402,7 @@ points higher." Deploy a diverging stacked bar chart.
 - **Bottom:** Distribution of sentiment scores *after* implementation.
 
 ![Example diverging stacked bar charts for showing quantified sentiment
-change.](https://jimbojw.github.io/karmarank/images/diverging-stacked-bar-chart.png)
+change.](https://jimbojw.github.io/karmarank/images/diverging-stacked-bar-chart.light.png)
 *Figure: Example diverging stacked bar charts for showing quantified
 sentiment change.*
 
@@ -1632,7 +1632,7 @@ a distinct curve. Call this the **Uncanny Valley of Alignment**.
 
 ![Chart showing the Uncanny Valley of Alignment. X-Axis: System
 Awareness (Cynicism). Y-Axis: Alignment with
-Firm.](https://jimbojw.github.io/karmarank/images/uncanny-valley-alignment.png)
+Firm.](https://jimbojw.github.io/karmarank/images/uncanny-valley-alignment.light.png)
 *Figure: Chart showing the Uncanny Valley of Alignment. X-Axis: System
 Awareness (Cynicism). Y-Axis: Alignment with Firm.*
 
