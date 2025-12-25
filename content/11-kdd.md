@@ -16,7 +16,7 @@ Despite this, most _careers_ run on **Waterfall**. You do months of work, ship i
 
 To fix this, adopt **Karma-Driven Development (KDD)**. In this framework, you never write a line of code until you have written the performance review bullet point that rewards it.
 
-![Karma Driven Development (KDD) Flowchart.](images/kdd-flowchart.png)
+![Karma Driven Development (KDD) Flowchart.](images/kdd-flowchart.light.png)
 *Figure: Karma Driven Development (KDD) Flowchart.*
 
 Remember [Law #2](./06-law-2.md): the rating is the job.

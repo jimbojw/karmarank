@@ -12,7 +12,7 @@ In this chapter you'll learn the local topology of the network graph as it appli
 
 If I asked you to draw a map of your workplace, you would likely draw a Tree: the Org Chart. You are a leaf node, connected to a branch (Manager), connected to a trunk (Director/VP), and so on.
 
-![Boring, uninformative, corporate Org Chart.](images/boring-org-chart.png)
+![Boring, uninformative, corporate Org Chart.](images/boring-org-chart.light.png)
 *Figure: Boring, uninformative, corporate Org Chart.*
 
 Delete that mental image. It is a static representation of reporting lines, useful primarily for knowing whose name is on your vacation approval. It tells you little about the physics of how your value is actually calculated.
@@ -23,12 +23,12 @@ The Org Chart implies a chain of command. The reality, as it applies to you, is 
 
 Starting at the bottom, you are at the center of a circle. The perimeter of that circle consists of your **Peers** reporting to your shared manager.
 
-![Circle of You and your Peers under your shared Manager.](images/peer-circle.png)
+![Circle of You and your Peers under your shared Manager.](images/peer-circle.light.png)
 *Figure: Circle of You and your Peers under your shared Manager.*
 
 Your circle of Peers forms the base of the cylinder. Above you, in the middle layer, your Manager is at the center of their own circle, surrounded by their **Peer Managers**. Your Skip Manager (manager's manager, e.g. Director) sits in the top layer, the center of their own third circle of peers, looking down into the cylinder.
 
-![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.png)
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.light.png)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
@@ -128,7 +128,7 @@ I have bad news. The topology is fractal.
 
 When the CEO announces a layoff, or a pivot to AI, or a stock buyback, do not mistake it for "strategy" in the pure sense. It is a **Status-Weighted Story** presented to the Board of Directors (The Jury) and the Market (The Judge) to prove that the CEO is still a "High Performer."
 
-![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.](images/turtles-all-the-way-up.png)  
+![CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.](images/turtles-all-the-way-up.light.png)  
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and Market circles.*
 
 The cylinder goes up indefinitely. The only thing that changes is the blast radius of the decisions. Everyone has the same job: figure out who matters, then ship them stories they'll endorse.

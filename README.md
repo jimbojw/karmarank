@@ -32,7 +32,7 @@ This document patches the [Default Engineering Worldview](content/04-security-ad
 
 While this full KarmaRank definition describes the actual appraisal process, for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
-[![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.png)](content/03-origin-story.md)
+[![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.light.png)](content/03-origin-story.md)
 
 $$
 K = \sum_{i} S_i \cdot k_i
@@ -51,7 +51,7 @@ Where:
 
 The KarmaRank Manifesto proceeds from this observation, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
 
-[![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.png)](content/09-calibration-cylinder.md)
+[![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.light.png)](content/09-calibration-cylinder.md)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 ## Table of Contents

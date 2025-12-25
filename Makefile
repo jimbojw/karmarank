@@ -29,7 +29,7 @@ ALL_MD := $(CHAPTERS) $(TOP_LEVEL_MD)
 
 # Excalidraw source files and corresponding PNG targets (light and dark)
 EXCALIDRAW_FILES := $(wildcard $(IMAGES_DIR)/src/*.excalidraw)
-PNG_FILES := $(patsubst $(IMAGES_DIR)/src/%.excalidraw,$(IMAGES_DIR)/%.png,$(EXCALIDRAW_FILES))
+PNG_FILES := $(patsubst $(IMAGES_DIR)/src/%.excalidraw,$(IMAGES_DIR)/%.light.png,$(EXCALIDRAW_FILES))
 PNG_DARK_FILES := $(patsubst $(IMAGES_DIR)/src/%.excalidraw,$(IMAGES_DIR)/%.dark.png,$(EXCALIDRAW_FILES))
 
 # Transformed chapters directory (for pandoc builds)
@@ -104,7 +104,7 @@ $(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua
 		--output=$@
 
 # Pattern rule to generate light mode PNG from excalidraw files
-$(IMAGES_DIR)/%.png: $(IMAGES_DIR)/src/%.excalidraw | verify-excalidraw-deps
+$(IMAGES_DIR)/%.light.png: $(IMAGES_DIR)/src/%.excalidraw | verify-excalidraw-deps
 	@echo "Generating $@ from $<..."
 	@$(EXCALIDRAW_EXPORT) -i "$<" -o "$@" --format png --scale 3 --dark-mode false --background true
 

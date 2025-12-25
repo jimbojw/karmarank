@@ -10,11 +10,11 @@ ALL_MD=("$@")
 
 FAILED=0
 
-if [ -d "$IMAGES_DIR" ]; then
-	for img_file in "$IMAGES_DIR"/*.png "$IMAGES_DIR"/*.excalidraw; do
+	if [ -d "$IMAGES_DIR" ]; then
+	for img_file in "$IMAGES_DIR"/*.light.png "$IMAGES_DIR"/*.dark.png "$IMAGES_DIR"/*.excalidraw; do
 		if [ -f "$img_file" ]; then
 			BASENAME=$(basename "$img_file")
-			BASENAME_NO_EXT=$(basename "$img_file" .png | sed 's/\.excalidraw$//')
+			BASENAME_NO_EXT=$(basename "$img_file" .light.png | sed 's/\.dark\.png$//' | sed 's/\.excalidraw$//')
 			FOUND=0
 			for md_file in "${ALL_MD[@]}"; do
 				if [ -f "$md_file" ]; then

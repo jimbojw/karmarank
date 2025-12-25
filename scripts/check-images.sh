@@ -13,15 +13,23 @@ if [ -d "$IMAGES_DIR" ]; then
 	# If excalidraw files are in a subdirectory (e.g., src/), PNGs are in the parent
 	PNG_DIR=$(dirname "$IMAGES_DIR")
 	
-	for excalidraw in "$IMAGES_DIR"/*.excalidraw; do
+		for excalidraw in "$IMAGES_DIR"/*.excalidraw; do
 		if [ -f "$excalidraw" ]; then
 			BASENAME=$(basename "$excalidraw" .excalidraw)
-			PNG_FILE="$PNG_DIR/$BASENAME.png"
-			if [ ! -f "$PNG_FILE" ]; then
-				echo "✗ Missing PNG for $excalidraw"
+			LIGHT_PNG_FILE="$PNG_DIR/$BASENAME.light.png"
+			if [ ! -f "$LIGHT_PNG_FILE" ]; then
+				echo "✗ Missing light PNG for $excalidraw"
 				FAILED=$((FAILED + 1))
-			elif [ ! "$PNG_FILE" -nt "$excalidraw" ]; then
-				echo "✗ PNG is out of date: $PNG_FILE (older than $excalidraw)"
+			elif [ ! "$LIGHT_PNG_FILE" -nt "$excalidraw" ]; then
+				echo "✗ Light PNG is out of date: $LIGHT_PNG_FILE (older than $excalidraw)"
+				FAILED=$((FAILED + 1))
+			fi
+			DARK_PNG_FILE="$PNG_DIR/$BASENAME.dark.png"
+			if [ ! -f "$DARK_PNG_FILE" ]; then
+				echo "✗ Missing dark PNG for $excalidraw"
+				FAILED=$((FAILED + 1))
+			elif [ ! "$DARK_PNG_FILE" -nt "$excalidraw" ]; then
+				echo "✗ Dark PNG is out of date: $DARK_PNG_FILE (older than $excalidraw)"
 				FAILED=$((FAILED + 1))
 			fi
 		fi

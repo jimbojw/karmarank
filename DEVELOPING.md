@@ -126,7 +126,7 @@ The book uses LaTeX math notation throughout. The setup supports:
 Images should be placed in `content/images/`. Reference them in Markdown relative to the `content/` directory:
 
 ```markdown
-![Descriptive caption text.](images/diagram.png)
+![Descriptive caption text.](images/diagram.light.png)
 *Figure: Descriptive caption text.*
 ```
 
