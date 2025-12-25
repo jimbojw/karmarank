@@ -32,7 +32,7 @@ This document patches the [Default Engineering Worldview](content/04-security-ad
 
 While this full KarmaRank definition describes the actual appraisal process, for the day-to-day practitioner, it suffices to optimize for **Net Status-Weighted Karma**:
 
-[![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.light.png#gh-light-mode-only)![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.dark.png#gh-dark-mode-only)](content/03-origin-story.md)
+[![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.light.png)](content/03-origin-story.md#gh-light-mode-only)[![Net Status-Weighted Karma Equation](content/images/net-status-weighted-karma.dark.png)](content/03-origin-story.md#gh-dark-mode-only)
 
 $$
 K = \sum_{i} S_i \cdot k_i
@@ -51,7 +51,7 @@ Where:
 
 The KarmaRank Manifesto proceeds from this observation, explaining how to decouple your self-worth from your rating ([Law #1](content/05-law-1.md)), optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](content/09-calibration-cylinder.md).
 
-[![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.light.png#gh-light-mode-only)![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.dark.png#gh-dark-mode-only)](content/09-calibration-cylinder.md)
+[![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.light.png)](content/09-calibration-cylinder.md#gh-light-mode-only)[![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](content/images/calibration-cylinder.dark.png)](content/09-calibration-cylinder.md#gh-dark-mode-only)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
 ## Table of Contents

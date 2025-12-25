@@ -24,8 +24,15 @@ fix_file() {
 	> "$temp_file"  # Create empty temp file
 	
 	while IFS= read -r line || [ -n "$line" ]; do
-		# Check if this line has light/dark images
-		if echo "$line" | grep -qE '\.(light|dark)\.png'; then
+		# Check for link-wrapped images first
+		if is_link_wrapped_image_line "$line"; then
+			# Use sed to extract components and replace in one step
+			# Pattern: [![alt](base.variant.png#hash)![alt](base.variant.png#hash)?](link#hash)
+			# Replace with: [![alt](base.light.png)](link#gh-light-mode-only)[![alt](base.dark.png)](link#gh-dark-mode-only)
+			local fixed_line=$(echo "$line" | sed -E 's%\[!\[([^]]*)\]\(([^#)]*)\.(light|dark)\.png(#[^)]*)?\)(!\[[^]]*\]\(\2\.(light|dark)\.png(#[^)]*)?\))?([^]]*)\]\(([^#)]*)(#[^#]*)?\)(\[!\[[^]]*\]\(\2\.(light|dark)\.png(#[^#]*)?\)\]\(\9(#[^)]*)?\))?%[![\1](\2.light.png)](\9#gh-light-mode-only)[![\1](\2.dark.png)](\9#gh-dark-mode-only)%')
+			echo "$fixed_line" >> "$temp_file"
+		elif echo "$line" | grep -qE '\.(light|dark)\.png'; then
+			# Regular (naked) images
 			# Apply the fix regex - handles both single images and pairs
 			# Pattern matches: ![alt](base.variant.png#hash) optionally followed by ![alt](base.variant.png#hash)
 			# Replaces with: ![alt](base.light.png#gh-light-mode-only)![alt](base.dark.png#gh-dark-mode-only)
