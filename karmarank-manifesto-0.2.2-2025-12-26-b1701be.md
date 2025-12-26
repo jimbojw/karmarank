@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.1 (2025-12-26-5cfa438)
+build: 0.2.2 (2025-12-26-b1701be)
 date: 2025-12-26
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -8,7 +8,7 @@ rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
   International
 subtitle: Optimizing the Unspoken Corporate Objective Function
 title: The KarmaRank Manifesto
-version: 0.2.1
+version: 0.2.2
 ---
 
 # The KarmaRank Manifesto
@@ -17,7 +17,7 @@ version: 0.2.1
 
 By jimbojw
 
-Build: 0.2.1 (2025-12-26-5cfa438)
+Build: 0.2.2 (2025-12-26-b1701be)
 
 # License: CC-BY-NC-SA-4.0
 
