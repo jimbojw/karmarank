@@ -172,11 +172,11 @@ _The Logic of Practice_ / _Distinction_
 
 The source of **Field**, **Capital**, and **Habitus**. Bourdieu explains why some people "just get it" (Habitus) and how social games are played for specific types of Capital within a bounded Field.
 
-### Jonathan Haidt
+### David McClelland
 
-_The Righteous Mind_
+_Human Motivation_
 
-The source of **Moral Foundations Theory**. Essential for debugging **Protocol Mismatches**. It explains why your "rational" argument for refactoring code (Sanctity/Order) sounds like nonsense to a manager optimizing for quarterly revenue (Authority/Outcome).
+The source of **Need Theory**. Essential for debugging **Motivation Mismatches**. It explains why your "rational" argument for refactoring code (Achievement) sounds like nonsense to a manager optimizing for organizational influence (Power) or team harmony (Affiliation).
 
 ### James C. Scott
 

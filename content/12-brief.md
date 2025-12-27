@@ -29,7 +29,7 @@ It does not matter that the "45 hours" is a napkin-math estimate. It is a **Numb
 
 ## 2. Moral Targeting (Know Your Judge)
 
-Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your achievement in a way that strokes the specific **[Moral Matrix](./16-appendix.md#jonathan-haidt)** of your evaluators.
+Before you pick your number, you must pick your narrative. This goes back to **CVE-DEW-03 (The Motivation Mismatch)**. You must frame your achievement in a way that strokes the specific *motivations* of your evaluators.
 
 Different tribes worship different gods:
 

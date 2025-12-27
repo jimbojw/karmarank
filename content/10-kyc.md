@@ -17,7 +17,7 @@ In the engineering world, managers generally fall into one of three archetypes: 
 ![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.light.png#gh-light-mode-only)![The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.](images/know-your-counsel.dark.png#gh-dark-mode-only)
 *Figure: The Three Managerial Archetypes: the Technician, the Politician, and the Peacemaker.*
 
-Every person is different, but these are the abstract base classes.
+Every person is different, but these abstract base classes extend from their primary _motivations_ (([McClelland](./16-appendix.md#david-mcclelland))).
 
 ## 1. The Technician (The "Achievement" Manager)
 

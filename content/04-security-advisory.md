@@ -33,13 +33,13 @@ There is no capital-T Truth behind the rating; the rating _is_ the object. Your 
 
 Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
 
-### CVE-DEW-03: The Protocol Mismatch (The Moral Matrix)
+### CVE-DEW-03: The Motivation Mismatch
 
 **The Vulnerability:** You assume your manager and leadership are driven by "Logic" and "Accuracy." When they make an illogical decision, you assume they are underinformed, stupid, or technically illiterate.
 
-**The Reality:** They are not stupid. They are optimizing for a different set of moral foundations.
+**The Reality:** They are not stupid. They are optimizing for a different set of psychological drivers.
 
-While you are optimizing for **Truth** and **Efficiency**, they are often optimizing for **Loyalty**, **Authority**, or **Sanctity**. You are sending JSON to a SOAP endpoint. The communication is failing not because the data is wrong, but because the format is rejected.
+While you are optimizing for **Truth** and **Efficiency** (your own drivers of **Achievement**), they may often optimizing for their own Achievement, or for  **Power** (influence, control) or **Affiliation** (consensus, relationships). You are sending JSON to a SOAP endpoint. The communication is failing not because the data is wrong, but because the format is rejected.
 
 ### CVE-DEW-04: The Scoreboard Glitch (Meritocracy)
 
