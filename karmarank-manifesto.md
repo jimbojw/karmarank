@@ -1,7 +1,7 @@
 ---
 author: jimbojw
-build: 0.2.2 (2025-12-26-b1701be)
-date: 2025-12-26
+build: 0.2.2 (2025-12-27-9cd032e)
+date: 2025-12-27
 lang: en
 license: CC-BY-NC-SA-4.0
 rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -17,7 +17,7 @@ version: 0.2.2
 
 By jimbojw
 
-Build: 0.2.2 (2025-12-26-b1701be)
+Build: 0.2.2 (2025-12-27-9cd032e)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -1617,7 +1617,7 @@ This resentment is a warning light. It means you are halfway there.
 The problem isn't that you are too cynical for your company. The problem
 is that you are **not cynical enough**.
 
-## 1. The Uncanny Valley of Alignment
+## 1. The Cynicism-Dissonance Curve
 
 The engineer who complains that "politics is unfair" is actually a
 closeted optimist.
@@ -1627,43 +1627,44 @@ be fair. You believe the Firm Ledger *should* match the Private Ledger.
 You are like a physicist screaming at the second law of thermodynamics
 because it creates waste heat.
 
-If we map "System Awareness" against "Organizational Alignment," we see
-a distinct curve. Call this the **Uncanny Valley of Alignment**.
+If we map Cynicism against Dissonance, we see a distinct curve:
 
-![Chart showing the Uncanny Valley of Alignment. X-Axis: System
-Awareness (Cynicism). Y-Axis: Alignment with
-Firm.](https://jimbojw.github.io/karmarank/images/uncanny-valley-alignment.light.png)
-*Figure: Chart showing the Uncanny Valley of Alignment. X-Axis: System
-Awareness (Cynicism). Y-Axis: Alignment with Firm.*
+![Chart showing the Cynicism-Dissonance Curve. X-Axis: Cynicism. Y-Axis:
+Dissonance.](https://jimbojw.github.io/karmarank/images/cynicism-dissonance-curve.light.png)
+*Figure: Chart showing the Cynicism-Dissonance Curve. X-Axis: Cynicism.
+Y-Axis: Dissonance.*
 
-On the X-Axis, plot System Awareness (Cynicism). On the Y-Axis:
-Alignment with the Firm. The curve starts high (Naive Idealist), dips
-low (Burnt-Out Senior), and rises high again (KarmaRank Optimizer).
-Let's look at each archetype.
+On the X-Axis, plot Cynicism (System Awareness). On the Y-Axis:
+Dissonance (Distress). The curve starts low (Naive Idealist), rises high
+(Burnt-Out Senior), and dips low again (KarmaRank Optimizer). Let's look
+at each archetype.
 
-### The Naive Idealist (Top Left)
+### The Naive Idealist (Bottom Left)
 
 - **Mindset:** "We are a family! Meritocracy is real."
-- **Behavior:** High alignment. They work weekends for pizza parties.
+- **Behavior:** High alignment with HR Doxa. Low Dissonance due to true
+  belief in the system. They work weekends for pizza parties.
 - **Fate:** They are useful to the Firm but fragile. One bad calibration
   destroys them.
 
-### The Burnt-Out Senior (The Trough)
+### The Burnt-Out Senior (Top Middle)
 
 - **Mindset:** "This place is a joke. Management is stupid. It's all
   politics."
-- **Behavior:** Low alignment. They see the lie, so they rebel. They
-  refuse to write the Brief because "the work should speak for itself."
+- **Behavior:** Low alignment with HR Doxa. High Dissonance. They see
+  the lie, so they rebel. They refuse to write the Brief because "the
+  work should speak for itself."
 - **Fate:** They become toxins. They get isolated, PIP'd, or quit in
   anger.
 
-### The KarmaRank Optimizer (Top Right)
+### The KarmaRank Optimizer (Bottom Right)
 
 - **Mindset:** "The system is a game. I know the rules, so I can choose
   my outcome."
-- **Behavior:** High alignment. They might use the protocols to
-  ruthlessly climb the C-suite ladder, or they might use them to secure
-  a "Meets Expectations" rating with minimum effort.
+- **Behavior:** High alignment with the firm's revealed preferences. Low
+  Dissonance. They might use the protocols to ruthlessly climb the
+  C-suite ladder, or they might use them to secure a "Meets
+  Expectations" rating with minimum effort.
 - **Fate:** **They possess Agency.** They are no longer victims of the
   algorithm; they are its operators.
 
@@ -1673,7 +1674,7 @@ didn't finish the analysis.
 
 The Optimizer keeps analyzing until they find the **mechanism**. They
 don't waste calories judging the "Judge" for not reading the code. They
-accept the Calibration Court as a boundary condition and adapt.
+accept the Calibration Court as a boundary object and adapt.
 
 A truly cynical engineer does not yell at gravity; they build an
 airplane.
@@ -1690,7 +1691,7 @@ system.**
 It is a complex, probabilistic state machine with inputs, outputs, and
 weighting functions. It is messy, and often under-specified, but it can
 become legible. And you have a massive, asymmetric advantage over the
-natural Politicians you fear.
+natural Politicians you detest.
 
 **A Systematizer can logic their way to Empathy. But an Empath cannot
 feel their way to Systematization.**
@@ -1705,9 +1706,9 @@ graphics instantly, but that advantage is domain-specific. Their
 intuition for people will not help them debug a stack trace.
 
 Once you accept that social dynamics are learnable skills rather than
-character flaws, you become a **Full-Stack Human**. You become a
-creature that can build the value *and* sell the value. There is no
-ceiling for that archetype.
+character flaws, you become *full-stack*. You become an entity that can
+build the value *and* sell the value. There is no ceiling for that
+archetype.
 
 ## 3. From the Palliative Lie to Karmic Price Discovery
 
@@ -1720,9 +1721,9 @@ keep you functional.
 
 The business saw that you, the Engineer, responded to words of
 affirmation. They saw that you were willing to trade high-value
-Intellectual Property for a "Good Job!" from a manager or skip.
-Rationally, the Firm paid you in the currency you were willing to
-accept: **Validation.**
+Intellectual Property for a kudos from a manager or skip. Rationally,
+the Firm paid you in the cheapest currency you were willing to accept:
+**Validation.**
 
 The Firm is not your enemy. The Firm is an amoral mirror. It issues what
 you demand in proportion to what *value* you produce. If you demand
@@ -1739,17 +1740,12 @@ You are forcing the Firm to realize that "Quality," "Maintenance," and
 products. If the Firm wants them, they must pay for them with currency
 that matters: **Promotions and Budget.**
 
-By optimizing for the Calibration Cylinder you benefit yourself
-immediately. But you also benefit the collective. You force the
-organization to mature. You force it to align its incentives with its
-actual survival needs. This is a bottom-up movement for agency.
-
 ## 4. The Cost of Clarity
 
 There is a price to pay for this clarity.
 
-You must endure the Conative Dissonance. You must detach your personal
-moral compass from your economic engine. You must accept that you can be
+You must transcend the Dissonance. You must detach your personal moral
+compass from your economic engine. You must accept that you can be
 "Right" (technically) and "Broke" (politically) at the same time.
 
 You must accept that the Rating is the Job.
