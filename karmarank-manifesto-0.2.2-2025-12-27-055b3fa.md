@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.2 (2025-12-27-9cd032e)
+build: 0.2.2 (2025-12-27-055b3fa)
 date: 2025-12-27
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -17,7 +17,7 @@ version: 0.2.2
 
 By jimbojw
 
-Build: 0.2.2 (2025-12-27-9cd032e)
+Build: 0.2.2 (2025-12-27-055b3fa)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -503,19 +503,21 @@ wall.
 Do not confuse the input (your labor) with the output (the recognition).
 *The rating is the job.*
 
-### CVE-DEW-03: The Protocol Mismatch (The Moral Matrix)
+### CVE-DEW-03: The Motivation Mismatch
 
 **The Vulnerability:** You assume your manager and leadership are driven
 by "Logic" and "Accuracy." When they make an illogical decision, you
 assume they are underinformed, stupid, or technically illiterate.
 
 **The Reality:** They are not stupid. They are optimizing for a
-different set of moral foundations.
+different set of psychological drivers.
 
-While you are optimizing for **Truth** and **Efficiency**, they are
-often optimizing for **Loyalty**, **Authority**, or **Sanctity**. You
-are sending JSON to a SOAP endpoint. The communication is failing not
-because the data is wrong, but because the format is rejected.
+While you are optimizing for **Truth** and **Efficiency** (your own
+drivers of **Achievement**), they may often optimizing for their own
+Achievement, or for **Power** (influence, control) or **Affiliation**
+(consensus, relationships). You are sending JSON to a SOAP endpoint. The
+communication is failing not because the data is wrong, but because the
+format is rejected.
 
 ### CVE-DEW-04: The Scoreboard Glitch (Meritocracy)
 
@@ -957,7 +959,8 @@ Peacemaker.](https://jimbojw.github.io/karmarank/images/know-your-counsel.light.
 *Figure: The Three Managerial Archetypes: the Technician, the
 Politician, and the Peacemaker.*
 
-Every person is different, but these are the abstract base classes.
+Every person is different, but these abstract base classes extend from
+their primary *motivations* (([McClelland](#david-mcclelland))).
 
 ## 1. The Technician (The "Achievement" Manager)
 
@@ -1341,9 +1344,9 @@ receptor in the evaluator's brain. Defensible estimates are in bounds.
 ## 2. Moral Targeting (Know Your Judge)
 
 Before you pick your number, you must pick your narrative. This goes
-back to **CVE-DEW-03 (The Protocol Mismatch)**. You must frame your
-achievement in a way that strokes the specific **[Moral
-Matrix](#jonathan-haidt)** of your evaluators.
+back to **CVE-DEW-03 (The Motivation Mismatch)**. You must frame your
+achievement in a way that strokes the specific *motivations* of your
+evaluators.
 
 Different tribes worship different gods:
 
@@ -2247,14 +2250,14 @@ The source of **Field**, **Capital**, and **Habitus**. Bourdieu explains
 why some people "just get it" (Habitus) and how social games are played
 for specific types of Capital within a bounded Field.
 
-### Jonathan Haidt
+### David McClelland
 
-*The Righteous Mind*
+*Human Motivation*
 
-The source of **Moral Foundations Theory**. Essential for debugging
-**Protocol Mismatches**. It explains why your "rational" argument for
-refactoring code (Sanctity/Order) sounds like nonsense to a manager
-optimizing for quarterly revenue (Authority/Outcome).
+The source of **Need Theory**. Essential for debugging **Motivation
+Mismatches**. It explains why your "rational" argument for refactoring
+code (Achievement) sounds like nonsense to a manager optimizing for
+organizational influence (Power) or team harmony (Affiliation).
 
 ### James C. Scott
 
