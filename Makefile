@@ -53,6 +53,8 @@ HTML_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).html
 PDF_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).pdf
 EPUB_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).epub
 MD_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).md
+MAN_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).7
+MAN_FILE_LONG := $(OUTPUT_DIR)/$(LONG_BASE).7
 
 # Tools
 # Docker is the default build method for hermetic, cross-platform builds
@@ -74,12 +76,12 @@ endif
 # Excalidraw export tool (uses local npm install via npx)
 EXCALIDRAW_EXPORT := npx --no-install excalidraw-brute-export-cli
 
-.PHONY: all clean html pdf epub md images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-images-mode check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images fix-images-mode check-nav fix
+.PHONY: all clean html pdf epub md man images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-images-mode check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images fix-images-mode check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
 # Each format builds both short-named and long-named versions.
-all: images index html pdf epub md
+all: images index html pdf epub md man
 
 # Build infrastructure
 directories:
@@ -256,6 +258,30 @@ $(MD_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(FILTERED_METADATA) filters/c
 		--output=$@
 	@echo "✓ Markdown: $@"
 $(MD_FILE_LONG): $(MD_FILE)
+	@cp $< $@
+
+# Man Page Build (builds both short and long versions)
+man: $(MAN_FILE_LONG)
+$(MAN_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(METADATA) filters/man-page-images.lua filters/man-page-math.lua | directories verify-pandoc-deps prepare-title-page
+	@echo "Building man page..."
+	$(PANDOC) \
+		$(TITLE_PAGE) \
+		$(TRANSFORMED_CHAPTERS) \
+		--resource-path=$(CONTENT_DIR) \
+		--metadata-file=$(METADATA) \
+		--from=commonmark_x \
+		--to=man \
+		--standalone \
+		--lua-filter=filters/man-page-images.lua \
+		--lua-filter=filters/man-page-math.lua \
+		--metadata title="KARMARANK" \
+		--metadata section="7" \
+		--metadata description="Optimizing the Unspoken Corporate Objective Function" \
+		--metadata date="$(DATE)" \
+		--metadata build-info="$(VERSION) ($(DATE)-$(HASH))" \
+		--output=$@
+	@echo "✓ Man page: $@"
+$(MAN_FILE_LONG): $(MAN_FILE)
 	@cp $< $@
 
 # Check targets
