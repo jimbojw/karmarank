@@ -77,7 +77,7 @@ endif
 # Excalidraw export tool (uses local npm install via npx)
 EXCALIDRAW_EXPORT := npx --no-install excalidraw-brute-export-cli
 
-.PHONY: all clean html pdf epub md man images release directories prepare-metadata-filtered prepare-title-page build-transform-filter check check-links check-images check-images-refs check-images-mode check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images fix-images-mode check-nav fix
+.PHONY: all clean html pdf epub md man images release directories prepare-metadata-filtered prepare-title-page build-transform-filter build-man-page-images-filter check check-links check-images check-images-refs check-images-mode check-unused-images check-chapter-order check-readme verify-pandoc-deps verify-pdf-deps verify-excalidraw-deps fix-nav fix-readme fix-images fix-images-mode check-nav fix
 
 # Main targets
 # Build deployable artifacts (index page + all formats).
@@ -94,6 +94,11 @@ directories:
 build-transform-filter: $(BUILD_DIR)/transform-chapters.lua
 $(BUILD_DIR)/transform-chapters.lua: $(CHAPTERS) filters/transform-chapters.lua | directories
 	@scripts/build-transform-filter.sh $(BUILD_DIR) $@ filters/transform-chapters.lua $(sort $(CHAPTERS))
+
+# Build combined man page images filter (map + transform logic)
+build-man-page-images-filter: $(BUILD_DIR)/man-page-images.lua
+$(BUILD_DIR)/man-page-images.lua: filters/man-page-images.lua $(wildcard $(IMAGES_DIR)/src/*.txt) | directories
+	@scripts/build-man-page-images-filter.sh $(BUILD_DIR) $@ filters/man-page-images.lua $(IMAGES_DIR)/src
 
 # Pattern rule to build transformed chapters
 $(TRANSFORMED_DIR)/%.md: $(CONTENT_DIR)/%.md $(BUILD_DIR)/transform-chapters.lua filters/remove-nav.lua filters/filter-image-modes.lua | directories build-transform-filter verify-pandoc-deps
@@ -263,7 +268,7 @@ $(MD_FILE_LONG): $(MD_FILE)
 
 # Man Page Build (builds both short and long versions)
 man: $(MAN_FILE_LONG)
-$(MAN_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(METADATA) filters/man-page-images.lua filters/man-page-math.lua | directories verify-pandoc-deps prepare-title-page
+$(MAN_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(METADATA) $(BUILD_DIR)/man-page-images.lua filters/man-page-math.lua | directories verify-pandoc-deps prepare-title-page build-man-page-images-filter
 	@echo "Building man page..."
 	$(PANDOC) \
 		$(TITLE_PAGE) \
@@ -273,7 +278,7 @@ $(MAN_FILE): $(TRANSFORMED_CHAPTERS) $(TITLE_PAGE) $(METADATA) filters/man-page-
 		--from=commonmark_x \
 		--to=man \
 		--standalone \
-		--lua-filter=filters/man-page-images.lua \
+		--lua-filter=$(BUILD_DIR)/man-page-images.lua \
 		--lua-filter=filters/man-page-math.lua \
 		--metadata title="KARMARANK" \
 		--metadata section="7" \
