@@ -1,6 +1,6 @@
 #!/bin/bash
 # Prepare title page markdown
-# Usage: prepare-title-page.sh METADATA OUTPUT_FILE DATE VERSION HASH [RELEASE_MODE]
+# Usage: prepare-title-page.sh METADATA OUTPUT_FILE DATE VERSION HASH LOGO_FILE [RELEASE_MODE]
 
 set -e
 
@@ -9,7 +9,8 @@ OUTPUT_FILE="$2"
 DATE="$3"
 VERSION="$4"
 HASH="$5"
-RELEASE_MODE="$6"
+LOGO_FILE="$6"
+RELEASE_MODE="$7"
 
 # Ensure output directory exists
 mkdir -p "$(dirname "$OUTPUT_FILE")"
@@ -22,6 +23,15 @@ echo "# $TITLE" > "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 echo "*$SUBTITLE*" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
+
+# Add ASCII art logo in code block
+if [ -f "$LOGO_FILE" ]; then
+	echo '```' >> "$OUTPUT_FILE"
+	cat "$LOGO_FILE" >> "$OUTPUT_FILE"
+	echo '```' >> "$OUTPUT_FILE"
+	echo "" >> "$OUTPUT_FILE"
+fi
+
 echo "By $AUTHOR" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 

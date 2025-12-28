@@ -40,6 +40,7 @@ TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPT
 TITLE_PAGE := $(BUILD_DIR)/title-page.md
 FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
 IMAGE_LIST := $(BUILD_DIR)/image-list.txt
+LOGO_FILE := $(TEMPLATE_DIR)/karmarank-logo.txt
 
 # Output files (short names - built first)
 HTML_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).html
@@ -124,9 +125,9 @@ $(FILTERED_METADATA): $(METADATA) | directories
 
 # Prepare title page markdown
 prepare-title-page: $(TITLE_PAGE)
-$(TITLE_PAGE): $(METADATA) | directories
+$(TITLE_PAGE): $(METADATA) $(LOGO_FILE) | directories
 	@echo "Preparing title page..."
-	@scripts/prepare-title-page.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(RELEASE_MODE)
+	@scripts/prepare-title-page.sh $(METADATA) $@ $(DATE) $(VERSION) $(HASH) $(LOGO_FILE) "$(RELEASE_MODE)"
 
 # Extract image list from transformed chapters
 $(IMAGE_LIST): $(TRANSFORMED_CHAPTERS) filters/extract-images.lua | directories verify-pandoc-deps
