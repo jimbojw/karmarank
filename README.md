@@ -8,17 +8,16 @@ So why does your performance review feel like gaslighting?
 
 ## Start Reading
 
+**Stream in terminal:**
+
+```
+curl -sL https://jimbojw.github.io/karmarank/karmarank-manifesto.7 | man -l - 
+```
+
 **Latest builds:**
 
 [![Read The KarmaRank Manifesto Online (HTML)](https://img.shields.io/badge/Read_Online-HTML-2ea44f?style=for-the-badge&logo=html5&logoColor=white)](https://jimbojw.github.io/karmarank/karmarank-manifesto.html) [![Download The KarmaRank Manifesto (PDF)](https://img.shields.io/badge/Download-PDF-b31b1b?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://jimbojw.github.io/karmarank/karmarank-manifesto.pdf) [![Download The KarmaRank Manifesto (ePub)](https://img.shields.io/badge/Download-ePub-orange?style=for-the-badge&logo=epub&logoColor=white)](https://jimbojw.github.io/karmarank/karmarank-manifesto.epub)
 
-**Stream in terminal:**
-
-```
-curl -sL https://jimbojw.github.io/karmarank/karmarank-manifesto.md | less
-```
-
-(Looks great in [glow](https://github.com/charmbracelet/glow) or [bat](https://github.com/sharkdp/bat))
 
 _See [Releases](https://github.com/jimbojw/karmarank/releases) for stable versions._
 
