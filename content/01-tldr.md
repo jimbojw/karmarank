@@ -34,6 +34,9 @@ Where:
 The KarmaRank Manifesto proceeds from this, explaining how to decouple your self-worth from your rating ([Law #1](./05-law-1.md)),
 optimize your output for the **Firm Ledger**, and maximize your karmic ROI within your local [Calibration Cylinder](./09-calibration-cylinder.md).
 
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.light.png#gh-light-mode-only)![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.dark.png#gh-dark-mode-only)
+*Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
+
 <!-- NAV_FOOTER_START -->
 ---
 
