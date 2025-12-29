@@ -40,7 +40,7 @@ TRANSFORMED_CHAPTERS := $(patsubst $(CONTENT_DIR)/%,$(TRANSFORMED_DIR)/%,$(CHAPT
 TITLE_PAGE := $(BUILD_DIR)/title-page.md
 FILTERED_METADATA := $(BUILD_DIR)/metadata-filtered.yaml
 IMAGE_LIST := $(BUILD_DIR)/image-list.txt
-LOGO_FILE := $(TEMPLATE_DIR)/karmarank-logo.txt
+LOGO_FILE := $(IMAGES_DIR)/src/karmarank-logo.txt
 
 # Output files (short names - built first)
 HTML_FILE := $(OUTPUT_DIR)/$(SHORT_BASE).html
