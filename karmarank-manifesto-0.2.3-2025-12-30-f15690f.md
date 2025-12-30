@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.3 (2025-12-30-079844f)
+build: 0.2.3 (2025-12-30-f15690f)
 date: 2025-12-30
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -35,7 +35,7 @@ version: 0.2.3
 
 By jimbojw
 
-Build: 0.2.3 (2025-12-30-079844f)
+Build: 0.2.3 (2025-12-30-f15690f)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -270,9 +270,9 @@ flustered.
 
 She said:
 
-> "Look, in two weeks I and `<other manager>`{=html} are going to
-> `<corp HQ>`{=html} for a meeting with \<boss's boss\>. We need to be
-> able to tell them **who your software has helped and how**."
+> "Look, in two weeks I and \<other manager\> are going to \<corp HQ\>
+> for a meeting with \<boss's boss\>. We need to be able to tell them
+> **who your software has helped and how**."
 
 And suddenly, the room tilted.
 
@@ -382,10 +382,10 @@ Pleased with my little equation, I showed it to my manager.
 
 I explained, cheerfully, something like:
 
-> "Look, I get it now. My value to the org is basically the sum over
-> people of how much they like telling stories about me, weighted by
-> their status. So my job is to create high-status, positive
-> storytellers. That's what I optimized for with the alpha."
+> "I get it now. My value to the org is basically the sum over people of
+> how much they like telling stories about me, weighted by their status.
+> So my job is to create high-status, positive storytellers. That's what
+> I optimized for with the alpha."
 
 Silence.
 
