@@ -31,7 +31,7 @@ Your circle of Peers forms the base of the cylinder. Above you, in the middle la
 ![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.light.png#gh-light-mode-only)![Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).](images/calibration-cylinder.dark.png#gh-dark-mode-only)
 *Figure: Calibration Cylinder showing You (Defendant), your Manager (Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager (Judge).*
 
-This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you're a manager, then the feedback of your circle of reports below you may influence your manager above.
+This cylindrical portion of the corporate social graph contains the people who have direct influence on your rating. People exterior to the cylinder may have indirect influence, subject to the discretion of the in-cylinder participants. For example, if you, yourself, happen to be a manager, then the feedback of your circle of reports below you may influence your manager above.
 
 Twice a year (or however often your company performs reviews), the lid is put on this cylinder, and the heat is turned up. This is the **Calibration Meeting**. And it works a whole lot like a courtroom.
 
