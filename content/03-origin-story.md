@@ -52,7 +52,7 @@ Back in the cold fishbowl, she came to our 1:1 visibly frustrated, face flushedâ
 
 She said:
 
-> "Look, in two weeks I and <other manager> are going to <corp HQ> for a meeting with <boss's boss>. We need to be able to tell them **who your software has helped and how**."
+> "Look, in two weeks I and &lt;other manager&gt; are going to &lt;corp HQ&gt; for a meeting with &lt;boss's boss&gt;. We need to be able to tell them **who your software has helped and how**."
 
 And suddenly, the room tilted.
 
@@ -118,7 +118,7 @@ Pleased with my little equation, I showed it to my manager.
 
 I explained, cheerfully, something like:
 
-> "Look, I get it now. My value to the org is basically the sum over people of how much they like telling stories about me, weighted by their status. So my job is to create high-status, positive storytellers. That's what I optimized for with the alpha."
+> "I get it now. My value to the org is basically the sum over people of how much they like telling stories about me, weighted by their status. So my job is to create high-status, positive storytellers. That's what I optimized for with the alpha."
 
 Silence.
 
