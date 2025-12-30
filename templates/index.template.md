@@ -3,16 +3,17 @@ title: "The KarmaRank Manifesto"
 subtitle: "Optimizing the Unspoken Corporate Objective Function"
 ---
 
-You are good at games. You understand rules. But the modern workplace runs on a hidden operating system that you haven't reverse-engineered yet.
+You are good at games. You understand systems.  
+So why does your performance review feel like gaslighting?
 
-This manifesto is a debugger for your career. It reveals the unstated social physics of performance appraisal, promoting a simple, rigorous framework for navigating the corporate "calibration cylinder."
+**KarmaRank** is a framework for understanding how you are _actually_ evaluated in modern corporations. Not the HR story, but the real objective function.
 
 ## Start Reading
 
 - [**Read Online (HTML)**](./karmarank-manifesto.html)
 - [**Download PDF**](./karmarank-manifesto.pdf)
 - [**Download ePub**](./karmarank-manifesto.epub)
-- [**Download Markdown**](./karmarank-manifesto.md)
+- [**Download man page**](./karmarank-manifesto.7)
 
 ## Source Code
 
