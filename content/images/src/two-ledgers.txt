@@ -1,0 +1,11 @@
++=====================+                 +=====================+
+|                     |                 |                     |
+|  Private Ledger     |           #     |  Firm Ledger        |
+|  -----------------  |          #      |  -----------------  |
+|  - Clean Code       |    #########    |  - Shipped Feature  |
+|  - Personal Ethics  |        #        |  - Saved Launch     |
+|  - Refactoring      |    #########    |  - Director Praise  |
+|  - Unit Tests       |      #          |  - Number Go Up     |
+|  - Self Worth       |     #           |  - Flashy Demo      |
+|                     |                 |                     |
++=====================+                 +=====================+
