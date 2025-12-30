@@ -1,7 +1,7 @@
 ---
 author: jimbojw
-build: 0.2.3 (2025-12-29-99c4742)
-date: 2025-12-29
+build: 0.2.3 (2025-12-30-e455500)
+date: 2025-12-30
 lang: en
 license: CC-BY-NC-SA-4.0
 rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -15,29 +15,31 @@ version: 0.2.3
 
 *Optimizing the Unspoken Corporate Objective Function*
 
-     █████   ████                                              
-    ░░███   ███░                                               
-     ░███  ███     ██████   ████████  █████████████    ██████  
-     ░███████     ░░░░░███ ░░███░░███░░███░░███░░███  ░░░░░███ 
-     ░███░░███     ███████  ░███ ░░░  ░███ ░███ ░███   ███████ 
-     ░███ ░░███   ███░░███  ░███      ░███ ░███ ░███  ███░░███ 
-     █████ ░░████░░████████ █████     █████░███ █████░░████████
-    ░░░░░   ░░░░  ░░░░░░░░ ░░░░░     ░░░░░ ░░░ ░░░░░  ░░░░░░░░ 
-                                                               
-                                                               
-                                                                   
-         ███████████                        █████                  
-        ░░███░░░░░███                      ░░███                   
-         ░███    ░███   ██████   ████████   ░███ █████             
-         ░██████████   ░░░░░███ ░░███░░███  ░███░░███              
-         ░███░░░░░███   ███████  ░███ ░███  ░██████░               
-         ░███    ░███  ███░░███  ░███ ░███  ░███░░███              
-         █████   █████░░████████ ████ █████ ████ █████             
-        ░░░░░   ░░░░░  ░░░░░░░░ ░░░░ ░░░░░ ░░░░ ░░░░░              
+                                                          
+     /$$   /$$                                            
+    | $$  /$$/                                            
+    | $$ /$$/   /$$$$$$   /$$$$$$  /$$$$$$/$$$$   /$$$$$$ 
+    | $$$$$/   |____  $$ /$$__  $$| $$_  $$_  $$ |____  $$
+    | $$  $$    /$$$$$$$| $$  \__/| $$ \ $$ \ $$  /$$$$$$$
+    | $$\  $$  /$$__  $$| $$      | $$ | $$ | $$ /$$__  $$
+    | $$ \  $$|  $$$$$$$| $$      | $$ | $$ | $$|  $$$$$$$
+    |__/  \__/ \_______/|__/      |__/ |__/ |__/ \_______/
+                                                          
+                                                          
+                                                          
+     /$$$$$$$                      /$$                    
+    | $$__  $$                    | $$                    
+    | $$  \ $$  /$$$$$$  /$$$$$$$ | $$   /$$              
+    | $$$$$$$/ |____  $$| $$__  $$| $$  /$$/              
+    | $$__  $$  /$$$$$$$| $$  \ $$| $$$$$$/               
+    | $$  \ $$ /$$__  $$| $$  | $$| $$_  $$               
+    | $$  | $$|  $$$$$$$| $$  | $$| $$ \  $$              
+    |__/  |__/ \_______/|__/  |__/|__/  \__/              
+                                                          
 
 By jimbojw
 
-Build: 0.2.3 (2025-12-29-99c4742)
+Build: 0.2.3 (2025-12-30-e455500)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -110,6 +112,13 @@ your self-worth from your rating ([Law
 \#1](#law-1-conative-dissonance)), optimize your output for the **Firm
 Ledger**, and maximize your karmic ROI within your local [Calibration
 Cylinder](#the-calibration-cylinder-topology-of-the-trial).
+
+![Calibration Cylinder showing You (Defendant), your Manager (Counsel),
+your Manager's Peers (Prosecution/Jury) and your Skip Manager
+(Judge).](https://jimbojw.github.io/karmarank/images/calibration-cylinder.light.png)
+*Figure: Calibration Cylinder showing You (Defendant), your Manager
+(Counsel), your Manager's Peers (Prosecution/Jury) and your Skip Manager
+(Judge).*
 
 # Introduction: The Frame of the Game
 
@@ -794,9 +803,9 @@ your Manager's Peers (Prosecution/Jury) and your Skip Manager
 This cylindrical portion of the corporate social graph contains the
 people who have direct influence on your rating. People exterior to the
 cylinder may have indirect influence, subject to the discretion of the
-in-cylinder participants. For example, if you're a manager, then the
-feedback of your circle of reports below you may influence your manager
-above.
+in-cylinder participants. For example, if you, yourself, happen to be a
+manager, then the feedback of your circle of reports below you may
+influence your manager above.
 
 Twice a year (or however often your company performs reviews), the lid
 is put on this cylinder, and the heat is turned up. This is the
