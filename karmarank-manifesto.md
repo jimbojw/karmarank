@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.4 (2026-02-05-a42f6eb)
+build: 0.2.4 (2026-02-05-290d7d4)
 date: 2026-02-05
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -35,7 +35,7 @@ version: 0.2.4
 
 By jimbojw
 
-Build: 0.2.4 (2026-02-05-a42f6eb)
+Build: 0.2.4 (2026-02-05-290d7d4)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -146,9 +146,9 @@ be more difficult.
 
 Just like in other professional sports, how you play affects your
 greater life. Most directly in terms of comp, but also in terms of
-reputation, future opportunities, social sphere, mental health, etc. And
-so **playing ethically is the rational move**. But so may be the
-occasional strategic light foul.
+reputation, future opportunities, social sphere, mental health, and so
+on. Therefore, **playing ethically is the rational move**. But so may be
+the occasional strategic light foul.
 
 The point is that you must separate your **Private Ledger**, what you
 think of as right and true and just, from the **Firm Ledger**, how the
@@ -162,7 +162,7 @@ which we'll explore thoroughly.
 
 One final warning before we proceed: *you will feel manipulative*. We've
 been brought up to believe that unconscious prosocial behavior is "good"
-while conscious prosocial behavior is "suspicious", "manipulative", etc.
+while conscious prosocial behavior is "suspicious" or "manipulative".
 
 Unfortunately, to explain the rules and physics of the corporate
 appraisal game, this text must make social behavior and communication
