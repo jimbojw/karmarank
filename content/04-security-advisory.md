@@ -25,11 +25,11 @@ The firm does not value your suffering. It values **Status-Weighted Stories**. I
 
 ### CVE-DEW-02: The Reality Illusion (Noumenal vs. Phenomenal)
 
-**The Vulnerability:** You believe that the work artifact (the code, the analysis, the doc) is the "Real Object"—what philosophers call **noumenal**, the thing in itself—and your manager's opinion is just a noisy approximation of that truth.
+**The Vulnerability:** You believe that the work artifact (the code, the analysis, the doc) is the Real Object, to be judged by objective standards of goodness. Your manager's opinion is just a noisy approximation of that truth.
 
-**The Reality:** You have it backward. In the corporate epistemology, **perception IS the noumenon**.
+**The Reality:** You have it backward. In the corporate epistemology, **perception IS reality**.
 
-There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analysis are merely shadows on the cave wall.
+There is no capital-T Truth behind the rating; the rating _is_ the object. Your code, docs, and analyses are merely shadows on the cave wall.
 
 Do not confuse the input (your labor) with the output (the recognition). _The rating is the job._
 
