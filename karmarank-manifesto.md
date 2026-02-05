@@ -1,7 +1,7 @@
 ---
 author: jimbojw
-build: 0.2.4 (2025-12-30-ce7bc8d)
-date: 2025-12-30
+build: 0.2.4 (2026-02-05-d2be70d)
+date: 2026-02-05
 lang: en
 license: CC-BY-NC-SA-4.0
 rights: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
@@ -35,7 +35,7 @@ version: 0.2.4
 
 By jimbojw
 
-Build: 0.2.4 (2025-12-30-ce7bc8d)
+Build: 0.2.4 (2026-02-05-d2be70d)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -85,21 +85,23 @@ process, for the day-to-day practitioner, it suffices to optimize for
 ![Net Status-Weighted Karma
 Equation](https://jimbojw.github.io/karmarank/images/net-status-weighted-karma.light.png)
 
-$$K = \sum_{i} S_i \cdot k_i$$
+$$
+K = \sum_{i} S_i \cdot k_i
+$$
 
 Where:
 
-- **$K$ --- Net Status-Weighted Karma**  
+- **$K$ --- Net Status-Weighted Karma**\
   In a given field: a company, a team, a subculture, a community.
-- **$i$ --- The Index**  
+- **$i$ --- The Index**\
   Ranging over the people whose opinions about you actually
   *travel*---your manager, your manager's peers, the Staff engineer
   everyone listens to, the PM who won't shut up in calibration meetings.
-- **$S_i$ --- Status**  
+- **$S_i$ --- Status**\
   Intentionally capitalized, because it's the most important term. It's
   not just the witness's job title, but their actual ability to move
   decisions and narratives as it pertains *to you*.
-- **$k_i$ --- Karmic Appraisal**  
+- **$k_i$ --- Karmic Appraisal**\
   The signed "emotional value" person $i$ gets from telling a story
   about you and your work.
 
@@ -338,7 +340,9 @@ always do when I think I've spotted a pattern: I tried to turn it into
 math. In my notebook, I wrote down a simple expression for what I'd just
 experienced:
 
-$$K = \sum_{i} S_i \cdot k_i$$
+$$
+K = \sum_{i} S_i \cdot k_i
+$$
 
 Here, $K$ is your **Net Status-Weighted Karma** in a given field: a
 company, a team, a subculture, a community.
@@ -406,7 +410,7 @@ boss's feelings about me."
 In retrospect, that was my first clear encounter with a meta-rule of
 corporate life:
 
-> **You are allowed to play the game.**  
+> **You are allowed to play the game.**\
 > **You are not supposed to write down the rules.**
 
 The organization must broadcast a story about "merit" and "impact" that
@@ -480,7 +484,7 @@ that part for you.
 
 # SECURITY ADVISORY: Five Vulnerabilities in the Default Engineering Worldview
 
-**Severity:** Critical  
+**Severity:** Critical\
 **Status:** Active Exploitation Detected
 
 This manuscript is going to systematically dismantle a number of your
@@ -514,15 +518,15 @@ low-value labor.
 ### CVE-DEW-02: The Reality Illusion (Noumenal vs. Phenomenal)
 
 **The Vulnerability:** You believe that the work artifact (the code, the
-analysis, the doc) is the "Real Object"---what philosophers call
-**noumenal**, the thing in itself---and your manager's opinion is just a
-noisy approximation of that truth.
+analysis, the doc) is the Real Object, to be judged by objective
+standards of goodness. Your manager's opinion is just a noisy
+approximation of that truth.
 
 **The Reality:** You have it backward. In the corporate epistemology,
-**perception IS the noumenon**.
+**perception IS reality**.
 
 There is no capital-T Truth behind the rating; the rating *is* the
-object. Your code, docs, and analysis are merely shadows on the cave
+object. Your code, docs, and analyses are merely shadows on the cave
 wall.
 
 Do not confuse the input (your labor) with the output (the recognition).
@@ -670,7 +674,9 @@ Literally: who $(S_i)$ cares $(k_i)$.
 Written as math, your capital-I **Impact** to the firm is just your Net
 Status-Weighted Karma:
 
-$$K = \sum_i S_i \cdot k_i$$
+$$
+K = \sum_i S_i \cdot k_i
+$$
 
 If nobody with Status cares, the system has nowhere to store your
 so-called "impact". It lives only on your Private Ledger as a pleasant
@@ -688,13 +694,13 @@ doing **speculative impact**. To you, it may be good. It may be
 virtuous. It may even be useful in some cosmic hard-to-measure sense.
 But as far as the Firm Ledger is concerned, it does not exist yet.
 
-Law \#3 is the operational version of Law \#2.  
-"The rating is the job" tells you what gets serialized.  
+Law \#3 is the operational version of Law \#2.\
+"The rating is the job" tells you what gets serialized.\
 "Who Cares?" tells you how to decide where to spend your next hour.
 
 # Meta-Law: You Do Not Talk About KarmaRank
 
-You are allowed to play the game.  
+You are allowed to play the game.\
 You are not supposed to describe the game.
 
 When I showed my manager the Net Status-Weighted Karma formula, she
@@ -715,7 +721,7 @@ emotional payoff of stories, you are not "insightful." You are rude.
 
 From the inside, the rule looks like this:
 
-> **You may act on the true objective function.**  
+> **You may act on the true objective function.**\
 > **You may not name the true objective function.**
 
 You are expected to transubstantiate your moves back into the house
@@ -952,7 +958,7 @@ and the Market (The Judge) to prove that the CEO is still a "High
 Performer."
 
 ![CEO's Calibration Cylinder showing SVP, Executive, Board and Market
-circles.](https://jimbojw.github.io/karmarank/images/turtles-all-the-way-up.light.png)  
+circles.](https://jimbojw.github.io/karmarank/images/turtles-all-the-way-up.light.png)\
 *Figure: CEO's Calibration Cylinder showing SVP, Executive, Board and
 Market circles.*
 
