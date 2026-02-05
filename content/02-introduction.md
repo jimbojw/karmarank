@@ -16,13 +16,13 @@ When you sit down to a complex board game, you have certain expectations. Some r
 
 In the pages that follow, I will reveal the hidden rules and unstated social physics of the corporate performance appraisal game. If you treat it with the same detached curiosity you bring to other gaming, you'll be fine. If you tie your self worth to _being right_, well, it's going to be more difficult.
 
-Just like in other professional sports, how you play affects your greater life. Most directly in terms of comp, but also in terms of reputation, future opportunities, social sphere, mental health, etc. And so **playing ethically is the rational move**. But so may be the occasional strategic light foul.
+Just like in other professional sports, how you play affects your greater life. Most directly in terms of comp, but also in terms of reputation, future opportunities, social sphere, mental health, and so on. Therefore, **playing ethically is the rational move**. But so may be the occasional strategic light foul.
 
 The point is that you must separate your **Private Ledger**, what you think of as right and true and just, from the **Firm Ledger**, how the company (the firm) values your contributions.
 
 It's not that your ethics don't matter in some abstract sense. It's that if you choose to commit a game-suboptimal play to satisfy your ethical frame, or vice versa, I want you to do it with eyes open. But to do that, you first have to understand the game you're already playing, which we'll explore thoroughly.
 
-One final warning before we proceed: _you will feel manipulative_. We've been brought up to believe that unconscious prosocial behavior is "good" while conscious prosocial behavior is "suspicious", "manipulative", etc.
+One final warning before we proceed: _you will feel manipulative_. We've been brought up to believe that unconscious prosocial behavior is "good" while conscious prosocial behavior is "suspicious" or "manipulative".
 
 Unfortunately, to explain the rules and physics of the corporate appraisal game, this text must make social behavior and communication strategies **explicit**. You can think of our approach as going from vibes to debugger. Assistive technology for the empathetically disinclined.
 
