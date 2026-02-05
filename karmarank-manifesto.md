@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.4 (2026-02-05-d2be70d)
+build: 0.2.4 (2026-02-05-7e96065)
 date: 2026-02-05
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -35,7 +35,7 @@ version: 0.2.4
 
 By jimbojw
 
-Build: 0.2.4 (2026-02-05-d2be70d)
+Build: 0.2.4 (2026-02-05-7e96065)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -572,10 +572,10 @@ ambiguity is a mistake or a sign of incompetence.
 
 If the firm gave you a clear, static set of rules (e.g., "Do X, Y, and Z
 to get promoted"), you, and everyone else, would ruthlessly optimize for
-those variables and destroy the company ([Goodhart's
-Law](#goodharts-law)). Leadership *must* deploy "Strategic Ambiguity" to
-retain their veto power. They will never give you the manual you are
-looking for. You have to reverse-engineer it.
+those variables and destroy the company (Goodhart's Law). Leadership
+*must* deploy "Strategic Ambiguity" to retain their veto power. They
+will never give you the manual you are looking for. You have to
+reverse-engineer it.
 
 ------------------------------------------------------------------------
 
