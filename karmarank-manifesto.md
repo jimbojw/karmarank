@@ -1,6 +1,6 @@
 ---
 author: jimbojw
-build: 0.2.4 (2026-02-05-7e96065)
+build: 0.2.4 (2026-02-05-a42f6eb)
 date: 2026-02-05
 lang: en
 license: CC-BY-NC-SA-4.0
@@ -35,7 +35,7 @@ version: 0.2.4
 
 By jimbojw
 
-Build: 0.2.4 (2026-02-05-7e96065)
+Build: 0.2.4 (2026-02-05-a42f6eb)
 
 # License: CC-BY-NC-SA-4.0
 
@@ -2146,13 +2146,6 @@ Alignment.
 - **Burnouts** rebel because they reject the nobel lie.
 - **Optimizers** align because they subvert the nobel lie.
 
-**Full-Stack Human**
-
-The result of an engineer applying their system-design skills to social
-dynamics. An individual who can both build value (Technical CPU) and
-sell value (Social GPU emulation), giving them an asymmetric advantage
-over pure politicians.
-
 **KarmaRank**
 
 Time-Decayed, Capital-Constrained, Adversarial Eigenvector-Sponsorship.
@@ -2307,10 +2300,12 @@ Reconnaissance**. Voss frames empathy not as "niceness," but as a way to
 extract information and influence behavior using Calibrated Questions.
 This is the engine behind **Political Echolocation**.
 
-### Goodhart's Law
+### Venkatesh Rao
 
-Marilyn Strathern
+*The Gervais Principle*
 
-*"When a measure becomes a target, it ceases to be a good measure."* The
-fundamental reason why **Strategic Ambiguity** is a feature, not a bug,
-of performance review systems.
+Using the TV show *The Office* as a lens, Rao provides an incisive and
+complete explanation of the three corporate archetypes: the Sociopaths,
+the Clueless and the Losers. He explains their motivations and
+interactions with particular emphasis on the "languages" they use among
+themselves and between them.
